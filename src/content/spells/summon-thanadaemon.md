@@ -1,0 +1,14 @@
+### Summon Thanadaemon
+
+**Escola** Conjuração (Convocação) [mal]; **Nível** Arcano 9, Divino 9
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 rodada  **Componentes** V, S, F (duas moedas de prata)
+
+**EFEITO**
+**Alcance** perto (7,5m + 1,5m/2 níveis)  **Efeito** uma criatura conjurada  **Duração** 1 rodada/nível (D)  **Teste de Resistência** nenhum  **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Esta magia funciona como summon monster, exceto que conjura um único thanadaemon. Você só pode usar esta magia em uma área com água aberta suficiente para acomodar o bote do daemon, ou quando no Plano Astral ou Plano Etéreo.
+
+---

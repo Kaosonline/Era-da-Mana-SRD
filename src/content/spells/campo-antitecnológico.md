@@ -1,0 +1,12 @@
+### Campo Antitecnológico
+
+**Escola** Abjuração; **Nível** Arcano 7, Divino 6
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M/FD (uma pitada de ferrugem)
+
+**EFEITO**
+**Alcance** 3m  **Alvos** emanação com 3m de raio, centrada em você  **Duração** 1 minuto/nível (D)  **Teste de Resistência** Fortitude parcial (ver texto)  **Resistência a Magia** sim
+
+**DESCRIÇÃO**
+Você cria um campo de energia hemisférico e móvel que impede a entrada de objetos, sinais e criaturas tecnológicos. Um campo antitecnológico suprime qualquer efeito tecnológico usado dentro, trazido para, ou implantado na área, mas não o nega. O tempo gasto dentro de um campo antitecnológico conta contra a duração do efeito suprimido. Robôs e outras construtos tecnológicos que entram em contato com um campo antitecnológico devem tentar um teste de Fortitude a cada rodada que permanecerem no campo. Falha indica que a criatura não pode realizar ações naquela rodada e é considerada indefesa. Sucesso indica que a criatura pode realizar uma ação de movimento ou uma ação padrão naquela rodada. Criaturas parcialmente tecnológicas, como androides ou ciborgues, ficam apenas atordoadas se falharem neste teste de resistência. Note que equipamentos cibernéticos não funcionam em um campo antitecnológico, e todos os benefícios concedidos por tais equipamentos são suprimidos. Criaturas não tecnológicas podem entrar na área, assim como projéteis de baixa tecnologia como pedras de funda e flechas. Projéteis de alta tecnologia, como balas e mísseis, param imediatamente ao entrar em contato com o campo e caem no chão inofensivamente ou detonam. Um campo antitecnológico não impede raios criados por fontes mágicas, mas impede raios disparados por armas de feixe, como lasers. O campo antitecnológico não oferece proteção contra explosões causadas por explosivos tecnológicos detonando contra ele — portanto, criaturas dentro do campo ainda podem sofrer dano de um foguete que explode contra ele. Se uma criatura for maior que a área cercada pela barreira, qualquer parte da criatura que fique fora da barreira não é afetada pelo campo. Esta magia pode ser usada apenas defensivamente, não agressivamente. Forçar uma barreira de abjuração contra criaturas que a magia mantém afasta colapsa a barreira.

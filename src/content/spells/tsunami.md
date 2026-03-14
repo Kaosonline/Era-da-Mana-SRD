@@ -1,0 +1,12 @@
+### Tsunami
+
+**Escola** Conjuração (Criação) [água]; **Nível** Arcano 9, Divino 9
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão **Componentes** V, S
+
+**EFEITO**
+**Alcance** longo (120m + 12m/nível) **Efeito** onda de 3m de profundidade, 3m de largura/nível e 0,6m de altura/nível **Duração** 5 rodadas **Teste de Resistência** ver texto **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Você cria uma onda massiva de água que então se move em linha reta sobre água ou terra — você seleciona a direção em que a onda viaja (que deve ser perpendicular à sua largura), mas uma vez em movimento, a onda não pode mudar de curso. Sobre a superfície de águas abertas, a onda viaja a uma velocidade de 18m por rodada — em terra ou debaixo d'água, a onda viaja a uma velocidade de 9m por rodada. Criaturas atingidas por um tsunami sofrem 8d6 pontos de dano de concussão (um teste de Fortitude reduz este dano pela metade). Além disso, o tsunami faz uma verificação especial de MBC contra qualquer criatura que atinja — a MBC da onda é igual ao seu nível de conjurador + seu modificador de atributo de conjuração relevante (o que for maior) + 8 (pelo tamanho da onda). Se esta verificação de MBC superar a DMC de uma criatura, a criatura é derrubada e carregada pela onda. Uma criatura carregada por um tsunami pode tentar escapar da onda em seu turno como uma ação padrão fazendo uma verificação de MBC ou Natação oposta à verificação de MBC da onda — se uma criatura falhar em escapar, sofre mais 6d6 pontos de dano de concussão (teste de Fortitude para metade) e continua sendo carregada pela onda. Objetos atingidos por um tsunami são varridos se forem Enormes ou menores e são carregados pela onda, depositados em uma pilha ao final do trajeto da onda. Objetos Colossais ou maiores, bem como estruturas ou objetos firmemente fixados ao solo, sofrem 8d6 pontos de dano de concussão quando um tsunami passa por seu espaço — se isto for suficiente para destruir o objeto ou estrutura, os restos são carregados pela onda. Dureza não reduz este dano, nem é reduzido à metade como o dano causado a objetos normalmente é. Movimento livre impede uma criatura de ser carregada por um tsunami, mas não impede o dano causado ao atingir uma criatura. Uma barreira sólida que seja mais alta que o tsunami e não seja destruída pela onda impede aquela porção da onda de continuar adiante, deixando uma lacuna na onda enquanto o resto continua em frente.

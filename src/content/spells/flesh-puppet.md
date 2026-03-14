@@ -1,0 +1,14 @@
+### Flesh Puppet
+
+**Escola** Necromancia [mal]; **Nível** Arcano 3, Divino 2
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 rodada  **Componentes** V, S, M (uma ônix no valor de 25 po e uma corda de seda)
+
+**EFEITO**
+**Alcance** toque  **Alvos** um cadáver tocado  **Duração** permanente (D)  **Teste de Resistência** nenhum  **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Você anima um cadáver que esteja morto há não mais de 48 horas. Ele se levanta como um zumbi (Pathfinder RPG Bestiary 288) que é magicamente atado a você e obedece seus comandos. Como observado em animar mortos, você não pode controlar mais de 4 DV por nível de conjurador de mortos-vivos no total, nem uma única conjuração pode criar mais de 2 DV por nível de conjurador. Esta magia disfarça a aparência do zumbi e permite que você o controle. A aparência externa, movimento e voz do zumbi parecem os mesmos como se ainda estivesse vivo. A condição normal de cambaleante do zumbi não se aplica (embora ele ainda possa ficar cambaleante por outros meios). Detectar com sucesso o flesh puppet como um zumbi sem magia requer um teste de Percepção oposto contra seu teste de Disfarce, e você adiciona seu nível de conjurador como bônus neste teste de Disfarce. Uma corda efêmera conecta você ao zumbi. Através desta corda, você tem um vínculo mental com o zumbi e pode comandá-lo como uma ação rápida. O zumbi usa suas próprias ações para completar seus comandos. O zumbi pode falar até 25 palavras em 1 rodada, mas você deve mentalmente transmitir o que pretende que ele diga como uma ação rápida. Ele é incapaz de articular fala por conta própria. O zumbi pode ser ordenado a realizar tarefas muito simples que conhecia em vida, mas não pode fazer ataques, conjurar magias ou realizar tarefas complexas ou difíceis que requerem concentração constante. A corda que conecta você e o zumbi é quase invisível. Um teste de Percepção CD 30 é necessário para detectá-la. Ela tem dureza 0 e 1 pv. O comprimento de corda que você pode criar é de 30m + 3m por nível de conjurador que você possui. A corda se rompe se você e o zumbi se afastarem mais do que esse comprimento, embora o zumbi não saia do alcance a menos que seja forçado a fazê-lo ou que você o comande a fazê-lo. Se a corda para o zumbi for cortada, a magia termina imediatamente. A corda efêmera pode passar por barreiras físicas, mas não por barreiras de força mágica, e pode ser danificada como se fosse um objeto físico. Quando esta magia termina, o zumbi reverte imediatamente a um cadáver normal. A magia termina automaticamente se você conjurar flesh puppet ou flesh puppet horde em um novo cadáver.
+
+---

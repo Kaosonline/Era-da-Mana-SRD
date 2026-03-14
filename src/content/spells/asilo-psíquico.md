@@ -1,0 +1,12 @@
+### Asilo Psíquico
+
+**Escola** Ilusão (Fantasma) [afeta a mente]; **Nível** Arcano 5
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação rápida  **Componentes** V, S
+
+**EFEITO**
+**Alcance** pessoal  **Alvos** você  **Duração** instantânea; ver texto  **Teste de Resistência** nenhum  **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Você recua para uma paisagem mental (ver página 234) de sua própria criação que lhe permite realizar uma tarefa mental demorada em um instante. Você cria uma paisagem mental que lhe proporciona refúgio e calma, como uma biblioteca, uma sala de estar, um jardim ou a casa na árvore de sua infância. Você pode passar até 15 minutos em seu asilo psíquico. Enquanto você está dentro, nenhum tempo passa para o seu corpo, e quando você emerge pode continuar com o seu turno. A paisagem mental é aberta, finita e possui uma passagem de tempo acelerada. Enquanto estiver dentro da paisagem mental, você pode consultar qualquer texto, recordar qualquer conversa ou lembrar de qualquer imagem à qual tenha sido exposto com clareza e recordação perfeitas, como se tivesse uma memória eidética. Você deve ter visto ou ouvido o material dentro de um período de 1 semana por nível. Por exemplo, você pode desejar reexaminar uma passagem de texto de um manuscrito antigo que rapidamente folheou em uma biblioteca 2 semanas atrás. Enquanto estiver no asilo psíquico, você pode perfeitamente recordar a disposição exata do texto dentro do manuscrito antigo e lê-lo palavra por palavra. Ao emergir do asilo psíquico, você pode recordar os detalhes do que acabou de estudar com a mesma clareza como se tivesse acabado de olhar para ele, mas você não tem mais lembrança total do material. Se você for capaz de preparar magias, pode usar o tempo para preparar uma única magia. Por exemplo, se você estiver envenenado, pode usar sua ação rápida para conjurar asilo psíquico, orar e meditar por 15 minutos completos para ganhar neutralizar veneno, então emergir da paisagem mental e imediatamente conjurar a magia sobre si mesmo como sua ação padrão. Qualquer magia que afeta a mente que estava lhe afetando antes de você conjurar a magia continua a consumir sua duração em você enquanto você está dentro do asilo psíquico, então você pode usar esta magia para esperar os efeitos de tal condição. Efeitos que estão atualmente afetando seu corpo não consomem duração adicional enquanto você está no asilo psíquico, mas você também não experimenta seus efeitos durante o tempo passado lá.

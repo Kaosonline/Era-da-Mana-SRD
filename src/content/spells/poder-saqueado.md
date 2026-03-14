@@ -1,0 +1,14 @@
+### Poder Saqueado
+
+**Escola** Necromancia [mal]; **Nível** Arcano 6, Divino 7
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 10 minutos  **Componentes** V, S, M (rubis esmagados no valor de 2.500 po e um órgão maior do alvo sacrificado, ver texto)
+
+**EFEITO**
+**Alcance** perto (7,5m + 1,5m/2 níveis)  **Alvos** uma criatura  **Duração** 1 dia/nível  **Teste de Resistência** Vontade anula  **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Você deve sacrificar uma criatura assim que terminar de conjurar esta magia. Quando o sacrifício morre, seu sangue ou ícor se acumula e endurece em uma única hematita vermelha. Esta hematita contém a essência e o espírito da criatura sacrificada, permitindo que qualquer um segurando a pedra ative a habilidade racial ativada de mais alto nível da criatura, tomando as ações necessárias para ativar a habilidade semelhante a magia armazenada. Qualquer criatura que segure a pedra pode ativá-la, mas a pedra só pode ser usada uma vez por dia (ou a frequência da habilidade semelhante a magia da criatura, o que for menor). Se uma criatura tiver várias habilidades raciais semelhantes a magia do mesmo nível de magia, escolha aleatoriamente entre elas para determinar qual está armazenada na hematita. A hematita só pode armazenar habilidades raciais semelhantes a magia que emulam uma magia, incluindo magias alteradas, como invisibilidade (apenas em si mesmo), mas não habilidades semelhantes a magia únicas possuídas pela criatura. Habilidades com efeitos alterados permanecem alteradas, então uma criatura ativando a hematita para teletransporte maior (apenas em si mesmo) afetaria apenas a si mesma e uma hematita armazenando invocar monstro II (apenas elemental do fogo Pequeno) ainda só poderia invocar um elemental do fogo Pequeno. Além disso, a hematita não pode armazenar habilidades semelhantes a magia que duplicam magias com componentes caros custando mais de 250 po.  A CD de resistência, nível de conjurador e outros atributos desta habilidade permanecem os mesmos que quando a criatura ainda estava viva, embora a criatura que ativa a hematita possa escolher os alvos, área ou forma da magia, e tomar outras decisões, como controlar o alvo de dominar pessoa. A hematita pode tomar quaisquer ações necessárias para manipular aspectos da magia, concentrando-se na magia, redirecionando a magia, e assim por diante, até o equivalente a uma rodada normal completa de ações.  Se a criatura sacrificada não morrer durante a conjuração da magia (por exemplo, se era apenas uma criatura invocada) ou for trazida de volta à vida antes que a duração da magia expire, a hematita perde seu poder mágico. O fragmento do espírito da criatura preso na hematita não atrapalha as tentativas de restaurar a criatura à vida.
+
+---

@@ -1,0 +1,12 @@
+### Absorver Runa II
+
+Escola Abjuração; Nível Arcano 6, Divino 6
+
+CONJURAÇÃO
+Tempo de Conjuração 1 ação padrão  Componentes V, S, M (uma luva de seda branca no valor de 25 po)
+
+EFEITO
+Alcance toque  Alvos um efeito de magia  Duração instantânea mais 1 minuto/nível (ver texto)  Teste de Resistência Vontade anula (inofensivo)  Resistência a Magia sim (inofensivo)
+
+DESCRIÇÃO
+Esta magia funciona como absorver runa I, mas pode afetar runas equivalentes a uma magia de 5º nível ou inferior.

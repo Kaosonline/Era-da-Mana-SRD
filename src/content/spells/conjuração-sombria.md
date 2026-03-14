@@ -1,0 +1,14 @@
+### Conjuração Sombria
+
+**Escola** Ilusão (Sombra) [sombra]; **Nível** Arcano 4
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S
+
+**EFEITO**
+**Alcance** ver texto  **Efeito** ver texto  **Duração** ver texto  **Teste de Resistência** Vontade desacredita (ao interagir); varia; ver texto  **Resistência a Magia** sim; ver texto
+
+**DESCRIÇÃO**
+Você usa material do Plano das Sombras para moldar ilusões quase reais de uma ou mais criaturas, objetos ou forças. A conjuração sombria pode imitar qualquer magia de conjuração (invocação) ou conjuração (criação) de mago ou feiticeiro de 3º nível ou inferior. As conjurações sombrias são apenas um quinto (20%) tão fortes quanto as coisas reais, embora criaturas que acreditem que as conjurações sombrias são reais sejam afetadas por elas com força total. Qualquer criatura que interaja com a magia pode realizar um teste de Vontade para reconhecer sua verdadeira natureza. Magias que causam dano têm efeitos normais, a menos que a criatura afetada tenha sucesso em um teste de Vontade. Cada criatura que desacredita sofre apenas um quinto (20%) do dano do ataque. Se o ataque desacreditado tiver um efeito especial além do dano, esse efeito tem apenas 20% de chance de ocorrer. Independentemente do resultado do teste para desacreditar, a criatura afetada também tem direito a qualquer teste que a magia simulada permita, mas a CD do teste é definida de acordo com o nível da conjuração sombria (4º) em vez do nível normal da magia. Além disso, qualquer efeito criado por conjuração sombria permite resistência a magia, mesmo que a magia que ela está simulando não permita. Objetos ou substâncias sombrias têm efeitos normais, exceto contra aqueles que os desacreditam. Contra os que desacreditam, eles têm 20% de chance de funcionar. Uma criatura sombria tem um quinto dos pontos de vida de uma criatura normal de seu tipo (independentemente de ser reconhecida como sombria). Ela causa dano normal e tem todas as habilidades e fraquezas normais. No entanto, contra uma criatura que a reconhece como uma criatura sombria, o dano da criatura sombria é de um quinto (20%) do normal, e todas as habilidades especiais que não causam dano letal têm apenas 20% de chance de funcionar. (Role separadamente para cada uso e cada personagem afetado.) Além disso, os bônus de CA da criatura sombria são apenas um quinto tão grandes. Uma criatura que tenha sucesso em seu teste vê as conjurações sombrias como imagens transparentes sobrepostas a formas vagas e sombrias. Objetos realizam automaticamente com sucesso seus testes de Vontade contra esta magia.
+
+---

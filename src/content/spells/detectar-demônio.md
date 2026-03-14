@@ -1,0 +1,14 @@
+### Detectar Demônio
+
+**Escola** Adivinhação; **Nível** Divino 1
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, FD
+
+**EFEITO**
+**Alcance** 18m  **Área** emanação em forma de cone  **Duração** concentração, até 10 minutos/nível (D)  **Teste de Resistência** nenhum (ver texto)  **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Você percebe a presença de um tipo específico de mal — o de demônios, seus servos e o Abismo. A quantidade de informação revelada depende de quanto tempo você estuda uma área ou sujeito em particular.  1ª Rodada: Presença ou ausência de criaturas com o subtipo demônio, criaturas possuídas por demônios, criaturas sob efeitos de magias ou habilidades similares a magias conjuradas por demônios, ou criaturas de outra forma corrompidas por demônios. Criaturas corrompidas por demônios incluem tieflings com heranças demoníacas, feiticeiros com linhagens abissais, criaturas afetadas pelo presente profano de uma súcubo, criaturas com implantes demoníacas (ver página 44 de Pathfinder Campaign Setting: Lords of Chaos, Book of the Damned, Vol. 2), ou criaturas que possuem a proeza Obediência Demoníaca (Lords of Chaos 8), e aquelas sob influência demoníaca significativa determinada pelo GM. Esta magia não detecta criaturas de alinhamento caótico maligno que não sejam demônios ou significativamente influenciadas por demônios.  Adicionalmente, esta magia detecta se um portal ou passagem mágica similar leva ao Abismo.  2ª Rodada: Número de auras malignas irradiadas por criaturas com o subtipo demônio na área, assim como o poder da aura maligna mais potente presente. Se você for de alinhamento bom, e a força da aura maligna mais forte for avassaladora; se a criatura tiver DV igual a pelo menos duas vezes o nível do seu personagem, você fica atordoado por 1 rodada e a magia termina.  3ª Rodada: O poder e a localização de cada aura, e a qual senhor dos demônios, se houver, um demônio é mais intimamente afiliado. Se uma aura estiver fora da sua linha de visão, você discerne a direção mas não sua localização exata. A afiliação a um senhor dos demônios só é revelada quando a criatura detectada é um demônio (não apenas uma criatura corrompida por um demônio). Demônios recebem um teste de resistência de Vontade para resistir em revelar a qual senhor dos demônios são afiliados. Se o demônio obtiver sucesso neste teste de resistência ou não for devoto a um senhor dos demônios, você sabe apenas que este aspecto da magia não retornou informação.  Além do detalhado acima, esta magia funciona de forma similar a detectar mal em termos de poder de aura, auras persistentes, auras avassaladoras, e assim por diante.
+
+---

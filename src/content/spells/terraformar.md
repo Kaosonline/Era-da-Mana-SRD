@@ -1,0 +1,14 @@
+### Terraformar
+
+**Escola** Transmutação; **Nível** Arcano 7, Divino 6
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 hora **Componentes** V, S, M (minerais preciosos no valor de 10.000 po, ver texto)
+
+**EFEITO**
+**Alcance** 30 metros **Área** emanação de 30 metros de raio, centrada em você **Duração** 1 dia/nível (ver texto) **Teste de Resistência** nenhum **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Você altera o terreno e o clima da área para um novo tipo de terreno e clima apropriado ao planeta ou plano. Por exemplo, você pode transformar um deserto em planícies. Para lançar essa magia, você deve gastar 10 usos de poder mítico junto com o custo material. Isso altera magicamente o clima da área e as plantas normais para aquelas apropriadas ao novo terreno, mas não afeta criaturas ou a configuração da terra. Transformar colinas rochosas em áreas florestais converte gramíneas em arbustos e árvores pequenas, mas não achata as colinas ou muda os animais para se adequar ao novo ambiente. Você pode alterar o clima em um passo (quente, temperado ou frio). A extensão máxima da mudança de terreno fica a critério do MJ, mas em geral é para um tipo de terreno similar ou um passo dentro desse tipo de terreno (como de uma floresta típica para uma floresta com árvores enormes ou sub-bosque raso, de um pântano raso para um pântano profundo, e assim por diante). Você pode ser capaz de mudar a terra para um tipo de terreno similar, como transformar uma floresta esparsa em um pântano relativamente seco. Criaturas locais adversamente afetadas por essas alterações fogem da área ou morrem rapidamente, dependendo de sua mobilidade e consciência da mudança. Múltiplas conjurações da magia na mesma área podem criar uma área com terreno e clima radicalmente diferentes da terra circundante. O MJ pode decidir que certas mudanças de terreno são insustentáveis e encurtar a duração, ou que algumas são adequadas para a área e estender a duração. Essa magia pode ter muitos efeitos secundários com base na natureza da mudança, no tipo de terreno limítrofe e assim por diante; esses devem ser determinados pelo MJ caso a caso. Por exemplo, transformar um deserto requer trazer água do subsolo para sustentar as plantas, o que pode esgotar o lençol freático em áreas próximas. Criar um deserto quente no meio de uma tundra coberta de neve criará uma área limítrofe de lama e tempestades frequentes devido ao choque de frentes de ar quente e frio. Se você tiver pelo menos 8º nível mítico, você pode gastar 20 usos de poder mítico em vez de 10 para aumentar o alcance para 1,6 km, a área para uma emanação de 1,6 km de raio centrada em você e a duração para 1 mês por nível de conjurador.
+
+---

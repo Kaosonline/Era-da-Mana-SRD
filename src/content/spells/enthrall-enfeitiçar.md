@@ -1,0 +1,12 @@
+### Enthrall (Enfeitiçar)
+
+**Escola** Encantamento (Encanto) [dependente de idioma, afeta a mente, sônico]; **Nível** Arcano 2, Divino 2
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 rodada  **Componentes** V, S
+
+**EFEITO**
+**Alcance** médio (30m + 3m/nível)  **Alvos** qualquer número de criaturas  **Duração** 1 hora ou menos  **Teste de Resistência** Vontade anula; ver texto  **Resistência a Magia** sim
+
+**DESCRIÇÃO**
+Se você tem a atenção de um grupo de criaturas, você pode usar esta magia para mantê-las enfeitiçadas. Para conjurar a magia, você deve falar ou cantar sem interrupção por 1 rodada completa. A partir daí, aqueles afetados lhe dão atenção inabalável, ignorando seus arredores. Eles são considerados terem uma atitude amigável enquanto estiverem sob o efeito da magia. Qualquer criatura potencialmente afetada de uma raça ou religião hostil à sua recebe um bônus de +4 no teste de resistência. Um alvo com 4 ou mais ND ou com uma pontuação de Sabedoria de 16 ou mais permanece ciente de seus arredores e tem uma atitude indiferente. Ele ganha um novo teste de resistência se testemunhar ações que se oponha. O efeito dura enquanto você falar ou cantar, até um máximo de 1 hora. Aqueles enfeitiçados por suas palavras não tomam nenhuma ação enquanto você fala ou canta e por 1d3 rodadas após isso enquanto discutem o tópico ou a apresentação. Aqueles que entrarem na área durante a apresentação também devem passar no teste de resistência ou ficarem enfeitiçados. O discurso termina (mas o atraso de 1d3 rodadas ainda se aplica) se você perder a concentração ou fizer qualquer coisa além de falar ou cantar. Se aqueles não enfeitiçados tiverem atitudes hostis ou inimigas em relação a você, eles podem coletivamente fazer um teste de Carisma para tentar encerrar a magia vaiando e perturbando. Para este teste, use o bônus de Carisma da criatura com o maior Carisma no grupo; outros podem fazer testes de Carisma para auxiliar. A vaiada encerra a magia se o resultado deste teste superar o resultado do seu teste de Carisma. Apenas um desafio desses é permitido por uso da magia. Se qualquer membro da audiência for atacado ou submetido a algum outro ato abertamente hostil, a magia termina e os membros anteriormente enfeitiçados tornam-se imediatamente hostis em relação a você. Cada criatura com 4 ou mais ND ou com uma pontuação de Sabedoria de 16 ou mais torna-se hostil.

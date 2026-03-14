@@ -1,0 +1,12 @@
+### Sugestão Sonâmbula
+
+**Escola** Encantamento (Compulsão) [afeta a mente]; **Nível** Arcano 3
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M (duas doses de óleo de taggit no valor total de 180 po)
+
+**EFEITO**
+**Alcance** perto (7,5m + 1,5m/2 níveis)  **Alvos** uma criatura  **Duração** 24 horas  **Teste de Resistência** Vontade anula ou nenhum (veja texto)  **Resistência a Magia** sim
+
+**DESCRIÇÃO**
+Você compel a criatura alvo a se levantar de seu sono como se sonâmbula e realizar uma linha de atividade (limitada a uma ou duas frases). A magia tem efeito imediatamente se o alvo já estiver dormindo, ou assim que o alvo adormecer se estiver consciente. Você pode especificar que a criatura espere antes de agir quando der suas instruções se assim desejar. Uma criatura dormindo não tem um teste de resistência contra esta magia. A atividade sugerida não deve causar que o alvo prejudique diretamente a si mesmo ou a outros, mas não precisa ser razoável. Por exemplo, você pode instruir o alvo a destrancar portas e janelas ou envenenar as rações de seu aliado, mas não pular de um telhado ou realizar uma ação de golpe de misericórdia contra um aliado dormindo. Instruções que causam dano direto fazem o alvo acordar imediatamente antes de realizar a ação e o alvo tem uma memória vaga do que deveria fazer. O alvo move-se a sua velocidade, mas não é capaz de correr ou se mover a uma taxa de velocidade maior. Move-se em condições de escuridão como se tivesse visão no escuro e pode realizar a maioria das ações simples e baseadas em perícia, mas não pode entrar em combate, conjurar magias ou realizar ações que requerem consciência cognitiva significativa (como tomar decisões complexas, resolver quebra-cabeças ou usar itens mágicos complicados). Se a criatura recebe qualquer dano enquanto sonâmbula, deve tentar um novo teste de resistência. Se tem sucesso, a magia termina e a criatura acorda. Quando o alvo completa a linha de atividade sugerida, ou quando a magia termina ou é dispensada, o alvo permanece inconsciente e retorna para onde estava dormindo e deve ser acordado normalmente. Ele não retém memória do que fez enquanto inconsciente (com a única exceção descrita acima). Diferente da magia sonambulismoAPG, tentativas de usar sugestão sonâmbula em uma criatura que está inconsciente por qualquer motivo além de dormir automaticamente falham. Uma criatura afetada por sugestão sonâmbula não está ciente de que foi programada para agir em seu sono (a menos que acordada porque estava prestes a causar dano).

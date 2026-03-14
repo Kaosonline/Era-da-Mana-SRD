@@ -1,0 +1,14 @@
+### Caminhada Sombria
+
+**Escola** Ilusão (Sombra) [sombra]; **Nível** Arcano 5
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S
+
+**EFEITO**
+**Alcance** toque  **Alvos** até uma criatura tocada/nível  **Duração** 1 horas/nível (D)  **Teste de Resistência** Vontade anula  **Resistência a Magia** sim
+
+**DESCRIÇÃO**
+Para usar a magia caminhada sombria, você deve estar em uma área de penumbra. Você e qualquer criatura que tocar são então transportados ao longo de um caminho serpenteante de substância sombria para a borda do Plano Material onde ele faz fronteira com o Plano das Sombras. O efeito é amplamente ilusório, mas o caminho é quase real. Você pode levar mais de uma criatura com você (sujeito ao seu limite de nível), mas todas devem estar se tocando. Na região das sombras, você se move a uma taxa de 80 km por hora, movendo-se normalmente nas bordas do Plano das Sombras, mas muito mais rapidamente em relação ao Plano Material. Assim, você pode usar esta magia para viajar rapidamente entrando no Plano das Sombras, percorrendo a distância desejada e depois retornando ao Plano Material. Devido à confusão da realidade entre o Plano das Sombras e o Plano Material, você não consegue discernir detalhes do terreno ou áreas que passa durante o trânsito, nem pode prever perfeitamente onde sua viagem terminará. É impossível julgar distâncias com precisão, tornando a magia virtualmente inútil para reconhecimento ou espionagem. Além disso, quando o efeito da magia termina, você é deslocado 1d10 x 3m em uma direção horizontal aleatória de seu destino desejado. Se isso o colocaria dentro de um objeto sólido, você é deslocado 1d10 x 30m na mesma direção. Se isso ainda o colocaria dentro de um objeto sólido, você (e quaisquer criaturas com você) é deslocado para o espaço vazio disponível mais próximo, mas o esforço dessa atividade deixa cada criatura fatigada (sem teste de resistência). A caminhada sombria também pode ser usada para viajar para outros planos que fazem fronteira com o Plano das Sombras, mas esse uso requer a travessia do Plano das Sombras para chegar a uma fronteira com outro plano da realidade. A travessia do Plano das Sombras requer 1d4 horas. Quaisquer criaturas tocadas por você quando a caminhada sombria é conjurada também fazem a transição para as bordas do Plano das Sombras. Elas podem optar por segui-lo, vaguear pelo plano ou tropeçar de volta ao Plano Material (50% de chance para qualquer um dos últimos resultados se estiverem perdidas ou abandonadas por você). Criaturas relutantes em acompanhá-lo ao Plano das Sombras recebem um teste de Vontade, anulando o efeito se bem-sucedido.
+
+---

@@ -1,0 +1,12 @@
+### Aspecto Animal
+
+**Escola** Transmutação (Polimorfia); **Nível** Arcano 2, Divino 2
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M/FD (uma parte do animal)
+
+**EFEITO**
+**Alcance** pessoal  **Alvos** você  **Duração** 1 minuto/nível (D)  **Teste de Resistência** nenhum  **Resistência a Magia** sim (inofensivo)
+
+**DESCRIÇÃO**
+Você ganha algumas das qualidades benéficas de um animal. Sua forma base permanece amplamente inalterada e seu tamanho não muda, mas algumas de suas partes corporais são modificadas. Armaduras ou equipamentos que você esteja vestindo se ajustam à sua nova forma pela duração da magia. Quando você conjura aspecto animal, escolha um dos seguintes animais para ganhar os benefícios associados. Você só pode ter uma magia de aspecto animal ou aspecto animal superior ativa sobre si de cada vez.  Rã: Suas pernas se tornam alongadas e musculosas. Você recebe um bônus de competência de +4 em testes de Acrobacia e sempre salta como se tivesse corrido para impulso.  Gorila: Seus braços se tornam longos, flexíveis e fortes como os de um grande símio. Seu dano desarmado aumenta um passo e você recebe um bônus de competência de +4 em testes de manobra de combate ao realizar as manobras de combate agarrar ou reposicionar.  Macaco: Suas mãos e braços se tornam habilidosos como os de um símio. Você recebe um bônus de competência de +4 em testes de Escalada e pode arremessar objetos como se tivesse o talento Arremessar Qualquer Coisa.  Lontra: Suas mãos e pés desenvolvem membranas e seus pulmões ganham capacidade, permitindo que você se mova pela água com facilidade. Você recebe uma velocidade de natação igual à metade de sua velocidade e todos os benefícios de ter uma velocidade de natação. Além disso, você pode prender a respiração por 4 rodadas por ponto de Constituição antes de ser forçado a fazer testes de Constituição para continuar segurando o ar.  Guaxinim: Suas mãos se tornam extremamente habilidosas e seus pés desenvolvem almofadas. Você recebe um bônus de competência de +2 em testes de Desarmar Armadilhas, Prestidigitação e Furtividade.  Raptor: Suas pernas se tornam construídas para velocidade de corrida, como as de um deinonico. Você recebe um bônus de aprimoramento de +6 metros à sua velocidade base.  Lagarto Arborícola: Suas mãos e pés desenvolvem garras de escalada e almofadas de aderência. Você recebe uma velocidade de escalada igual à metade de sua velocidade normal e todos os benefícios de ter uma velocidade de escalada natural.

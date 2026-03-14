@@ -1,0 +1,12 @@
+### What Grows Within
+
+**Escola** Necromancia [mal]; **Nível** Arcano 6, Divino 6
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação rápida  **Componentes** V
+
+**EFEITO**
+**Alcance** pessoal  **Efeito** você  **Duração** 1 rodadas/nível  **Teste de Resistência** ver texto  **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Ao pronunciar o nome "Xhamen-Dor", você se infunde com a essência da Mancha Mais Interna e recebe um bônus profano de +3 em testes de Vontade pela duração da magia. Quando você prepara what grows within pela primeira vez, ou a primeira vez que a usa por meio de um item de conclusão ou acionamento de magia, você pode então ser alvo da habilidade de sonhos infectados de Xhamen-Dor (ver página 86). Enquanto você estiver sob os efeitos de what grows within, suas magias que afetam a mente carregam essa contaminação sobrenatural e podem infectar aqueles que sucumbem a esses efeitos. Sempre que você afetar com sucesso uma criatura com uma de suas magias que afetam a mente (isso requer que o alvo falhe em seu teste de resistência contra a magia, se ela permitir um teste, mas afeta automaticamente um alvo se a magia não permitir um teste de resistência), esse alvo também deve ter sucesso em um teste de Fortitude contra what grows within ou imediatamente se torna acometido por uma versão menor da infestação semeada de Xhamen-Dor. Essa infestação não expõe a vítima aos sonhos infecciosos de Xhamen-Dor, mas pode eventualmente resultar na transformação daquela criatura em uma das semeadas. Cada vez que você afetar uma criatura com what grows within dessa maneira, a duração restante de what grows within é reduzida em 1 rodada. Se você afetar múltiplas criaturas em uma rodada, você escolhe a ordem na qual elas devem testar contra os efeitos de what grows within, e reduz a duração restante da magia em 1 rodada cada vez que uma delas for afetada pela infestação. Infestação Semeador Menor - teste de Fortitude DC = DC de resistência da magia; início imediato; frequência 1/dia; efeito 1d4 drenagem de Constituição; cura nenhuma. Essa infestação pode ser curada apenas por magia. Uma criatura cuja Constituição seja reduzida a 0 por essa infestação morre e se ergue da morte em 1d4 rodadas como uma criatura semeadora (ver página 90). Este é um efeito de infestação.
