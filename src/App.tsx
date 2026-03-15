@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { Header } from './components/Header/Header';
 import { Sidebar } from './components/Sidebar/Sidebar';
@@ -22,35 +22,41 @@ function AppContent() {
   const [categories, setCategories] = useState<string[]>([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [spellFilters, setSpellFilters] = useState<SpellFilters>({});
+  const [spellFilters, setSpellFilters] = useState<SpellFilters>({ });
   const [availableSpellValues, setAvailableSpellValues] = useState<{
     schools: string[];
     castingTimes: string[];
     durations: string[];
-  }>({ schools: [], castingTimes: [], durations: [] });
+    levels: number[];
+  }>({ schools: [], castingTimes: [], durations: [], levels: [] });
 
   useEffect(() => {
     const items = loadContent();
     setAllItems(items);
     setCategories(getCategories(items));
-    
     // Extrair valores únicos de spells para os filtros
     if (items.length > 0) {
       const spells = items.filter(item => item.category === 'spells');
+      const levels = Array.from(
+        new Set(
+          spells
+            .map(spell => spell.spellLevel)
+            .filter((level): level is number => level !== undefined)
+        )
+      ).sort((a, b) => a - b);
+
       setAvailableSpellValues({
         schools: getUniqueSpellValues(spells, 'spellSchool'),
         castingTimes: getUniqueSpellValues(spells, 'spellCastingTime'),
         durations: getUniqueSpellValues(spells, 'spellDuration'),
+        levels,
       });
-    }
-    
-    if (items.length > 0) {
+
       setSelectedId(items[0].id);
     }
   }, []);
 
   const selectedItem = allItems.find(i => i.id === selectedId) || null;
-
   const currentCategory = selectedItem?.category || null;
   const itemsInCategory = currentCategory
     ? allItems
@@ -85,7 +91,8 @@ function AppContent() {
     setSearchQuery('');
   };
 
-  const hasActiveFilters = searchQuery || selectedCategories.length > 0 || Object.values(spellFilters).some(v => v);
+  const hasActiveFilters = !!searchQuery || selectedCategories.length > 0 || Object.values(spellFilters).some(v => v);
+  const hasSpellsSelected = currentCategory === 'spells';
 
   return (
     <div className="app-srd">
@@ -107,7 +114,7 @@ function AppContent() {
           spellFilters={spellFilters}
           onSpellFilterChange={updateSpellFilter}
           availableSpellValues={availableSpellValues}
-          hasSpellsSelected={selectedCategories.includes('spells')}
+          hasSpellsSelected={hasSpellsSelected}
         />
         <main className="main-content">
           <ContentView

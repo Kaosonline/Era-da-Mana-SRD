@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { ContentItem } from '../../types/content';
 import { highlightText } from '../../utils/highlightText';
 import './Sidebar.css';
@@ -35,6 +35,7 @@ interface SidebarProps {
   spellFilters: { level?: string; school?: string; castingTime?: string; duration?: string };
   onSpellFilterChange: (key: keyof SpellFilters, value: string) => void;
   availableSpellValues: {
+    levels: number [];
     schools: string[];
     castingTimes: string[];
     durations: string[];
@@ -98,18 +99,21 @@ export function Sidebar({
       if (spellFilters.school) {
         result = result.filter(item => 
           item.category === 'spells' && 
+          spellFilters.school &&
           item.spellSchool?.toLowerCase().includes(spellFilters.school.toLowerCase())
         );
       }
       if (spellFilters.castingTime) {
         result = result.filter(item => 
           item.category === 'spells' && 
+          spellFilters.castingTime &&
           item.spellCastingTime?.toLowerCase().includes(spellFilters.castingTime.toLowerCase())
         );
       }
       if (spellFilters.duration) {
         result = result.filter(item => 
           item.category === 'spells' && 
+          spellFilters.duration &&
           item.spellDuration?.toLowerCase().includes(spellFilters.duration.toLowerCase())
         );
       }
@@ -269,6 +273,7 @@ export function Sidebar({
               </div>
 
               {/* Filtros específicos de magias - só mostra se spells estiver selecionado E houver metadados */}
+                            {/* Filtros específicos de magias - só mostra se spells estiver selecionado E houver metadados */}
               {hasSpellsSelected && hasSpellMetadataAvailable && (
                 <div className="spell-filters">
                   <h4>Filtros de Magias</h4>
@@ -280,11 +285,18 @@ export function Sidebar({
                       onChange={(e) => onSpellFilterChange('level', e.target.value)}
                     >
                       <option value="">Todos</option>
-                      {[0,1,2,3,4,5,6,7,8,9].map(n => (
-                        <option key={n} value={n}>
-                          {n === 0 ? 'Truque (Nível 0)' : `Nível ${n}`}
-                        </option>
-                      ))}
+                      {availableSpellValues.levels && availableSpellValues.levels.length > 0 ? 
+                        availableSpellValues.levels.map(level => (
+                          <option key={level} value={level.toString()}>
+                            {level === 0 ? 'Truque (Nível 0)' : `Nível ${level}`}
+                          </option>
+                        )) :
+                        [0,1,2,3,4,5,6,7,8,9].map(n => (
+                          <option key={n} value={n.toString()}>
+                            {n === 0 ? 'Truque (Nível 0)' : `Nível ${n}`}
+                          </option>
+                        ))
+                      }
                     </select>
                   </div>
 

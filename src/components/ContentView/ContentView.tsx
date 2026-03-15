@@ -50,7 +50,7 @@ function HomePage({
   allItems: ContentItem[], 
   onSelect: (id: string) => void,
   selectedCategories: string[],
-(spellFilters: { level?: string; school?: string; castingTime?: string; duration?: string }),
+  spellFilters: { level?: string; school?: string; castingTime?: string; duration?: string },
   searchQuery: string,
   hasActiveFilters: boolean,
   onClearFilters: () => void
@@ -202,11 +202,13 @@ export function ContentView({
         <h1 className="content-title">{item.title}</h1>
         {item.category === 'spells' && (
           <div className="spell-metadata">
-            {item.spellLevel !== undefined && (
-              <span className="metadata-item">Nível {item.spellLevel}</span>
-            )}
             {item.spellSchool && (
               <span className="metadata-item">{item.spellSchool}</span>
+            )}
+            {item.spellClasses && item.spellClasses.length > 0 && (
+              <span className="metadata-item">
+                Nível: {item.spellClasses.map(c => `${c.className} ${c.level}`).join(', ')}
+              </span>
             )}
             {item.spellCastingTime && (
               <span className="metadata-item">{item.spellCastingTime}</span>
