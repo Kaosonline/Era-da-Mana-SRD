@@ -45,6 +45,7 @@ export function loadContent(): ContentItem[] {
     const title = getTitle(source);
     const id = getId(path);
     
+    
     let item: ContentItem = {
       id,
       category,
@@ -52,7 +53,7 @@ export function loadContent(): ContentItem[] {
       content: source,
     };
     
-    if (category === 'spells') {
+    if (category === 'magias') {  // <<< CORRIGIDO: spells -> magias
       const spellMetadata = parseSpellMetadata(source);
       if (spellMetadata) {
         const mapped: Partial<ContentItem> = {};
@@ -101,7 +102,7 @@ export function getCategories(items: ContentItem[]): string[] {
 
 export function getUniqueSpellValues(items: ContentItem[], field: keyof ContentItem): string[] {
   const values = items
-    .filter(item => item.category === 'spells' && item[field])
+    .filter(item => item.category === 'magias' && item[field])  // <<< CORRIGIDO: spells -> magias
     .map(item => String(item[field]))
     .filter((value, index, arr) => arr.indexOf(value) === index)
     .sort((a, b) => a.localeCompare(b));

@@ -47,7 +47,7 @@ export function parseSpellMetadata(markdown: string): SpellMetadata | null {
     
     while ((match = regex.exec(line)) !== null) {
       const key = match[1].trim().toLowerCase();
-      let value = match[2].trim();
+      let value = match[2].trim(); value = value.replace(/;+$/, '').trim();
 
       // Cortar qualquer outro **...** que venha depois (metadados na mesma linha)
       const nextAsterisk = value.indexOf('**');

@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { Header } from './components/Header/Header';
 import { Sidebar } from './components/Sidebar/Sidebar';
@@ -22,7 +22,7 @@ function AppContent() {
   const [categories, setCategories] = useState<string[]>([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [spellFilters, setSpellFilters] = useState<SpellFilters>({ });
+  const [spellFilters, setSpellFilters] = useState<SpellFilters>({});
   const [availableSpellValues, setAvailableSpellValues] = useState<{
     schools: string[];
     castingTimes: string[];
@@ -34,25 +34,23 @@ function AppContent() {
     const items = loadContent();
     setAllItems(items);
     setCategories(getCategories(items));
-    // Extrair valores únicos de spells para os filtros
+    // Extrair valores únicos de magias para os filtros
     if (items.length > 0) {
-      const spells = items.filter(item => item.category === 'spells');
+      const magias = items.filter(item => item.category === 'magias');  // <<< CORRIGIDO: spells -> magias
       const levels = Array.from(
         new Set(
-          spells
+          magias
             .map(spell => spell.spellLevel)
             .filter((level): level is number => level !== undefined)
         )
       ).sort((a, b) => a - b);
 
       setAvailableSpellValues({
-        schools: getUniqueSpellValues(spells, 'spellSchool'),
-        castingTimes: getUniqueSpellValues(spells, 'spellCastingTime'),
-        durations: getUniqueSpellValues(spells, 'spellDuration'),
+        schools: getUniqueSpellValues(magias, 'spellSchool'),
+        castingTimes: getUniqueSpellValues(magias, 'spellCastingTime'),
+        durations: getUniqueSpellValues(magias, 'spellDuration'),
         levels,
       });
-
-      setSelectedId(items[0].id);
     }
   }, []);
 
@@ -92,7 +90,7 @@ function AppContent() {
   };
 
   const hasActiveFilters = !!searchQuery || selectedCategories.length > 0 || Object.values(spellFilters).some(v => v);
-  const hasSpellsSelected = currentCategory === 'spells';
+  const hasMagiasSelected = selectedCategories.includes('magias');  // <<< CORRIGIDO: spells -> magias
 
   return (
     <div className="app-srd">
@@ -114,7 +112,7 @@ function AppContent() {
           spellFilters={spellFilters}
           onSpellFilterChange={updateSpellFilter}
           availableSpellValues={availableSpellValues}
-          hasSpellsSelected={hasSpellsSelected}
+          hasMagiasSelected={hasMagiasSelected}  // <<< CORRIGIDO: hasSpellsSelected -> hasMagiasSelected
         />
         <main className="main-content">
           <ContentView
@@ -126,7 +124,6 @@ function AppContent() {
             currentCategory={currentCategory}
             allItems={allItems}
             searchQuery={searchQuery}
-            onSearchChange={setSearchQuery}
             selectedCategories={selectedCategories}
             spellFilters={spellFilters}
             hasActiveFilters={hasActiveFilters}

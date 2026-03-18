@@ -6,7 +6,7 @@ import './Sidebar.css';
 const CATEGORY_ICONS: Record<string, string> = {
   'races': '🧝',
   'classes': '⚔️',
-  'spells': '✨',
+  'magias': '✨',  // <<< ALTERADO: spells -> magias
   'feats': '📜',
   'skills': '🎯',
   'equipment': '🛡️',
@@ -35,11 +35,12 @@ interface SidebarProps {
   spellFilters: { level?: string; school?: string; castingTime?: string; duration?: string };
   onSpellFilterChange: (key: keyof SpellFilters, value: string) => void;
   availableSpellValues: {
-    levels: number [];
+    levels: number[];
     schools: string[];
     castingTimes: string[];
     durations: string[];
   };
+  hasMagiasSelected: boolean;  // <<< ALTERADO: hasSpellsSelected -> hasMagiasSelected
 }
 
 type SpellFilters = { level?: string; school?: string; castingTime?: string; duration?: string };
@@ -57,28 +58,29 @@ export function Sidebar({
   spellFilters,
   onSpellFilterChange,
   availableSpellValues,
+  hasMagiasSelected,  // <<< ALTERADO: hasSpellsSelected -> hasMagiasSelected
 }: SidebarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showCategoryFilter, setShowCategoryFilter] = useState(false);
   const [suggestions, setSuggestions] = useState<ContentItem[]>([]);
-  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [showSuggestions] = useState(false);
 
   const toggleMobile = () => setMobileOpen(!mobileOpen);
 
-  const hasSpellsSelected = selectedCategories.includes('spells');
-
-  // Verifica se HÁ SPELLS COM METADADOS disponíveis para filtrar
+  // <<< ALTERADO: hasSpellsSelected -> hasMagiasSelected
+  // Verifica se HÁ MAGIAS COM METADADOS disponíveis para filtrar
   const hasSpellMetadataAvailable = useMemo(() => {
-    if (!hasSpellsSelected) return false;
-    // Verifica se há pelo menos uma spell com algum metadado
+    if (!hasMagiasSelected) return false;
+    // Verifica se há pelo menos uma magia com algum metadado
     return items.some(item => 
-      item.category === 'spells' && 
-      (item.spellLevel !== undefined || 
-       item.spellSchool !== undefined || 
-       item.spellCastingTime !== undefined || 
-       item.spellDuration !== undefined)
+      item.category === 'magias' && (  // <<< ALTERADO: spells -> magias
+        item.spellLevel !== undefined || 
+        item.spellSchool !== undefined || 
+        item.spellCastingTime !== undefined || 
+        item.spellDuration !== undefined
+      )
     );
-  }, [items, hasSpellsSelected]);
+  }, [items, hasMagiasSelected]);
 
   // Filtrar itens
   const filteredItems = useMemo(() => {
@@ -89,30 +91,30 @@ export function Sidebar({
       result = result.filter(item => selectedCategories.includes(item.category));
     }
 
-    // Filtro de spells (apenas se a categoria spells foi selecionada)
-    if (hasSpellsSelected) {
+    // Filtro de magias (apenas se a categoria magias foi selecionada)
+    if (hasMagiasSelected) {  // <<< ALTERADO: hasSpellsSelected -> hasMagiasSelected
       if (spellFilters.level) {
         result = result.filter(item => 
-          item.category === 'spells' && item.spellLevel?.toString() === spellFilters.level
+          item.category === 'magias' && item.spellLevel?.toString() === spellFilters.level  // <<< ALTERADO
         );
       }
       if (spellFilters.school) {
         result = result.filter(item => 
-          item.category === 'spells' && 
+          item.category === 'magias' &&  // <<< ALTERADO
           spellFilters.school &&
           item.spellSchool?.toLowerCase().includes(spellFilters.school.toLowerCase())
         );
       }
       if (spellFilters.castingTime) {
         result = result.filter(item => 
-          item.category === 'spells' && 
+          item.category === 'magias' &&  // <<< ALTERADO
           spellFilters.castingTime &&
           item.spellCastingTime?.toLowerCase().includes(spellFilters.castingTime.toLowerCase())
         );
       }
       if (spellFilters.duration) {
         result = result.filter(item => 
-          item.category === 'spells' && 
+          item.category === 'magias' &&  // <<< ALTERADO
           spellFilters.duration &&
           item.spellDuration?.toLowerCase().includes(spellFilters.duration.toLowerCase())
         );
@@ -129,7 +131,7 @@ export function Sidebar({
     }
 
     return result;
-  }, [items, searchQuery, selectedCategories, spellFilters, hasSpellsSelected]);
+  }, [items, searchQuery, selectedCategories, spellFilters, hasMagiasSelected]);
 
   // Agrupar itens filtrados por categoria
   const grouped = useMemo(() => {
@@ -153,17 +155,12 @@ export function Sidebar({
     if (searchQuery.trim().length > 0) {
       const filtered = filteredItems.slice(0, 6);
       setSuggestions(filtered);
-      setShowSuggestions(true);
-    } else {
-      setSuggestions([]);
-      setShowSuggestions(false);
     }
   }, [searchQuery, filteredItems]);
 
   const handleSuggestionClick = (id: string) => {
     onSelect(id);
     onSearchChange('');
-    setShowSuggestions(false);
     setShowCategoryFilter(false);
   };
 
@@ -177,7 +174,7 @@ export function Sidebar({
 
   // Contador de filtros ativos
   const activeFilterCount = selectedCategories.length + 
-    (hasSpellsSelected && hasSpellMetadataAvailable ? 
+    (hasMagiasSelected && hasSpellMetadataAvailable ?  // <<< ALTERADO
       (spellFilters.level ? 1 : 0) + 
       (spellFilters.school ? 1 : 0) + 
       (spellFilters.castingTime ? 1 : 0) + 
@@ -200,10 +197,9 @@ export function Sidebar({
                 value={searchQuery}
                 onChange={(e) => {
                   onSearchChange(e.target.value);
-                  setShowSuggestions(e.target.value.trim().length > 0);
                 }}
-                onFocus={() => { if (searchQuery.trim()) setShowSuggestions(true); }}
-                onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+                onFocus={() => { if (searchQuery.trim()) {}; }}
+                onBlur={() => setTimeout(() => {}, 200)}
                 className="search-input"
               />
               {searchQuery && (
@@ -211,7 +207,6 @@ export function Sidebar({
                   className="clear-search" 
                   onClick={() => {
                     onSearchChange('');
-                    setShowSuggestions(false);
                   }}
                   aria-label="Clear search"
                 >
@@ -272,9 +267,8 @@ export function Sidebar({
                 })}
               </div>
 
-              {/* Filtros específicos de magias - só mostra se spells estiver selecionado E houver metadados */}
-                            {/* Filtros específicos de magias - só mostra se spells estiver selecionado E houver metadados */}
-              {hasSpellsSelected && hasSpellMetadataAvailable && (
+              {/* Filtros específicos de magias - só mostra se magias estiver selecionado E houver metadados */}
+              {hasMagiasSelected && hasSpellMetadataAvailable && (  // <<< ALTERADO
                 <div className="spell-filters">
                   <h4>Filtros de Magias</h4>
                   
@@ -363,7 +357,7 @@ export function Sidebar({
                   </div>
                   <div className="suggestion-meta">
                     {getCategoryIcon(item.category)} {formatCategoryName(item.category)}
-                    {item.category === 'spells' && item.spellLevel !== undefined && (
+                    {item.category === 'magias' && item.spellLevel !== undefined && (  // <<< ALTERADO
                       <span> • Nv. {item.spellLevel}</span>
                     )}
                   </div>
@@ -395,7 +389,7 @@ export function Sidebar({
                         }}
                       >
                         {highlightText(item.title, searchQuery)}
-                        {item.category === 'spells' && item.spellLevel !== undefined && (
+                        {item.category === 'magias' && item.spellLevel !== undefined && (  // <<< ALTERADO
                           <span className="spell-level-indicator"> (Nv.{item.spellLevel})</span>
                         )}
                       </button>

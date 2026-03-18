@@ -1,19 +1,17 @@
-import React from 'react';
 import { ContentItem } from '../../types/content';
 import { parseMarkdown } from '../../utils/markdownParser';
-import { highlightText } from '../../utils/highlightText';
 import './ContentView.css';
 
 function getCategoryIcon(category: string): string {
   const icons: Record<string, string> = {
-    'races': '🧝',
+    'raças': '🧝',
     'classes': '⚔️',
-    'spells': '✨',
-    'feats': '📜',
-    'skills': '🎯',
-    'equipment': '🛡️',
-    'conditions': '⚠️',
-    'rules': '📖',
+    'magias': '✨',
+    'talentos': '📜',
+    'perícias': '🎯',
+    'equipamentos': '🛡️',
+    'condições': '⚠️',
+    'regras': '📖',
   };
   return icons[category.toLowerCase()] || '📚';
 }
@@ -31,7 +29,6 @@ interface ContentViewProps {
   currentCategory?: string | null;
   allItems?: ContentItem[];
   searchQuery: string;
-  onSearchChange: (query: string) => void;
   selectedCategories: string[];
   spellFilters: { level?: string; school?: string; castingTime?: string; duration?: string };
   hasActiveFilters: boolean;
@@ -65,7 +62,7 @@ function HomePage({
       (searchQuery === '' || 
        item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
        item.content.toLowerCase().includes(searchQuery.toLowerCase())) &&
-      (category !== 'spells' || 
+      (category !== 'magias' || 
         (!spellFilters.level || item.spellLevel?.toString() === spellFilters.level) &&
         (!spellFilters.school || item.spellSchool?.toLowerCase().includes(spellFilters.school.toLowerCase())) &&
         (!spellFilters.castingTime || item.spellCastingTime?.toLowerCase().includes(spellFilters.castingTime.toLowerCase())) &&
@@ -148,7 +145,6 @@ export function ContentView({
   currentCategory,
   allItems = [],
   searchQuery,
-  onSearchChange,
   selectedCategories,
   spellFilters,
   hasActiveFilters,
@@ -200,7 +196,7 @@ export function ContentView({
 
       <article className="content-article">
         <h1 className="content-title">{item.title}</h1>
-        {item.category === 'spells' && (
+        {item.category === 'magias' && (
           <div className="spell-metadata">
             {item.spellSchool && (
               <span className="metadata-item">{item.spellSchool}</span>
