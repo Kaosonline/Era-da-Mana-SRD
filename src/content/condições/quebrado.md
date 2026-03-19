@@ -1,0 +1,9 @@
+# Quebrado
+
+Itens que sofreram dano superior à metade de seus pontos de vida totais adquirem a condição quebrado, o que significa que são menos eficazes em sua tarefa designada. A condição quebrado tem os seguintes efeitos, dependendo do item.
+
+    Se o item for uma arma, quaisquer ataques feitos com o item sofrem uma penalidade de –2 nas jogadas de ataque e dano. Tais armas apenas obtêm um acerto crítico em um 20 natural e apenas causam ×2 de dano em um acerto crítico confirmado.
+    Se o item for uma armadura ou escudo, o bônus que ele concede à CA é reduzido pela metade, arredondado para baixo. Armaduras quebradas dobram sua penalidade de teste de armadura em perícias.
+    Se o item for uma ferramenta necessária para uma perícia, qualquer teste de perícia feito com o item sofre uma penalidade de –2.
+    Se o item for uma varinha ou bastão, ele consome o dobro de cargas quando usado.
+    Se o item não se encaixa em nenhuma dessas categorias, a condição quebrado não tem efeito em seu uso. Itens com a condição quebrado, independentemente do tipo, valem 75% de seu valor normal. Se o item for mágico, ele só pode ser reparado com uma magia de consertar (mending) ou fazer inteiro (make whole) conjurada por um personagem com um nível de conjurador igual ou superior ao do item. Itens perdem a condição quebrado se a magia restaurar o objeto a pelo menos metade de seus pontos de vida originais. Itens não mágicos podem ser reparados de forma semelhante, ou através da perícia Ofício usada para criá-lo. Geralmente, isso requer um teste de Ofício de CD 20 e 1 hora de trabalho por ponto de dano a ser reparado. A maioria dos artesãos cobra um décimo do custo total do item para reparar tal dano (mais se o item estiver gravemente danificado ou arruinado).

@@ -1,0 +1,3 @@
+# Morto
+
+Os pontos de vida do personagem são reduzidos a uma quantidade negativa igual ao seu valor de Constituição, sua Constituição cai para 0, ou ele é morto instantaneamente por uma magia ou efeito. A alma do personagem abandona seu corpo. Personagens mortos não podem se beneficiar de cura normal ou mágica, mas podem ser restaurados à vida através de magia. Um corpo morto se decompõe normalmente, a menos que seja preservado magicamente, mas a magia que restaura um personagem morto à vida também restaura o corpo à saúde total ou à condição em que estava no momento da morte (dependendo da magia ou dispositivo). De qualquer forma, personagens ressuscitados não precisam se preocupar com rigidez cadavérica, decomposição e outras condições que afetam corpos mortos.

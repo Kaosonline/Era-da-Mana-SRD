@@ -1,0 +1,3 @@
+# Surdo
+
+Um personagem surdo não pode ouvir. Ele sofre uma penalidade de –4 em testes de iniciativa, falha automaticamente em testes de Percepção baseados em som, sofre uma penalidade de –4 em testes de Percepção opostos e tem uma chance de 20% de falha em magias ao conjurar magias com componentes verbais. Personagens que permanecem surdos por muito tempo se acostumam com esses inconvenientes e podem superar alguns deles.

@@ -1,0 +1,5 @@
+# Agarrado
+
+Uma criatura agarrada está contida por uma criatura, armadilha ou efeito. Criaturas agarradas não podem se mover e sofrem uma penalidade de –4 em Destreza. Uma criatura agarrada sofre uma penalidade de –2 em todas as jogadas de ataque e testes de manobra de combate, exceto aqueles feitos para agarrar ou escapar de um agarrão. Além disso, criaturas agarradas não podem realizar ações que exijam duas mãos para executar. Um personagem agarrado que tenta lançar uma magia ou usar uma habilidade similar a magia deve fazer um teste de concentração (CD 10 + CMB do agressor + nível da magia) ou perder a magia. Criaturas agarradas não podem fazer ataques de oportunidade.
+
+Uma criatura agarrada não pode usar Furtividade para se esconder da criatura que a agarrou, mesmo que uma habilidade especial, como Esconder-se à Vista de Todos, normalmente permitisse que ela fizesse isso. Se uma criatura agarrada se tornar invisível, através de uma magia ou outra habilidade, ela ganha um bônus de circunstância de +2 em sua CMD para evitar ser agarrada, mas não recebe outros benefícios.

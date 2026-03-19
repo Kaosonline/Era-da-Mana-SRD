@@ -1,0 +1,3 @@
+# Incorpóreo
+
+Criaturas com a condição incorpórea não têm um corpo físico. Criaturas incorpóreas são imunes a todas as formas de ataque não mágicas. Criaturas incorpóreas sofrem metade do dano (50%) de armas mágicas, magias, efeitos similares a magia e efeitos sobrenaturais. Criaturas incorpóreas sofrem dano total de outras criaturas e efeitos incorpóreos, bem como de todos os efeitos de força. Consulte aqui para informações adicionais.

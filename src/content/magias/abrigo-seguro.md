@@ -3,7 +3,7 @@
 **Escola** Conjuração (Criação); **Nível** Arcano 4
 
 **CONJURAÇÃO**
-**Tempo de Conjuração** 10 minutos  **Componentes** V, S, M (uma lasca de pedra, areia, uma gota de água e um lascamento de madeira)
+**Tempo de Conjuração** 10 minutos  **Componentes** V, S
 
 **EFEITO**
 **Alcance** perto (7,5m + 1,5m/2 níveis)  **Efeito** estrutura quadrada de 6m  **Duração** 2 horas/nível (D)  **Teste de Resistência** nenhum  **Resistência a Magia** não

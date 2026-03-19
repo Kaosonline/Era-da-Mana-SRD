@@ -1,0 +1,3 @@
+# Paralisado
+
+Um personagem paralisado está congelado no lugar e incapaz de se mover ou agir. Um personagem paralisado tem valores de Destreza e Força efetivos de 0 e é indefeso, mas pode realizar ações puramente mentais. Uma criatura alada voando no ar no momento em que fica paralisada não pode bater suas asas e cai. Um nadador paralisado não pode nadar e pode se afogar. Uma criatura pode se mover através de um espaço ocupado por uma criatura paralisada — aliada ou não. Cada quadrado ocupado por uma criatura paralisada, no entanto, conta como 2 quadrados para se mover através.

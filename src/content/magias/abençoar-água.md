@@ -9,6 +9,6 @@
 **Alcance** toque  **Alvos** frasco de água tocado  **Duração** instantânea  **Teste de Resistência** Vontade anula (objeto)  **Resistência a Magia** sim (objeto)
 
 **DESCRIÇÃO**
-Esta transmutação imbui um frasco (meio litro) de água com energia positiva, transformando-o em água benta.
+Esta transmutação imbui um frasco de água com energia positiva, transformando-o em água benta.
 
 ---

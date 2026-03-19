@@ -1,0 +1,3 @@
+# Drenado de Energia
+
+O personagem ganha um ou mais níveis negativos, que podem se tornar permanentes. Se o sujeito tiver pelo menos tantos níveis negativos quantos seus Dados de Vida, ele morre. Dreno de energia não é um efeito de morte. Cada nível negativo concede as seguintes penalidades ao personagem: –1 em todos os valores de habilidade, jogadas de ataque, jogadas de dano de arma, testes de resistência, testes de perícia e uma perda de 5 pontos de vida.

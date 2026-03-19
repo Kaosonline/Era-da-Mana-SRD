@@ -1,0 +1,3 @@
+# Fascinado
+
+Uma criatura fascinada está enfeitiçada por um efeito sobrenatural ou de magia. A criatura fica em pé ou sentada quietamente, não realizando ações além de prestar atenção ao efeito fascinante, pelo tempo que o efeito durar. Ela sofre uma penalidade de –4 em testes de perícia feitos como reações, como testes de Percepção. Qualquer ameaça potencial, como uma criatura hostil se aproximando, permite que a criatura fascinada faça um novo teste de resistência contra o efeito fascinante. Qualquer ameaça óbvia, como alguém desembainhando uma arma, lançando uma magia ou mirando uma arma de longo alcance na criatura fascinada, quebra automaticamente o efeito. Um aliado da criatura fascinada pode sacudi-la livre da magia como uma ação padrão.

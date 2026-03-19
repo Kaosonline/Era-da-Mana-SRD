@@ -1,0 +1,3 @@
+# Sangramento
+
+Uma criatura que está sofrendo dano de sangramento sofre a quantidade de dano listada no início de seu turno. O sangramento pode ser interrompido por um teste de Cura (Heal) de CD 15 ou pela aplicação de qualquer magia que cure dano de pontos de vida (mesmo que o sangramento seja dano de habilidade). Alguns efeitos de sangramento causam dano de habilidade ou até mesmo dreno de habilidade. Efeitos de sangramento não se acumulam entre si, a menos que causem tipos diferentes de dano. Quando dois ou mais efeitos de sangramento causam o mesmo tipo de dano, aplica-se o pior efeito. Neste caso, dreno de habilidade é pior que dano de habilidade.

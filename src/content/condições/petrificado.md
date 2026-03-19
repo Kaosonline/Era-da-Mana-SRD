@@ -1,0 +1,3 @@
+# Petrificado
+
+Um personagem petrificado foi transformado em pedra e é considerado inconsciente. Se um personagem petrificado rachar ou quebrar, mas os pedaços quebrados forem unidos ao corpo quando ele retornar à carne, ele não sofre dano. Se o corpo petrificado do personagem estiver incompleto quando retornar à carne, o corpo também estará incompleto e haverá alguma quantidade de perda permanente de pontos de vida e/ou debilitação.
