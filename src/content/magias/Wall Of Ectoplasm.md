@@ -1,0 +1,12 @@
+### Parede de Ectoplasma
+
+**Escola** Evocação; **Nível** Arcano 5, Divino 5
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M (um pequeno pedaço de gaze)
+
+**EFEITO**
+**Alcance** perto (7,5 m + 1,5 m/2 níveis)  **Efeito** cortina opaca de ectoplasma até 9 metros quadrados por nível ou uma esfera ou hemisfério com um raio de até 0,3 metro por nível  **Duração** 1 minuto por nível  **Teste de Resistência** nenhum, e Vontade anula; ver texto  **Resistência à Magia** sim
+
+**DESCRIÇÃO**
+Você evoca uma grande cortina de ectoplasma que se agita com espíritos inquietos. Imóvel uma vez formada, a parede de ectoplasma tem 2,5 cm de espessura por nível de conjurador e cobre até uma área de 9 metros quadrados por nível de conjurador (portanto, um mago de 10º nível pode criar uma parede de ectoplasma de 30 metros de comprimento por 3 metros de altura, uma parede de 7,5 metros de comprimento por 12 metros de altura, ou qualquer outra combinação de comprimento e altura que não exceda 900 metros quadrados). O plano pode ser orientado de qualquer forma e não precisa estar ancorado, mas deve ser criado contínuo e ininterrupto. A parede não pode incluir quadrados que tenham criaturas dentro deles, mesmo que as criaturas estejam no Plano Etéreo. A parede existe tanto no Plano Material quanto no Plano Etéreo, e bloqueia criaturas etéreas e incorpóreas de passarem através dela. Um lado da parede, selecionado por você, irradia uma aura profundamente sinistra e ameaçadora dos espíritos contorcidos dentro. O alcance deste efeito de medo que afeta a mente é 3 metros a partir da superfície da parede, e criaturas que estão dentro do alcance quando a parede é criada ou que depois se aproximam a dentro de 3 metros devem ter sucesso em um teste de Vontade ou ficar abaladas (ou apavoradas se tiverem 4 Dados de Vida ou menos) por 1 rodada por seu nível de conjurador. Cada quadrado de 3 metros da parede tem 2 pontos de vida por polegada de espessura. Uma seção da parede cujos pontos de vida caem para 0 é rompida, mas se uma seção é destruída, o ectoplasma restante na parede imediatamente preenche qualquer buraco criado, reduzindo o tamanho total da parede em um quadrado de 3 metros mas permanecendo uma barreira contígua. A parede também pode ter a forma de uma esfera ou hemisfério cujo raio máximo é 0,3 metro por nível de conjurador, e que é tão difícil de atravessar quanto a forma de plano ectoplásmico.

@@ -47,6 +47,11 @@
   border: none;
   cursor: pointer;
   font-size: 0.875rem;
+  text-decoration: none;
+}
+
+a.nav-button {
+  text-decoration: none;
 }
 
 .nav-button:hover:not(:disabled) {
@@ -209,6 +214,8 @@
   text-align: center;
   min-height: 160px;
   justify-content: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .category-card:hover {
@@ -512,4 +519,16 @@
 
 .clear-all-filters:hover {
   background: var(--color-primary-hover);
+}
+
+/* Favorite button in content view header */
+.favorite-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+.favorite-btn:hover {
+  transform: scale(1.1);
 }

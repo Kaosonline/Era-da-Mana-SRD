@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import { ContentItem } from '../../types/content';
+import { useFavorites } from '../../contexts/FavoritesContext';
 import { parseMarkdown } from '../../utils/markdownParser';
 import './ContentView.css';
 
@@ -24,8 +26,8 @@ interface ContentViewProps {
   item: ContentItem | null;
   previousItem?: ContentItem | null;
   nextItem?: ContentItem | null;
-  onSelect: (id: string) => void;
-  onBackToCategory: () => void;
+  onSelect?: (id: string) => void;
+  onBackToCategory?: () => void;
   currentCategory?: string | null;
   allItems?: ContentItem[];
   searchQuery: string;
@@ -37,7 +39,6 @@ interface ContentViewProps {
 
 function HomePage({ 
   allItems, 
-  onSelect, 
   selectedCategories,
   spellFilters,
   searchQuery,
@@ -45,7 +46,6 @@ function HomePage({
   onClearFilters
 }: { 
   allItems: ContentItem[], 
-  onSelect: (id: string) => void,
   selectedCategories: string[],
   spellFilters: { level?: string; school?: string; castingTime?: string; duration?: string },
   searchQuery: string,
@@ -54,7 +54,6 @@ function HomePage({
 }) {
   const allCategories = Array.from(new Set(allItems.map(item => item.category))).sort();
 
-  // Função para contar itens de uma categoria que atendem a todos os filtros
   const countItemsInCategory = (category: string) => {
     return allItems.filter(item => 
       item.category === category &&
@@ -71,25 +70,16 @@ function HomePage({
     ).length;
   };
 
-  // Filtrar categorias
   let categories = allCategories;
   if (selectedCategories.length > 0) {
     categories = categories.filter(cat => selectedCategories.includes(cat));
   }
 
-  // Remover categorias com zero itens após filtros
   categories = categories.filter(cat => countItemsInCategory(cat) > 0);
 
   const getItemsForCategory = (category: string) => 
     allItems.filter(item => item.category === category)
             .sort((a, b) => a.title.localeCompare(b.title));
-
-  const handleCategoryClick = (category: string) => {
-    const items = getItemsForCategory(category);
-    if (items.length > 0) {
-      onSelect(items[0].id);
-    }
-  };
 
   return (
     <div className="home-page">
@@ -116,19 +106,17 @@ function HomePage({
       <div className="category-grid">
         {categories.map(category => {
           const count = countItemsInCategory(category);
+          const firstItem = getItemsForCategory(category)[0];
           return (
-            <div 
-              key={category} 
-              className="category-card" 
-              onClick={() => handleCategoryClick(category)}
-              role="button"
-              tabIndex={0}
-              onKeyPress={(e) => { if (e.key === 'Enter') handleCategoryClick(category); }}
+            <Link
+              key={category}
+              to={`/${category}/${firstItem?.id || ''}`}
+              className="category-card"
             >
               <div className="category-icon">{getCategoryIcon(category)}</div>
               <h3>{formatCategoryName(category)}</h3>
               <p>{count} {count === 1 ? 'página' : 'páginas'}</p>
-            </div>
+            </Link>
           );
         })}
       </div>
@@ -140,9 +128,9 @@ export function ContentView({
   item, 
   previousItem, 
   nextItem, 
-  onSelect, 
-  onBackToCategory, 
-  currentCategory,
+  onSelect = () => {}, 
+  onBackToCategory = () => {}, 
+  currentCategory: _currentCategory,
   allItems = [],
   searchQuery,
   selectedCategories,
@@ -153,7 +141,6 @@ export function ContentView({
   if (!item) {
     return <HomePage 
       allItems={allItems} 
-      onSelect={onSelect} 
       selectedCategories={selectedCategories}
       spellFilters={spellFilters}
       searchQuery={searchQuery}
@@ -163,7 +150,8 @@ export function ContentView({
   }
 
   const htmlContent = parseMarkdown(item.content);
-  const formattedCategory = currentCategory ? formatCategoryName(currentCategory) : 'Categoria';
+  const { isFavorite, toggleFavorite } = useFavorites();
+  const favorite = isFavorite(item.id);
 
   return (
     <div className="content-view">
@@ -172,7 +160,7 @@ export function ContentView({
           className="nav-button back-to-category"
           onClick={onBackToCategory}
         >
-          ← Voltar para {formattedCategory}
+          ← Início
         </button>
         <div style={{ display: 'flex', gap: '0.5rem' }}>
           <button
@@ -195,7 +183,17 @@ export function ContentView({
       </nav>
 
       <article className="content-article">
-        <h1 className="content-title">{item.title}</h1>
+        <div className="content-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+          <h1 className="content-title" style={{ marginRight: '8px' }}>{item.title}</h1>
+          <button
+            className="favorite-btn"
+            onClick={() => toggleFavorite(item.id)}
+            aria-label={favorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+            title="Favoritos"
+          >
+            {favorite ? '★' : '☆'}
+          </button>
+        </div>
         {item.category === 'magias' && (
           <div className="spell-metadata">
             {item.spellSchool && (

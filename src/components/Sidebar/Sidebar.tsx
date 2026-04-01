@@ -1,4 +1,5 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { ContentItem } from '../../types/content';
 import { highlightText } from '../../utils/highlightText';
 import './Sidebar.css';
@@ -6,7 +7,7 @@ import './Sidebar.css';
 const CATEGORY_ICONS: Record<string, string> = {
   'races': '🧝',
   'classes': '⚔️',
-  'magias': '✨',  // <<< ALTERADO: spells -> magias
+  'magias': '✨',
   'feats': '📜',
   'skills': '🎯',
   'equipment': '🛡️',
@@ -25,11 +26,8 @@ function formatCategoryName(category: string): string {
 interface SidebarProps {
   categories: string[];
   items: ContentItem[];
-  selectedId: string | null;
-  onSelect: (id: string) => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
-  activeCategory?: string | null;
   selectedCategories: string[];
   onToggleCategory: (category: string) => void;
   spellFilters: { level?: string; school?: string; castingTime?: string; duration?: string };
@@ -40,7 +38,9 @@ interface SidebarProps {
     castingTimes: string[];
     durations: string[];
   };
-  hasMagiasSelected: boolean;  // <<< ALTERADO: hasSpellsSelected -> hasMagiasSelected
+  hasMagiasSelected: boolean;
+  isOpen: boolean;
+  onToggle: () => void;
 }
 
 type SpellFilters = { level?: string; school?: string; castingTime?: string; duration?: string };
@@ -48,32 +48,24 @@ type SpellFilters = { level?: string; school?: string; castingTime?: string; dur
 export function Sidebar({ 
   categories, 
   items, 
-  selectedId, 
-  onSelect, 
   searchQuery, 
   onSearchChange,
-  activeCategory = null,
   selectedCategories,
   onToggleCategory,
   spellFilters,
   onSpellFilterChange,
   availableSpellValues,
-  hasMagiasSelected,  // <<< ALTERADO: hasSpellsSelected -> hasMagiasSelected
+  hasMagiasSelected,
+  isOpen,
+  onToggle,
 }: SidebarProps) {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const { category, id } = useParams<{ category?: string; id?: string }>();
   const [showCategoryFilter, setShowCategoryFilter] = useState(false);
-  const [suggestions, setSuggestions] = useState<ContentItem[]>([]);
-  const [showSuggestions] = useState(false);
 
-  const toggleMobile = () => setMobileOpen(!mobileOpen);
-
-  // <<< ALTERADO: hasSpellsSelected -> hasMagiasSelected
-  // Verifica se HÁ MAGIAS COM METADADOS disponíveis para filtrar
   const hasSpellMetadataAvailable = useMemo(() => {
     if (!hasMagiasSelected) return false;
-    // Verifica se há pelo menos uma magia com algum metadado
     return items.some(item => 
-      item.category === 'magias' && (  // <<< ALTERADO: spells -> magias
+      item.category === 'magias' && (
         item.spellLevel !== undefined || 
         item.spellSchool !== undefined || 
         item.spellCastingTime !== undefined || 
@@ -82,46 +74,42 @@ export function Sidebar({
     );
   }, [items, hasMagiasSelected]);
 
-  // Filtrar itens
   const filteredItems = useMemo(() => {
     let result = items;
 
-    // Filtro de categorias
     if (selectedCategories.length > 0) {
       result = result.filter(item => selectedCategories.includes(item.category));
     }
 
-    // Filtro de magias (apenas se a categoria magias foi selecionada)
-    if (hasMagiasSelected) {  // <<< ALTERADO: hasSpellsSelected -> hasMagiasSelected
+    if (hasMagiasSelected) {
       if (spellFilters.level) {
         result = result.filter(item => 
-          item.category === 'magias' && item.spellLevel?.toString() === spellFilters.level  // <<< ALTERADO
+          item.category === 'magias' && item.spellLevel?.toString() === spellFilters.level
         );
       }
       if (spellFilters.school) {
         result = result.filter(item => 
-          item.category === 'magias' &&  // <<< ALTERADO
+          item.category === 'magias' &&
           spellFilters.school &&
           item.spellSchool?.toLowerCase().includes(spellFilters.school.toLowerCase())
         );
       }
       if (spellFilters.castingTime) {
         result = result.filter(item => 
-          item.category === 'magias' &&  // <<< ALTERADO
+          item.category === 'magias' &&
           spellFilters.castingTime &&
           item.spellCastingTime?.toLowerCase().includes(spellFilters.castingTime.toLowerCase())
         );
       }
       if (spellFilters.duration) {
         result = result.filter(item => 
-          item.category === 'magias' &&  // <<< ALTERADO
+          item.category === 'magias' &&
           spellFilters.duration &&
           item.spellDuration?.toLowerCase().includes(spellFilters.duration.toLowerCase())
         );
       }
     }
 
-    // Filtro de busca
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       result = result.filter(item => 
@@ -133,7 +121,6 @@ export function Sidebar({
     return result;
   }, [items, searchQuery, selectedCategories, spellFilters, hasMagiasSelected]);
 
-  // Agrupar itens filtrados por categoria
   const grouped = useMemo(() => {
     const groups: Record<string, ContentItem[]> = {};
     filteredItems.forEach(item => {
@@ -150,31 +137,16 @@ export function Sidebar({
       }));
   }, [filteredItems]);
 
-  // Autocomplete
-  useEffect(() => {
-    if (searchQuery.trim().length > 0) {
-      const filtered = filteredItems.slice(0, 6);
-      setSuggestions(filtered);
-    }
-  }, [searchQuery, filteredItems]);
-
-  const handleSuggestionClick = (id: string) => {
-    onSelect(id);
-    onSearchChange('');
-    setShowCategoryFilter(false);
-  };
-
   const toggleCategoryFilter = () => {
     setShowCategoryFilter(!showCategoryFilter);
   };
 
-  const closeMobile = () => setMobileOpen(false);
+  const closeMobile = () => onToggle();
 
   const shouldShowItems = searchQuery.trim() || selectedCategories.length > 0;
 
-  // Contador de filtros ativos
   const activeFilterCount = selectedCategories.length + 
-    (hasMagiasSelected && hasSpellMetadataAvailable ?  // <<< ALTERADO
+    (hasMagiasSelected && hasSpellMetadataAvailable ?
       (spellFilters.level ? 1 : 0) + 
       (spellFilters.school ? 1 : 0) + 
       (spellFilters.castingTime ? 1 : 0) + 
@@ -183,10 +155,15 @@ export function Sidebar({
 
   return (
     <>
-      <button className="mobile-menu-btn" onClick={toggleMobile} aria-label="Toggle menu">
+      <button className="mobile-menu-btn" onClick={onToggle} aria-label="Toggle menu">
         ☰
       </button>
-      <aside className={`sidebar ${mobileOpen ? 'open' : ''}`}>
+      {isOpen && (
+        <button className="sidebar-close-btn" onClick={onToggle} aria-label="Fechar sidebar" title="Fechar sidebar">
+          ▶
+        </button>
+      )}
+      <aside className={`sidebar ${isOpen ? '' : 'closed'}`}>
         <div className="sidebar-controls">
           <div className="search-container">
             <div className="search-wrapper">
@@ -195,19 +172,13 @@ export function Sidebar({
                 type="text"
                 placeholder="Buscar regras..."
                 value={searchQuery}
-                onChange={(e) => {
-                  onSearchChange(e.target.value);
-                }}
-                onFocus={() => { if (searchQuery.trim()) {}; }}
-                onBlur={() => setTimeout(() => {}, 200)}
+                onChange={(e) => onSearchChange(e.target.value)}
                 className="search-input"
               />
               {searchQuery && (
                 <button 
                   className="clear-search" 
-                  onClick={() => {
-                    onSearchChange('');
-                  }}
+                  onClick={() => onSearchChange('')}
                   aria-label="Clear search"
                 >
                   ✕
@@ -267,8 +238,7 @@ export function Sidebar({
                 })}
               </div>
 
-              {/* Filtros específicos de magias - só mostra se magias estiver selecionado E houver metadados */}
-              {hasMagiasSelected && hasSpellMetadataAvailable && (  // <<< ALTERADO
+              {hasMagiasSelected && hasSpellMetadataAvailable && (
                 <div className="spell-filters">
                   <h4>Filtros de Magias</h4>
                   
@@ -342,29 +312,6 @@ export function Sidebar({
               )}
             </div>
           )}
-
-          {showSuggestions && suggestions.length > 0 && (
-            <ul className="suggestions-dropdown">
-              {suggestions.map(item => (
-                <li 
-                  key={item.id} 
-                  className="suggestion-item"
-                  onClick={() => handleSuggestionClick(item.id)}
-                  onMouseDown={(e) => e.preventDefault()}
-                >
-                  <div className="suggestion-title">
-                    {highlightText(item.title, searchQuery)}
-                  </div>
-                  <div className="suggestion-meta">
-                    {getCategoryIcon(item.category)} {formatCategoryName(item.category)}
-                    {item.category === 'magias' && item.spellLevel !== undefined && (  // <<< ALTERADO
-                      <span> • Nv. {item.spellLevel}</span>
-                    )}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
 
         {shouldShowItems && (
@@ -372,7 +319,7 @@ export function Sidebar({
             {grouped.map(group => (
               <div 
                 key={group.category} 
-                className={`nav-category ${activeCategory === group.category ? 'active' : ''}`}
+                className={`nav-category ${category === group.category ? 'active' : ''}`}
               >
                 <h3 className="nav-category-title">
                   <span className="category-icon">{getCategoryIcon(group.category)}</span>
@@ -381,18 +328,16 @@ export function Sidebar({
                 <ul className="nav-list">
                   {group.items.map(item => (
                     <li key={item.id}>
-                      <button
-                        className={`nav-item ${selectedId === item.id ? 'active' : ''}`}
-                        onClick={() => {
-                          onSelect(item.id);
-                          closeMobile();
-                        }}
+                      <Link
+                        to={`/${item.category}/${item.id}`}
+                        className={`nav-item ${id === item.id && category === item.category ? 'active' : ''}`}
+                        onClick={closeMobile}
                       >
                         {highlightText(item.title, searchQuery)}
-                        {item.category === 'magias' && item.spellLevel !== undefined && (  // <<< ALTERADO
+                        {item.category === 'magias' && item.spellLevel !== undefined && (
                           <span className="spell-level-indicator"> (Nv.{item.spellLevel})</span>
                         )}
-                      </button>
+                      </Link>
                     </li>
                   ))}
                 </ul>

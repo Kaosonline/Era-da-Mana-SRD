@@ -1,0 +1,12 @@
+### Mansão Resplandecente
+
+**Escola** Conjuração (Criação); **Nível** Arcano 9
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 minuto  **Componentes** V, S, F (um alicerce em miniatura esculpido em gemas preciosas no valor de 500 po)
+
+**EFEITO**
+**Alcance** longo (120 m + 12 m/nível)  **Efeito** mansão opulenta, até 90 m de lado e um andar de altura por 4 níveis  **Duração** 1 dia/nível (D)  **Teste de Resistência** nenhum  **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Esta magia cria uma mansão imponente. Ao conjurar a magia, você mantém uma imagem da mansão e sua aparência desejada em sua mente. A mansão pode conter tantos ou poucos quartos quanto você desejar, e é decorada para combinar com sua imagem. Você pode imaginar um propósito para cada quarto da mansão, e os acessórios apropriados aparecem dentro. Qualquer mobília ou outras comodidades mundanas funcionam normalmente para qualquer um dentro da mansão, mas deixam de existir se levadas além de suas paredes. Nenhuma fixture criada com esta magia pode criar efeitos mágicos, mas dispositivos mágicos trazidos para a mansão funcionam normalmente. Uma mansão resplandecente contém os mesmos tipos de alimentos e servos que uma mansão magnífica de mago. Cada uma das portas e janelas externas da mansão é protegida por magias de alarme. Você escolhe se cada alarme é audível ou mental ao conjurar a magia, e cada alarme tem um som diferente (para um alarme audível) ou sensação (para um mental), permitindo que você determine instantaneamente qual portal foi usado. A mansão deve ser criada em um terreno livre de outras estruturas. Ela se adapta ao terreno natural, adotando todos os requisitos estruturais para ser construída, por exemplo, em uma encosta de montanha. A mansão se ajusta ao redor de pequenas características como lagos ou espirais de rocha, mas não pode ser criada na água ou em outras superfícies não sólidas. Se criada na neve, dunas de areia ou outras superfícies moles com uma superfície sólida abaixo, a fundação alcança o solo sólido. Se criada em uma superfície sólida mas instável, como um pântano ou uma área atingida por tremores, há uma chance de 10% a cada dia de que a mansão comece a afundar ou desabar. A mansão não prejudica criaturas dentro da área quando aparece, e não pode ser criada entre uma multidão ou em uma área densamente povoada. Qualquer criatura inadvertidamente pega dentro da mansão quando a magia é conjurada acaba ilesa dentro da mansão completa.

@@ -1,0 +1,12 @@
+### Aura Mágica, Maior
+
+**Escola** Ilusão (Vislumbre); **Nível** Arcano 3
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, F (um lenço de bolso de lã)
+
+**EFEITO**
+**Alcance** perto (7,5m + 1,5m/2 níveis)  **Alvos** uma criatura, ou um objeto pesando até 9 kg/nível  **Duração** 1 dias/nível (D)  **Teste de Resistência** nenhum (ver texto)  **Resistência à Magia** não
+
+**DESCRIÇÃO**
+Se conjurada em um objeto, esta magia funciona como aura mágica, exceto que se você identificou as assinaturas únicas de conjuração de um indivíduo específica com detectar magia superior (veja página 212) ou uma magia similar, você pode fazer a aura mágica parecer ter sido criada por aquele indivíduo. Alternativamente, você pode simplesmente obscurecer todos os identificadores, tornando mais difícil determinar quem conjurou a magia. Em qualquer caso, se o objeto for o alvo de uma magia de detectar magia superior, qualquer teste de Conhecimento de Magia feito para identificar os identificadores únicos de conjuração da aura produzirá automaticamente o resultado que você escolheu, a menos que o observador discorde da magia com um teste de Vontade bem-sucedido (como com aura mágica, no entanto, magias de detecção não concedem um teste para discordar). Se conjurada em uma criatura, você pode fazer essa criatura registrar-se para detectar magias (e magias com capacidades similares) como se fosse o alvo de qualquer número de magias que você especificar, quando a magia é conjurada. Alternativamente, você pode fazer a criatura registrar-se como não mágica, escondendo todos os efeitos de magia que ela está atualmente afetada de tal escrutínio. Se você escolher fazer a criatura registrar-se como sendo o alvo de uma ou mais magias, você também pode alterar os identificadores únicos de conjuração dessas auras de magia, da mesma forma descrita para objetos. Se o alvo for uma criatura, você também pode alterar como a criatura registra-se para visão arcana, fazendo a criatura parecer ter ou não ter habilidades de conjuração ou habilidades semelhantes a magias, se essas habilidades são de natureza arcana, divina ou psíquica, e a força da magia ou habilidade semelhante a magia mais poderosa que ela tem atualmente disponível para uso. De forma similar, você pode alterar a maneira como o alvo aparece quando visto com detectar magia superior, fazendo a última magia que ele conjurou parecer ser qualquer magia de sua escolha.

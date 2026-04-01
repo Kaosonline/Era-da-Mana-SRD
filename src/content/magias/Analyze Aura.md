@@ -1,0 +1,12 @@
+### Analisar Aura
+
+**Escola** Adivinhação; **Nível** Arcano 2
+
+**Conjuração**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S
+
+**Efeito**
+**Alcance** perto (7,5 m + 1,5 m/2 níveis)  **Alvos** uma criatura ou objeto  **Duração** concentração, até 1 rodada/nível  **Teste de Resistência** nenhum  **Resistência à Magia** não
+
+**Descrição**
+Você examina a aura de uma criatura ou objeto alvo, obtendo informações valiosas sobre sua condição e natureza. A cada rodada, escolha uma das quatro auras do alvo. Esta magia funciona de forma similar à habilidade de ocultismo ler aura (veja página 197), mas não requer testes e retorna resultados em todas as auras do alvo instantaneamente.  Alinhamento da Aura: Você estuda a natureza espiritual do alvo para determinar seu alinhamento. Você também aprende o tipo e o poder de sua aura de alinhamento, como detectar mal.  Emoção da Aura: As cores que surgem dentro da aura do alvo revelam seu estado emocional, concedendo insight valioso em sua psique. Você aprende um resumo geral da disposição atual do alvo, bem como sua atitude em relação a quaisquer outras criaturas dentro de 9 m dele. Pela duração da magia e por 1 hora depois, você ganha um bônus de circunstância de +2 em testes de Blefar, Diplomacia, Intimidação e Percepção que você tentar contra o alvo. Objetos não têm auras de emoção, exceto armas inteligentes e outras singularidades sencientes.  Saúde da Aura: O fluxo de força vital que anima o alvo se torna claramente visível, dando a você insight em sua condição física. Você sabe se o alvo está ileso ou ferido, se está envenenado ou doente, e se está sob qualquer uma das seguintes condições: confuso, incapacitado, moribundo, nauseado, pânico, cambaleante, atordoado ou inconsciente. Além disso, seu insight na força geral da força vital do alvo revela o número total de pontos disponíveis em sua reserva de ki, reserva de grit ou recurso similar. Objetos e a maioria das criaturas mortos-vivas não têm auras de saúde.  Magia da Aura: Você determina o número e o poder de todas as auras mágicas no alvo (como detectar magia para determinar o poder de uma aura mágica), bem como a escola de cada aura. Você pode tentar testes de perícia de Conhecimento (arcano) ou Ofício para determinar a escola ou identificar propriedades de um item mágico, como normal. Se conjurada em um item, analisar aura corta através da ofuscação da magia Aura Mágica.

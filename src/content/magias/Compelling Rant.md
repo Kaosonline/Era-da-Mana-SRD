@@ -1,0 +1,12 @@
+### Discurso Compelente
+
+**Escola** Encantamento (Encanto); **Nível** Arcano 5, Divino 5
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 minuto  **Componentes** V, S, M/FD (uma folha manuscrita de notas)
+
+**EFEITO**
+**Alcance** médio (30m + 3m/nível)  **Alvos** qualquer número de criaturas  **Duração** concentração mais 1 rodada/nível, até 1 hora/nível  **Teste de Resistência** Vontade anula (ver texto)  **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Você profere um monólogo confuso, mas fascinante, transmitindo conspirações ou revelações metafísicas que confundem sua audiência, durante o tempo de conjuração da magia e enquanto você se concentra. Você sofre 1d4 pontos de dreno de Sabedoria quando começa o discurso e não pode reduzir ou prevenir esse dano de qualquer forma. Cada criatura inteligente na área da magia sofre 1d6 pontos de dano de Sabedoria enquanto suas percepções da realidade se alinham com as suas pela duração da magia. Ouvintes com pelo menos 5 DV podem tentar um teste de Vontade para negar os efeitos. Seus alvos o veem com uma atitude amigável e respondem à crítica sobre você com irritação. Testes de Blefar, Diplomacia ou Intimidar para criar dúvida sobre seu propósito naqueles afetados pela magia recebem uma penalidade de -4. A atitude de seus alvos em relação a qualquer criatura que o critique ou critique sua visão automaticamente muda um passo em direção a hostil; um teste de Diplomacia que falhar por 5 ou mais reduz ainda mais sua atitude. Seus alvos retêm o mesmo alinhamento e suas crenças anteriores, além daquelas que você força neles. Você não pode forçar crenças em um alvo se tais crenças seriam necessariamente contra a natureza de seu alinhamento e crenças anteriores, mas os alvos são, de outra forma, capazes de manter crenças contraditórias. Se sua campanha usa o sistema de sanidade (veja página 12), sua pontuação de sanidade diminui em 2 (e, portanto, sua margem de sanidade diminui em 1) em vez de sofrer dreno de Sabedoria cada vez que conjura esta magia. Apenas restauração maior, milagre ou desejo podem remover essa diminuição. Um único lançamento de restauração maior remove uma diminuição na sanidade de conjurar discurso compelente, enquanto um lançamento de milagre ou desejo os remove todos. Alvos afetados sofrem dano de sanidade igual à metade do seu nível de conjurador (máximo 10) em vez de dano de Sabedoria. Os alvos podem realmente mudar de alinhamento e crenças se sua perda de sanidade os afligir com uma loucura apropriada, nesse caso, esses efeitos duram mesmo após a duração da magia ter terminado.

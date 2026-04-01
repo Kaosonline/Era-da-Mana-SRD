@@ -1,0 +1,12 @@
+### Mar de Pó
+
+**Escola** Transmutação [água]; **Nível** Divino 9
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 hora  **Componentes** V, S, FD
+
+**EFEITO**
+**Alcance** 0 m  **Área** 2-mile-radius emanação  **Duração** permanente  **Teste de Resistência** nenhum  **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Você faz com que todas as áreas de água sobre as quais você tem linha de efeito recuem como se tivesse conjurado controlar água. Água exposta que entra na área escoa, evaporando ou infiltrando-se no solo a uma taxa de 30 cm de profundidade por hora. Criaturas vivas na área quando a magia é conjurada ficam com sede e sofrem uma penalidade de -4 em testes de Constituição para resistir aos efeitos de um clima quente, e seu requisito diário de água para evitar a sede dobra (Pathfinder RPG Core Rulebook 444). Criaturas vegetais e plantas inanimadas sofrem 1d6 pontos de dano não letal por hora após as primeiras 24 horas, que ignora dureza e redução de dano. Criaturas vivas com o subtipo aquático ou da água, a menos que completamente imersas em água, devem fazer um teste de Constituição CD 20 a cada hora, não importa quanta água bebam. Uma criatura que falha sofre 1d6 pontos de dano não letal e fica fatigada até se recuperar do dano não letal. Após 1 semana, o solo na área do mar de pó começa a se desintegrar e ser levado pelo vento. Ventos moderados têm 50% de chance a cada hora de causar tempestades de areia (Core Rulebook 431). Essa chance aumenta para 75% em ventos fortes e 100% em ventos severos ou mais fortes. Efeitos de vento de curta duração, como rajada de vento, criam tempestades de areia com a mesma área e duração da magia, mais uma duração idêntica após o fim da magia. Após 1 mês, o solo em uma área afetada pelo mar de pó virtualmente se desintegrou. A área é tratada como um pântano raso para fins de movimento (Core Rulebook 427), com 25% de chance a cada hora de encontrar uma área equivalente a um pântano profundo com 2d6x3 m de largura, e 5% de chance de encontrar uma deriva de poeira colapsável equivalente a areia movediça com 1d6x1,5 m de largura. A região afetada permanece em condição desértica até que a magia seja dissipada, momento em que a região se recupera e retorna ao terreno original ao longo do tempo (isso pode levar apenas dias ou semanas, ou pode levar meses ou até anos, a critério do GM). Esta magia não tem efeito se conjurada em uma região totalmente aquática. Se a magia for conjurada em uma ilha, os efeitos da magia se estendem até a costa, mas não além.

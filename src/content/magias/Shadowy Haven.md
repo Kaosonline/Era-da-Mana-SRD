@@ -1,0 +1,12 @@
+### Refúgio Sombrio
+
+**Escola** Transmutação; **Nível** Arcano 4
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M (um pequeno saco de seda preta)
+
+**EFEITO**
+**Alcance** toque  **Alvos** um quadrado de 1,5 m de piso tocado  **Duração** 2 horas por nível (D)  **Teste de Resistência** nenhum  **Resistência à Magia** não
+
+**DESCRIÇÃO**
+Esta magia funciona como truque da corda, exceto que o ponto de entrada é através de um quadrado de 1,5 m em vez de uma corda. O espaço comporta até 10 criaturas de qualquer tamanho. Quando esta magia é conjurada em uma parte quadrada de 1,5 m de uma parede, ela cria um espaço extradimensional adjacente ao Plano das Sombras. Criaturas no espaço extradimensional estão escondidas além do alcance de magias (incluindo adivinhações) a menos que essas magias funcionem através de planos. O espaço comporta até 10 criaturas (de qualquer tamanho). A entrada para o espaço extradimensional permanece visível como uma área que é mais escura do que a iluminação ambiente. Magias não podem ser conjuradas através da interface extradimensional, nem efeitos de área podem atravessá-la. Aqueles no espaço extradimensional podem ver para fora como se uma porta ou janela de 1,5 m por 1,5 m estivesse centrada na superfície afetada. A janela é invisível (embora esteja dentro da entrada sombreada da magia, que é visível), e até mesmo criaturas que podem ver a janela do lado de fora não podem ver através dela. Qualquer coisa dentro do espaço extradimensional é ejetada quando a magia termina. Apenas uma criatura pode entrar ou sair do espaço extradimensional por vez. A entrada está aberta apenas quando a área ao redor está em penumbra. Qualquer outro nível de luz (mais brilhante ou mais escura) fecha a entrada, prendendo criaturas dentro do espaço extradimensional. Se a entrada estiver fechada quando a magia expira, há 50% de chance de que as criaturas dentro sejam ejetadas no Plano das Sombras em vez da localização da entrada. Se isso ocorrer, as criaturas aparecem no Plano das Sombras a 1d10 milhas em uma direção aleatória de sua localização correspondente no Plano Material. A magia não tem efeito se conjurada em um plano que não seja adjacente ao Plano das Sombras. Porque o espaço extradimensional é adjacente ao Plano das Sombras, qualquer magia de passos das sombras ou efeito similar que permita viagem ao Plano das Sombras é mais preciso, reduzindo a distância que as criaturas chegam fora do alvo pela metade.

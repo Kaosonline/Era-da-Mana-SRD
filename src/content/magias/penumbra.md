@@ -9,6 +9,6 @@
 **Alcance** toque  **Alvos** criatura ou objeto tocado  **Duração** 10 minutos/nível (D)  **Teste de Resistência** Vontade anula (inofensivo)  **Resistência a Magia** sim
 
 **DESCRIÇÃO**
-Esta magia mantém a criatura ou objeto tocado levemente na sombra. O alvo desta magia não sofre quaisquer penalidades ou cegueira causada por luz brilhante, como aquelas por sensibilidade à luz ou cegueira pela luz. Você só pode ter uma magia de penumbra ativa a qualquer momento. Se você conjurar esta magia enquanto outra conjuração ainda estiver em efeito, a conjuração anterior é dissipada.
+Esta magia mantém a criatura ou objeto tocado ligeiramente na sombra. O alvo desta magia não sofre penalidades ou cegueira causadas por luz intensa, como aquelas de sensibilidade à luz ou cegueira à luz. Você pode ter apenas uma magia de penumbra ativa por vez. Se você conjurar esta magia enquanto outra conjuração ainda estiver em efeito, a conjuração anterior é dissipada.
 
 ---

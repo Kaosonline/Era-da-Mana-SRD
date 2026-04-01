@@ -1,4 +1,4 @@
-### Heal
+### Cura
 
 **Escola** Conjuração (Cura); **Nível** Arcano 6, Divino 5
 
@@ -6,9 +6,7 @@
 **Tempo de Conjuração** 1 ação padrão  **Componentes** V, S
 
 **EFEITO**
-**Alcance** toque  **Alvos** criatura tocada  **Duração** instantânea  **Teste de Resistência** Vontade anula (inofensivo)  **Resistência a Magia** sim (inofensivo)
+**Alcance** toque  **Alvos** criatura tocada  **Duração** instantânea  **Teste de Resistência** Vontade anula (inofensivo)  **Resistência à Magia** sim (inofensivo)
 
 **DESCRIÇÃO**
-Heal permite canalizar energia positiva em uma criatura para eliminar ferimentos e aflições. Imediatamente encerra qualquer e todas as seguintes condições adversas afetando o alvo: dano de habilidade, cego, confuso, atordoado, ofuscado, surdo, doente, exausto, fatigado, enfraquecido, insania, enjoado, envenenado, enojado e aturdido. Também cura 10 pontos de dano por nível do conjurador, até o máximo de 150 pontos no 15º nível. Heal não remove níveis negativos ou restaura pontos de habilidade drenados permanentemente. Se usada contra uma criatura morta-viva, heal age como harm.
-
----
+Cura permite que você canalize energia positiva em uma criatura para apagar ferimentos e aflições. Imediatamente encerra qualquer uma das seguintes condições adversas que afetam o alvo: dano de atributo, cego, confuso, atordoado, ofuscado, surdo, doente, exausto, fatigado, idiotizado, insano, enjoado, envenenado, enojado e atordoado. Também cura 10 pontos de vida por nível do conjurador, até um máximo de 150 pontos no 15º nível. Cura não remove níveis negativos nem restaura pontos de atributo drenados permanentemente. Se usada contra uma criatura morta-viva, cura, em vez disso, age como dano.

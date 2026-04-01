@@ -1,0 +1,14 @@
+### Poder Saqueado
+
+**Escola** Necromancia [Mau]; **Nível** Arcano 6, Divino 7
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 10 minutos  **Componentes** V, S, M (rubis esmagados no valor de 2.500 po e um órgão principal do alvo sacrificado, ver texto)
+
+**EFEITO**
+**Alcance** perto (7,5 m + 1,5 m/2 níveis)  **Alvos** uma criatura  **Duração** 1 dia/nível  **Teste de Resistência** Vontade anula  **Resistência à Magia** não
+
+**DESCRIÇÃO**
+Você deve sacrificar uma criatura assim que terminar de conjurar esta magia. Quando o sacrifício morre, seu sangue ou ichor se acumula e endurece em uma única pedra de sangue vermelha. Esta pedra de sangue contém a essência e o espírito da criatura sacrificada, permitindo que qualquer um segurando a pedra ative a habilidade racial semelhante a magia de nível mais alto da criatura, realizando as ações necessárias para ativar a habilidade semelhante a magia armazenada. Qualquer criatura que segurar a pedra pode ativá-la, mas a pedra pode ser usada apenas uma vez por dia (ou a frequência da habilidade semelhante a magia da criatura, o que for menor). Se uma criatura tiver várias habilidades raciais semelhantes a magia do mesmo nível de magia, escolha aleatoriamente entre elas para determinar qual é armazenada na pedra de sangue. A pedra de sangue só pode armazenar habilidades raciais semelhantes a magia que emulem uma magia, incluindo magias alteradas, como invisibilidade (só em si mesma), mas não habilidades semelhantes a magia únicas possuídas pela criatura. Habilidades com efeitos alterados ainda são alteradas, então uma criatura ativando a pedra de sangue para maior teleporte (só em si mesma) afetaria apenas a si mesma e uma pedra de sangue armazenando convocar monstro II (só elementar de fogo Pequeno) ainda só seria capaz de convocar um elementar de fogo Pequeno. Além disso, a pedra de sangue não pode armazenar habilidades semelhantes a magia que dupliquem magias com componentes caros custando mais de 250 po. O CD do teste de resistência, nível de conjurador e outros atributos desta habilidade permanecem os mesmos de quando a criatura ainda estava viva, embora a criatura que ativar a pedra de sangue possa escolher os alvos, área ou forma da magia, e tomar outras decisões, como controlar o alvo de dominar pessoa. A pedra de sangue pode realizar quaisquer ações necessárias para manipular aspectos da magia, concentrando-se na magia, redirecionando a magia, e assim por diante, até um valor total de ações de uma rodada normal. Se a criatura sacrificada não morrer durante a conjuração da magia (por exemplo, se era apenas uma criatura convocada) ou for trazida de volta à vida antes que a duração da magia expire, a pedra de sangue perde seu poder mágico. O fragmento do espírito da criatura preso na pedra de sangue não obstrui tentativas de restaurar a criatura à vida.
+
+---

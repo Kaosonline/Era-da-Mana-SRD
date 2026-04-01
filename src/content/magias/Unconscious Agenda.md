@@ -1,0 +1,14 @@
+### Agenda Inconsciente
+
+**Escola** Encantamento (Compulsão) [dependente de idioma, afeta a mente]; **Nível** Arcano 6, Divino 6
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 10 minutos  **Componentes** V
+
+**EFEITO**
+**Alcance** perto (7,5 m + 1,5 m/2 níveis)  **Alvos** 1 humanoides  **Duração** 1 semana/nível ou até ser descarregada (D)  **Teste de Resistência** Vontade anula  **Resistência à Magia** sim
+
+**DESCRIÇÃO**
+Esta magia planta uma diretiva subconsciente na mente do alvo que o força a agir como você dita quando circunstâncias específicas surgem. O humanide alvo pode estar consciente ou inconsciente, mas deve entender seu idioma. Ao conjurar esta magia, você deve declarar um curso de ação que deseja que o alvo tome. Este curso de ação deve ser descrito em 20 palavras ou menos. Você deve então declarar a condição sob a qual deseja que o alvo tome esta ação, também descrevendo-a em 20 ou menos palavras. Ações ou condições mais elaboradas que 20 palavras fazem a magia falhar. Agenda Inconsciente não pode compelir um alvo a se matar, embora possa compelí-lo a realizar atos extremamente perigosos, enfrentar probabilidades impossíveis ou empreender quase qualquer outro curso de atividade. Você não pode emitir novos comandos ao alvo após a magia ser conjurada. Se o alvo falhar em seu teste de resistência contra esta magia, ele não é compelido a agir de qualquer forma até que as circunstâncias de gatilho especificadas sejam encontradas. Ele também não tem conhecimento dos detalhes da magia que o afeta e não tem memória dos últimos 10 minutos (embora ele possa notar o tempo faltando ou a presença do conjurador). Ele pode funcionar como desejar até que os eventos que você detalhou como a condição ocorram. Ao experimentar a condição pré-requisito, o alvo é forçado a realizar o curso de ação que você descreveu conforme a magia dominar pessoa. (Se a ação compelida for contra a natureza da vítima, ele imediatamente ganha um novo teste de resistência com um +5 de bônus contra a magia para encerrar seus efeitos.) Durante a próxima hora, o alvo age como você ditou, fazendo tudo o que pode para cumprir seu comando. Se, no final da hora, o alvo ainda não tiver completado seu comando, o alvo é liberado do encantamento e a magia termina. Uma vez que o curso de ação é completado, a magia termina. O alvo tem memória completa dos atos realizados durante esta hora. É difícil detectar uma Agenda Inconsciente antes da magia ser acionada. Conjurar detectar magia em um afetado por ela só revela uma aura de encantamento se o conjurador de detectar magia tiver um nível de conjurador maior que o conjurador de Agenda Inconsciente. Mesmo que a magia seja detectada, ela só pode ser removida por quebrar encantamento, desejo limitado, remover maldição, milagre ou desejo. Dissipar magia não afeta Agenda Inconsciente.
+
+---

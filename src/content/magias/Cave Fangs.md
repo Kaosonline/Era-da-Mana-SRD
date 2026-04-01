@@ -1,0 +1,14 @@
+### Presas de Caverna
+
+**Escola** Conjuração (Criação) [terra]; **Nível** Arcano 5, Divino 5
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M (um fragmento de gema afiada valendo 150 po)
+
+**EFEITO**
+**Alcance** perto (7,5 m + 1,5 m/2 níveis)  **Área** um quadrado de 1,5 m/nível (S); a área deve ser uma superfície de pedra  **Duração** 1 dia/nível ou até ser ativada (D) (M)  **Teste de Resistência** Reflexos reduz à metade (ver abaixo)  **Resistência à Magia** não
+
+**DESCRIÇÃO**
+Você cria uma armadilha mágica na área que causa estalactites ou estalagmites mortíferas a surgirem do chão ou teto de uma superfície de pedra para "morder" um intruso. A armadilha mágica é ativada sempre que uma criatura Pequena ou maior (que não seja você ou seu companheiro animal, familiar ou animal espiritual) se mover através da área afetada. O efeito de Presas de Caverna depende se você cria estalactites ou estalagmites (veja abaixo). Você pode colocar esses quadrados armadilhados em qualquer lugar dentro do alcance da magia; eles não precisam ser adjacentes uns aos outros, e você pode criar qualquer mistura de estalactites e estalagmites que desejar. Presas de Caverna podem ser detectadas e desarmadas como uma armadilha mágica, com testes de Percepção e Desativar Dispositivo bem-sucedidos de CD 30. Todos os quadrados armadilhados criados por uma única conjuração estão vinculados, e todos são desativados se um deles for. Se você colocar as armadilhas em uma área que seja ocupada por uma criatura, o efeito da magia é ativado ao término da conjuração.  Estalactites: Fragmentos de pedra caem do teto, causando 3d8 pontos de dano concussivo e perfurante (Reflexos reduz à metade) e criando uma área de detritos densos que custa 2 quadrados de movimento para entrar. Detritos densos adicionam 5 à CD dos testes de Acrobacia e adicionam 2 às CDs dos testes de Furtividade. Uma criatura que falha em seu teste de Reflexos fica pinçada ao chão sob estalactites e detritos, ganhando a condição enredada até que possa se libertar com um teste de Força bem-sucedido de CD 15 ou um teste de Fuga bem-sucedido de CD 20. Uma criatura Pequena ou maior pode automaticamente limpar os detritos trabalhando por 1 minuto.  Estalagmites: Espinhos perfurantes de pedra irrompem do chão, causando 3d8 pontos de dano perfurante e derrubando a criatura de joelhos (uma criatura que tenha sucesso em um teste de resistência de Reflexos sofre dano reduzido à metade e evita ser derrubada). Uma vez que as estalagmites aparecem, elas funcionam posteriormente como Pedras Espinhosas por 1 minuto por nível de conjurador e então se desintegram em pó.  Se Presas de Caverna for conjurada dentro de uma caverna ou gruta, cada efeito da magia causa 4d8 pontos de dano em vez de 3d8, e criaturas que ativam as Presas de Caverna sofrem uma penalidade de -2 em seus testes de resistência contra o efeito da magia.
+
+---

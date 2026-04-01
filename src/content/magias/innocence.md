@@ -1,4 +1,4 @@
-### Innocence
+### Inocência
 
 **Escola** Transmutação; **Nível** Arcano 1
 
@@ -9,6 +9,6 @@
 **Alcance** pessoal  **Alvos** você  **Duração** 1 minuto/nível (D)
 
 **DESCRIÇÃO**
-Você se rodeia com uma aura de inocência e confiabilidade. Você recebe um bônus de competência de +10 em testes de perícia Blefar para convencer outros de sua inocência. Eles acham difícil acreditar que você é capaz de qualquer ato errado. Este bônus não se aplica a outros usos da perícia Blefar, como fintar em combate, criar uma distração para se esconder, ou transmitir mensagens secretas por insinuação, nem se aplica a qualquer uso da perícia para convencer alguém de qualquer coisa além de sua completa inocência e isenção de culpa.
+Você se envolve com uma aura de inocência e confiabilidade. Você ganha um bônus de competência de +10 em testes de habilidade de Blefar para convencer outros de sua inocência. Eles acham difícil acreditar que você seja capaz de qualquer maldade. Este bônus não se aplica a outros usos da habilidade de Blefar, como desferir um ataque falso em combate, criar uma diversão para se esconder, ou comunicar mensagens secretas por insinuação, nem se aplica a qualquer uso da perícia para convencer qualquer um de qualquer coisa além de sua completa inocência e irrepreensibilidade.
 
 ---

@@ -1,0 +1,14 @@
+### Forma de Fera IV
+
+**Escola** Transmutação (Polimorfia); **Nível** Arcano 6
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M (um pedaço da criatura cuja forma você planeja assumir)
+
+**EFEITO**
+**Alcance** pessoal  **Alvos** você  **Duração** 1 min./nível (D)
+
+**DESCRIÇÃO**
+Esta magia funciona como Forma de Fera III exceto que também permite que você assuma a forma de uma criatura Minúscula ou Grande do tipo besta mágica. Se a forma que você assumir possuir qualquer das seguintes habilidades, você ganha a habilidade listada: cavar 18 m, escalar 27 m, voar 36 m (boa manobrabilidade), nadar 36 m, sentidos cegos 18 m, visão no escuro 27 m, visão de baixa luminosidade, olfato, tremorsense 18 m, arma de sopro, constrição, ferocidade, agarrar, jato, veneno, investir, rasgar, rugido, espinhos, pisoteio, derrubar e teia. Se a criatura possuir imunidade ou resistência a qualquer elemento, você ganha resistência 20 a esses elementos. Se a criatura possuir vulnerabilidade a um elemento, você ganha essa vulnerabilidade. Animal Diminuto: Se a forma que você assumir for a de um animal Diminuto, você ganha um bônus de tamanho de +6 em Destreza, uma penalidade de -4 em Força e um bônus de armadura natural de +1. Animal Minúsculo: Se a forma que você assumir for a de um animal Minúsculo, você ganha um bônus de tamanho de +4 em Destreza, uma penalidade de -2 em Força e um bônus de armadura natural de +1. Animal Pequeno: Se a forma que você assumir for a de um animal Pequeno, você ganha um bônus de tamanho de +2 em Destreza e um bônus de armadura natural de +1. Animal Médio: Se a forma que você assumir for a de um animal Médio, você ganha um bônus de tamanho de +2 em Força e um bônus de armadura natural de +2. Animal Grande: Se a forma que você assumir for a de um animal Grande, você ganha um bônus de tamanho de +4 em Força, uma penalidade de -2 em Destreza e um bônus de armadura natural de +4. Animal Enorme: Se a forma que você assumir for a de um animal Enorme, você ganha um bônus de tamanho de +6 em Força, uma penalidade de -4 em Destreza e um bônus de armadura natural de +6. Besta Mágica Minúscula: Se a forma que você assumir for a de uma besta mágica Minúscula, você ganha uma penalidade de -2 em Força, um bônus de tamanho de +8 em Destreza e um bônus de armadura natural de +3. Besta Mágica Pequena: Se a forma que você assumir for a de uma besta mágica Pequena, você ganha um bônus de tamanho de +4 em Destreza e um bônus de armadura natural de +2. Besta Mágica Média: Se a forma que você assumir for a de uma besta mágica Média, você ganha um bônus de tamanho de +4 em Força e um bônus de armadura natural de +4. Besta Mágica Grande: Se a forma que você assumir for a de uma besta mágica Grande, você ganha um bônus de tamanho de +6 em Força, uma penalidade de -2 em Destreza, um bônus de tamanho de +2 em Constituição e um bônus de armadura natural de +6.
+
+---

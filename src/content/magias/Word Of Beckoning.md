@@ -1,0 +1,14 @@
+### Palavra de Convocação
+
+**Escola** Conjuração (Teletransporte); **Nível** Arcano 7
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 10 minutos  **Componentes** V, S, M/FD (fio de cobre fino)
+
+**EFEITO**
+**Alcance** ver texto  **Alvos** uma criatura  **Duração** 1 rodada; ver texto  **Teste de Resistência** nenhum  **Resistência à Magia** não
+
+**DESCRIÇÃO**
+Esta magia funciona como enviar mensagem, exceto que o sujeito também recebe conhecimento de uma palavra de comando que, quando falada, o convoca para o espaço aberto mais próximo do sujeito.  O sujeito deve falar a palavra de comando dentro de 1 rodada de conhecê-la para convocá-lo, embora não seja obrigado a falá-la. Você pode ser transportado por qualquer distância dentro de um plano, mas não pode viajar entre planos. Você pode trazer objetos consigo, desde que seu peso não exceda sua carga máxima. Você também pode trazer uma criatura adicional voluntária Média ou menor (carregando equipamento ou objetos até sua carga máxima) ou seu equivalente por três níveis de conjurador. Uma criatura Grande conta como duas criaturas Médias, uma criatura Enorme conta como quatro criaturas Médias, e assim por diante. Todas as criaturas a serem transportadas devem estar em contato umas com as outras, e pelo menos uma dessas criaturas deve estar em contato com você.
+
+---

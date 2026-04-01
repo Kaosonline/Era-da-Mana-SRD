@@ -1,0 +1,14 @@
+### Remover Radioatividade, Maior
+
+**Escola** Conjuração (Cura); **Nível** Arcano 8, Divino 8
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S
+
+**EFEITO**
+**Alcance** toque  **Alvos** criatura ou objeto tocado  **Duração** instantânea  **Teste de Resistência** Fortitude anula (objeto)  **Resistência a Magia** sim (objeto)
+
+**DESCRIÇÃO**
+Esta magia funciona como remover radioatividade, exceto que cura todo dano e dreno de atributos devido à radioatividade que o alvo sofreu. Além disso, você pode esgotar um objeto radioativo também, embora, como deve tocar o objeto para afetá-lo, você se exponha a pelo menos 1 rodada de contato com a radiação do objeto. Você deve ter sucesso em um teste de nível de conjurador (CD = 5 + a CD de Fortitude associada ao efeito de radiação) para esgotar o objeto. Se for bem-sucedido, o objeto não emite mais radiação. No caso de um reator nuclear ou ogiva atômica, isso torna permanentemente o reator ou ogiva inerte e inofensiva.
+
+---

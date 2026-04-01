@@ -34,7 +34,8 @@ function getTitle(markdown: string): string {
 
 function getId(path: string): string {
   const clean = path.replace(/^\.\.\/content\//, '').replace(/\.md$/, '');
-  return clean;
+  const parts = clean.split('/');
+  return parts[parts.length - 1];
 }
 
 export function loadContent(): ContentItem[] {

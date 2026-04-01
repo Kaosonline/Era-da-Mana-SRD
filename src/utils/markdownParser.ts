@@ -79,6 +79,11 @@ export function parseMarkdown(markdown: string): string {
     let processed = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     processed = processed.replace(/\*(.*?)\*/g, '<em>$1</em>');
     processed = processed.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    processed = processed.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_match, target, display) => {
+      const id = target.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\w-\/]/g, '');
+      const text = display ? display.trim() : target.trim();
+      return `<a href="#" class="cross-ref" data-target="${id}">${text}</a>`;
+    });
 
     if (trimmed.length > 0) {
       result.push(`<p>${processed}</p>`);

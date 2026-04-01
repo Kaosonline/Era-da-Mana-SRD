@@ -1,0 +1,14 @@
+### Entrar na Imagem
+
+**Escola** Transmutação; **Nível** Arcano 2, Divino 3
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M/FD (uma gota de tinta e uma bola de argila)
+
+**EFEITO**
+**Alcance** 15m/nível  **Efeito** transferir consciência para qualquer objeto que exiba sua imagem  **Duração** concentração  **Teste de Resistência** nenhum  **Resistência a Magia** não
+
+**DESCRIÇÃO**
+Você adquire uma vaga impressão das atividades ao redor de qualquer objeto que exiba seu rosto ou forma e também pode projetar sua consciência em um desses objetos por vez, permitindo que você observe ou até interaja com criaturas próximas. Esta magia permite que você deixe seu corpo e monitore subconscientemente a área imediata ao redor de qualquer representação de sua imagem, seja uma, centenas ou mesmo milhares. Cada tal imagem tem a gama completa de seus sentidos normais (visão, audição, olfato, etc.) e você pode fazer um teste de Percepção para notar qualquer coisa ocorrendo nas proximidades. A CD deste teste é sempre 10 maior do que seria se você estivesse realmente presente naquele local, então mesmo que você normalmente notasse algo automaticamente (como conversa, normalmente CD 0), você precisaria fazer um teste de Percepção de CD 10 para notá-lo. Você pode, a qualquer momento, escolher preencher uma imagem específica dentro do alcance com sua consciência. Enquanto dentro de uma imagem, você perde a habilidade de monitorar quaisquer outras imagens dentro do alcance, mas permanece totalmente ciente dos arredores de seu próprio corpo. Seu corpo fica indefeso e desamparado (falhando sempre em qualquer teste de resistência) enquanto sua consciência preenche uma imagem, mas você pode retornar a ele a qualquer momento como uma ação imediata. Quando você preenche uma imagem com sua consciência, ela ganha uma forma limitada de animação. Estátuas e representações tridimensionais similares podem mover suas cabeças, fazer gestos e falar, mas não podem atacar ou sair de seu quadrante sem assistência. Retratos ou representações bidimensionais similares que exibem sua imagem também podem falar e sua imagem pode se mover por qualquer lugar dentro da imagem ou até alterá-la temporariamente (como ao pegar uma flor na pintura). Você não pode usar quaisquer magias ou outras habilidades enquanto estiver dentro de uma imagem. Você pode deixar a imagem a qualquer momento, retornando ao seu corpo. Uma vez que sua consciência parte de um objeto que exibe sua imagem, ele imediatamente reverte à aparência que tinha antes de você entrar. Se alguém destruir ou danificar a imagem, você retorna a seu corpo ileso. A magia dura até que você cesse de se concentrar, ou até que seja terminada por algum meio externo, como uma dissipação de magia lançada sobre a imagem ou seu corpo, ou se seu corpo for morto.
+
+---

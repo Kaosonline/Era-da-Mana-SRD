@@ -1,0 +1,14 @@
+### Visualização do Corpo
+
+**Escola** Transmutação [meditativo]; **Nível** Arcano 2, Divino 2
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 hora  **Componentes** V, M (incenso calmante no valor de 200 po)
+
+**EFEITO**
+**Alcance** pessoal  **Alvos** você  **Duração** 24 horas ou até ser descarregada
+
+**DESCRIÇÃO**
+Você foca sua mente em um aspecto do seu corpo, alinhando as energias dentro do seu corpo para aprimorar esse elemento. Escolha uma única habilidade física (Constituição, Destreza ou Força). Se escolher Força ou Destreza, você ganha um bônus de +5 em testes de perícia associados a esse atributo. Se escolher Constituição, seus pontos de vida máximos e atuais aumentam em uma quantidade igual aos seus Dados de Vida. A qualquer momento durante a duração da magia, você pode gastar a duração restante da magia como uma ação imediata para ganhar um aprimoramento físico único associado ao atributo que você escolheu visualizar, conforme detalhado abaixo. Após fazer isso, a magia termina. Constituição: Você imediatamente recupera um número de pontos de vida igual a 1d8 + seu nível de personagem total. Destreza: Você ganha um bônus de esquiva de +4 em sua Classe de Armadura por 3 rodadas. Força: Você ganha um bônus de +6 em todos os testes de Força para quebrar objetos e em testes para escapar ou estabelecer agarramentos por 1 minuto.
+
+---

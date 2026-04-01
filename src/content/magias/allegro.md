@@ -1,12 +1,12 @@
 ### Allegro
 
-Escola Transmutação; Nível Arcano 2
+**Escola** Transmutação; **Nível** Arcano 2
 
-CONJURAÇÃO
-Tempo de Conjuração 1 ação padrão  Componentes V
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V
 
-EFEITO
-Alcance pessoal  Alvos você  Duração 1 rodadas/nível (D) ou até ser descarregada
+**EFEITO**
+**Alcance** pessoal  **Alvos** você  **Duração** 1 rodadas/nível (D) ou até ser descarregada
 
-DESCRIÇÃO
-Esta magia permite que você aja mais rapidamente enquanto mantém uma performance bárdica. Você já deve estar mantendo uma performance bárdica antes de poder conjurar *allegro*. Você recebe os benefícios da magia *haste* enquanto mantiver aquela performance bárdica. Se você cessar de manter a performance bárdica ou ela for interrompida, a duração desta magia termina. Como uma ação imediata enquanto você está mantendo uma performance bárdica, você pode dissipar *allegro* para rolar novamente um teste de Reflexo ou uma perícia baseada em Destreza—você deve escolher rolar novamente antes do resultado da rolagem original ser conhecido. Você deve aceitar o resultado da nova rolagem, mesmo que seja pior que a rolagem original. Allegro dissipada e é dissipada por slow.
+**DESCRIÇÃO**
+Esta magia permite que você aja com mais rapidez enquanto mantém uma performance de bardo. Você já deve estar mantendo uma performance de bardo antes de poder conjurar Allegro. Você ganha os benefícios da magia pressa enquanto mantiver essa performance de bardo. Se você cessar de manter a performance de bardo ou ela for interrompida, a duração desta magia termina. Como uma ação imediata enquanto você está mantendo uma performance de bardo, você pode descartar Allegro para rerrolar um teste de Reflexo ou um teste de habilidade baseado em Destreza—você deve escolher rerrolar antes que o resultado da rolagem original seja conhecido. Você deve aceitar o resultado do rerrolamento, mesmo se for pior que o resultado original. Allegro anula e é anulado por lentidão.

@@ -1,0 +1,12 @@
+### Aliviar Corrupção
+
+**Escola** Abjuração; **Nível** Arcano 6, Divino 6
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 minuto  **Componentes** V, S, M (ervas raras, incenso e joias valendo 500 po/o nível de personagem ou DV do alvo)
+
+**EFEITO**
+**Alcance** toque  **Alvos** uma criatura que não seja você  **Duração** instantânea  **Teste de Resistência** Vontade anula (inofensivo)  **Resistência a Magia** sim (inofensivo)
+
+**DESCRIÇÃO**
+Você combate a corrupção crescente (ver página 14) em outra criatura ou acelera o processo de longo prazo de exorcizá-la completamente. Esta magia tem dois propósitos, e você escolhe qual aplicação usar no momento da conjuração.  Combater Corrupção: Cada vez que uma criatura falha em um teste de resistência para evitar que sua corrupção progrida (conforme descrito na seção Progressão dessa corrupção), ela avança para o próximo estágio de corrupção—no estágio 3, ela perde a batalha contra sua corrupção. Usar esta magia pode reduzir o estágio de corrupção do alvo em 1. Isso não tem efeito se o alvo não estiver em um estágio de progressão de 1 ou superior.  Remover Corrupção: Você pode remover 1 nível de manifestação da criatura alvo, bem como a manifestação adquirida mais recentemente e seu presente e mancha correspondentes. Fazer isso também reduz o poder de presentes e manchas que variam com base no nível de manifestação. Esta aplicação de Aliviar Corrupção não reduz o estágio de corrupção do alvo. Se a criatura alvo perder todos os níveis de manifestação, ela é curada da corrupção.  Qualquer aplicação da magia exige um teste de nível de conjurador. O CD é igual a 10 + o dobro do nível de manifestação do alvo + 3 vezes o estágio de corrupção do alvo (efetivamente 0, 3 ou 6, pois o estágio 3 remove o personagem do controle do jogador).  interferir com corrupções é perigoso, pois sua natureza é contagiosa. Se você falhar neste teste de nível de conjurador por 5 ou mais, você contrai a corrupção e ganha uma manifestação (as regras para as variantes útil e vil da corrupção ainda se aplicam). Uma rolagem de 1 natural no teste de nível de conjurador é uma falha automática. Se você já tiver a mesma corrupção, você deve, em vez disso, tentar um teste de resistência imediato contra ela. Conjurar Aliviar Corrupção em si mesmo falha automaticamente, assim como conjurá-la em um alvo que sucumbiu completamente a uma corrupção (falhou três testes de resistência contra ela). Uma criatura pode ser beneficiada por esta magia apenas uma vez por semana, seja obtendo sucesso ou não.
