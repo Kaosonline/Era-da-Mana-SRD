@@ -1,0 +1,5 @@
+### Investida da Barracuda
+**Tipo do Talento**: Combate
+**Pré-requisitos**: Sab 13, Golpe da Barracuda, Estilo da Barracuda, Golpe Desarmado Aprimorado, Acrobacia 7 graduações, Natação 7 graduações.
+**Descrição**: Você usa rajadas poderosas e mortais de velocidade para investir e atacar um inimigo adicional.
+**Benefício**: Você ganha uma velocidade de natação igual à sua velocidade base. Quando você ataca em uma investida na água ou em terra e o ataque acerta, você pode imediatamente fazer um segundo ataque de investida contra um segundo oponente. Todos os requisitos normais para fazer uma investida, como mover-se pelo menos 3 metros e mover-se em linha reta, aplicam-se a esse segundo ataque. A distância total dos dois ataques de investida não pode exceder a distância máxima normal para uma investida (geralmente o dobro da sua velocidade). O movimento, incluindo sair da área ameaçada do primeiro alvo, provoca ataques de oportunidade como normalmente. Você não pode usar pounce ou outras habilidades que concedem ataques adicionais em seu turno se usar Investida da Barracuda para fazer um segundo ataque.

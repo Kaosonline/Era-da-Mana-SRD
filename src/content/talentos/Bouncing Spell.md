@@ -1,0 +1,4 @@
+### Magia Ricocheteante
+**Tipo do talento**: Metamagia
+**Descrição**: Você pode direcionar uma magia que falhou contra um alvo diferente.
+**Benefício**: Sempre que uma magia ricocheteante que alveja uma única criatura não tiver efeito em seu alvo pretendido (seja devido à resistência à magia ou a um teste de resistência bem-sucedido), você pode, como uma ação rápida, redirecioná-la para atingir outra criatura elegível dentro do alcance. A magia redirecionada se comporta de todas as formas como se seu novo alvo fosse o alvo original da magia. Magias que afetam um alvo de qualquer forma (incluindo um efeito menor de um teste de resistência bem-sucedido) não podem ser redirecionadas dessa maneira. Uma magia ricocheteante consome um espaço de magia um nível mais alto que o nível real da magia.

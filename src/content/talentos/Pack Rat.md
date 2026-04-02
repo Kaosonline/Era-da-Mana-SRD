@@ -1,0 +1,5 @@
+### Pegador de Tranqueiras
+**Tipo do talento**: General
+**Pré-requisitos**: Ratfolk.
+**Descrição**: Você coleciona todo tipo de coisa e frequentemente perde e reencontra as coisas que adquiriu.
+**Benefício**: Uma vez por dia, quando confrontado com uma situação que exija um item mundano específico, você casualmente tem tal item em sua pessoa. O item deve custar não mais que 25 po mais 5 po por nível, e você deve pagar seu custo quando "encontrá-lo" (em outras palavras, o dinheiro que você pensava ter em sua pessoa era na verdade o item). O item deve ser algo que você possa carregar facilmente—por exemplo, se você estiver a pé e tiver apenas uma mochila, você não poderia ter um caldeirão de ferro grande. Você não pode encontrar itens mágicos usando este talento, nem pode ter itens específicos, como a chave de uma porta particular. Se você for despojado de seu equipamento ou posses, você perde os benefícios deste talento até que tenha pelo menos um dia para reabastecer e adquirir novos itens.

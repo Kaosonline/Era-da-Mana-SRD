@@ -1,0 +1,6 @@
+### Intensified Spell-Like Ability
+**Tipo do talento**: Monstro
+**Pré-requisitos**: Habilidade similar a magia com nível de conjurador 4º ou maior.
+**Descrição**: Sua habilidade similar a magia causa mais dano.
+**Benefício**: Escolha uma de suas habilidades similares a magia, sujeita às restrições descritas neste talento. Você pode usar a habilidade similar a magia escolhida como uma habilidade similar a magia intensificada três vezes por dia (ou menos, se a habilidade for normalmente utilizável apenas uma ou duas vezes por dia). Quando você usa uma habilidade similar a magia intensificada, o número máximo de dados de dano da habilidade aumenta em 5 níveis. Você deve ter níveis de conjurador suficientes para superar o máximo normal a fim de se beneficiar deste talento. Nenhuma outra variável da habilidade similar a magia é afetada, e habilidades similares a magia que infligem dano não modificado pelo nível de conjurador não são afetadas por este talento. Você só pode selecionar uma habilidade similar a magia que duplique uma magia com um nível menor ou igual a (1/2 do seu nível de conjurador (arredondado para baixo)) - 1. Para um resumo, veja a Tabela 3-1.
+**Especial**: Este talento pode ser escolhido múltiplas vezes. Cada vez que for escolhido, você pode aplicá-lo a uma habilidade similar a magia diferente.

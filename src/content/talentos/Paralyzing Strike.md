@@ -1,0 +1,5 @@
+### Golpe Paralisante
+**Tipo do talento**: Combate
+**Pré-requisitos**: Destreza 13, Sabedoria 13, Golpe Desarmado Aprimorado, BBA +14.
+**Descrição**: Encontrando o ponto de pressão perfeito, você paralisa seu inimigo com um único golpe.
+**Benefício**: Você deve declarar que está usando este talento antes de fazer sua jogada de ataque (portanto, uma jogada de ataque fracassada arruína a tentativa). Golpe Paralisante força um inimigo danificado por seu ataque desarmado a tentar um teste de resistência de Fortitude (CD = 10 + 1/2 do seu nível de personagem + seu modificador de Sabedoria), além de causar dano normalmente. Um defensor que falha neste teste de resistência fica paralisado por 1 rodada, até pouco antes do seu próximo turno. Você pode tentar usar Golpe Paralisante uma vez por dia para cada 4 níveis de personagem que você tem, mas não mais do que uma vez por rodada. Construtivos, criaturas incorpóreas, plantas, mortos-vivos e criaturas que são imunes a golpes críticos não podem ser afetados por esta habilidade.

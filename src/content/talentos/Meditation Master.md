@@ -1,0 +1,4 @@
+### Mestre da Meditação
+**Tipo do talento**: Geral
+**Descrição**: Quando completamente focado em seu eu interior, você pode entrar em um estado meditativo profundo que permite um controle mais perfeito sobre sua mente e corpo.
+**Benefício**: Quando você medita por pelo menos 1 hora após obter pelo menos 8 horas de descanso, você ganha um insight especial sobre sua situação que é quase imparcial, concedendo a você a vantagem em qualquer empreendimento que mais importe durante o dia. Após meditar, você ganha um +1 de bônus de insight que pode aplicar a qualquer rolagem d20 durante as próximas 24 horas sem usar uma ação. O bônus pode ser aplicado após a rolagem ser feita, mas deve ser aplicado antes que os resultados da rolagem sejam determinados. Uma vez que o bônus tenha sido usado no dia, você não pode usá-lo novamente até after meditar novamente após outras 8 horas de descanso. Um bônus não usado desaparece após 24 horas.

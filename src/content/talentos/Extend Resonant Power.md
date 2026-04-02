@@ -1,0 +1,6 @@
+### Poder Ressonante Estendido
+**Tipo do talento**: Geral
+**Pré-requisitos**: Nível de conjurador 7, característica de classe de foco mental.
+**Descrição**: Você pode compartilhar os benefícios de seus poderes de foco ressonante com aliados próximos.
+**Benefício**: Selecione uma escola de implemento. Quando você coloca pontos de foco mental em um implemento dessa escola, você pode optar por ganhar os benefícios do poder ressonante como se tivesse colocado apenas metade dos pontos de foco mental no implemento. Se você fizer isso, pode estender os mesmos benefícios para um aliado adicional dentro de 9 m no momento em que investe foco mental. Se o aliado se mover fora do alcance do poder estendido, o poder é suprimido, mas retoma o funcionamento uma vez que o aliado se mova dentro do alcance novamente. Você pode gastar 1 ponto de foco mental de seu implemento para passar o efeito para um novo alvo, desde que tanto o alvo original quanto o novo estejam dentro de 9 m. Este talento pode afetar apenas um implemento de uma determinada escola por vez, mesmo que você tenha selecionado a mesma escola de implemento mais de uma vez.
+**Especial**: Você pode tomar este talento múltiplas vezes. Cada vez que você toma o talento, selecione uma escola de implemento diferente.

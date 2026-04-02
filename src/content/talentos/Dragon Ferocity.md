@@ -1,0 +1,6 @@
+### Fúria do Dragão
+**Tipo do talento**: Combate
+**Pré-requisitos**: For 15, Golpe Desarmado Aprimorado, Estilo do Dragão, Punho Atordoante, Acrobacia 5 graduações.
+**Descrição**: Você ataca com a força de um dragão, seus golpes decisivos enchendo de medo seus inimigos.
+**Benefício**: Quando usa o Estilo do Dragão, aumente seu bônus de Força nas rolagens de dano de golpe desarmado em metade adicional do seu bônus de Força, totalizando o dobro do seu bônus de Força no primeiro ataque e 1-1/2 vezes seu bônus de Força nos outros ataques. Quando você acerta um golpe crítico ou uma tentativa bem-sucedida de Punho Atordoante contra um oponente enquanto usa este estilo, esse oponente também fica abalado por um número de rodadas igual a 1d4 + seu bônus de Força.
+**Especial**: Ao adquirir este talento, você se qualifica para o talento Punho Elemental (Guia do Jogador Avançado 158) mesmo que não cumpra os pré-requisitos daquele talento. Se você não cumprir os pré-requisitos daquele talento, deve escolher um dos tipos de dano que aquele talento oferece, e você pode usar apenas aquele tipo de dano com seus ataques de Punho Elemental até que cumpra os pré-requisitos normais do talento. Um monge com este talento pode usar Punho Elemental como se fosse um monge dos quatro ventos (Guia do Jogador Avançado 112).

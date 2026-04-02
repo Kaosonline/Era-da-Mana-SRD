@@ -1,0 +1,5 @@
+### Perceber Relacionamentos
+**Tipo do talento**: Geral
+**Pré-requisitos**: Espertice Urbana.
+**Descrição**: Você pode perceber rapidamente os relacionamentos entre outros e usar esse conhecimento para manipulá-los.
+**Benefício**: Após 1 minuto ou mais de interação ou observação, você pode tentar um teste de Percepção das Intenções com CD 20 para intuir o relacionamento entre quaisquer duas criaturas que interagem entre si. Se você não entende o idioma que estão falando, você sofre uma penalidade de -5 no teste, e se as criaturas forem de um tipo diferente do seu, você sofre uma penalidade adicional de -5 no teste. Se você for bem-sucedido no teste por 5 ou mais, na próxima hora, você ganha um bônus de +2 em testes de Blefar para mentir sobre uma das criaturas para a outra e em testes de Diplomacia para solicitar que uma aja contra a outra. Se você falhar no teste, você não pode tentar esta habilidade nas mesmas criaturas novamente até que você ganhe uma graduação adicional em Percepção das Intenções.

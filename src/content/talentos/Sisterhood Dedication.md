@@ -1,0 +1,5 @@
+### Dedicação da Irmandade
+**Tipo do talento**: Combate
+**Pré-requisitos**: Car 13, Foco no Escudo, Muralha de Escudos (APG), Baluarte da Irmandade, Estilo da Irmandade, Foco em Arma (espada longa), BBA +6.
+**Descrição**: O vínculo das Donzelas Cinzas umas com as outras vai além da simples coordenação em combate. Um membro de elite da irmandade é uma inspiração para suas companheiras, revigorando seus espíritos e coordenando suas táticas sem esforço.
+**Benefício**: Enquanto você estiver usando a postura de Estilo da Irmandade e empunhando uma espada longa e um escudo leve ou pesado, o bônus em testes de resistência do Estilo da Irmandade aumenta para +2 e você concede metade desse bônus a todos os aliados dentro de 6 m. Além disso, você pode escolher até dois talentos de trabalho em equipe que possui ao entrar na postura de Estilo da Irmandade. Como uma ação rápida, você pode conceder um desses talentos a dois aliados dentro de 6 m até o início de seu próximo turno, ou conceder ambos os talentos a um aliado dentro de 6 m até o início de seu próximo turno.

@@ -1,0 +1,5 @@
+### ENLOQUECEDORA ANIQUILAÇÃO
+**Tipo do talento**: Combate
+**Pré-requisitos**: Sab 19, Car 15, Golpe Desarmado Aprimorado, Golpe Alucinante, Estilo Alucinante, Punho Atordoante, Conhecimento (arcano) 10 graduações, característica de classe reserva de ki, alinhamento não bom.
+**Descrição**: Com um golpe mortal poderoso, seu soco perturbador vaporiza seu inimigo.
+**Benefício**: Quando você inflige dano a uma criatura viva com um golpe desarmado enquanto usa Estilo Alucinante e tem pelo menos 1 ponto em sua reserva de ki, essa criatura sofre uma penalidade de -2 em testes de resistência contra qualquer efeito de confusão, loucura e insanidade (incluindo seu Golpe Alucinante) por 1 rodada. Além disso, se você reduzir uma criatura a menos de 0 pontos de vida com um ataque de Punho Atordoante, você pode gastar 2 pontos de sua reserva de ki como uma ação livre para obliterar seu oponente, reduzindo seu corpo a um fino pó como na Desintegração. Uma criatura viva pode tentar um teste de Fortitude (CD = 10 + 1/2 do seu nível de personagem + seu modificador de Sabedoria) para anular esse efeito.

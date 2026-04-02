@@ -1,0 +1,6 @@
+### Forma Gasosa Aprimorada
+**Tipo do talento**: Geral
+**Pré-requisitos**: Vampiro.
+**Descrição**: Seu estado gasoso é mais potente que o de seus pares.
+**Benefício**: Como uma ação padrão, você pode assumir forma gasosa à vontade (nível de conjurador 5º), mas pode permanecer gasoso indefinidamente e ter uma velocidade de voo de 6 m com manobrabilidade perfeita. Esta é uma habilidade sobrenatural.  Se você já possui a qualidade especial forma gasosa, você pode, em vez disso, escolher aprimorar sua forma gasosa de uma das seguintes maneiras. Esses efeitos se aplicam apenas a criaturas que entram em seu espaço enquanto você está em forma gasosa.  Pó Cintilante (Su): As criaturas devem ter sucesso em um teste de Vontade ou ficar cegas e serem delineadas por partículas douradas como se estivessem sob os efeitos de pó cintilante.  Nevoeiro Mental (Su): As criaturas devem ter sucesso em um teste de Vontade ou sofrer penalidades como se estivessem sob os efeitos de nevoeiro mental. Esse efeito dura enquanto uma criatura compartilha seu espaço e por 2d6 rodadas depois.
+**Especial**: Você pode obter este talento múltiplas vezes. Cada vez que você obtém este talento, escolha outro tipo de enxame.

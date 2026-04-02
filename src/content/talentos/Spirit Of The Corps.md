@@ -1,0 +1,4 @@
+### Espírito do Corpo
+**Tipo do talento**: Combate
+**Descrição**: Você encontra inspiração em seus companheiros de tropa, confiando que seu treinamento e dedicação compartilhados trarão vitória no campo de batalha.
+**Benefício**: Sempre que você estiver a até 3 metros de um aliado beneficiado por uma magia ou efeito que conceda um bônus de moral em um tipo específico de teste, uma vez durante a duração desse efeito, você pode aplicar esse bônus de moral em um teste que você fizer desse tipo. Por exemplo, se um aliado com este talento estiver beneficiado por heroísmo, uma vez durante a duração da magia, você poderia ganhar um bônus de moral +2 em um teste de resistência, jogada de ataque ou teste de habilidade. Você pode usar este talento apenas uma vez por rodada, e apenas uma vez por magia ou efeito.

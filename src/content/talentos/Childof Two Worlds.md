@@ -1,0 +1,5 @@
+### Filho de Dois Mundos
+**Tipo do talento**: História
+**Pré-requisitos**: Seja por meio de um elixir de dois mundos (consulte a página 62) ou por outros meios, um de seus pais era aquático e o outro era terrestre. Você é principalmente um membro normal de sua raça, exceto como declarado neste talento. Você deve selecionar este talento no 1º nível, e você não pode ter outros talentos, traços ou habilidades que especifiquem sua linhagem sanguínea, como Herança Racial (APG). Contextos tematicamente apropriados incluem Adotado Fora de Sua Raça, Bastardo Nascido, Morte na Família, Único de Seu Gênero e O Parente. Esses contextos são encontrados no Pathfinder RPG Ultimate Intrigue.
+**Descrição**: Você é o filho de uma criatura terrestre e de uma criatura aquática, lutando para conciliar sua herança dupla.
+**Benefício**: Você ganha um deslocamento terrestre de 3 m se for aquático; se não for aquático, você ganha um +4 de bônus racial em testes de Natação que não se acumula com o bônus por ter um deslocamento de natação.

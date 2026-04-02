@@ -1,0 +1,6 @@
+### Crônico Pessoal
+**Tipo do talento**: Geral
+**Pré-requisitos**: Caminhante do Crepúsculo.
+**Descrição**: Psicopompos enviaram um escriba nosoi para registrar suas ações.
+**Benefício**: Você ganha um familiar nosoi novato conforme a habilidade de classe vínculo arcano, usando seu nível de personagem como seu nível de mago. Trate isso como um familiar de corvo ou de bacurau (um bacurau usa as estatísticas de um tordo, mas concede um bônus de +3 em Intimidação em vez de Diplomacia). Se você tem a habilidade de obter um familiar por outros meios e você é pelo menos 5º nível, o pássaro é tratado como um nosoi (Pathfinder RPG Bestiário 4 220) como se você tivesse tomado o talento Familiar Aprimorado. Você pode ter apenas um familiar. Este talento pode ser tomado uma segunda vez por um personagem de 7º nível ou superior se esse personagem não tiver acesso a um familiar de outra forma. Esses personagens tratam seus familiares como nosoi, conforme descrito acima.
+**Especial**: Se você alguma vez consorte voluntariamente com sahkils ou mortos-vivos, seu familiar o abandona e reporta suas ações aos psicopomps mais próximos. Para recuperar seu familiar, você deve expiar seus atos através da magia de Expiação.

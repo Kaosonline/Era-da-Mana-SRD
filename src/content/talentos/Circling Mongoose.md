@@ -1,0 +1,6 @@
+### Circling Mongoose
+**Tipo do talento**: Combate
+**Pré-requisitos**: Des 13, Desviar, Mobilidade, Ataque da Primavera, bônus base de ataque +6.
+**Descrição**: Você mantém seu oponente na defensiva enquanto circula ao redor dele de forma ameaçadora.
+**Benefício**: Quando você está adjacente a um inimigo, como uma ação completa, você pode realizar uma ação de ataque completo para fazer ataques corpo a corpo contra o inimigo, movendo 1,5 m antes de cada ataque. Você deve se mover 1,5 m antes de cada ataque corpo a corpo que fizer e não pode exceder sua velocidade máxima, exceder seu número máximo de ataques em um turno ou atacar qualquer outro alvo até o início de seu próximo turno. Você deve permanecer adjacente ao inimigo e seu movimento provoca ataques de oportunidade normalmente, a menos que você tenha sucesso nos testes de Acrobacia apropriados. Se seu primeiro ataque contra o inimigo acertar, você é considerado estar flanqueando o inimigo no seu segundo ataque. Ataques subsequentes realizados como parte da ação de ataque completo continuam a ser tratados como se você estivesse flanqueando o inimigo até que um de seus ataques erre, momento em que seus ataques são tratados normalmente.
+**Normal**: Um personagem sem este talento é limitado a apenas um passo de 1,5 m durante um ataque completo, realizado antes, depois ou entre os ataques.

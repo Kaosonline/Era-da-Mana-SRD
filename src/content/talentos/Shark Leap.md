@@ -1,0 +1,5 @@
+### Salto do Tubarão
+**Tipo do talento**: Combate
+**Pré-requisitos**: Golpe Desarmado Aprimorado, Estilo do Tubarão, Retalho do Tubarão, Natação 10 graus, BBA +10 ou nível de monge 10º.
+**Descrição**: Como um predador mortal, você arremete contra oponentes desprevenidos de baixo.
+**Benefício**: Enquanto estiver no Estilo do Tubarão, quando você estiver subaquático com flutuabilidade neutra, ascendente ou rapidamente ascendente, você pode realizar um salto aterrador para atacar oponentes diretamente acima de você. Isso funciona de forma similar à ação de carga, exceto que você só pode se mover em linha reta para cima, e você faz um único golpe desarmado perfurante ou ataque de mordida. Se o ataque acertar, ele causa dano dobrado; se o resultado da jogada de ataque também for maior que 11 + o modificador de Natação do alvo, o ataque derruba o alvo até seu próximo turno. Como com uma carga, você pode realizar uma versão parcial quando limitado a uma única ação padrão (como no round de surpresa); além de se mover metade da distância normal para uma carga parcial, o ataque dobra apenas os dados de dano (conforme Golpe Vital) em vez de toda a rolagem de dano.

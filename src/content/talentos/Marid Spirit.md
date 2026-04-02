@@ -1,0 +1,5 @@
+### Marid Spirit
+**Tipo do talento**: Combate
+**Pré-requisitos**: Con 15, Sab 15, Soco Elemental**, Estilo do Marid, Golpe Desarmado Aprimorado, BBA +11 ou nível de monge 9.
+**Descrição**: Você pode manipular energia de frio para se proteger e congelar seus inimigos.
+**Benefício**: Você ganha uma tentativa adicional de Soco Elemental (Advanced Player's Guide 158) por dia. Enquanto estiver usando o Estilo do Marid, você ganha resistência a frio igual ao seu bônus base de ataque, ou nível de monge mais bônus base de ataque obtido de níveis em classes que não seja monge, o que for maior. Quando negado seu bônus de Destreza para a CA, você também nega essa resistência. Criaturas que sofrem dano de frio de seu ataque de Soco Elemental devem ter sucesso em um teste de Fortitude (CD 10 + 1/2 seu nível de personagem + seu modificador de Sab) ou ficarem enredadas no gelo por 1d4 rodadas. O gelo tem pontos de vida iguais a três vezes seu bônus base de ataque ou nível de monge, o que for maior, e uma CD de quebra de 15 + seu bônus base de ataque ou nível de monge, o que for maior. Destruir ou quebrar o gelo termina a condição enredado.*

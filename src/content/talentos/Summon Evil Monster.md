@@ -1,0 +1,5 @@
+### Invocar Monstro Maligno
+**Tipo de Talento**: Geral
+**Pré-requisitos**: Qualquer alinhamento maligno.
+**Descrição**: O Arquibarão Fex pode invocar a ajuda de criaturas movidas por sua própria natureza para destruir o bem. Este talento apareceu originalmente em Pathfinder Player Companion: Campeões da Corrupção. Consulte as Táticas de Fex na página 56 para os monstros que o arquibarão normalmente invoca em combate. Para a lista completa de monstros que podem ser invocados com este talento, consulte Campeões da Corrupção.
+**Benefício**: Ao conjurar a magia Invocar Monstro, você também tem acesso a uma lista adicional de monstros malignos. Quando você invoca uma criatura desta lista, sua natureza depravada permite que você conjure a magia como uma ação padrão. A criatura invocada aparece como normal para a magia, mas não pode agir até o seu próximo turno. Ela não está desprevenida, no entanto, e pode fazer ataques de oportunidade normalmente. Estes efeitos não se aplicam a criaturas da lista padrão que não estão também nesta lista.

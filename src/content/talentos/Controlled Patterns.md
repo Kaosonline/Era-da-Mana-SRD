@@ -1,0 +1,5 @@
+### Padrões Controlados
+**Tipo do talento**: Geral
+**Pré-requisitos**: Mensagem Padrão, Foco em Magia (ilusão), nível de conjurador 7.
+**Descrição**: Você pode modificar seus feitiços da subescola padrão para reduzir sua chance de afetar certos alvos.
+**Benefício**: Quando você lança um feitiço da subescola padrão, como uma ação livre, você pode escolher um tipo ou subtipo específico de criatura para proteger dos efeitos plenos do feitiço. Criaturas do tipo ou subtipo selecionado que são afetadas pelo feitiço reduzem a CD do teste de resistência do feitiço em 4. No nível 11 e a cada 4 níveis subsequentes, você pode especificar um tipo ou subtipo de criatura adicional para proteger (até quatro tipos protegidos no nível 19). Se uma criatura tiver múltiplos subtipos que você especificou ao lançar seu feitiço, a redução na CD do teste de resistência do feitiço acumula para cada tipo ou subtipo especificado. Por exemplo, se você especificou o tipo de criatura *extraterrestre* e os subtipos *demônio* e *maligno*, então a CD do seu feitiço de padrão seria 12 pontos mais baixa para extraterrestres com os subtipos demônio e maligno.

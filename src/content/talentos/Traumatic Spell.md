@@ -1,0 +1,4 @@
+### Magia Traumática
+**Tipo do talento**: Metamágico
+**Descrição**: Criaturas prejudicadas por suas magias revivem seus tormentos em terrores noturnos.
+**Benefício**: Uma magia traumática causa lembranças persistentes de dor e sofrimento em criaturas prejudicadas por ela. Quando uma criatura falha em um teste de resistência contra uma magia traumática, na próxima vez que dormir, deve ter sucesso em um teste de Vontade com CD igual à CD da magia original ou ser afetada como se estivesse sob o efeito de pesadelo. Cada vez que o alvo falha em seu teste, deve fazer um novo teste na noite seguinte ou ser afetado por outro pesadelo, embora a CD do teste diminua em 2 a cada noite após a primeira. Este talento metamágico pode ser aplicado apenas a magias com o descritor de emoção ou medo. Uma magia traumática usa um espaço de magia 2 níveis mais alto que o nível real da magia.

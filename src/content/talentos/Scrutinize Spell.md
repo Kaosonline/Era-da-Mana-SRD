@@ -1,0 +1,6 @@
+### Scrutinize Spell
+
+**Tipo do talento**: Geral
+**Pré-requisitos**: Magia 1 cumprimento.
+**Descrição**: Você pode rapidamente avaliar conjuradores para ganhar uma vantagem ao contraconjurar seus feitiços.
+**Benefício**: Quando você presencia uma criatura conjurando um feitiço, você pode tentar um teste de Magia para determinar que tipo de conjurador o alvo é—especificamente, qual é a classe do alvo. O CD deste teste de perícia é igual a 10 + os Dados de Vida do conjurador. Se o alvo tem níveis em múltiplas classes conjuradoras, ter sucesso neste teste revela de qual lista de feitiços da classe o feitiço veio. Se o resultado do teste for alto o suficiente para que identificaria o feitiço sendo conjurado (CD = 15 + o nível do feitiço), você também identifica o feitiço. Uma vez que você identificou a classe do alvo, você pode adicionar seu modificador de Sabedoria ou Carisma (o que for maior) aos testes de Magia para identificar todos os feitiços que o alvo conjura da lista de feitiços dessa classe. Além disso, depois que você determinou a classe conjuradora do alvo, você pode tentar um teste de Intimidação como uma ação livre para desmoralizar o alvo, ganhando um bônus igual ao seu modificador de Sabedoria ou Carisma (o que for mais alto).

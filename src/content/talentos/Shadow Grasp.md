@@ -1,0 +1,6 @@
+### Shadow Grasp
+
+**Tipo do talento**: Metamágico
+**Pré-requisitos**: Magia Tenebrosa, Magia Umbral.
+**Descrição**: Suas magias de escuridão têm substância e prendem seus inimigos.
+**Benefício**: Quando você conjura uma magia com o descritor de escuridão que afeta uma área, as criaturas na área ficam *agarradas*. Se a magia permite um teste de resistência, um teste bem-sucedido nega o efeito de agarramento. Se a magia não permite normalmente um teste de resistência, uma criatura pode fazer um teste de Reflexos (CD = a CD da magia se ela permitisse um teste de resistedência) para negar o efeito. Se a magia permite resistência à magia, falhar em superar a resistência à magia de uma criatura significa que ela não fica agarrada. Uma criatura agarrada permanece assim enquanto estiver na área da magia e por 1 rodada após sair. Uma criatura que sai e reentra na área deve fazer um novo teste de resistência para evitar ficar agarrada. Criaturas que obtêm sucesso em um teste de resistência para evitar ficarem agarradas não precisam fazer testes adicionais se permanecerem dentro da área escurecida. Você nunca é prejudicado pelos efeitos de suas magias modificadas por este talento. Uma magia com Agarramento Sombrio consome um slot de um nível mais alto que o nível real da magia.

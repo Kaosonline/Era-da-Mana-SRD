@@ -1,0 +1,4 @@
+### Collective Recollection
+**Tipo de talento**: Geral
+**Descrição**: Você e seus aliados podem rapidamente despertar as memórias uns dos outros para lembrar fatos essenciais.
+**Benefício**: Quando um aliado que também possesses este talento realiza um teste de perícia de Conhecimento treinado enquanto estiver a até 9 m de você, você pode realizar um teste de auxílio como uma ação livre para melhorar aquele teste de perícia do aliado. Você deve ter pelo menos 1 posto na perícia de Conhecimento que está sendo auxiliada para usar este talento. Se você for bem-sucedido no teste de auxílio, você automaticamente sabe qualquer informação que seu aliado obtiver do teste de Conhecimento, como se você tivesse rolado o teste de Conhecimento. Seja qual for o resultado do seu teste de auxílio, você não pode realizar um teste de Conhecimento para determinar a mesma informação que seu aliado após usar este talento.

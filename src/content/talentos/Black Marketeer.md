@@ -1,0 +1,5 @@
+### Black Marketeer
+**Tipo do talento**: General
+**Pré-requisitos**: Avaliação 4 ranks, Obtenção de Informações 4 ranks, Conhecimento (local) 4 ranks.
+**Descrição**: Você tem muitos contatos e um olho afiado para oportunidades ocultas no mercado.
+**Benefício**: Ao utilizar suas conexões com o mercado negro, você adquire uma reserva de recursos no valor de 100 po. Isso funciona como a reserva de recursos obtida pelo talento Lucros de Kalistrade (veja Pathfinder Chronicles Campaign Setting página 73), exceto que só pode ser usada em itens ou serviços ilegais ou ilícitos (note que algo pode ser ilegal ou ilícito em uma área, mas perfeitamente aceitável em outra) e é centrada em Osirion, não em Druma. Itens ou serviços ilegais ou ilícitos típicos são drogas, venenos, itens mágicos malignos, escravos ou cadáveres, embora intangíveis, como informações secretas, também possam se qualificar (e para esses itens, deve-se contribuir com um segredo de valor igual – a critério do Mestre – para a reserva).

@@ -1,0 +1,5 @@
+### Despertar Emoções
+**Tipo do talento**: Geral
+**Pré-requisitos**: Car 13, Performance Encantadora, Performance (qualquer) 5 graduações, performance de bardo ou canto de fúria.
+**Descrição**: Você pode influenciar os corações de uma multidão inteira com sua arte, ou voltá-los contra seus inimigos.
+**Benefício**: Você pode usar Performance Encantadora em todas as criaturas dentro de 18 metros. Além de influenciar a atitude inicial da multidão em relação a uma única pessoa, você pode optar por influenciar a atitude da multidão em relação a um grupo bem-definido com o qual estão familiarizados (como uma nação, organização ou religião específica). Uma tentativa de despertar emoções sobre um grupo sofre uma penalidade de -5 devido à dificuldade de criar sentimentos fortes em relação a um grupo inteiro em vez de um indivíduo específico. A CD para este teste é 30 + 1 para cada cinco pessoas na multidão a ser afetada. Você não pode usar Despertar Emoções para mudar a atitude da multidão em mais de um passo, ou para torná-la amigável ou hostil.

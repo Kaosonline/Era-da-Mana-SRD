@@ -1,0 +1,5 @@
+### Invocar Instinto Primal
+**Tipo do talento**: Geral
+**Pré-requisitos**: Blefar 1 posto, característica de classe Forma Selvagem, gnomo.
+**Descrição**: Você pode usar sua habilidade de assumir a forma de um animal para aprimorar sua perícia em Blefar, concedendo a si mesmo uma aura de perigo ou submissão que influencia criaturas próximas a fazerem o que você quer.
+**Benefício**: Como uma ação padrão, você pode pantomimar ou descrever comportamento semelhante ao de predador ou presa, gastar um de seus usos de Forma Selvagem e fazer um teste de Blefar. Todas as criaturas dentro de 9 metros que falharem em um teste de resistência de Vontade contra o CD do seu teste de Blefar o consideram como uma figura de medo ou desprezo (sua escolha se aplica a todas as criaturas afetadas). Se você escolher medo, os alvos ficam amedrontados por 1 rodada por nível de druida. Se você escolher desprezo, os alvos o consideram inofensivo por 1 minuto, ignorando-o a menos que você os ataque ou tome uma ação ameaçadora.

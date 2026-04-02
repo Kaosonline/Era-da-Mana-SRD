@@ -1,0 +1,5 @@
+### Befuddling Strike
+**Tipo do talento**: Combate
+**Pré-requisitos**: Des 13, Sab 13, Ataque Desarmado Aprimorado, bônus-base de ataque +8.
+**Descrição**: Você sabe exatamente onde golpear para enviar temporariamente seu inimigo a um estado de estupor confuso.
+**Benefício**: Golpe Desorientador força um inimigo que sofre dano por seu ataque desarmado a realizar um teste de resistência de Fortitude (CD = 10 + 1/2 seu nível de personagem + seu modificador de Sabedoria), além de causar dano normalmente. Você deve declarar que está usando este talento antes de realizar sua jogada de ataque — assim, uma jogada de ataque fracassada arruína a tentativa. Um defensor que falha neste teste de resistência fica confuso por 1d4 rodadas. Você pode tentar usar Golpe Desorientador uma vez por dia para cada 4 níveis de personagem que possui, mas não pode usá-lo mais de uma vez por rodada. Construtos, criaturas incorpóreas, criaturas sem mente, plantas, mortos-vivos e criaturas imunes a golpes críticos não podem ser afetados por esta habilidade.

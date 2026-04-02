@@ -1,0 +1,5 @@
+### But A Scratch
+**Tipo do talento**: Combate
+**Pré-requisitos**: Car 13, Blefar 4 graduações.
+**Descrição**: Seu bravado convence seus inimigos de que seus ataques mais mortais são meras ninharias, fazendo você parecer quase invulnerável.
+**Benefício**: Quando um oponente confirma um golpe crítico contra você com uma arma corpo a corpo, você pode tentar um teste especial de Blefar contra esse oponente como uma ação imediata. A CD desse teste é a mesma que a CD para desmoralizar o oponente com a perícia Intimidar. Se você for bem-sucedido, o oponente atacante fica abalado por 1 rodada como se você tivesse desmoralizado com sucesso com Intimidar. Exceder a CD em 5 ou mais não aumenta a duração da condição abalado. Se você falhar no teste especial de Blefar concedido por este talento, você pode tentá-lo contra oponentes que viram você tentar a verificação anterior e falhar, mas você sofre uma penalidade cumulativa de -2 nesse teste de Blefar e em quaisquer testes de Blefar subsequentes tentados em conjunto com este talento contra esses oponentes por 24 horas.

@@ -1,0 +1,5 @@
+### Flexible Wizardry
+**Tipo do talento**: Geral
+**Pré-requisitos**: Domínio de Magia, nível de mago 1º.
+**Descrição**: Você aprendeu um truque que torna sua conjuração mais flexível.
+**Benefício**: Quando você prepara suas magias a cada dia, você pode escolher manter um número de espaços de magia igual ao seu modificador de Inteligência (mínimo 1) preparados de forma flexível. Em vez de preparar uma única magia dentro de cada um desses espaços, você pode preparar parcialmente duas magias. A qualquer momento após preparar esses espaços flexíveis, você pode gastar uma ação completa para finalizar um espaço, escolhendo uma das duas magias para ser concluída e totalmente preparada nesse espaço.

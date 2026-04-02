@@ -1,0 +1,4 @@
+### Esoteric Conjuration
+**Tipo do talento**: Geral
+**Descrição**: Areia prismática refrata as energias espaciais de sua magia de conjuração, criando uma distorção mágica.
+**Benefício**: Quando você lança uma magia de conjuração usando areia prismática como componente material esotérico, selecione uma criatura invocada, chamada ou deslocada de outro plano por sua magia. Por 1 rodada, essa criatura não entirely se deslocou completamente para o plano atual, fazendo com que todos os ataques contra ela sofram uma chance de falha de 20% (ataques sem jogadas de ataque causam 20% menos dano). Quando você obtém o efeito de componente maior da areia prismática com uma magia de conjuração, trate seu nível de conjurador como 2 níveis adicionalmente mais alto para determinar o alcance. Isso acontece independentemente de você ter escolhido aumentar o alcance ou a área com o efeito de componente maior. Este talento não permite que você aumente ainda mais o tamanho de uma área.

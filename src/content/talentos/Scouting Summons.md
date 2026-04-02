@@ -1,0 +1,5 @@
+### Convocação de Reconhecimento
+**Tipo do talento**: Metamágica
+**Pré-requisitos**: Foco em Magia (conjuração), habilidade de conjurar jarro mágico.
+**Descrição**: Seus experimentos com a conexão entre invocadores e as criaturas que eles invocam lhe ensinaram a ver através dos olhos de uma criatura invocada por um curto período de tempo.
+**Benefício**: Ao conjurar uma magia de conjuração (invocação) que invoca uma única criatura, você pode possuir a criatura conforme o jarro mágico (mas sem necessidade de receptáculo). Se a criatura sofrer dano enquanto você a possui, você deve ter sucesso em um teste de concentração (CD igual à quantidade de dano sofrido) ou ser expulso da criatura imediatamente. Se a criatura sofrer dano suficiente para reduzi-la a 0 pontos de vida ou menos, você é imediatamente expulso da criatura e sofre uma quantidade de dano igual ao dobro do nível do espaço de magia usado para invocar essa criatura. Uma magia de Convocação de Reconhecimento ocupa um espaço de magia 2 níveis mais alto que o nível real da magia.

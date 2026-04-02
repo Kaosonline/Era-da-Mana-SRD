@@ -1,0 +1,5 @@
+### Flensing Strike
+**Tipo do talento**: Geral
+**Pré-requisitos**: Ataque furtivo +3d6, truque de ladino de ataque furtivo sangrante ou habilidade universal de monstro de sangramento.
+**Descrição**: Seus ataques furtivos cortantes tendem a cortar grandes extensões de pele e armadura natural.
+**Benefício**: Quando você inflige com sucesso dano de ataque furtivo em um inimigo com uma arma de corte, seu ataque não penetra particularmente fundo, mas você remove uma porção significativa de pele e carne. Se este ataque furtivo infligir dano de sangramento, a vítima do ataque furtivo fica enjoada pela dor e tem seu bônus de armadura natural (se houver) reduzido em um número de pontos igual ao número de dados de ataque furtivo que você possui. Essas penalidades persistem enquanto o dano de sangramento persistir. Múltiplos golpes no mesmo inimigo não acumulam o dano de sangramento, mas a penalidade na armadura natural acumula, até uma penalidade máxima igual ao valor total normal de armadura natural do alvo.

@@ -1,0 +1,5 @@
+### Power Attack
+**Tipo do talento**: Combate
+**Pré-requisitos**: For 13, BBA +1.
+**Descrição**: Você pode realizar ataques corpo a corpo excepcionalmente mortais sacrificando precisão por força.
+**Benefício**: Você pode optar por sofrer uma penalidade de -1 em todas as jogadas de ataque corpo a corpo e testes de manobra de combate para ganhar um bônus de +2 em todas as jogadas de dano corpo a corpo. Este bônus de dano é aumentado pela metade (+50%) se você estiver realizando um ataque com uma arma de duas mãos, uma arma de uma mão usando as duas mãos ou uma arma natural primária que adiciona 1-1/2 vezes seu modificador de Força nas jogadas de dano. Este bônus de dano é reduzido pela metade (-50%) se você estiver realizando um ataque com uma arma da mão secundária ou uma arma natural secundária. Quando sua BBA atinge +4, e a cada 4 pontos seguintes, a penalidade aumenta em -1 e o bônus de dano aumenta em +2. Você deve optar por usar este talento antes de fazer uma jogada de ataque, e seus efeitos duram até o seu próximo turno. O dano de bônus não se aplica a ataques de toque ou efeitos que não causam dano de pontos de vida.

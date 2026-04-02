@@ -1,0 +1,6 @@
+### Golpe Perfeito
+**Tipo do talento**: Combate
+**Pré-requisitos**: Des 13, Sab 13, Golpe Desarmado Aprimorado, BBA +8.
+**Descrição**: Ao empunhar uma arma de monge, seus ataques podem ser extremamente precisos.
+**Benefício**: Você deve declarar que está usando este talento antes de fazer sua jogada de ataque (portanto, uma jogada de ataque falha arruína a tentativa). Você deve usar uma das seguintes armas para fazer o ataque: kama, nunchaku, bastão, sai e siangham. Você pode rolar sua jogada de ataque duas vezes e usar o resultado mais alto. Se uma dessas rolagens for uma ameaça de crítico, a outra rolagem é usada como sua jogada de confirmação (sua escolha se ambas forem ameaças de crítico). Você pode tentar um golpe perfeito uma vez por dia para cada quatro níveis que tiver atingido (mas veja Especial), e não mais do que uma vez por rodada.
+**Especial**: Um monge mestre em armas ou um monge arqueiro zen recebe Golpe Perfeito como um talento bônus no 1º nível, mesmo que não cumpra os pré-requisitos. Um monge pode tentar um ataque de golpe perfeito um número de vezes por dia igual ao seu nível de monge, mais uma vez adicional por dia para cada quatro níveis que tiver em classes diferentes de monge.

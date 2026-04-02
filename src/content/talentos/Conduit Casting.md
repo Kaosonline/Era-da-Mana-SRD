@@ -1,0 +1,5 @@
+### Conduit Casting
+**Tipo do talento**: Geral
+**Pré-requisitos**: 3 graduações em Ofício (Magia).
+**Descrição**: Sua magia flui através de seu aliado.
+**Benefício**: Quando você estiver a 9 m de um aliado que também possua este talento, você pode canalizar sua magia através dela ao conjurar uma magia ou usar uma habilidade similar a magia, desde que ela tenha a magia na lista de sua classe ou tenha a habilidade de conjurá-la como uma habilidade similar a magia. A magia não pode ter alcance pessoal. Quando você termina de conjurar a magia, o aliado pode gastar uma ação imediata para agir como seu conduto. Seu aliado deve se concentrar para agir como o conduto para a magia, como se estivesse conjurando a magia, e a magia é perdida se um teste de concentração for necessário e ele falhar (como por dano ou para conjurar a magia defensivamente). Se conjurada com sucesso, a magia se origina do espaço do aliado em vez do seu. Você permanece o conjurador da magia para efeito de determinação do nível de conjurador, CD do teste de resistência, etc., mas seu aliado seleciona os alvos ou área afetada e faz quaisquer jogadas de ataque necessárias para a magia.

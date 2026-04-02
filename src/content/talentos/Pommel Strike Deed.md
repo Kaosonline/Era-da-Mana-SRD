@@ -1,0 +1,5 @@
+### Feito do Golpe com a Maçaneta
+**Tipo do talento**: Geral
+**Pré-requisitos**: Espadachim Amador ou a classe panache; bônus de ataque base +3.
+**Descrição**: Com um golpe sorrateiro com sua maçaneta, você pode derrubar um inimigo.
+**Benefício**: Você pode gastar 1 ponto de panache para realizar um ataque corpo a corpo com a maçaneta de uma arma de combate corpo a corpo perfurante leve ou de uma mão, como uma ação padrão. Você realiza este ataque como se estivesse usando a arma normalmente (incluindo quaisquer bônus obtidos do recurso de classe Finesse do Espadachim, da perícia Finesse com Armas ou de outros talentos e efeitos similares), mas você causa 1d6 de dano de impacto (ou 1d4 se você for Pequeno) em vez do dano normal da arma. Independentemente do seu tamanho, o alcance de ameaça de crítico e o multiplicador de crítico deste ataque são 20/x2, e eles não são afetados por Crítico Aprimorado, a habilidade especial de arma Afiada ou efeitos similares. Se o ataque acertar, você pode tentar um teste de manobra de combate para derrubar o alvo como uma ação livre.

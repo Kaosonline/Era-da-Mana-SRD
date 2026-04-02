@@ -1,0 +1,6 @@
+### Cloak And Dagger Style
+**Tipo do talento**: Combate
+**Pré-requisitos**: Int 13, Especialização em Combate, Travessura AprimoradaAPG, Golpe Vital, Foco em Arma com a arma escolhida, Bônus Base de Ataque +6.
+**Descrição**: Seus ataques infligem sem esforço condições debilitantes em oponentes desavisados.
+**Benefício**: Escolha uma arma corpo a corpo leve. Enquanto estiver usando este estilo, sempre que usar a ação de ataque para atacar um oponente durante uma rodada de surpresa com sua arma escolhida, você pode tentar um teste de manobra de travessuraAPG contra aquele oponente como uma ação livre. Adicionalmente, se um alvo adjacente tentar remover uma condição que você infligiu nele com a manobra de travessura, ele provoca um ataque de oportunidade de você.
+**Especial**: Além da arma escolhida, um personagem com a característica de classe treinamento com armas pode usar Estilo Manto e Adaga com qualquer arma corpo a corpo leve pertencente a qualquer grupo de armas de lutador que ele tenha selecionado com treinamento com armas. Um personagem com a característica de classe treinamento com armas de espadachimACG pode usar Estilo Manto e Adaga com armas perfurantes leves e de uma mão.

@@ -1,0 +1,6 @@
+### Planar Hunter
+**Tipo do talento**: Geral
+**Pré-requisitos**: Conhecimento (planos) 5 graduações, terreno favorito (qualquer plano) (característica de classe).
+**Descrição**: Após estudo cuidadoso de ambientes de outros mundos, você pode rapidamente avaliar como um extraterrestre reage em seu ambiente natal. Você pode usar seu conhecimento do ambiente nativo do extraterrestre para guiar seus ataques e superar as resistências naturais do extraterrestre.
+**Benefício**: Quando você está em um dos planos que selecionou como um terreno favorito, você ganha um bônus de +2 em jogadas de ataque com arma contra extraterrestres nativos daquele plano. Você também ignora até 5 pontos de redução de dano ao fazer ataques com arma contra extraterrestres nativos daquele plano, exceto para redução de dano sem um tipo (como RD 10/-). Além disso, você ganha este bônus contra criaturas extraplanares que você encontra e identifica como sendo de um de seus terrenos favoritos planares, como com um teste de Conhecimento (planos) bem-sucedido, independentemente de em que plano você ou elas estejam.
+**Especial**: Você pode selecionar este talento múltiplas vezes. Cada vez que o fizer, você o aplica a um terreno favorito qualificador diferente.

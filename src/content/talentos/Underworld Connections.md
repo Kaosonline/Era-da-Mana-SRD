@@ -1,0 +1,4 @@
+### Conexões Subterrâneas
+**Tipo do talento**: Geral
+**Descrição**: Você conhece pessoas e coisas que interagem com o submundo, seja através de conexões com sindicatos do crime ou amigos que literalmente residem beneath the surface.
+**Benefício**: Você ganha um +2 de bônus em todos os testes de Conhecimento (masmorras) e Sobrevivência enquanto estiver subterrâneo ou em terreno urbano. Além disso, enquanto estiver dentro de um assentamento e tentando um teste modificado pelos modificadores de corrupção, crime ou economia daquele assentamento (veja Pathfinder RPG GameMastery Guide 205), você pode usar seu conhecimento de contatos locais para ganhar um +4 de bônus nessa jogada. No entanto, se o teste falhar, qualquer um que testemunhar sua tentativa verá você cometendo alguma violação da lei local.

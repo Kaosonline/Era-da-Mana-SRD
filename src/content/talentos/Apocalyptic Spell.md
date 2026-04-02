@@ -1,0 +1,4 @@
+### Magia Apocalíptica
+**Tipo do talento**: Metamágico
+**Descrição**: Sua magia fica infundida com o horror devastador personificado pelos Cavaleiros do Apocalipse, transformando temporariamente a realidade em uma ruína traiçoeira.
+**Benefício**: Você pode alterar uma magia com uma área de efeito e duração instantânea para se tornar uma magia apocalíptica. Quando você conjura a magia, a área afetada pelo efeito instantâneo da magia fica arruinada e devastada em aparência. Todas as superfícies na área são tratadas como terreno difícil, e testes de Escalar, Voar e Nadar tentados na área sofrem uma penalidade igual ao nível original da magia. O terreno difícil e as penalidades de habilidade duram um número de rodadas igual ao nível original da magia. Uma magia apocalíptica adquire o descritor maligno. Uma magia apocalíptica usa um espaço de magia um nível mais alto que o nível normal da magia. Magias com o descritor bondoso não podem ser magias apocalípticas.

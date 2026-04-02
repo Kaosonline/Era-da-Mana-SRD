@@ -1,0 +1,9 @@
+### Obsessão do Cavaleiro do Inferno
+**Tipo de Talentos**: Gerais
+**Pré-requisitos**: Obediência do Cavaleiro do Inferno, Conhecimento (planos) 3 graduações, deve jurar lealdade a uma única ordem de Cavaleiros do Inferno.
+**Descrição**: Você equipara dor com disciplina e pode infligir dano a si mesmo para desbloquear um poder maior.
+**Benefício**: Durante sua hora de reckoning do Cavaleiro do Inferno, se você optar por causar dano letal a si mesmo (veja página 9), você atinge um estado de foco fantástico. Uma vez nas próximas 24 horas, você pode usar esse foco para obter os benefícios de qualquer um dos seguintes efeitos. Para ativar a habilidade, você deve causar 1 ponto de dano letal a si mesmo como uma ação livre (a menos que indicado de outra forma). Membros da Ordem do Prego frequentemente instalam um barbante afiado em sua armadura que causa esse dano quando o usuário é alvo de um golpe crítico (veja página 28); se você for atingido por um golpe crítico enquanto usa tal armadura, usar essa habilidade não requer uma ação livre.
+Fervor: As CDs para resistir aos efeitos dos benefícios concedidos por seu talento Obediência do Cavaleiro do Inferno aumentam em 1 por 1 hora.
+Indomabilidade: Você pode refazer um único teste de resistência de Vontade falho e deve usar o resultado da segunda jogada, mesmo que seja pior. Uma ação livre não é necessária para usar esse efeito, mas você ainda deve sofrer 1 ponto de dano.
+Ameaçador: Você ganha um bônus de +3 em testes de habilidade de Intimidação e Percepção de Intenções por 1 hora.
+Implacabilidade: O alcance de ameaça de crítico da arma favorecida de sua ordem dobra por 1 hora (mesmo que não seja uma arma perfurante ou cortante). Isso não acumula com quaisquer outros efeitos que aumentam o alcance de ameaça de crítico de uma arma.

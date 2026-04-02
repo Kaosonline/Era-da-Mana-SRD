@@ -14,9 +14,3 @@ export interface SpellMetadata {
   componentes?: string;
   area?: string;
 }
-
-export interface SpellFilters {
-  classes: string[];
-  levels: number[];
-  escolas: string[];
-}

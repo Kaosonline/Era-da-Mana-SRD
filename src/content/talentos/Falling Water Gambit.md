@@ -1,0 +1,5 @@
+### Falling Water Gambit
+**Tipo do talento**: Combate
+**Pré-requisitos**: Discípulo do Duelo Aldori, Duelista das Quedas Rumorosas, Duelista do Lago Encoberto, Proficiência com Arma Exótica (espada de duelar Aldori), Finesse com Arma, Foco em Arma (espada de duelar Aldori), BBA +8.
+**Descrição**: Você integrou as técnicas das Quedas Rumorosas e do Lago Encoberto do estilo de esgrima Aldori em uma união perfeita.
+**Benefício**: Ao atacar uma criatura que perdeu seu bônus de Destreza para a CA devido ao seu blefe bem-sucedido, você aumenta o alcance de ameaça de sua espada de duelar Aldori em 1 (tipicamente para 18-20/x2) e ganha um bônus de +2 em jogadas de ataque para confirmar acertos críticos. Após realizar um desvio de duelo ou ter sucesso em uma parada de duelo durante um duelo, você pode fazer um ataque de oportunidade contra o inimigo que o atacou, se esse inimigo estiver abalado, assustado ou em pânico. Para ganhar esses benefícios, você deve estar empunhando apenas uma espada de duelar Aldori (sem usar escudo, arma na mão secundária, espinhos de armadura, golpes desarmados ou armas naturais).

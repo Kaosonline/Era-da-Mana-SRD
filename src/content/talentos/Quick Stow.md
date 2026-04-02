@@ -1,0 +1,5 @@
+### Quick Stow
+**Tipo de talento**: Combate
+**Pré-requisitos**: Desembainhar Rápido, bônus base de ataque +1.
+**Descrição**: Você guarda itens e embainha armas com facilidade.
+**Benefício**: Você não provoca um ataque de oportunidade ao embainhar uma arma e pode combinar uma ação de movimento para embainhar uma arma com uma ação de movimento padrão. (Desta forma, você pode guardar e desembainhar uma arma como parte da mesma ação de movimento.) Se você tem o talento Combate com Duas Armas, pode embainhar duas armas leves ou de uma mão no tempo que normalmente levaria para embainhar uma. Você também pode rapidamente guardar itens em uma mochila ou outro recipiente que esteja usando ou carregando. Quando você usa com sucesso uma ação para pegar um item (incluindo quando rouba um item com um teste de Prestidigitação bem-sucedido ou um teste de manobra de roubo), pode guardar o item como parte da mesma ação usada para adquiri-lo. Você pode tentar esconder esse objeto fazendo um teste de Prestidigitação com uma penalidade de -20, oposto pelo resultado do teste de Percepção de todos os oponentes.

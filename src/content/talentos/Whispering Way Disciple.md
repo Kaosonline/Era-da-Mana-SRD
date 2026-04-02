@@ -1,0 +1,5 @@
+### Discípulo do Caminho Sussurrante
+**Tipo do talento**: Geral
+**Pré-requisitos**: Associado (Caminho Sussurrante).
+**Descrição**: Sua pesquisa chamou a atenção do Caminho Sussurrante, que recompensa você com acesso às suas bibliotecas.
+**Benefício**: Você pode explorar o conhecimento adquirido do Caminho Sussurrante uma vez por dia para combinar seu próprio sangue e uma manga de água profana para criar uma poção de cura leve ou uma poção de infligir ferimentos leves como uma ação completa. A perda de sangue dessa transformação causa 1 ponto de dano de Constituição em você. Além disso, em qualquer assentamento que seja do tamanho de uma cidade pequena ou maior, você pode sempre encontrar pergaminhos das seguintes magias disponíveis para compra independentemente de sua legalidade: animar mortos, controlar morto-vivo, criar morto-vivo, detectar morto-vivo, disruptar morto-vivo, vida falsa, vida falsa maiorUM, toque de carrasco, animar mortos menorUM, reparar morto-vivo em massaACG, reparar morto-vivoACG, e anatomia de morto-vivo I-IVUM.

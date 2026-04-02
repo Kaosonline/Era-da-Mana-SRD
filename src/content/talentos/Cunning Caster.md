@@ -1,0 +1,5 @@
+### Conjurador Astuto
+**Tipo do talento**: Geral
+**Pré-requisitos**: Enganoso, habilidade de conjurar magias de 1º nível.
+**Descrição**: Seja como contrabandista ou espião, você aprendeu a usar desvio e prestidigitação para ocultar suas próprias habilidades mágicas.
+**Benefício**: Ao conjurar uma magia, você pode tentar um teste de Blefar (contestado pelos testes de Percepção dos observadores) para ocultar suas ações dos observadores. Se a magia exigir componentes materiais, você sofre uma penalidade de -4 no teste de Blefar. Se a magia exigir componentes somáticos, você sofre uma penalidade de -4 no teste de Blefar. Se a magia exigir componentes verbais, você sofre uma penalidade de -4 no teste de Blefar. Se a magia exigir um foco ou foco divino, você sofre uma penalidade de -4 no teste de Blefar. Se a magia produzir um efeito óbvio (como uma criatura invocada ou efeito de magia visível), você sofre uma penalidade de -4 no teste de Blefar, e mesmo que seu teste seja bem-sucedido, os observadores ainda verão o efeito da magia (embora falhem em perceber que você é responsável por ele). Todas as penalidades de teste de Blefar são cumulativas.

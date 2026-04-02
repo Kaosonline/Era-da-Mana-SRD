@@ -1,0 +1,5 @@
+### Ace Disarm
+**Tipo do talento**: Geral
+**Pré-requisitos**: Des 13, Mira Mortífera, Desarme à Distância (Ranged Tactics Toolbox 8), bônus de ataque base +6, recurso de treinamento com arma com uma arma à distância.
+**Descrição**: Você agarra objetos com seus ataques à distância e os arrasta consigo.
+**Benefício**: Você não sofre a penalidade de -2 ao tentar manobras de combate de desarme com uma arma à distância usando Desarme à Distância, e pode tentar uma manobra de combate de rouboAPG em vez de uma manobra de combate de desarme ao usar Desarme à Distância. Além disso, quando você desarma ou rouba um item de um oponente com sucesso, esse item é depositado no quadrado desse oponente. Para cada 5 pontos pelos quais seu ataque exceder a DMC do alvo, você pode depositar o item a 1,5 m de distância do alvo (até o máximo do alcance máximo do ataque ou até que seu projétil atinja um objeto que não possa penetrar). Se usar esta habilidade com uma arma arremessada e possuir o talento Arremesso Ricochete, tanto a arma quanto o item retornam a você.

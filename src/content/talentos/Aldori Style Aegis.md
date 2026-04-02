@@ -1,0 +1,5 @@
+### Aldori Style Aegis
+**Tipo de talento**: Combate, estilo
+**Pré-requisitos**: Estilo Aldori, Alerta, Reflexos de Combate, Treino em Arma Exótica (espada de duelo Aldori), Precisão com Arma (espada de duelo Aldori).
+**Descrição**: O estilo de duelo de Barão Aldori é mais forte quando empregado em duelos um contra um. Ajustando-se para uma pegada reversa e mantendo sua lâmina em movimento, você desvia dos golpes do rival com facilidade.
+**Benefício**: Enquanto estiver usando o Estilo Aldori, no início de seu turno, você pode designar um alvo focado como uma ação rápida. Essa designação dura até o início de seu próximo turno, e você sofre uma penalidade de -2 em sua CA contra os ataques de todas as outras criaturas durante esse período. Como uma ação imediata enquanto estiver usando Especialização em Combate ou lutando defensivamente, você pode tentar desviar do ataque do alvo focado. Isso funciona como a habilidade *Golpe e Contragolpe Oportuno* do covil (Pathfinder RPG Guia de Classes Avançadas 57), exceto que não custa行道 (panache) e você não pode realizar um contragolpe (riposte).

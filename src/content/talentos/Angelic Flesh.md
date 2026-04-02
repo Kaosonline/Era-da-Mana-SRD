@@ -1,0 +1,5 @@
+### Angelic Flesh
+**Tipo do talento**: Geral
+**Pré-requisitos**: Angelic Blood, aasimar.
+**Descrição**: Sua pele brilha como metal polido.
+**Benefício**: Você sofre uma penalidade de -2 em testes de Disfarce e Furtividade, mas ganha um dos seguintes benefícios, dependendo da afinidade metálica de sua pele (escolha um).  Brazen: Você ganha resistência ao fogo 5 e um bônus de +2 em testes de resistência contra efeitos de fogo.  Golden: Você ganha um bônus de +2 em testes de resistência contra cegueira, deslumbre, padrões e efeitos com o descritor luz. Quando você conjura magias ou usa habilidades semelhantes a magia que são da subescola ilusão (padrão) ou têm o descritor luz, você o faz com +1 nível de conjurador.  Silver: Você ganha um bônus de +2 em testes de resistência contra paralisia, petrificação e veneno, e seus golpes desarmados ou armas naturais contam como prata para o propósito de superar redução de dano.  Steel: Você ganha um bônus de +1 de armadura natural à CA, e seus golpes desarmados ou armas naturais contam como ferro frio para o propósito de superar redução de dano.

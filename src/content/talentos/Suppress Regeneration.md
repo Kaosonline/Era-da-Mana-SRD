@@ -1,0 +1,4 @@
+### Suprimir Regeneração
+**Tipo do talento**: Combate
+**Descrição**: Você e seus aliados podem agravar as fraquezas de uma criatura em regeneração. Ao fazer um ataque precisamente cronometrado para abrir uma ferida séria um pouco mais, seus aliados podem estender o tempo em que a regeneração da criatura é suprimida.
+**Benefício**: Quando você faz um ataque bem-sucedido que faz com que a habilidade de regeneração de uma criatura cesse de funcionar por pelo menos 1 rodada (como acertando um troll com fogo de alquimista), qualquer aliado que também tenha este talento e esteja atualmente ameaçando a criatura pode fazer um ataque de oportunidade contra ela. Este ataque de oportunidade não causa dano, mas em vez disso estende o tempo em que a regeneração da criatura é suprimida por 1 rodada adicional. Se múltiplos aliados com este talento acertarem a criatura com este ataque de oportunidade, as rodadas adicionais de supressão se acumulam.

@@ -1,0 +1,4 @@
+### Esoteric Illusion
+**Tipo do talento**: Geral
+**Descrição**: A areia prismática aperfeiçoa e estabiliza as formas de suas ilusões.
+**Benefício**: Quando você conjura uma magia de ilusão usando areia prismática como componente material esotérico, a CD para não acreditar na ilusão aumenta em 2, assim como a CA da magia, se aplicável. Este benefício dura pela duração da magia, mas não afeta magias com duração instantânea ou permanente. Quando você obtém o efeito de componente maior da areia prismática com uma magia de ilusão, trate seu nível de conjurador como 2 níveis mais alto para determinar o alcance. Isso acontece independentemente de você ter escolhido aumentar o alcance ou a área com o efeito de componente maior. Este talento não permite que você aumente ainda mais o tamanho de uma área.

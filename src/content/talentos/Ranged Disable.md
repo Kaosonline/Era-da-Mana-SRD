@@ -1,0 +1,5 @@
+### Desativar à Distância
+**Tipo do talento**: Geral
+**Pré-requisitos**: Tiro Distante, Tiro Cerimonial, Foco em Arma, Desativar Dispositivo 9 graduações.
+**Descrição**: Você pode desativar dispositivos com armas de distância.
+**Benefício**: Como uma ação completa, você pode tentar um teste de Desativar Dispositivo com uma arma de distância que você escolheu com Foco em Arma. Você pode usar essa habilidade apenas contra um dispositivo simples (um que normalmente levaria uma ação completa para desativar), e não pode usá-la se o dispositivo tiver qualquer cobertura ou ocultação. Esse uso da arma de distância não causa dano ao dispositivo, mas permite que você tente um teste de Desativar Dispositivo em vez disso. Você trata o ataque à distância como se estivesse usando ferramentas inadequadas para o trabalho, sofrendo uma penalidade de -4 no seu teste de Desativar Dispositivo. Você também aplica qualquer penalidade de alcance da arma ao teste de Desativar Dispositivo, mas não ganha quaisquer bônus que normalmente se aplicariam às jogadas de ataque no teste de Desativar Dispositivo.

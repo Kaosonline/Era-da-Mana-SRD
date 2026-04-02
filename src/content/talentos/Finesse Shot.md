@@ -1,0 +1,8 @@
+### Tiro de Destreza
+**Tipo do talento**: Geral
+**Pré-requisitos**: Tiro de UtilidadeUC, BBA +7, característica de classe Treinamento com Arma com uma arma de alcance.
+**Descrição**: Você pode usar ataques à distância para realizar ações que exijam destreza.
+**Benefício**: Além das opções permitidas pelo feito Tiro de UtilidadeUC do pistoleiro, você obtém acesso aos seguintes tiros de utilidade.
+Abrir/Fechar Objeto: Você pode usar um ataque à distância para abrir ou fechar um objeto como uma ação padrão. Você faz uma jogada de ataque contra uma porta, janela ou recipiente não guardado e destrancado dentro do primeiro incremento de alcance de sua arma. Tal objeto tem uma CA igual a 3 + o modificador de tamanho do objeto (mínimo +0) + sua dureza. Se você acertar, o objeto abre se estiver fechado ou fecha se estiver aberto. Caso contrário, essa habilidade funciona como a magia abrir/fechar.
+Disparo Acionador: Você pode usar um ataque à distância para acionar uma armadilha. Você faz um ataque à distância contra uma armadilha da qual você está ciente que está dentro do primeiro incremento de alcance de sua arma. A CA da armadilha é igual a 10 + seu CD de Desativar Dispositivo. Se você acertar, a armadilha é acionada automaticamente como se sua condição de acionamento tivesse sido atendida.
+Usar Objeto: Você pode tentar usar um objeto simples atirando nele como uma ação padrão. Essa habilidade funciona como o uso de mover objeto não guardado do feito Tiro de Utilidade, exceto que você puxa ou empurra o objeto de forma que ele ative. Por exemplo, você pode atirar em uma alavanca não guardada, fazendo com que ela ative e abaixe uma ponte levadiça.

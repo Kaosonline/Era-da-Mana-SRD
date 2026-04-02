@@ -1,0 +1,5 @@
+### Feito do Tiro Explosivo
+**Tipo do talento**: General
+**Pré-requisitos**: Conhecimento (Alquimia) 3 graduações, característica de classe grit ou talento Gunslinger Amador (UC).
+**Descrição**: Ao usar uma mistura especial de reagentes, você pode criar explosões concussivas com sua arma de fogo.
+**Benefício**: Gaste 1 ponto de grit para recuperar uma dose especial de pólvora negra que você carrega. Na próxima vez que você usar a arma de fogo carregada com esta pólvora negra especial, a explosão concussiva empurra você para trás em 1,5 m na direção em que estava mirando. Se não houver espaço disponível atrás de você, você se apoia no obstáculo e não se move de sua casa. Quaisquer criaturas dentro do primeiro incremento de alcance da arma de fogo atingidas por este ataque sofrem dano normalmente e devem passar em um teste de Reflexos (CD = 10 + metade do seu nível de gunslinger + seu modificador de Int) ou serem empurradas para trás em 3 m. Criaturas dentro de dois incrementos de alcance são empurradas para trás em 1,5 m, enquanto criaturas mais distantes que isso não são afetadas pela explosão concussiva.

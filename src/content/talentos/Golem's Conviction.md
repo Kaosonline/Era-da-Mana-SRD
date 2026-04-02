@@ -1,0 +1,5 @@
+### Golem's Conviction
+**Tipo do talento**: Geral
+**Pré-requisitos**: Vontade de Ferro Aprimorada, Vontade de Ferro, bônus base de ataque +8.
+**Descrição**: Outros sussurram que você não passa de um golem obedecendo ordens. Eles estão errados, mas sua dedicação é inegável.
+**Benefício**: Quando você falha em um teste de Vontade contra um efeito que afeta a mente e que faria você perder o controle de suas ações (como dominar pessoa ou risada hedionda), você pode, em vez disso, optar por seguir uma programação rudimentar. Por um número de rodadas igual à metade do seu nível (mínimo de 1), você ganha a condição de atordoado e deve ou atacar um alvo designado dentro de 18 m ou manter posição. Se você manter posição, você realiza a ação de defesa total em vez de realizar qualquer ação que o efeito que afeta a mente o forçaria a fazer. Se você escolher atacar um alvo, você deve ou fazer um ataque à distância, fazer um ataque corpo a corpo ou se aproximar do alvo designado. Se o efeito que afeta a mente não tiver sido resolvido quando os efeitos deste talento terminarem, então você fica sujeito ao efeito normalmente.

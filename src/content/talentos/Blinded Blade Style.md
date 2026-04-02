@@ -1,0 +1,5 @@
+### Blinded Blade Style
+**Tipo do talento**: Combate
+**Pré-requisitos**: Lutar Cego, Percepção 5 graduações.
+**Descrição**: Você não tem medo da cegueira, pois seus outros sentidos melhoram sem as distrações da visão.
+**Benefício**: Enquanto você está usando este estilo, você ganha uma série de benefícios sempre que estiver cego ou incapaz de ver (incluindo quando usa uma venda nos olhos ou fecha os olhos). Em tais circunstâncias, você não sofre nenhuma penalidade em testes de atributo baseados em Força ou Destreza devido à cegueira. Além disso, você ganha um +4 de bônus em testes de Percepção baseados em audição e olfato e adquire a habilidade especial de olfato com um alcance de 3 metros; se você já tiver olfato, o alcance de sua habilidade de olfato aumenta em 3 metros em vez disso. Ter este talento conta como ter 10 graduações em Percepção para satisfazer os pré-requisitos do talento Lutar Cego AprimoradoAPG, bem como qualquer talento que liste Lutar Cego AprimoradoAPG como pré-requisito.

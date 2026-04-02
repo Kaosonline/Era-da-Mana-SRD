@@ -1,0 +1,5 @@
+### Redirecionamento do Chamativo
+**Tipo do talento**: Familiar
+**Pré-requisitos**: Deve ter um familiar com o arquétipo Chamativo (veja a página 10).
+**Descrição**: Você pode enganar tentativas de adivinhação usando seu familiar.
+**Benefício**: Enquanto seu familiar estiver a 9 m de você, sempre que você passar em um teste de Vontade para negar um efeito de Adivinhar (incluindo Adivinhar e Adivinhar Maior), você toma conhecimento da tentativa de adivinhação como se tivesse passado no teste de Ofício para identificá-la, e pode escolher deixar a magia funcionar normalmente em vez de fazê-la falhar. Se fizer isso, pode escolher redirecionar o efeito de adivinhação para seu familiar, fazendo com que o familiar mude imediatamente de forma (como sua habilidade similar a magia Compartilhador Secreto, exceto que a duração é a mesma do efeito de adivinhação). O criador do efeito de adivinhação observa o familiar como se fosse você, embora magias como Detectar Magia detectem o efeito de Alterar-se normalmente.

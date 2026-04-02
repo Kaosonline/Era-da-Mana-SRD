@@ -1,0 +1,6 @@
+### Estilo Perfeito
+**Tipo do talento**: Combate
+**Pré-requisitos**: Sab 13; BBA +5 ou nível 5 de monge.
+**Descrição**: Você treinou em uma das Casas da Perfeição.
+**Benefício**: Quando você adquire este talento, escolha uma das Casas da Perfeição; uma vez tomada esta decisão, ela não pode ser alterada. Enquanto usa este estilo, você ganha um tipo de resistência a energia baseado na Casa da Perfeição que escolheu. Alunos do Mosteiro do Ferro Não Torcido ganham resistência a ácido 5. Alunos do Mosteiro da Chama Não Cintilante ganham resistência a fogo 5. Alunos do Mosteiro do Vento Não Desdobrado ganham resistência a eletricidade 5. Se você já tem resistência a energia de uma característica racial ou de classe, a resistência a energia ganha deste estilo soma. Além disso, você ganha um reservatório de ki que pode usar para ativar habilidades do estilo da sua Casa da Perfeição escolhida. Seu reservatório contém 2 pontos de ki, e aumenta em 1 ponto no 9º nível e a cada 4 níveis subsequentes. Se você já tem um reservatório de ki de outra fonte, você não ganha pontos de ki adicionais deste talento.
+**Especial**: Você pode selecionar Estilo Perfeito múltiplas vezes. Cada vez que o faz, deve escolher uma Casa da Perfeição diferente à qual pertencer.

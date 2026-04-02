@@ -1,0 +1,5 @@
+### Daggermark Lore
+**Tipo do talento**: Geral
+**Pré-requisitos**: Ofício (Alquimia) 5 graduações, membro da Guilda dos Envenenadores de Daggermark, conhecimento de venenos ou recurso de classe de uso de venenos.
+**Descrição**: Você entende os venenos exclusivos preparados por sua guilda muito melhor do que os compradores para quem os vende, e pode entregá-los de forma que sejam mais difíceis de neutralizar.
+**Benefício**: Escolha um veneno. Quando você entregar esse veneno, o número de testes de resistência necessários para curá-lo aumenta em 1, e o CD para curá-lo com neutralizar veneno aumenta em 5. Ter sucesso no teste de resistência inicial ainda anula o veneno. Os venenos típicos usados pelos envenenadores de Daggermark estão listados em Pathfinder Player Companion: Alchemy Manual e Pathfinder Chronicles: Guide to the River Kingdoms. Além disso, se você tiver o recurso de classe conhecimento de venenos, você é considerado ter o recurso de classe uso de venenos para fins de atender pré-requisitos.

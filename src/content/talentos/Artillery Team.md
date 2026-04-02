@@ -1,0 +1,5 @@
+### Equipe de Artilharia
+**Tipo do talento**: Combate
+**Pré-requisitos**: Treinamento com besta leve, besta pesada ou mosquete; tamanho Pequeno ou Médio.
+**Descrição**: Juntos, você e um aliado podem operar uma arma grande e difícil de manusear.
+**Benefício**: Quando você está adjacente a um aliado que também possui este talento, juntos vocês contam como sendo Grandes para o propósito de usar bestas leves Grandes, bestas pesadas Grandes e mosquetes Grandes. Disparar tal arma desta forma requer que seu aliado suporte o cano ou arco da arma. Você deve ser capaz de traçar uma linha do seu espaço para o espaço do alvo de tal forma que a linha passe pelo espaço do aliado. O aliado não fornece cobertura leve ao seu alvo. Seu aliado usa as ações dele para carregar a arma, e você usa suas ações para realizar ataques. Da mesma forma, os talentos e habilidades do seu aliado se aplicam ao recarregamento, enquanto seus talentos e habilidades se aplicam a realizar ataques. Este talento não permite que você e seu aliado ajam simultaneamente na mesma iniciativa.

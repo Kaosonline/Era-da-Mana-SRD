@@ -1,0 +1,5 @@
+### Alma Compartilhada
+**Tipo do talento**: Geral
+**Pré-requisitos**: Habilidade de classe consciência compartilhada.
+**Descrição**: Você e seu fantasma estão profundamente conectados em coração, mente e alma.
+**Benefício**: Enquanto seu fantasma estiver confinado dentro de sua consciência, você recebe um bônus de +2 em testes de resistência contra efeitos de morte, dreno de energia e possessão. Além disso, uma vez por dia quando você falhar em um teste de resistência contra um efeito de morte ou de possessão ou ganhar um nível negativo, como uma ação imediata você pode desviar esse efeito para a seção do fantasma de sua alma. Quando você faz isso, você não é afetado por esse efeito, mas também não recebe nenhum dos benefícios normais de sua habilidade de consciência compartilhada e não pode convocar seu fantasma de nenhuma forma pela duração normal da magia ou efeito desviado para a consciência do fantasma. O fantasma sofre o efeito completo que você transferiu, e enquanto seu fantasma continuar sofrendo com o efeito, você não pode desviar um efeito de morte ou de possessão ou um nível negativo para seu fantasma.

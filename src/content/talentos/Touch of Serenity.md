@@ -1,0 +1,6 @@
+### Toque da Serenidade
+**Tipo do talento**: Combate
+**Pré-requisitos**: SAB 18, Golpe Desarmado Aprimorado, BBA +8.
+**Descrição**: Com um único toque você pode reduzir a ameaça mesmo dos inimigos mais selvagens.
+**Benefício**: Você deve declarar que está usando este talento antes de fazer sua jogada de ataque (portanto, uma jogada de ataque falha arruína a tentativa). Em um acerto bem-sucedido, o ataque não causa dano e não confere qualquer outro efeito ou condição, mas o alvo não pode lançar magias ou atacar (incluindo ataques de oportunidade e ataques como ações imediatas) por 1 rodada, a menos que obtenha sucesso em um teste de resistência de Vontade com CD 10 + 1/2 seu nível de personagem + seu modificador de Sabedoria. Você pode tentar um toque da serenidade uma vez por dia para cada quatro níveis que você possuir (mas veja Especial), e não mais de uma vez por rodada.
+**Especial**: Um monge do lótus recebe Toque da Serenidade como um talento bônus no 1º nível, mesmo que não atenda aos pré-requisitos. Um monge pode tentar um toque da serenidade um número de vezes por dia igual ao seu nível de monge, mais uma vez por dia para cada quatro níveis que ele tiver em classes que não sejam monge.

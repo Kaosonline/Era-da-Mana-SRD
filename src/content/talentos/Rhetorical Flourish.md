@@ -1,0 +1,5 @@
+### Florescimento Retórico
+**Tipo do talento**: Geral
+**Pré-requisitos**: Car 13, Persuasivo.
+**Descrição**: Você rapidamente muda de tópicos e emprega retórica confusa para distrair as pessoas de sua verdadeira intenção.
+**Benefício**: Ao usar a habilidade Diplomacia para fazer um pedido ou mudar a atitude de uma criatura, você pode usar desvio verbal. Para fazer isso, faça um teste de Blefar contra essa criatura. Se você for bem-sucedido, você ganha um bônus de +4 em seu próximo teste de Diplomacia contra essa criatura se o teste for feito dentro do próximo minuto. Se você falhar por 5 ou mais, você em vez disso toma uma penalidade de -2 em seu próximo teste de Diplomacia contra essa criatura. Alternativamente, você pode usar este talento para tentar novamente um único teste de Diplomacia falho contra uma criatura. Você toma uma penalidade de -4 em seu teste de Blefar ao usar Florescimento Retórico dessa forma. Se você for bem-sucedido, em vez de ganhar o bônus normal deste talento, você pode tentar novamente seu último teste de Diplomacia contra a criatura se esse teste foi feito no minuto passado.

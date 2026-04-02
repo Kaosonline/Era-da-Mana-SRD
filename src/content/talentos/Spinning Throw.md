@@ -1,0 +1,6 @@
+### Arremesso Giratório
+**Tipo do talento**: Combate
+**Pré-requisitos**: Especialização em Combate, Empurrar Aprimorado, Derrubar Aprimorado, Golpe Desarmado Aprimorado, Arremesso de Ki.
+**Descrição**: Você gira seu oponente e então o solta.
+**Benefício**: Em uma manobra de combate de derrubada sem arma bem-sucedida contra um oponente de tamanho igual ou menor, você pode gastar uma ação livre para tentar uma manobra de combate de empurrar contra esse oponente. Se seu empurrão for bem-sucedido, você pode mover esse oponente para qualquer quadrado desocupado que você ameace, então empurrar esse oponente o número de incrementos de 1,5 m que seu empurrão bem-sucedido permitir. O alvo é então derrubado. Se o empurrão falhar, você pode usar a habilidade Arremesso de Ki normalmente. Se você também tiver a habilidade Arremesso de Ki Aprimorado, um empurrão bem-sucedido permite que você empurre o oponente para um espaço que alvos secundários ocupam. Você resolve esse efeito como se tivesse usado a habilidade Arremesso de Ki Aprimorado para arremessar o oponente nesse espaço.
+**Especial**: Conforme a habilidade Arremesso de Ki, um monge pode usar ki para afetar criaturas maiores que ele com essa habilidade.

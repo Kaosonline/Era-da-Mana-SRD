@@ -1,0 +1,4 @@
+### Treinamento Espiritual
+**Tipo do talento**: Geral
+**Descrição**: Através de estudo e treinamento dedicados, você pode resistir ao controle de espíritos possuidores.
+**Benefício**: Você recebe um bônus de competência +2 em testes de Conhecimento para identificar criaturas com o subtipo incorpóreo, e pode tentar testes de Conhecimento relacionados a criaturas incorpóreas mesmo sem treinamento. Quando afetado por uma magia ou habilidade similar de dominar pessoa, jarra mágica ou possessãoOA, sua mente e alma permanecem cientes dentro de seu corpo, em guerra com a consciência invasora. Enquanto dominado ou possuído, você pode tentar um teste de Vontade como uma ação livre para recuperar temporariamente o controle sobre seu corpo. Em um teste bem-sucedido, você pode agir normalmente por 1 rodada. Em um teste falho, você não pode tentar recuperar o controle por 1 hora, mas a consciência possuidora não pode realizar uma ação livre nessa rodada.

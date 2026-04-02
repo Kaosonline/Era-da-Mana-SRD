@@ -1,0 +1,5 @@
+### Malleable Form
+**Tipo do talento**: Conduíte
+**Pré-requisitos**: Conhecimento (planos) 7 graus.
+**Descrição**: Você infunde seu corpo com protoplasma do Maelstrom.
+**Benefício**: Como uma ação completa, você pode se infundir com protoplasma, convertendo seu corpo e equipamento em um estado semigelatinoso. Você ganha a habilidade de monstro universal de compressão, que permite que você se mova através de uma área tão pequena quanto um quarto de seu espaço sem espremer ou um oitavo de seu espaço quando espremido. Você também ganha um bônus em sua CMD contra manobras de combate de agarrar e derrubar igual à metade de seus graus em Conhecimento (planos). Devido à maciez e instabilidade de sua forma, seus ataques com armas fabricadas, armas naturais e golpes desarmados causam metade do dano enquanto você está na forma maleável. Este efeito não oferece proteção contra acertos críticos ou dano de precisão. Você pode usar o benefício deste talento por um número de minutos por dia igual a seus graus em Conhecimento (planos). Esses minutos não precisam ser consecutivos, mas devem ser gastos em incrementos de 1 minuto.

@@ -1,0 +1,6 @@
+### Faro Espiritual
+**Tipo do talento**: Geral
+**Pré-requisitos**: Sab 15, Vontade de Ferro.
+**Descrição**: Você está mais ciente das forças sobrenaturais que influenciam o mundo – e, consequentemente, é mais facilmente notado por elas.
+**Benefício**: Selecione uma categoria específica de espírito: feéricos, externários ou mortos-vivos (incluindo assombrações). Você ganha um bônus de +1 em testes de Percepção e Detecção de Motivação contra essas criaturas. Se você tiver 10 ou mais graduações em uma dessas habilidades, o bônus aumenta para +2 para essa habilidade. Você também ganha um bônus de esquiva de +1 à sua CA contra criaturas do tipo escolhido, e um bônus de intuição de +1 em testes de resistência de Vontade contra magias, habilidades similares a magia e habilidades sobrenaturais de criaturas do tipo escolhido. Qualquer condição que faça você perder seu bônus de Destreza na CA também faz você perder os bônus de CA e teste de resistência deste talento.
+**Especial**: Você brilha como uma luz aos olhos dos espíritos. Criaturas feéricas, externárias e mortas-vivas ganham um bônus de +2 em testes de Percepção para notar você. Você pode selecionar este talento até três vezes. Cada vez que o fizer, você deve selecionar um tipo de criatura diferente para o benefício deste talento.

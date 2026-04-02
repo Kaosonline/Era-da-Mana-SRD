@@ -1,0 +1,4 @@
+### Magia Trovejante
+**Tipo do talento**: Metamagia
+**Descrição**: Você pode conjurar suas magias à existência com trovões estrondosos ou gritos assustadores, deixando surdas as criaturas danificadas por seus efeitos.
+**Benefício**: Você pode modificar uma magia para deixar surda uma criatura danificada pela magia. Quando uma criatura sofre dano desta magia, ela fica surda por um número de rodadas igual ao nível original da magia. Se a magia permite um teste de resistência, um teste bem-sucedido nega o efeito de surdez. Se a magia não permite um teste de resistência, o alvo pode fazer um teste de Fortitude para negar o efeito de surdez. Se o efeito da magia também causa à criatura ficar surda, a duração deste efeito de metamagia é adicionada à duração da magia. Uma magia trovejante consome um espaço de magia dois níveis mais alto que o nível real da magia. Magias que não causam dano não se beneficiam deste talento.

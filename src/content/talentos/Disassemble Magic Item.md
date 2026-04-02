@@ -1,0 +1,5 @@
+### Disassemble Magic Item
+**Tipo do talento**: Geral
+**Pré-requisitos**: Qualquer talento de criação de itens, Aspis Consortium 20 TPA.
+**Descrição**: Você pode desmontar e remontar itens mágicos.
+**Benefício**: Você pode quebrar um item mágico em peças componentes. Essas peças são não mágicas e podem ter pouca semelhança com o item original, além de serem feitas do mesmo material (uma espada mágica pode ser três peças de metal reconhecíveis ou simplesmente uma coleção de sucata de metal). Desmontar um item mágico leva 1 hora por 1.000 po do preço do item e exige que você se concentre como se estivesse criando um item. Você só pode usar este talento em itens que seu talento de criação de itens permitiria criar (por exemplo, se você tiver Criar Item Maravilhoso, pode desmontar itens maravilhosos, mas não armas ou armaduras mágicas). Você pode remontar um item desmontado desde que todas as peças estejam presentes; isso leva a mesma quantidade de tempo que desmontá-lo. Há 10% de chance de a reconstrução falhar e o item ser destruído permanentemente.

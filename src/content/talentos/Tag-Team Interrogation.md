@@ -1,0 +1,5 @@
+### Interrogatório em Dupla
+**Tipo do talento**: Geral
+**Pré-requisitos**: Proeza Intimidante ou Persuasivo; Diplomacia 1 graduação; Intimidação 1 graduação.
+**Descrição**: Você e seu parceiro trabalham juntos para confundir um alvo, alternando entre medo e bondade.
+**Benefício**: Ao usar Diplomacia ou Intimidação para mudar a atitude de uma criatura, um aliado que você possa ver e que também possua este talento pode tentar mudar a atitude da criatura ao mesmo tempo. Você faz um teste de Diplomacia ou um teste de Intimidação, e seu aliado faz um teste com a outra habilidade. Se ambos tiverem sucesso, você escolhe se aplica o efeito do teste de Diplomacia ou do teste de Intimidação; o outro teste não tem efeito direto, mas fornece ao primeiro teste um *bônus de circunstância* de +5 em seu resultado. Se apenas uma pessoa tiver sucesso, ignore a falha, mas o efeito do teste de habilidade bem-sucedido dura apenas metade do tempo. Se ambos falharem, quaisquer efeitos resultantes de ambas as falhas se aplicam.

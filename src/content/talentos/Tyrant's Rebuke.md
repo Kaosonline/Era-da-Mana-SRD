@@ -1,0 +1,5 @@
+### Repreensão do Tirano
+**Tipo do talento**: Conduit
+**Pré-requisitos**: Conhecimento (planos) 5 graduações.
+**Descrição**: Por decreto de Asmodeus, o Inferno é um lugar antitético ao livre-arbítrio; empunhar seu poder humilha os inimigos e os torna vulneráveis aos seus comandos. Aqueles que você alveja com uma repreensão pontual sentem como se o desdém do próprio Inferno tivesse voltado sua atenção para seus atos.
+**Benefício**: Como uma ação padrão, você pode fazer um ataque de toque corpo a corpo. Uma criatura atingida com sucesso por esse ataque de toque deve passar em um teste de resistência (CD = 10 + metade do seu nível + seu modificador de Carisma) ou fica atordoada até o final de seu próximo turno. Se você usar Repreensão do Tirano em uma criatura que já esteja atordoada por esse efeito e ela falhar em seu teste de resistência, ela sofre 1d4 pontos de dano de Carisma além de ficar atordoada. Você pode usar esse talento uma vez por dia para cada 5 Graduações que tiver em Conhecimento (planos).

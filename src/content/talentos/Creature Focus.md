@@ -1,0 +1,6 @@
+### Foco em Criatura
+**Tipo do talento**: Geral
+**Pré-requisitos**: Nenhum nível em uma classe que conceda o recurso de classe inimigo predileto.
+**Descrição**: Você tem experiência mortal com um certo tipo de criatura, concedendo-lhe uma vantagem ao lutar contra sua espécie.
+**Benefício**: Escolha um tipo de criatura da tabela de inimigos prediletos do ranger (Pathfinder RPG Core Rulebook 64), exceto humanoide ou humanoide monstruoso. Você ganha um bônus de +2 em testes de Percepção, testes de Sobrevivência e jogadas de dano de arma contra criaturas do tipo selecionado. Você pode tentar testes de habilidade de Conhecimento sem treinamento ao tentar identificar tais criaturas.
+**Especial**: Este talento conta como o recurso de classe inimigo predileto para fins de atender pré-requisitos de talentos. Se outra habilidade referir-se ao seu bônus de inimigo predileto para o tipo de criatura selecionado, você trata seu bônus de inimigo predileto como +2. Se você mais tarde ganhar o recurso de classe inimigo predileto, você pode substituir este talento por um talento diferente para o qual você se qualifique e cujos pré-requisitos incluam o recurso de classe inimigo predileto.  Você pode ganhar este talento múltiplas vezes. Seus efeitos não se acumulam. Cada vez que você obtém o talento, ele se aplica a um tipo de criatura diferente.

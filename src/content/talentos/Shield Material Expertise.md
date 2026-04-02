@@ -1,0 +1,5 @@
+### Especialização em Material de Escudo
+**Tipo do talento**: Geral
+**Pré-requisitos**: Foco em Escudo, BBA +6 ou nível de guerreiro 4.
+**Descrição**: Você enfatiza e explora o potencial do material especial do qual seu escudo é feito.
+**Benefício**: Ao empunhar um escudo feito de um dos materiais listados abaixo, você pode usar a habilidade listada duas vezes por dia.  Madeira Sombria: Como uma ação livre como parte de um ataque com seu escudo, você pode cravar farpas do seu escudo no seu oponente, causando uma quantidade de dano de sangramento igual a 1 + o bônus de aprimoramento do escudo.  Pele de Dragão: Como uma ação imediata quando você sofre dano de energia do tipo ao qual o escudo de pele de dragão é imune, você pode reduzir a quantidade de dano que você sofre em 10 pontos de vida.  Aço VivoUE: Como uma ação livre como parte de um ataque com seu escudo, você pode tentar uma verificação de manobra de combate de destruir contra uma arma metálica empunhada pelo seu alvo. Se você for bem-sucedido na tentativa, a arma ganha a condição quebrado; se a arma já tiver a condição quebrado, ela é destruída.

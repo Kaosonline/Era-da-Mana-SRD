@@ -1,0 +1,6 @@
+### Redes Nodadas
+**Tipo do talento**: Combate
+**Pré-requisitos**: Proficiência com Arma Exótica (rede), BBA +1.
+**Descrição**: Você é capaz de emaranhar presas muito maiores com a ajuda de seus aliados.
+**Benefício**: Se você prepara um ataque com uma rede para emaranhar uma criatura quando um aliado do seu tamanho que também tenha este talento tenta emaranhar essa criatura com uma rede, vocês dois podem emaranhar a criatura como se fossem uma categoria de tamanho maior. A criatura emaranhada pode tentar escapar das duas redes como se fossem uma única rede, usando o menor dos pontos de vida das redes, dureza (se houver) e CDs para quebrar ou escapar. Apenas você ou seu aliado podem tentar controlar o movimento da criatura emaranhada com um teste de Força oposto, mas seu aliado concede a você um bônus de +1 no teste. Se você trabalhar com três outros aliados do mesmo tamanho que tenham este talento, vocês podem emaranhar uma criatura como se fossem duas categorias de tamanho maior. Se você trabalhar com sete outros aliados dessa forma, vocês podem emaranhar uma criatura como se fossem três categorias de tamanho maior.
+**Normal**: Uma rede é útil apenas contra criaturas dentro de uma categoria de tamanho sua.

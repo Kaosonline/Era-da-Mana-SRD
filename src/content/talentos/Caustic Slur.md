@@ -1,0 +1,5 @@
+### Insulto Corrosivo
+**Tipo do talento**: Geral
+**Pré-requisitos**: Blefar 1 graduação, característica de classe inimigo predileto, gnomo.
+**Descrição**: Você sabe exatamente como insultar seus inimigos prediletos para fazê-los perder a cabeça.
+**Benefício**: Como uma ação padrão, você pode realizar um teste de Blefar contra um tipo de inimigo predileto. Qualquer criatura daquele tipo a até 18 m de você deve fazer um teste de Vontade ou ficar enfurecida. Se uma criatura afetada atacar você, ela é tratada como se estivesse usando Ataque Poderoso (sofrendo uma penalidade nas jogadas de ataque mas ganhando um bônus nas jogadas de dano). Se a criatura já possuir o talento Ataque Poderoso, a penalidade de ataque aumenta em 1 e o bônus de dano aumenta em 2. Estes modificadores terminam quando o combate termina. Esta habilidade não funciona em criaturas que não possam entendê-lo, embora às vezes um gesto simples seja suficiente para um oponente inteligente captar sua intenção, independentemente de qualquer barreira linguística.

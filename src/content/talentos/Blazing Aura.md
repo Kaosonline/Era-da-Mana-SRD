@@ -1,0 +1,5 @@
+### Aura Flamejante
+**Tipo do talento**: Combate, Conduíte
+**Pré-requisitos**: Conhecimento (planos) 3 níveis.
+**Descrição**: Você se envolve em espirais de chama provenientes do Plano do Fogo.
+**Benefício**: Como uma ação padrão, você pode envolver-se em fogo. Até o final do seu turno, sempre que uma criatura realiza um ataque corpo a corpo bem-sucedido contra você, essa criatura sofre um número de pontos de dano de fogo igual a 1d6 mais metade de seus níveis em Conhecimento (planos); ataques realizados com armas de alcance ignoram esse efeito. Uma criatura pode reduzir pela metade esse dano de fogo com um teste de resistência de Reflexo bem-sucedido (CD = 10 + metade do seu nível + seu modificador de Constituição). Você pode usar o benefício deste talento um número de vezes por dia igual a seus níveis em Conhecimento (planos). Se você tiver pelo menos 9 níveis em Conhecimento (planos), ativar essa habilidade é uma ação de movimento. Se você tiver pelo menos 15 níveis em Conhecimento (planos), você pode ativar essa habilidade como uma ação de movimento ou uma ação rápida.

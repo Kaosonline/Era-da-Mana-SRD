@@ -1,0 +1,5 @@
+### Hook Fighter
+**Tipo do talento**: Combate
+**Pré-requisitos**: BBA +1.
+**Descrição**: Em suas mãos hábeis, uma ferramenta de escalada se torna uma arma mortal.
+**Benefício**: Você trata um gancho de agarramento como uma arma de uma mão que causa dano perfurante igual a uma picadura pesada de seu tamanho e que possui as características especiais de arma *desarmar* e *derrubar*. Você não incorre em penalidades como faria ao usar um gancho de agarramento como uma arma improvisada. Se você for proficiente com chicotes e seu gancho de agarramento tiver pelo menos 5 m de corda ou corrente anexados a ele, você pode tratá-lo como uma arma corpo a corpo de duas mãos com alcance de 5 m, embora você possa usá-lo contra oponentes em qualquer lugar dentro de seu alcance (incluindo oponentes adjacentes), embora você não ameace nenhum quadrado com ele. Alternar entre usar um gancho de agarramento como uma arma normal e uma arma de alcance é uma ação de movimento. Ao realizar a manobra *reposicionar* com um gancho de agarramento, você só pode mover o alvo em sua direção a partir de sua posição original.

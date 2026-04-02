@@ -1,0 +1,5 @@
+### Pincel Laminado
+**Tipo do talento**: Combate
+**Pré-requisitos**: Foco em Arma (glaive), deve ser um adorador de Shelyn.
+**Descrição**: Você sabe como equilibrar uma arma de haste perfeitamente, golpeando com precisão artística, porém mortal.
+**Benefício**: Você pode usar o talento Finesse com Arma para aplicar seu modificador de Destreza em vez de seu modificador de Força às jogadas de ataque com um glaive ajustado para você, mesmo que não seja uma arma leve. Ao empunhar um glaive, você pode tratá-lo como uma arma de corpo a corpo perfurante ou cortante de uma mão e como se não estivesse fazendo ataques com sua mão secundária para todos os talentos e habilidades de classe que exigem tal arma (como o golpe preciso do duelista ou do espadachim). Como uma ação de movimento, você pode encurtar sua empunhadura no glaive, tratando-o como se não tivesse a propriedade de alcance de arma. Você pode ajustar sua empunhadura para conceder à arma a propriedade de alcance como uma ação de movimento.

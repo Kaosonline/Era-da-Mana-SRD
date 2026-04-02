@@ -1,0 +1,5 @@
+### Piranha Strike
+**Tipo do talento**: Combate
+**Pré-requisitos**: Weapon Finesse, BBA +1.
+**Descrição**: Você faz uma combinação de golpes rápidos, sacrificando precisão por múltiplas feridas menores que se provam excepcionalmente mortais.
+**Benefício**: Ao empunhar uma arma leve, você pode optar por sofrer uma penalidade de -1 em todas as jogadas de ataque corpo a corpo e testes de manobra de combate para ganhar um bônus de +2 em todas as jogadas de dano corpo a corpo. Este bônus de dano é reduzido à metade (-50%) se você estiver realizando um ataque com uma arma secundária (mão off-hand) ou uma arma natural secundária. Quando sua BBA atingir +4, e a cada 4 pontos thereafter, a penalidade aumenta em -1 e o bônus nas jogadas de dano aumenta em +2. Você deve optar por usar este talento antes da jogada de ataque, e seus efeitos duram até seu próximo turno. O bônus de dano não se aplica a ataques de toque ou efeitos que não causem dano de pontos de vida. Este talento não pode ser usado em conjunto com o talento Power Attack.

@@ -1,46 +1,41 @@
-import React, { useMemo } from 'react';
-import type { ContentItem } from '../types/content';
-import type { SpellFilters } from '../types/spell';
+import { useMemo } from 'react';
+import type { ContentItem } from '../../types/content';
 import './SpellFilter.css';
+
+interface SpellFilterState {
+  levels: number[];
+  schools: string[];
+  castingTimes: string[];
+  durations: string[];
+}
 
 interface SpellFilterProps {
   spells: ContentItem[];
-  filters: SpellFilters;
-  onFiltersChange: (filters: SpellFilters) => void;
+  filters: SpellFilterState;
+  onFiltersChange: (filters: SpellFilterState) => void;
 }
 
 export function SpellFilter({ spells, filters, onFiltersChange }: SpellFilterProps) {
-  const { allClasses, allLevels, allEscolas } = useMemo(() => {
-    const classes = new Set<string>();
+  const { allLevels, allSchools, allCastingTimes, allDurations } = useMemo(() => {
     const levels = new Set<number>();
-    const escolas = new Set<string>();
+    const schools = new Set<string>();
+    const castingTimes = new Set<string>();
+    const durations = new Set<string>();
 
     spells.forEach(spell => {
-      if (spell.metadata) {
-        const meta = spell.metadata as any;
-        meta.classes?.forEach((c: any) => {
-          classes.add(c.nome);
-          levels.add(c.nivel);
-        });
-        if (meta.escola) {
-          escolas.add(meta.escola);
-        }
-      }
+      if (spell.spellLevel !== undefined) levels.add(spell.spellLevel);
+      if (spell.spellSchool) schools.add(spell.spellSchool);
+      if (spell.spellCastingTime) castingTimes.add(spell.spellCastingTime);
+      if (spell.spellDuration) durations.add(spell.spellDuration);
     });
 
     return {
-      allClasses: Array.from(classes).sort(),
       allLevels: Array.from(levels).sort((a, b) => a - b),
-      allEscolas: Array.from(escolas).sort()
+      allSchools: Array.from(schools).sort(),
+      allCastingTimes: Array.from(castingTimes).sort(),
+      allDurations: Array.from(durations).sort(),
     };
   }, [spells]);
-
-  const toggleClass = (className: string) => {
-    const newClasses = filters.classes.includes(className)
-      ? filters.classes.filter(c => c !== className)
-      : [...filters.classes, className];
-    onFiltersChange({ ...filters, classes: newClasses });
-  };
 
   const toggleLevel = (level: number) => {
     const newLevels = filters.levels.includes(level)
@@ -49,18 +44,32 @@ export function SpellFilter({ spells, filters, onFiltersChange }: SpellFilterPro
     onFiltersChange({ ...filters, levels: newLevels });
   };
 
-  const toggleEscola = (escola: string) => {
-    const newEscolas = filters.escolas.includes(escola)
-      ? filters.escolas.filter(e => e !== escola)
-      : [...filters.escolas, escola];
-    onFiltersChange({ ...filters, escolas: newEscolas });
+  const toggleSchool = (school: string) => {
+    const newSchools = filters.schools.includes(school)
+      ? filters.schools.filter(s => s !== school)
+      : [...filters.schools, school];
+    onFiltersChange({ ...filters, schools: newSchools });
+  };
+
+  const toggleCastingTime = (time: string) => {
+    const newTimes = filters.castingTimes.includes(time)
+      ? filters.castingTimes.filter(t => t !== time)
+      : [...filters.castingTimes, time];
+    onFiltersChange({ ...filters, castingTimes: newTimes });
+  };
+
+  const toggleDuration = (duration: string) => {
+    const newDurations = filters.durations.includes(duration)
+      ? filters.durations.filter(d => d !== duration)
+      : [...filters.durations, duration];
+    onFiltersChange({ ...filters, durations: newDurations });
   };
 
   const clearFilters = () => {
-    onFiltersChange({ classes: [], levels: [], escolas: [] });
+    onFiltersChange({ levels: [], schools: [], castingTimes: [], durations: [] });
   };
 
-  const activeCount = filters.classes.length + filters.levels.length + filters.escolas.length;
+  const activeCount = filters.levels.length + filters.schools.length + filters.castingTimes.length + filters.durations.length;
 
   return (
     <div className="spell-filter">
@@ -75,21 +84,6 @@ export function SpellFilter({ spells, filters, onFiltersChange }: SpellFilterPro
 
       <div className="spell-filter-grid">
         <div className="filter-section">
-          <h4>Classe</h4>
-          <div className="filter-chips">
-            {allClasses.map(cls => (
-              <button
-                key={cls}
-                className={`filter-chip ${filters.classes.includes(cls) ? 'active' : ''}`}
-                onClick={() => toggleClass(cls)}
-              >
-                {cls}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="filter-section">
           <h4>Nível</h4>
           <div className="filter-chips">
             {allLevels.map(level => (
@@ -98,7 +92,7 @@ export function SpellFilter({ spells, filters, onFiltersChange }: SpellFilterPro
                 className={`filter-chip ${filters.levels.includes(level) ? 'active' : ''}`}
                 onClick={() => toggleLevel(level)}
               >
-                Nível {level}
+                {level === 0 ? 'Truque' : `Nível ${level}`}
               </button>
             ))}
           </div>
@@ -107,13 +101,43 @@ export function SpellFilter({ spells, filters, onFiltersChange }: SpellFilterPro
         <div className="filter-section">
           <h4>Escola</h4>
           <div className="filter-chips">
-            {allEscolas.map(escola => (
+            {allSchools.map(school => (
               <button
-                key={escola}
-                className={`filter-chip ${filters.escolas.includes(escola) ? 'active' : ''}`}
-                onClick={() => toggleEscola(escola)}
+                key={school}
+                className={`filter-chip ${filters.schools.includes(school) ? 'active' : ''}`}
+                onClick={() => toggleSchool(school)}
               >
-                {escola}
+                {school}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="filter-section">
+          <h4>Tempo de Conjuração</h4>
+          <div className="filter-chips">
+            {allCastingTimes.map(time => (
+              <button
+                key={time}
+                className={`filter-chip ${filters.castingTimes.includes(time) ? 'active' : ''}`}
+                onClick={() => toggleCastingTime(time)}
+              >
+                {time}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="filter-section">
+          <h4>Duração</h4>
+          <div className="filter-chips">
+            {allDurations.map(duration => (
+              <button
+                key={duration}
+                className={`filter-chip ${filters.durations.includes(duration) ? 'active' : ''}`}
+                onClick={() => toggleDuration(duration)}
+              >
+                {duration}
               </button>
             ))}
           </div>
@@ -123,19 +147,24 @@ export function SpellFilter({ spells, filters, onFiltersChange }: SpellFilterPro
       {activeCount > 0 && (
         <div className="active-filters-summary">
           <span>Ativos: </span>
-          {filters.classes.map(c => (
-            <span key={`class-${c}`} className="active-tag" onClick={() => toggleClass(c)}>
-              {c} ✕
-            </span>
-          ))}
           {filters.levels.map(l => (
             <span key={`level-${l}`} className="active-tag" onClick={() => toggleLevel(l)}>
-              Nvl {l} ✕
+              {l === 0 ? 'Truque' : `Nvl ${l}`} ✕
             </span>
           ))}
-          {filters.escolas.map(e => (
-            <span key={`escola-${e}`} className="active-tag" onClick={() => toggleEscola(e)}>
-              {e} ✕
+          {filters.schools.map(s => (
+            <span key={`school-${s}`} className="active-tag" onClick={() => toggleSchool(s)}>
+              {s} ✕
+            </span>
+          ))}
+          {filters.castingTimes.map(t => (
+            <span key={`time-${t}`} className="active-tag" onClick={() => toggleCastingTime(t)}>
+              {t} ✕
+            </span>
+          ))}
+          {filters.durations.map(d => (
+            <span key={`duration-${d}`} className="active-tag" onClick={() => toggleDuration(d)}>
+              {d} ✕
             </span>
           ))}
         </div>

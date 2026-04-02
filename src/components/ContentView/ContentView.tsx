@@ -149,7 +149,8 @@ export function ContentView({
     />;
   }
 
-  const htmlContent = parseMarkdown(item.content);
+  const contentWithoutTitle = item.content.replace(/^#{1,6}\s+.+$/m, '').trimStart();
+  const htmlContent = parseMarkdown(contentWithoutTitle);
   const { isFavorite, toggleFavorite } = useFavorites();
   const favorite = isFavorite(item.id);
 

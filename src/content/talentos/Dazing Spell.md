@@ -1,0 +1,4 @@
+### Magia Atordoante
+**Tipo do talento**: Metamagia
+**Descrição**: Você pode atordoar criaturas com o poder de suas magias.
+**Benefício**: Você pode modificar uma magia para atordoar uma criatura que sofre dano da magia. Quando uma criatura sofre dano desta magia, ela fica atordoada por um número de rodadas igual ao nível original da magia. Se a magia permitir um teste de resistência, um teste bem-sucedido anula o efeito de atordoamento. Se a magia não permitir um teste de resistência, o alvo pode fazer um teste de Vontade para anular o efeito de atordoamento. Se o efeito da magia também causar a criatura a ficar atordoada, a duração deste efeito de metamagia é adicionada à duração da magia. Uma magia atordoante usa um espaço de magia três níveis mais alto que o nível real da magia. Magias que não causam dano não se beneficiam deste talento.

@@ -1,0 +1,6 @@
+### Pacify Animal
+**Tipo do talento**: Geral
+**Pré-requisitos**: Habilidade de empatia selvática (wild empathy).
+**Descrição**: Você é capaz de acalmar animais furiosos.
+**Benefício**: Como uma ação completa, você tenta acalmar um animal ou besta mágica com um valor de Inteligência 1 ou 2 e uma atitude hostil em relação a você ou seus aliados. Você realiza um teste de empatia selvática (CD = 10 + os Dados de Vida do alvo + o modificador de Carisma do alvo). Se for bem-sucedido, a atitude do alvo em relação a você e seus aliados se torna indiferente por 1 minuto, e ele não ataca durante esse período. Se o alvo for atacado durante esse tempo ou se o alvo puder ver você ou seus aliados após 1 minuto, ele se torna hostil novamente. Uma criatura pode ser afetada por essa tentativa de pacificação apenas uma vez em um período de 24 horas.
+**Especial**: Companheiros animais e criaturas sob compulsão mágica são mais difíceis de pacificar; a CD para tais criaturas é igual a 15 + os Dados de Vida do alvo + o modificador de Carisma do alvo. Um companheiro animal também aplica seu bônus em testes de Vontade da habilidade de devoção a esta CD, e atacar o mestre do animal também quebra este efeito. O mestre de um companheiro animal pode ordenar que o animal ataque novamente, mas a CD deste teste de Adestrar Animais é aumentada pelo seu modificador de empatia selvática.

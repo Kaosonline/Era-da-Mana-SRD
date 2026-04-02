@@ -1,0 +1,4 @@
+### Expert Trainer
+**Tipo do talento**: Geral
+**Descrição**: Você tem um dom especial para certa profissão e a aprende com facilidade.
+**Benefício**: Escolha três classes de personagem. Para os propósitos de reaprendizagem, você sempre é considerado ter uma sinergia de reaprendizagem com essas classes, independentemente de sua classe atual. Além disso, reaprender qualquer opção de classe leva metade do tempo que normalmente levaria (e, portanto, metade do custo em po), embora reaprender uma classe ainda leve o tempo normal (5 dias para uma classe com a qual você tenha sinergia, 7 para uma classe com a qual não tenha). Se você obtiver este talento via reaprendizagem ou substituí-lo por outro talento da mesma maneira, o tempo de reaprendizagem relacionado apenas a este talento leva o dobro do tempo normal.

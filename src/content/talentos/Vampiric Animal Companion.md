@@ -1,0 +1,14 @@
+### Companheiro Animal Vampírico
+**Tipo do talento**: Geral
+**Pré-requisitos**: Vampiro, Carisma 18, habilidade de classe de companheiro animal, nível suficientemente alto (veja abaixo).
+**Descrição**: Como um vampiro, você pode usar sua habilidade de criar servidores para transformar um morcego terrível, rato terrível ou lobo em um companheiro vampírico mais poderoso.
+**Benefício**: Um vampiro com este talento pode optar por usar sua habilidade de criar servidores em um animal invocado usando a habilidade Filhos da Noite (como um morcego terrível, rato terrível ou lobo) para criar um companheiro animal vampírico. Esta decisão deve ser feita como uma ação livre enquanto o vampiro mata o animal com sua habilidade de drenagem de sangue ou drenagem de energia. O animal se levanta da morte em 1d4 dias como um animal vampírico ligado ao vampiro que o criou. A partir de então, o animal vampírico avança em habilidades como um companheiro animal normal conforme o vampiro ganha mais níveis de classe na classe que concedeu o companheiro animal. Para ganhar um rato terrível como companheiro vampírico, o nível efetivo de druida do vampiro deve ser 4º. Para ganhar um lobo como companheiro vampírico, o nível efetivo de druida do vampiro deve ser 6º. Para ganhar um morcego terrível como companheiro vampírico, o nível efetivo de druida do vampiro deve ser 9º. Por sua opção, animais adicionais podem ser adicionados a esta lista - use estes exemplos como guias para definir níveis mínimos. Companheiros animais vampíricos contam para o número total de Dados de Vida que um vampiro pode escravizar, bem como para o limite de companheiros animais que o personagem pode ter em um determinado momento. Qualquer companheiro animal vampírico que o vampiro crie que exceda tais limites se torna um morto-vivo de vontade própria. Um vampiro também pode libertar um companheiro vampírico para escravizar um novo, mas uma vez libertado, o animal vampírico não pode ser escravizado novamente. As estatísticas de um animal vampírico são idênticas às do animal original, exceto pelas seguintes mudanças.
+&#8226; Seu tipo muda para morto-vivo com o subtipo animal aumentado.
+&#8226; Ganha um bônus de armadura natural +4.
+&#8226; Ganha o ataque especial de drenagem de sangue de vampiro.
+&#8226; Ganha um ataque de drenagem de energia (1 nível, CD igual a 10 + 1/2 dos DV raciais do companheiro animal + o modificador de Carisma do companheiro animal).
+&#8226; Ganha o ataque especial de dominação de vampiro em relação a animais de seu tipo.
+&#8226; Ganha resistência a canais +2, RD 5/prata, resistência a frio e eletricidade 10, cura acelerada 2, e as qualidades de vampiro de forma gasosa e sem sombra.
+&#8226; Ganha todas as fraquezas padrão de vampiro.
+&#8226; Ganha For +2, Des +2, e Car +4.
+&#8226; Não ganha as habilidades Filhos da Noite ou Criar Servidores do vampiro.

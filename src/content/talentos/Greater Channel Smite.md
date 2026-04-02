@@ -1,0 +1,5 @@
+### Maior Golpe Canalizador
+**Tipo do talento**: Geral
+**Pré-requisitos**: Característica de classe canalizar energia, Golpe Canalizador, BBA +8.
+**Descrição**: Você empodera sua arma com o poder de sua divindade, que você descarrega ao atingir seus inimigos.
+**Benefício**: Antes de fazer quaisquer ataques corpo a corpo em seu turno, você pode usar uma ação rápida para gastar um uso diário de sua característica de classe canalizar energia. Os dados de sua característica canalizar energia formam um conjunto de dados de dano que você pode acessar para causar dano adicional a criaturas normalmente prejudicadas pela energia que você está canalizando—mortos-vivos para energia positiva, criaturas vivas para energia negativa. Antes de fazer cada ataque corpo a corpo, aloque dados do conjunto para serem usados como dados de dano extra se você acertar. Seu alvo pode fazer um teste de Vontade, como normalmente, para reduzir à metade este dano extra. Este dano extra não é multiplicado quando você obtém um golpe crítico. Se você errar, os dados de dano extra permanecem em seu conjunto, mas quaisquer dados não gastos ao final de seu turno são desperdiçados.

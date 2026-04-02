@@ -1,0 +1,5 @@
+### Amor Torcido
+**Tipo do talento**: História
+**Pré-requisitos**: Você se parece com um ente querido perdido de uma criatura maléfica que, caso contrário, seria um inimigo desafiador. A semelhança é suficiente para que você seja confundido com a reencarnação do antigo ente querido, ou você pode ser esse ente querido renascido em uma nova vida. Alternativamente, a criatura pode ser um antigo amante que tornou-se maléfico e deseja retomar o relacionamento. Esse relacionamento indesejado deve ser contrário ao seu alinhamento ou aos seus objetivos de longo prazo. Antecedentes tematicamente apropriados incluem Nascido Fora do Tempo, Namorado Atual, Reencarnado, O Amante e Primeiro Amor Problemático (todos encontrados em Ultimate Campaign).
+**Descrição**: Uma pessoa ou entidade maléfica tornou-se obcecada pela sua semelhança com um ente querido perdido.
+**Benefício**: Você ganha um +2 em testes de resistência contra efeitos de encantamento e um +2 em testes de Blefar e Diplomacia para influenciar seu amor pretendido ou seus lacaios e servos.

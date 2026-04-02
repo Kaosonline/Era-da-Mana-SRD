@@ -1,0 +1,5 @@
+### Envenenador Sutil
+**Tipo do talento**: Geral
+**Pré-requisitos**: Prestidigitação 5 graduações.
+**Descrição**: Você dominou a arte de preparar furtiva e rapidamente uma arma envenenada.
+**Benefício**: Sempre que você sacar uma arma, você pode aplicar veneno à arma como parte da mesma ação. Para fazer isso, você já deve ter o veneno em mãos e deve ter sucesso em um teste de Prestidigitação de CD 20. O sucesso significa que a dose de veneno é gasta e você envenena a arma sem chamar atenção para seu ato. Esse teste é adicional a quaisquer outros testes de Prestidigitação que você tente realizar para executar a ação (como para sacar uma arma escondida). A falha significa que quaisquer criaturas presentes podem imediatamente tentar testes de Percepção opostos para notar sua tentativa de envenenamento. Se você falhar no teste por 5 ou mais, você também se expõe ao veneno, a menos que você tenha uma habilidade que previne envenenamento acidental, como a habilidade de uso de veneno do alquimista.

@@ -1,0 +1,5 @@
+### Fogo Amigo
+**Tipo do talento**: Geral
+**Pré-requisitos**: Tiro Preciso.
+**Descrição**: Seus ataques à distância assustam seus inimigos, em parte porque você nem sequer está tentando evitar acertar seus aliados.
+**Benefício**: Você inicia este talento como uma ação padrão, realizando um ataque à distância contra um inimigo engajado em combate corpo a corpo com pelo menos um aliado. Este tiro deliberadamente abandona as precauções normais, colocando seu aliado em risco, mas também é inesperado o suficiente para surpreender seu oponente mútuo. Você ganha um bônus de +2 em sua jogada de ataque se o ataque passar pelo espaço de um aliado. Se seu tiro errar o alvo, você deve imediatamente fazer uma segunda jogada de ataque com todos os mesmos modificadores contra o aliado, potencialmente acertando-a com o ataque em vez do oponente. Quando o ataque for resolvido (independentemente de qualquer alvo em potencial ter sido acertado), a reação assustada do alvo pretendido provoca um ataque de oportunidade do aliado.

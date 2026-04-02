@@ -1,0 +1,5 @@
+### Tumultuous Spell
+
+**Tipo do talento**: Metamagia
+**Descrição**: Você pode derramar o caos agitado do Maelstrom em sua magia, fazendo com que os inimigos se dispersem imprevisivelmente, sendo empurrados em direções aleatórias conforme os caprichos desconhecidos do próprio caos, trazendo consigo sons estranhos e inesperados e flashes de cor antinatural.
+**Benefício**: Você pode aprimorar qualquer magia que tenha um único alvo para se tornar uma magia tumultuosa. Uma criatura atingida por uma magia tumultuosa (se a magia exigir uma jogada de ataque) ou que falha em seu teste de resistência contra uma magia tumultuosa se move imediatamente 1d4x1,5 m em uma direção aleatória. Este movimento não provoca ataques de oportunidade. Se este movimento forçar uma criatura a entrar em um objeto sólido ou em outra criatura, o movimento termina inofensivamente logo antes do impacto. Uma magia tumultuosa usa um espaço de magia 1 nível mais alto que o nível normal da magia. Magias com o descritor leal não podem ser magias tumultuosas.

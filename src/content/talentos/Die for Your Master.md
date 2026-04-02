@@ -1,0 +1,5 @@
+### Die for Your Master
+**Tipo do talento**: Geral
+**Pré-requisitos**: Descoberta de tumor familiar de alquimista.
+**Descrição**: Seu tumor familiar faz qualquer coisa para salvar sua vida.
+**Benefício**: Se seu tumor familiar estiver anexado e você fosse ser reduzido a 0 ou menos pontos de vida por dano em combate (de uma arma ou outro golpe, não de uma magia ou habilidade especial), o familiar se joga no caminho do ataque como uma ação imediata. Se ele obtiver sucesso em um teste de resistência de Reflexos (CD = dano causado), ele sofre todo o dano do ataque; se falhar, ele sofre metade do dano e você sofre metade. O familiar deve estar ciente do ataque e capaz de reagir a ele para usar esta habilidade, e ele só pode fazer isso uma vez por dia – se estiver negado seu bônus de Destreza na CA, ele não pode usar esta habilidade. Como este efeito não permitiria normalmente que o familiar fizesse um teste de resistência de Reflexos para sofrer dano reduzido, sua habilidade de evasão aprimorada não se aplica a este teste de resistência.

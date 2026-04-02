@@ -1,0 +1,6 @@
+### Channeling Variance
+**Tipo do talento**: Geral
+**Pré-requisitos**: Habilidade de classe de domínio, habilidade de classe de canalizar energia, deve adorar e receber magias de uma divindade.
+**Descrição**: Você altera suas energias canalizadas com base nos princípios de seu deus.
+**Benefício**: Escolha uma habilidade de canalização variante (Pathfinder RPG Ultimate Magic 28). A habilidade escolhida deve corresponder a um dos domínios, subdomínios ou áreas de interesse de sua divindade. Três vezes por dia quando você canalizar energia, você pode aplicar as modificações da habilidade de canalização variante escolhida à sua energia canalizada, incluindo reduções no dano causado ou cura realizada por sua energia canalizada. Se você já tiver uma habilidade de canalização variante, este talento, em vez disso, permite que você canalize energia sem as modificações de sua habilidade de canalização variante escolhida (incluindo reduções no dano causado ou cura realizada por sua energia canalizada) três vezes por dia.
+**Especial**: Este talento pode ser selecionado duas vezes. Da segunda vez que você o fizer, você pode usar Variação de Canalização sempre que canalizar energia, em vez de apenas três vezes por dia.

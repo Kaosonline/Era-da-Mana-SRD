@@ -1,0 +1,5 @@
+### Mutilating Ritualist
+**Tipo do talento**: Geral
+**Pré-requisitos**: Conhecimento (arcana) 4 ranques, Conhecimento (religião) 4 ranques, Conjuração 4 ranques.
+**Descrição**: Você adiciona um sacrifício pessoal para aumentar o poder de sua magia ritualística.
+**Benefício**: Uma vez durante a conjuração de um ritual oculto (Pathfinder RPG Occult Adventures 208), você pode infligir 1d6 pontos de vida por 2 Dados de Vida e 1d4 dano de Constituição (ou dano de Carisma se você for um morto-vivo) a si mesmo como uma ação imediata com uma arma perfurante ou cortante. Você não pode reduzir ou ignorar esse dano de qualquer forma. Esse dano não interrompe o ritual, e você pode rolar duas vezes para o próximo teste de perícia feito como parte da conjuração de um ritual e ficar com o melhor resultado. Se o efeito ritual resultante tiver o descritor medo ou for da subescola fantasma, aumente sua CD do teste de resistência em 1. Vários personagens com este talento podem usá-lo uma vez por ritual em seus testes de perícia, mas os aumentos de CD não se acumulam.

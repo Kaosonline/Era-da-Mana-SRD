@@ -1,0 +1,5 @@
+### Derivação do Archon
+**Tipo do talento**: Combate
+**Pré-requisitos**: Estilo Archon*; Perícia em Combate; Reflexos de Combate; BBA +4 ou nível de monge 3º.
+**Descrição**: Você se joga na frente de golpes destinados a aliados, dando a esses aliados uma chance de revidar contra o inimigo depois que ele o atacou.
+**Benefício**: A penalidade na CA por usar o Estilo Archon para conceder a aliados próximos um bônus na CA contra um único oponente diminui para -1. Uma vez por rodada enquanto usa o Estilo Archon, quando você tem pelo menos uma mão livre ou está empunhando um escudo, você pode desviar um ataque com arma corpo a corpo que esteja mirando em um aliado adjacente para você mesmo. Após resolver o ataque, o aliado que você protegeu pode fazer um ataque de oportunidade contra o oponente desviado. Você não consome nenhuma ação para desviar o ataque, mas deve estar ciente dele e não pode estar desprevenido. Você deve escolher desviar o ataque depois que o oponente declarou o ataque corpo a corpo, mas antes que a jogada de ataque seja rolada.

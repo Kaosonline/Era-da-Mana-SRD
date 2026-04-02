@@ -1,0 +1,4 @@
+### Magia Enjoadora
+**Tipo do talento**: Metamágico
+**Descrição**: Você pode enjoar criaturas com suas magias.
+**Benefício**: Você pode modificar uma magia para enjoar uma criatura que sofre dano da magia. Quando uma criatura sofre dano desta magia, ela fica enjoada por um número de rodadas igual ao nível original da magia. Se a magia permite um teste de resistência, um teste bem-sucedido anula o efeito de enjoar. Se a magia não permite um teste, o alvo pode fazer um teste de Fortitude para anular o efeito de enjoar. Se o efeito da magia também causa a criatura a ficar enjoada, a duração deste efeito metamágico é adicionada à duração da magia. Uma magia enjoadora consome um slot de magia dois níveis acima do nível real da magia. Magias que não infligem dano não se beneficiam deste talento.

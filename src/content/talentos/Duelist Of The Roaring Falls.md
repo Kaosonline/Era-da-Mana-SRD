@@ -1,0 +1,5 @@
+### Duelista das Cataratas Rugidoras
+**Tipo do talento**: Combate
+**Pré-requisitos**: Discípulo da Espada Aldori, Perícia com Arma Exótica (espada de duelo Aldori), Finesse com Arma, Foco em Arma (espada de duelo Aldori), Bônus Base de Ataque +5.
+**Descrição**: Você adotou o método das Cataratas Rugidoras da esgrima Aldori, conhecido por seus golpes elegantes e amplos.
+**Benefício**: Quando você usa uma espada de duelo Aldori para causar dano a um inimigo abalado, assustado ou em pânico, você pode adicionar seu bônus de Destreza às jogadas de dano em vez de seu bônus de Força. Se você já pode adicionar seu bônus de Destreza às jogadas de dano, em vez disso você ganha um bônus de competência +1 nas jogadas de dano feitas com uma espada de duelo Aldori. Quando você tenta um parry de duelo durante um duelo, a penalidade em sua jogada de ataque para parar é reduzida de -5 para -3. Para ganhar esses benefícios, você deve estar empunhando apenas uma espada de duelo Aldori (não usando escudo, arma secundária, espinhos de armadura, golpes desarmados ou armas naturais).

@@ -1,0 +1,5 @@
+### Crítico Empalador
+**Tipo do talento**: Combate
+**Pré-requisitos**: Foco Crítico, Especialização com Arma com a arma de corpo a corpo perfurante selecionada, BBA +11.
+**Descrição**: Seus golpes críticos podem empalar seus inimigos.
+**Benefício**: Sempre que você obtiver um golpe crítico com a arma de corpo a corpo perfurante selecionada, você pode empalar seu oponente em sua arma. Enquanto seu oponente estiver empalado dessa forma, cada vez que ele iniciar seu turno, você causa dano igual aos dados de dano de sua arma mais os dados de dano adicionais das propriedades de sua arma. Como uma ação imediata, você pode puxar sua arma para fora de seu oponente. Se seu oponente estiver fora de seu alcance, você deve gastar uma ação livre para soltar sua arma ou puxá-la para fora dele. Seu oponente também pode gastar uma ação de movimento para puxar sua arma para fora. Quando a arma sai, seu oponente sofre dano como se estivesse iniciando seu turno empalado. Enquanto você empalar seu oponente com sua arma, você não pode usá-la para atacar e deve segurá-la.

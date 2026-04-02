@@ -5,14 +5,14 @@ import { highlightText } from '../../utils/highlightText';
 import './Sidebar.css';
 
 const CATEGORY_ICONS: Record<string, string> = {
-  'races': '🧝',
+  'raças': '🧝',
   'classes': '⚔️',
   'magias': '✨',
-  'feats': '📜',
-  'skills': '🎯',
-  'equipment': '🛡️',
-  'conditions': '⚠️',
-  'rules': '📖',
+  'talentos': '📜',
+  'perícias': '🎯',
+  'equipamentos': '🛡️',
+  'condições': '⚠️',
+  'regras': '📖',
 };
 
 function getCategoryIcon(category: string): string {

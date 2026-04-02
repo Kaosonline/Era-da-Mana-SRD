@@ -1,0 +1,5 @@
+### Callous Casting
+**Tipo do talento**: Geral
+**Pré-requisitos**: Ofício (Magia) 1 graduação.
+**Descrição**: Você não se importa se seus aliados forem prejudicados por suas magias. Os espertos sabem disso e começam a correr.
+**Benefício**: Você inicia este talento ao incluir um aliado conivente na área de qualquer magia que causa dano de um tipo contra o qual o conivente não seja imune. A insensibilidade do ataque desanima os inimigos na área, que devem ter sucesso em um teste de Vontade contra a CD da magia ou ficar abalados por 1 rodada por nível de magia. Após resolver os efeitos da magia, o conivente pode se mover até seu deslocamento como uma ação imediata. Qualquer movimento realizado usando esta ação é então subtraído de seu deslocamento até o fim de seu próximo turno. Este movimento ainda pode provocar ataques de oportunidade normalmente. Uma vez que um inimigo tenha tentado um teste de Vontade contra este talento, ele fica imune a este efeito daquele iniciador pelas próximas 24 horas.

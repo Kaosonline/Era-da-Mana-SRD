@@ -1,0 +1,5 @@
+### Burrowing Shot
+**Tipo do talento**: Geral  
+**Pré-requisitos**: Dest 13, Deadly Aim, BBA +9, habilidade de classe treinamento em arma com uma arma de alcance.  
+**Descrição**: Você aloja suas armas de alcance dentro do corpo do alvo.  
+**Benefício**: Quando você acerta uma criatura com um ataque de alcance, como uma ação livre, você pode fazer com que a arma (ou sua munição, para armas de projétil) aloje-se dentro do corpo da criatura, fazendo com que ela sofra uma penalidade de -2 em testes de atributo, jogadas de ataque, testes de resistência e testes de perícia devido à dor intensa. Penalidades de múltiplas armas alojadas não se acumulam. Se a criatura for uma conjuradora, ela ganha 25% de chance de falha de magia com todas as magias que conjura que incluam componentes somáticos. Essa penalidade pode ser removida com o uso de tratar ferimentos mortais da perícia Cura ou removendo a arma alojada como uma ação padrão, o que encerra as penalidades e faz com que a criatura sofra uma quantidade de dano igual ao dano base da arma (sem quaisquer bônus).

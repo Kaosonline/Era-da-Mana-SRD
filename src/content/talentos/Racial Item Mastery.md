@@ -1,0 +1,5 @@
+### Domínio Racial de Itens
+**Tipo do talento**: Geral
+**Pré-requisitos**: Usar Dispositivo Mágico 6 graduações, bônus base em testes de resistência de Fortitude +3.
+**Descrição**: Você pode usar certos itens mágicos para alimentar seus poderes inatos.
+**Benefício**: Você pode se concentrar em um item associado à sua raça para usar uma habilidade tipo magia racial que você possui sem gastar nenhum uso por dia dessa habilidade tipo magia. Uma habilidade tipo magia racial é qualquer habilidade tipo magia que você tenha adquirido de um traço racial, de um talento ou traço que liste sua raça como pré-requisito, ou de uma opção de classe ou arquétipo que esteja disponível apenas para membros de sua raça. Você deve usar um item com uma magia em seu requisito de construção que pertença à mesma escola e seja de pelo menos o mesmo nível que a habilidade tipo magia que deseja usar. Você pode usar este talento uma vez por dia, mais uma vez adicional por dia quando seu bônus base em testes de resistência de Fortitude atingir +9 e +12.

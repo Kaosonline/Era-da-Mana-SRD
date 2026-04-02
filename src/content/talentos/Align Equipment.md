@@ -1,0 +1,5 @@
+### Equipamento Alinhado
+**Tipo do talento**: General
+**Pré-requisitos**: Canalizar Alinhamento, Abençoar Equipamento, nível de conjurador 3º, habilidade de classe canalizar energia.
+**Descrição**: Você ganha a habilidade de abençoar equipamento com habilidades que os tornam mais eficazes contra seres extraplanários.
+**Benefício**: Além das bênçãos concedidas por Abençoar Equipamento, você pode imbuir armas, escudos e armaduras com as habilidades especiais listadas na tabela a seguir. Se uma habilidade especial for seguida por um alinhamento definido entre parênteses, você deve ser capaz de canalizar energia capaz de curar ou prejudicar seres extraplanários daquele subtipo de alinhamento com Canalizar Alinhamento. Por exemplo, um clérigo deve ter Canalizar Alinhamento (bom) para abençoar uma arma com a habilidade especial sagrada, Canalizar Alinhamento (law) para abençoar um escudo com a habilidade especial vigilante, e assim por diante. Por outro lado, as bênçãos de equipamento alinhado seguem todas as mesmas regras que as bênçãos de equipamento concedidas por Abençoar Equipamento.

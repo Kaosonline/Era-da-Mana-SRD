@@ -1,0 +1,5 @@
+### Potência Sacrificial
+**Tipo do talento**: Geral
+**Pré-requisitos**: Uma ou mais habilidades raciais tipo magia, e ser um extralev com o subtipo maligno.
+**Descrição**: Seus poderes aumentam com as mortes de mortais.
+**Benefício**: Sempre que você realizar um golpe de misericórdia que mata uma criatura, escolha uma habilidade racial tipo magia que você possui que é usável um número limitado de vezes por dia (mas não mais limitada, como uma vez por semana ou uma vez por mês). O nível da magia da habilidade tipo magia deve ser igual ou menor que a metade dos Dados de Vida da vítima. Você recupera um uso dessa habilidade tipo magia.  Isso não tem efeito se você não tiver gasto nenhum uso dessa habilidade tipo magia.  Além disso, você pode obter esse benefício quando um aliado a até 9 metros realizar um golpe de misericórdia que mata sua vítima. O aliado deve proclamar abertamente que a morte é feita em seu nome. Isso, caso contrário, age como se você tivesse realizado o golpe de misericórdia você mesmo.  Você pode obter o benefício deste talento apenas uma vez a cada 24 horas.

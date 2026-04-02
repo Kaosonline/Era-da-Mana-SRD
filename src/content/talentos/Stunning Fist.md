@@ -1,0 +1,7 @@
+### Stunning Fist
+
+**Tipo do talento**: Combate
+**Pré-requisitos**: Des 13, Sab 13, Golpe Desarmado Aprimorado, bônus de ataque base +8.
+**Descrição**: Você sabe exatamente onde atingir para atordoar temporariamente um inimigo.
+**Benefício**: Você deve declarar que está usando este talento antes de fazer sua jogada de ataque (portanto, uma jogada de ataque falhada arruína a tentativa). Golpe Atordoante força um inimigo danificado por seu ataque desarmado a fazer um teste de resistência de Fortitude (CD 10 + 1/2 seu nível de personagem + seu modificador de Sabedoria), além de causar dano normalmente. Um defensor que falha neste teste de resistência fica atordoado por 1 rodada (até logo antes de seu próximo turno). Um personagem atordoado larga tudo o que está segurando, não pode realizar ações, perde qualquer bônus de Destreza na CA e sofre uma penalidade de -2 na CA. Você pode tentar um ataque atordoante uma vez por dia para cada quatro níveis que tiver alcançado (mas veja Especial), e não mais do que uma vez por rodada. Construtos, gelatinas, plantas, mortos-vivos, criaturas incorpóreas e criaturas imunes a golpes críticos não podem ser atordoados.
+**Especial**: Um monge recebe Golpe Atordoante como um talento bônus no 1º nível, mesmo que não atenda aos pré-requisitos. Um monge pode tentar um ataque atordoante um número de vezes por dia igual a seu nível de monge, mais uma vez adicional por dia para cada quatro níveis que tiver em classes outras que não a de monge.

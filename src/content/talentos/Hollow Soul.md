@@ -1,0 +1,5 @@
+### Alma Vazia
+**Tipo do talento**: Conduíte
+**Pré-requisitos**: Conhecimento (planos) 9 graduações.
+**Descrição**: Você pode temporariamente substituir sua alma por um fragmento do vazio devorador de Abaddon.
+**Benefício**: Como uma ação de movimento, você pode entrar em um estado de vazio emocional e espiritual. Enquanto nesse estado, você reage a energia positiva e negativa como se fosse um morto-vivo - energia positiva o machuca, enquanto energia negativa o cura. Sempre que você é alvo de um efeito que afeta especificamente criaturas vivas ou criaturas mortas-vivas, ou que afeta ambos de maneiras diferentes, você tem 50% de chance de ser considerado uma criatura morta-viva em vez de uma criatura viva. Você é imune a efeitos que visam especificamente sua alma (como Armadilha da Alma). No entanto, enquanto sob o efeito deste talento, você não pode se beneficiar de efeitos mentais benéficos, bônus de moral ou apresentações de bardo. Você pode usar o benefício deste talento por um número de minutos por dia igual às suas graduações em Conhecimento (planos). Esses minutos não precisam ser consecutivos, mas devem ser gastos em incrementos de 1 minuto.

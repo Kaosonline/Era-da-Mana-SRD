@@ -1,0 +1,5 @@
+### Estrangulamento
+**Tipo do talento**: Combate
+**Pré-requisitos**: Agarramento Aprimorado, Golpe Desarmado Aprimorado, BBA +6 ou nível de monge 5º.
+**Descrição**: Durante um agarramento, você pode cortar o fornecimento de ar e sangue de um oponente.
+**Benefício**: Enquanto você tiver um oponente agarrado que seja até uma categoria de tamanho maior que você, você pode tentar uma manobra de combate de agarramento com uma penalidade de -5 no teste. Se você for bem-sucedido, você imobilizou seu oponente e o mantém em um estrangulamento. Quando você mantém o agarramento, você também mantém o estrangulamento. Uma criatura em um estrangulamento não pode respirar ou falar e, portanto, não pode conjurar magias que tenham um componente verbal. Um oponente que você tem em um estrangulamento tem que prender a respiração ou começar a sufocar. Qualquer criatura que não respira, é imune a dano de sangramento ou é imune a golpes críticos é imune aos efeitos de seu estrangulamento. Quando o agarramento termina, o estrangulamento também termina.

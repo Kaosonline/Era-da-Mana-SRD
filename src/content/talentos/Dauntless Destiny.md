@@ -1,0 +1,5 @@
+### Destino Intrépido
+**Tipo de talento**: Geral
+**Pré-requisitos**: Car 13, Curiosidade Intrépida, Intimidação 10 graduações, humano.
+**Descrição**: Sua habilidade de evitar desastres é impressionante.
+**Benefício**: Você ganha um bônus de +1 em testes de resistência contra efeitos com o descritor emoção; este bônus acumula-se com aqueles concedidos por Curiosidade Intrépida e Confiança Intimidadora. Além disso, uma vez por dia você pode rerrolar um 1 natural em um teste de resistência ou uma jogada de ataque. Se seu rerrolamento resulta em um teste de resistência ou jogada de ataque bem-sucedido, como uma ação livre você pode fazer um teste de Intimidação para desmoralizar o alvo de seu ataque ou a criatura que o forçou a fazer um teste de resistência, desde que a criatura esteja a 9 m e possa ver e ouvir você. Este efeito não se aplica em testes de resistência contra armadilhas ou outros objetos. Isso não acumula-se com outros efeitos que permitem que você rerrole um teste de resistência ou uma jogada de ataque. Você só pode fazer um rerrolamento.

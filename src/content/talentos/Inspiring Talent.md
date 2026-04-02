@@ -1,0 +1,5 @@
+### Talento Inspirador
+**Tipo de talento**: Geral
+**Pré-requisitos**: Meio-elfo, traço racial Adaptabilidade ou traço racial Armas Ancestrais.
+**Descrição**: Sua adaptabilidade inata permite que você imite outros de sua espécie quase perfeitamente, a ponto de poder utilizar sua maestria sobre perícias quase como se tivesse treinado pessoalmente nelas.
+**Benefício**: Sempre que você estiver a até 9 metros de um aliado que também tenha este talento, você ganha os seguintes benefícios. Se o aliado tiver um talento Foco em Perícia, você também é considerado como tendo aquele talento para os seguintes usos de perícias: testes de Acrobacia para se mover através de quadrados ameaçados, testes de Blefar para blefar, testes de Fuga para escapar de um agarrão, testes de Intimidação para desmoralizar, testes de Conhecimento para identificar uma criatura e testes de Percepção para perceber uma criatura usando Furtividade. Além disso, se o aliado tiver uma proficiência com armas obtida através do traço racial Armas Ancestrais, você também é considerado como tendo aquela proficiência com armas.

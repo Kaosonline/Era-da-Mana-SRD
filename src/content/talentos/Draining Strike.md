@@ -1,0 +1,5 @@
+### Golpe Drenante
+**Tipo do talento**: Combate
+**Pré-requisitos**: Destreza 13, Sabedoria 13, Golpe Desarmado Aprimorado, BBA +8.
+**Descrição**: Com um golpe bem direcionado, você faz seu alvo ficar fatigado ou exausto.
+**Benefício**: Você deve declarar que está usando este talento antes de fazer sua jogada de ataque (portanto, uma jogada de ataque falha arruína a tentativa). Golpe Drenante força um inimigo que foi danificado por seu ataque desarmado a tentar um teste de resistência de Fortitude (CD = 10 + 1/2 do seu nível de personagem + seu modificador de Sabedoria), além de causar dano normalmente. Um oponente que falha neste teste de resistência fica fatigado por 1 minuto ou até que o inimigo seja submetido a qualquer magia ou efeito que cure dano de pontos de vida. Se você tiver um BBA de +14 ou maior, o alvo fica exausto pela mesma duração em vez disso. Você pode tentar usar Golpe Drenante uma vez por dia para cada 4 níveis de personagem que você tiver, mas pode usá-lo não mais do que uma vez por rodada. Construtos, criaturas incorpóreas, plantas, mortos-vivos e criaturas imunes a golpes críticos não podem ser afetados por esta habilidade.

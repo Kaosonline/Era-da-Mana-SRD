@@ -57,6 +57,7 @@ function AppContent() {
     }
   }, []);
 
+  const navigate = useNavigate();
   const handleCrossRefClick = useCallback((e: MouseEvent) => {
     const target = e.target as HTMLElement;
     if (target.classList.contains('cross-ref')) {
@@ -65,11 +66,11 @@ function AppContent() {
       if (refTarget) {
         const resolved = resolveCrossRef(refTarget, allItems);
         if (resolved) {
-          window.location.hash = `/${resolved.category}/${resolved.id}`;
+          navigate(`/${resolved.category}/${resolved.id}`);
         }
       }
     }
-  }, [allItems]);
+  }, [allItems, navigate]);
 
   useEffect(() => {
     document.addEventListener('click', handleCrossRefClick);

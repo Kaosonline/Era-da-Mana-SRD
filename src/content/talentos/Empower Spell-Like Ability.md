@@ -1,0 +1,6 @@
+### Empower Spell-Like Ability
+**Tipo do talento**: Monstro
+**Pré-requisitos**: Habilidade simil-magia com nível de conjurador 6º ou maior.
+**Descrição**: Uma das habilidades simil-magia desta criatura é particularmente potente e poderosa.
+**Benefício**: Escolha uma das habilidades simil-magia da criatura, sujeita às restrições abaixo. A criatura pode usar essa habilidade como uma habilidade simil-magia potencializada três vezes por dia (ou menos, se a habilidade normalmente só puder ser usada uma ou duas vezes por dia). Quando uma criatura usa uma habilidade simil-magia potencializada, todos os efeitos variáveis e numéricos da habilidade simil-magia são aumentados pela metade (+50%). Testes de resistência e jogadas oposicionadas não são afetados. Habilidades simil-magia sem variáveis aleatórias não são afetadas. A criatura só pode selecionar uma habilidade simil-magia que duplique uma magia com um nível menor ou igual a 1/2 de seu nível de conjurador (arredondado para baixo) - 2. Para um resumo, veja a tabela na descrição do talento Acelerar Habilidade Simil-Magia na página 316.
+**Especial**: Este talento pode ser escolhido múltiplas vezes. Cada vez que é escolhido, a criatura pode aplicá-lo a uma habilidade simil-magia diferente.

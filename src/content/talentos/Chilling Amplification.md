@@ -1,0 +1,4 @@
+### Amplificação Gélida
+**Tipo do talento**: Geral
+**Descrição**: Suas magias com o descritor frio tornam seus alvos letárgicos.
+**Benefício**: Sempre que você conjurar uma magia com o descritor frio, você pode sofrer uma penalidade de -1 nas jogadas de ataque feitas com a magia e reduzir o CD do teste de resistência da magia em 1 para fazer com que qualquer alvo que sofrer dano de frio pela magia tenha sua velocidade de movimento reduzida em 1,5 m e se torne incapaz de dar passos de 1,5 m. Este efeito dura por 1 rodada + 1 rodada por 3 níveis de magia da magia. Você deve escolher usar este talento antes de fazer uma jogada de ataque ou antes que seus alvos tentem seus testes de resistência. Este talento não tem efeito em magias que não permitem um teste de resistência nem exigem uma jogada de ataque.

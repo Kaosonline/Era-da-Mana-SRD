@@ -1,0 +1,5 @@
+### Golpe Subjetivo
+**Tipo do talento**: Combate
+**Pré-requisitos**: Con 13; Sab 13; Mobilidade Subjetiva*; BBA +4 ou nível de Monge 3.
+**Descrição**: Quando no controle da gravidade, você pode usar seu momento para causar impactos brutais, transformando o próprio ato de cair em uma arma devastadora.
+**Benefício**: Enquanto estiver em um plano com gravidade direcional subjetiva, você reduz pela metade todo dano que sofre de impactos (como dano de queda). Enquanto estiver em tal plano, se sua "queda" fizesse com que você colidisse com uma criatura ou objeto, você pode golpeá-lo com força devastadora como uma ação padrão. Você deve ter sucesso em um ataque de toque para golpear uma criatura ou objeto, com uma penalidade cumulativa de -1 para cada 15 metros de sua velocidade de queda atual; a critério do MJ, você pode automaticamente acertar objetos vastos como paredes. Uma criatura ou objeto atingido por este golpe sofre 1d6 pontos de dano de concussão para cada 15 metros de velocidade de queda atual, até um máximo de 6d6, e começa a cair em sua velocidade atual de acordo com sua gravidade direcional subjetiva atual.

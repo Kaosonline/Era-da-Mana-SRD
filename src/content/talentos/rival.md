@@ -1,12 +1,7 @@
 ### Rival
 
-Pré-requisitos: Você deve ter pelo menos um inimigo que deseja superá-lo. Se tiver múltiplos rivais, o mestre pode manter o rival específico em segredo, ou fazer com que muitos dos seus inimigos trabalhem juntos contra você. Se seu rival ainda não for um adversário desafiador, ele ou avança para se tornar um, ou se alia a outras uma ou mais criaturas que o são.
-
-Benefício:
-Sua luta o impulsiona a se tornar cada vez mais habilidoso. Quando ganha este poder, e a cada 2 níveis de personagem seguintes, ou você ganha 1 ponto de perícia, ou sua pontuação de Fama aumenta em 1 (se o jogo usar o sistema de reputação e Fama de Ultimate Campaign).
-
-Especial:
-Frustrá-lo torna-se um objetivo que consome totalmente o seu rival. Seu rival ganha um bônus +2 em verificações de iniciativa, testes de resistência e verificações de perícia contra você. Seu rival tenta roubar ou prejudicar conquistas que você se esforça para alcançar.
-
-Descrição:
-Você tem um rival, e os dois tentam sabotar, humilhar ou de outra forma derrotar um ao outro sem permitir que ninguém mais interfira.
+**Tipo do talento**: Conceito
+**Pré-requisitos**: Você deve ter pelo menos um inimigo que deseja superá-lo. Se você tiver vários rivais, o Mestre pode manter o rival específico em segredo ou fazer com que muitos de seus inimigos colaborem contra você. Se seu rival já não for um desafiante, ou ele avança para se tornar um ou se alia a uma ou mais criaturas que são.
+**Descrição**: Você tem um rival, e vocês dois tentam sabotar, humilhar ou de outra forma derrotar um ao outro sem permitir que mais ninguém interfira.
+**Benefício**: Sua disputa o empurra a se tornar cada vez mais hábil. Quando você adquire este talento, e a cada 2 níveis de personagem thereafter, você ganha 1 ponto de habilidade ou sua pontuação de Fama aumenta em 1 (se seu jogo usa o sistema de Reputação e Fama de *Ultimate Campaign*).
+**Especial**: Derrotá-lo torna-se um objetivo absorvente para seu rival. Seu rival ganha um bônus de +2 em testes de iniciativa, testes de resistência e testes de habilidade contra você. Seu rival tenta roubar ou minar as conquistas que você se esforça para alcançar.

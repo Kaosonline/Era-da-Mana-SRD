@@ -1,0 +1,6 @@
+### Associate
+**Tipo do talento**: General
+**Pré-requisitos**: Manter um relacionamento positivo com uma organização por pelo menos 6 meses ou alcançar uma grande realização em nome de uma organização.
+**Descrição**: Você está em bons termos com uma grande organização, embora não necessariamente seja um membro oficial.
+**Benefício**: Selecione uma única organização com a qual você tenha um relacionamento positivo. Você ganha um +4 de bônus de circunstância em testes de Diplomacia para influenciar membros desse grupo ou ao fazer testes de Obter Informações sobre a organização. Em qualquer assentamento que seja do tamanho de uma pequena cidade ou maior, você pode gastar 1d4 horas para tentar localizar um representante de sua organização para conseguir um recurso ou serviço menor gratuitamente (como informação), um lugar para ficar ou transporte. Se você for bem-sucedido em um teste de Diplomacia (CD = 20 + o custo em po do serviço solicitado [mínimo 1 po]), você consegue um favor com sucesso e ganha esse serviço de graça; caso contrário, você deve pagar a taxa normal. Você pode tentar este teste uma vez por semana.
+**Especial**: Você pode escolher este talento múltiplas vezes. Cada vez que você seleciona este talento, você se associa a uma organização adicional.

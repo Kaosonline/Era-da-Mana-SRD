@@ -1,0 +1,5 @@
+### Nuvem Cristalina
+**Tipo do talento**: General
+**Pré-requisitos**: Afórito, nível de personagem 5, traço racial de poeira cristalina.
+**Descrição**: Você pode liberar grandes quantidades de poeira cristalina para criar uma diversão ou proteger seus aliados.
+**Benefício**: Quando você usa seu traço racial supernatural de poeira cristalina, você pode, em vez disso, criar uma nuvem de poeira cristalina em um raio de 3 metros centrada em você. A nuvem não obscurece a visão, mas aliados dentro da nuvem recebem o benefício de sua poeira cristalina. A nuvem pode ser mantida a cada rodada como uma ação livre desde que você permaneça dentro da área da nuvem. Um vento moderado (18+ km/h), como de uma magia rajada de vento, dispersa a nuvem imediatamente. Cada rodada que a nuvem cristalina está ativa consome 2 rodadas de seu traço racial de poeira cristalina. Se você tiver o talento Armas Douradas (veja página 15), qualquer criatura com o subtipo caótico que entra na nuvem deve passar em um teste de resistência de Fortitude (CD = 10 + metade do seu nível de personagem + seu modificador de Carisma) ou ficar enjoado por 1 rodada.

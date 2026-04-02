@@ -1,0 +1,5 @@
+### Luz Celestial
+**Tipo do talento**: Conduto
+**Pré-requisitos**: Conhecimento (planos) 1 graduação.
+**Descrição**: Você é um farol luminoso na escuridão, um ícone de ordem e bondade através do qual a luz do próprio Céu pode brilhar, mesmo nos reinos mais terríveis.
+**Benefício**: Como uma ação padrão, você pode emitir uma aura de luz brilhante centrada em um halo luminoso acima ou atrás de sua cabeça. A iluminação fornecida tem intensidade igual à de uma tocha. Se você tiver pelo menos 5 graduações em Conhecimento (planos), a iluminação é equivalente à criada por uma magia de Luz do Dia. Se você tiver pelo menos 15 graduações em Conhecimento (planos), a luz se torna ainda mais infundida com Celestial  poder, e cada criatura maligna dentro de 9 m de você deve ter sucesso em um teste de resistência de Fortitude (CD = 10 + metade do seu nível + seu modificador de Carisma) ou ficar enjoada pela luz enquanto permanecer no alcance mais 1 rodada adicional após sair da área.  Você pode usar o benefício deste talento por um número de rodadas por dia igual às suas graduações em Conhecimento (planos). Essas rodadas não precisam ser consecutivas.

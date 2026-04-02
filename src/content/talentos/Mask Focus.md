@@ -1,0 +1,5 @@
+### Foco da Máscara
+**Tipo do talento**: Geral
+**Pré-requisitos**: Expansão de Magia, Nameless One, habilidade para conjurar magias arcanas de 3º nível.
+**Descrição**: Você pode usar sua máscara como um foco adicional para suas magias arcanas, aumentando seu poder.
+**Benefício**: Enquanto você estiver se beneficiando do talento Nameless One (veja abaixo), a máscara que você usa para obter os benefícios desse talento satisfaz o componente foco de qualquer magia que você conjure que exija uma máscara (como máscara da adivinhação). Além disso, uma vez por dia você pode aplicar o talento de metamagia Expansão de Magia a uma magia arcana sem aumentar o nível da magia adicionando sua máscara como componente foco. Quando Expansão de Magia é aplicada dessa maneira, seu aumento na duração se aplica apenas aos efeitos que têm você como alvo; outras criaturas usam a duração normal da magia. Por exemplo, se você usar essa habilidade com a magia Pressa, os efeitos da magia duram o dobro para você, mas não para qualquer outra criatura que você tenha como alvo com a magia.

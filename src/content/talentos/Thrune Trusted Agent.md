@@ -1,0 +1,5 @@
+### Agente Confiável de Thrune
+**Tipo do talento**: Geral
+**Pré-requisitos**: Traço de *Agente Leal de Thrune*.
+**Descrição**: Seu vínculo sobrenatural com outros agentes de Thrune fortalece sua determinação e permite que você reforce seus aliados.
+**Benefício**: Sempre que você estiver a 9 m de um aliado que também possua este talento, você ganha um +1 de bônus profano em testes de resistência de Reflexo e Vontade. Além disso, uma vez por dia como uma ação livre, você pode abrir mão dos bônus em testes de resistência concedidos por este talento para aumentar a eficácia da ação de ajudar outro. Por um número de rodadas igual ao seu modificador de Carisma (mínimo 1), quando você usa a ação de ajudar outro para auxiliar um aliado que também possui este talento, o bônus que você concede à CA do aliado, à sua jogada de ataque ou ao seu teste de perícia é aumentado para +4 em vez do +2 usual. Você não se beneficia dos bônus em testes de resistência do talento por 24 horas, embora ainda se qualifique como possuidor deste talento para que outros personagens possam ganhar os bônus.

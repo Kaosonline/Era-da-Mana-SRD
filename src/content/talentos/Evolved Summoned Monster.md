@@ -1,0 +1,6 @@
+### Evolved Summoned Monster
+**Tipo do talento**: Geral
+**Pré-requisitos**: Augmented Summoning, Spell Focus (conjuration), habilidade de conjurar *summon monster I*.
+**Descrição**: As criaturas que você conjura evoluíram para ter habilidades ainda maiores.
+**Benefício**: Cada vez que você conjura uma magia de *summon monster*, pode selecionar uma evolução de 1 ponto, diferente de pounce ou reach, daquelas disponíveis para o eidolon de um invocador. Sua criatura conjurada ganha essa evolução. A criatura conjurada deve se adequar a quaisquer limitações da evolução. (Por exemplo, apenas uma criatura com um alcance de 3 m ou maior pode ter a evolução pull.) Evoluções que concedem ataques adicionais ou melhoram ataques existentes podem ser aplicadas apenas a criaturas conjuradas Médias ou maiores. Se você conjurar mais de uma criatura com uma única magia, apenas uma criatura ganha a evolução.
+**Especial**: Você pode escolher este talento múltiplas vezes. Cada vez que fizer isso, selecione uma evolução de 1 ponto adicional para uma de suas criaturas conjuradas. Se você conjurar mais de uma criatura, pode aplicar todas as evoluções escolhidas a uma única criatura conjurada ou dividi-las entre as criaturas.

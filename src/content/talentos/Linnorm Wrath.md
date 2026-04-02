@@ -1,0 +1,5 @@
+### Linnorm Wrath
+**Tipo do talento**: Combate
+**Pré-requisitos**: Sab 13, Golpes Desarmados Aprimorados, Estilo do Linnorm, Vingança do Linnorm, Bônus de Ataque Base +9 ou nível de monge 9.
+**Descrição**: Com facilidade praticada, você responde a um golpe com outro golpe. Mesmo quando estiver sobrecarregado, seu corpo desvia a força do ataque de volta para o agressor como uma onda atordoante de energia.
+**Benefício**: Quando você usa o talento Vingança do Linnorm para permitir que um inimigo o atinja, você pode fazer um ataque desarmado de retaliação contra esse oponente como uma ação imediata. Isso funciona como um ataque de oportunidade e conta contra o número de ataques de oportunidade que você pode fazer a cada rodada. Além disso, uma vez por dia quando um ataque corpo a corpo causa dano suficiente para deixá-lo inconsciente ou matá-lo, o atacante deve passar em um teste de resistência de Fortitude (CD = 10 + 1/2 seu nível de personagem + seu modificador de Sabedoria) ou ficar atordoado por 1 rodada. Esse teste ocorre depois de você fazer o ataque desarmado de retaliação concedido pelo talento Vingança do Linnorm.

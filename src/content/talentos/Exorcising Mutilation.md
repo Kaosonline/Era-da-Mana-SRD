@@ -1,0 +1,5 @@
+### Exorcising Mutilation
+**Tipo do talento**: Geral
+**Pré-requisitos**: Con 15, Clarity of Pain (Clareza da Dor), Improved Iron Will (Vontade de Ferro Melhorada), Iron Will (Vontade de Ferro).
+**Descrição**: Entidades malévolas que buscam possuir ou dominar você não têm ideia do que você fará para detê-las.
+**Benefício**: Quando você falha em um teste de resistência para resistir a possessão ou a uma magia de dominação, você pode causar a si mesmo 4 pontos de dano de Constituição e rolar novamente seu teste de resistência como uma ação imediata. Você não pode reduzir ou anular esse dano de qualquer forma, e a única maneira de curar o dano é através da recuperação natural; métodos mágicos não funcionam. Você deve aceitar o resultado da segunda rolagem, mesmo que seja pior. Se você for bem-sucedido no segundo teste de resistência, você também se torna imune àquela magia ou habilidade daquela criatura por 24 horas. Para usar essa habilidade, você deve estar empunhando uma arma perfurante ou cortante letal, possuir um ataque natural de garra ou ter algum meio de desembainhar tal arma reativamente sem usar sua ação imediata.
