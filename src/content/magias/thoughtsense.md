@@ -1,51 +1,12 @@
-### TERMOS DE REFERÊNCIA (USE ESTAS TRADUÇÕES):
-- range → alcance
-- duration → duração
-- saving throw → teste de resistência
-- spell resistance → resistência à magia
-- target → alvo
-- area → área
-- caster level → nível de conjurador
-- standard action → ação padrão
-- move action → ação de movimento
-- free action → ação livre
-- full-round action → ação completa
-- touch → toque
-- personal → pessoal
-- description → descrição
-- effect → efeito
-- damage → dano
-- bonus → bônus
-- penalty → penalidade
-- minute → minuto
-- hour → hora
-- day → dia
-- per level → por nível
-- ft. → m
-- gp → po
-- creature → criatura
-- object → objeto
-- ability check → teste de atributo
-- abjuration → abjuração
-- ac → CA
-- acrobatic steps → Passos Acrobáticos
-- acrobatics → Acrobacia
-- action → ação
-- alertness → Alerta
-- all → todos
-- any → qualquer
-- appraise → Avaliação
-- arcane → arcano
-- arcane strike → Golpe Arcano
-- armor focus → Foco em Armadura
-- attack → ataque
-- attack roll → jogada de ataque
-- bab → BBA
-- bane → ruína
-- bleeding critical → Crítico Sangrento
-- blinded → cego
-- blinding critical → Crítico Cegante
-- bluff → Blefar
-- boon → benefício
-- bull rush → Empurrar
-### FIM DOS TERMOS DE REFERÊNCIA
+### Sentido do Pensamento
+
+**Escola** Adivinhação [afeta a mente]; **Nível** Arcano 4
+
+**CONJURAÇÃO**
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, M (um pouco de tecido cerebral seco)
+
+**EFEITO**
+**Alcance** pessoal  **Alvos** você  **Duração** 1 minuto por nível
+
+**DESCRIÇÃO**
+Você detecta e localiza automaticamente criaturas conscientes dentro de 18 m, como se possuísse a habilidade de visão cega. Não Detecção, Mente em Branco e efeitos similares podem bloquear este efeito. Sentido do Pensamento pode distinguir entre criaturas sencientes (Inteligência 3 ou maior) e não sencientes (Inteligência 1-2), mas de outra forma não fornece informações sobre as criaturas que detecta.

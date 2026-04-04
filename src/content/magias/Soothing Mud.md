@@ -1,4 +1,4 @@
-Lama calmante
+### Lama Calmante
 
 **Escola** Conjuração (Cura) [terra, água]; **Nível** Divino 3
 

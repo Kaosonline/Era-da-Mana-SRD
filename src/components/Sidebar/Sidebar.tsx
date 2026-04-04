@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ContentItem } from '../../types/content';
 import { highlightText } from '../../utils/highlightText';
@@ -23,7 +23,11 @@ function formatCategoryName(category: string): string {
   return category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g, ' ');
 }
 
-interface SidebarProps {
+const ITEM_HEIGHT = 32;
+const CATEGORY_HEADER_HEIGHT = 28;
+const OVERSCAN = 10;
+
+interface VirtualizedSidebarProps { 
   categories: string[];
   items: ContentItem[];
   searchQuery: string;
@@ -58,9 +62,12 @@ export function Sidebar({
   hasMagiasSelected,
   isOpen,
   onToggle,
-}: SidebarProps) {
+}: VirtualizedSidebarProps) {
   const { category, id } = useParams<{ category?: string; id?: string }>();
   const [showCategoryFilter, setShowCategoryFilter] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [scrollTop, setScrollTop] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(600);
 
   const hasSpellMetadataAvailable = useMemo(() => {
     if (!hasMagiasSelected) return false;
@@ -114,7 +121,7 @@ export function Sidebar({
       const query = searchQuery.toLowerCase();
       result = result.filter(item => 
         item.title.toLowerCase().includes(query) ||
-        item.content.toLowerCase().includes(query)
+        (item.content && item.content.toLowerCase().includes(query))
       );
     }
 
@@ -136,6 +143,56 @@ export function Sidebar({
         items: categoryItems.sort((a, b) => a.title.localeCompare(b.title))
       }));
   }, [filteredItems]);
+
+  const layout = useMemo(() => {
+    const layoutItems: Array<{ type: 'category' | 'item'; category: string; item?: ContentItem; index: number }> = [];
+    let offset = 0;
+
+    grouped.forEach(group => {
+      layoutItems.push({ type: 'category', category: group.category, index: offset });
+      offset++;
+
+      group.items.forEach(item => {
+        layoutItems.push({ type: 'item', category: group.category, item, index: offset });
+        offset++;
+      });
+    });
+
+    return { layoutItems, totalHeight: offset * ITEM_HEIGHT + grouped.length * (CATEGORY_HEADER_HEIGHT - ITEM_HEIGHT) };
+  }, [grouped]);
+
+  const visibleItems = useMemo(() => {
+    const startIdx = Math.max(0, Math.floor(scrollTop / ITEM_HEIGHT) - OVERSCAN);
+    const endIdx = Math.min(
+      layout.layoutItems.length,
+      Math.ceil((scrollTop + containerHeight) / ITEM_HEIGHT) + OVERSCAN
+    );
+
+    return layout.layoutItems.slice(startIdx, endIdx).map(item => ({
+      ...item,
+      top: item.index * ITEM_HEIGHT + (Math.floor(item.index / 1) * 0),
+    }));
+  }, [layout, scrollTop, containerHeight]);
+
+  const handleScroll = useCallback(() => {
+    if (scrollContainerRef.current) {
+      setScrollTop(scrollContainerRef.current.scrollTop);
+    }
+  }, []);
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const observer = new ResizeObserver(entries => {
+      for (const entry of entries) {
+        setContainerHeight(entry.contentRect.height);
+      }
+    });
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
 
   const toggleCategoryFilter = () => {
     setShowCategoryFilter(!showCategoryFilter);
@@ -315,37 +372,65 @@ export function Sidebar({
         </div>
 
         {shouldShowItems && (
-          <nav className="sidebar-nav">
-            {grouped.map(group => (
-              <div 
-                key={group.category} 
-                className={`nav-category ${category === group.category ? 'active' : ''}`}
-              >
-                <h3 className="nav-category-title">
-                  <span className="category-icon">{getCategoryIcon(group.category)}</span>
-                  {formatCategoryName(group.category)}
-                </h3>
-                <ul className="nav-list">
-                  {group.items.map(item => (
-                    <li key={item.id}>
-                      <Link
-                        to={`/${item.category}/${item.id}`}
-                        className={`nav-item ${id === item.id && category === item.category ? 'active' : ''}`}
-                        onClick={closeMobile}
-                      >
-                        {highlightText(item.title, searchQuery)}
-                        {item.category === 'magias' && item.spellLevel !== undefined && (
-                          <span className="spell-level-indicator"> (Nv.{item.spellLevel})</span>
-                        )}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-            {grouped.length === 0 && (
-              <p className="no-results">Nenhum resultado encontrado</p>
-            )}
+          <nav 
+            className="sidebar-nav sidebar-nav-virtualized"
+            ref={scrollContainerRef}
+            onScroll={handleScroll}
+          >
+            <div style={{ height: layout.totalHeight, position: 'relative' }}>
+              {visibleItems.map((layoutItem) => {
+                if (layoutItem.type === 'category') {
+                  const group = grouped.find(g => g.category === layoutItem.category);
+                  if (!group) return null;
+
+                  return (
+                    <div 
+                      key={`cat-${layoutItem.category}`}
+                      className={`nav-category ${category === layoutItem.category ? 'active' : ''}`}
+                      style={{
+                        position: 'absolute',
+                        top: layoutItem.top,
+                        left: 0,
+                        right: 0,
+                        height: CATEGORY_HEADER_HEIGHT,
+                      }}
+                    >
+                      <h3 className="nav-category-title">
+                        <span className="category-icon">{getCategoryIcon(layoutItem.category)}</span>
+                        {formatCategoryName(layoutItem.category)}
+                      </h3>
+                    </div>
+                  );
+                }
+
+                if (!layoutItem.item) return null;
+
+                const item = layoutItem.item;
+                return (
+                  <div
+                    key={`item-${item.id}`}
+                    style={{
+                      position: 'absolute',
+                      top: layoutItem.top,
+                      left: 0,
+                      right: 0,
+                      height: ITEM_HEIGHT,
+                    }}
+                  >
+                    <Link
+                      to={`/${item.category}/${item.id}`}
+                      className={`nav-item ${id === item.id && category === item.category ? 'active' : ''}`}
+                      onClick={closeMobile}
+                    >
+                      {highlightText(item.title, searchQuery)}
+                      {item.category === 'magias' && item.spellLevel !== undefined && (
+                        <span className="spell-level-indicator"> (Nv.{item.spellLevel})</span>
+                      )}
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
           </nav>
         )}
       </aside>

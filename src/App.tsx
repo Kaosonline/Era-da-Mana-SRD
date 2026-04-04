@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useParams, useNavigate, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { FavoritesProvider } from './contexts/FavoritesContext';
@@ -6,8 +6,8 @@ import { Header } from './components/Header/Header';
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { ContentView } from './components/ContentView/ContentView';
 import { FavoritesPanel } from './components/FavoritesPanel/FavoritesPanel';
-import { loadContent, getCategories, getUniqueSpellValues } from './utils/dataLoader';
-import { resolveCrossRef } from './utils/crossReferences';
+import { loadContentIndex, getCategories, getUniqueSpellValues } from './utils/dataLoader';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import type { ContentItem } from './types/content';
 import './styles/variables.css';
 import './styles/global.css';
@@ -33,49 +33,43 @@ function AppContent() {
   }>({ schools: [], castingTimes: [], durations: [], levels: [] });
   const [favoritesOpen, setFavoritesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const items = loadContent();
-    setAllItems(items);
-    setCategories(getCategories(items));
-    if (items.length > 0) {
-      const magias = items.filter(item => item.category === 'magias');
-      const levels = Array.from(
-        new Set(
-          magias
-            .map(spell => spell.spellLevel)
-            .filter((level): level is number => level !== undefined)
-        )
-      ).sort((a, b) => a - b);
+    const load = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const items = await loadContentIndex();
+        setAllItems(items);
+        setCategories(getCategories(items));
+        if (items.length > 0) {
+          const magias = items.filter(item => item.category === 'magias');
+          const levels = Array.from(
+            new Set(
+              magias
+                .map(spell => spell.spellLevel)
+                .filter((level): level is number => level !== undefined)
+            )
+          ).sort((a, b) => a - b);
 
-      setAvailableSpellValues({
-        schools: getUniqueSpellValues(magias, 'spellSchool'),
-        castingTimes: getUniqueSpellValues(magias, 'spellCastingTime'),
-        durations: getUniqueSpellValues(magias, 'spellDuration'),
-        levels,
-      });
-    }
-  }, []);
-
-  const navigate = useNavigate();
-  const handleCrossRefClick = useCallback((e: MouseEvent) => {
-    const target = e.target as HTMLElement;
-    if (target.classList.contains('cross-ref')) {
-      e.preventDefault();
-      const refTarget = target.getAttribute('data-target');
-      if (refTarget) {
-        const resolved = resolveCrossRef(refTarget, allItems);
-        if (resolved) {
-          navigate(`/${resolved.category}/${resolved.id}`);
+          setAvailableSpellValues({
+            schools: getUniqueSpellValues(magias, 'spellSchool'),
+            castingTimes: getUniqueSpellValues(magias, 'spellCastingTime'),
+            durations: getUniqueSpellValues(magias, 'spellDuration'),
+            levels,
+          });
         }
+      } catch (err) {
+        console.error('Erro ao carregar conteúdo:', err);
+        setError(err instanceof Error ? err.message : 'Erro desconhecido');
+      } finally {
+        setLoading(false);
       }
-    }
-  }, [allItems, navigate]);
-
-  useEffect(() => {
-    document.addEventListener('click', handleCrossRefClick);
-    return () => document.removeEventListener('click', handleCrossRefClick);
-  }, [handleCrossRefClick]);
+    };
+    load();
+  }, []);
 
   const toggleCategory = (category: string) => {
     setSelectedCategories(prev => 
@@ -97,6 +91,26 @@ function AppContent() {
 
   const hasActiveFilters = !!searchQuery || selectedCategories.length > 0 || Object.values(spellFilters).some(v => v);
   const hasMagiasSelected = selectedCategories.includes('magias');
+
+  if (loading) {
+    return (
+      <div className="app-srd">
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+          <p>Carregando conteúdo...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="app-srd">
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', color: 'red' }}>
+          <p>Erro: {error}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="app-srd">
@@ -265,7 +279,9 @@ function App() {
     <BrowserRouter>
       <ThemeProvider>
         <FavoritesProvider>
-          <AppContent />
+          <ErrorBoundary>
+            <AppContent />
+          </ErrorBoundary>
         </FavoritesProvider>
       </ThemeProvider>
     </BrowserRouter>

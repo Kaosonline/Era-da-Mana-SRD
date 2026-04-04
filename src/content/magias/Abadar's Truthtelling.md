@@ -1,3 +1,5 @@
+### Verdade de Abadar
+
 **Escola** Encantamento (Compulsão) [afeta a mente]; **Nível** Divino 1
 
 **CONJURAÇÃO**

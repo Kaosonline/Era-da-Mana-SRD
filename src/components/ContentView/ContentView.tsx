@@ -1,7 +1,9 @@
+import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ContentItem } from '../../types/content';
 import { useFavorites } from '../../contexts/FavoritesContext';
 import { parseMarkdown } from '../../utils/markdownParser';
+import { loadContentItem } from '../../utils/dataLoader';
 import './ContentView.css';
 
 function getCategoryIcon(category: string): string {
@@ -124,6 +126,111 @@ function HomePage({
   );
 }
 
+function ContentSkeleton() {
+  return (
+    <div className="content-skeleton">
+      <div className="skeleton-line skeleton-title" />
+      <div className="skeleton-line skeleton-meta" />
+      <div className="skeleton-line skeleton-paragraph" />
+      <div className="skeleton-line skeleton-paragraph" />
+      <div className="skeleton-line skeleton-paragraph" />
+      <div className="skeleton-line skeleton-paragraph short" />
+    </div>
+  );
+}
+
+function ContentArticle({ item }: { item: ContentItem }) {
+  const [content, setContent] = useState<string>(item.content || '');
+  const [loadingContent, setLoadingContent] = useState(!item.content);
+  const { isFavorite, toggleFavorite } = useFavorites();
+  const favorite = isFavorite(item.id);
+
+  useEffect(() => {
+    if (item.content) {
+      setContent(item.content);
+      setLoadingContent(false);
+      return;
+    }
+
+    let cancelled = false;
+
+    const fetchContent = async () => {
+      setLoadingContent(true);
+      const rawContent = await loadContentItem(item.category, item.id);
+      if (!cancelled && rawContent) {
+        setContent(rawContent);
+        setLoadingContent(false);
+      }
+    };
+
+    fetchContent();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [item.id, item.category, item.content]);
+
+  const htmlContent = useMemo(() => {
+    if (!content) return '';
+    const contentWithoutTitle = content.replace(/^#{1,6}\s+.+$/m, '').trimStart();
+    try {
+      return parseMarkdown(contentWithoutTitle, item.category);
+    } catch (error) {
+      console.error('Erro ao parsear markdown:', error);
+      return `<p style="color: red; padding: 1rem; background: #fee; border: 1px solid #fcc;">Erro ao renderizar conteúdo.</p>`;
+    }
+  }, [content, item.category]);
+
+  if (loadingContent) {
+    return (
+      <article className="content-article">
+        <div className="content-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+          <h1 className="content-title" style={{ marginRight: '8px' }}>{item.title}</h1>
+        </div>
+        <ContentSkeleton />
+      </article>
+    );
+  }
+
+  return (
+    <article className="content-article">
+      <div className="content-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+        <h1 className="content-title" style={{ marginRight: '8px' }}>{item.title}</h1>
+        <button
+          className="favorite-btn"
+          onClick={() => toggleFavorite(item.id)}
+          aria-label={favorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+          title="Favoritos"
+        >
+          {favorite ? '★' : '☆'}
+        </button>
+      </div>
+      {item.category === 'magias' && (
+        <div className="spell-metadata">
+          {item.spellSchool && (
+            <span className="metadata-item">{item.spellSchool}</span>
+          )}
+          {item.spellClasses && item.spellClasses.length > 0 && (
+            <span className="metadata-item">
+              Nível: {item.spellClasses.map(c => `${c.className} ${c.level}`).join(', ')}
+            </span>
+          )}
+          {item.spellCastingTime && (
+            <span className="metadata-item">{item.spellCastingTime}</span>
+          )}
+          {item.spellDuration && (
+            <span className="metadata-item">{item.spellDuration}</span>
+          )}
+        </div>
+      )}
+      <div
+        className="content-body"
+        dangerouslySetInnerHTML={{ __html: htmlContent }}
+      />
+    </article>
+  );
+}
+
 export function ContentView({ 
   item, 
   previousItem, 
@@ -148,11 +255,6 @@ export function ContentView({
       onClearFilters={onClearFilters}
     />;
   }
-
-  const contentWithoutTitle = item.content.replace(/^#{1,6}\s+.+$/m, '').trimStart();
-  const htmlContent = parseMarkdown(contentWithoutTitle);
-  const { isFavorite, toggleFavorite } = useFavorites();
-  const favorite = isFavorite(item.id);
 
   return (
     <div className="content-view">
@@ -183,41 +285,7 @@ export function ContentView({
         </div>
       </nav>
 
-      <article className="content-article">
-        <div className="content-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
-          <h1 className="content-title" style={{ marginRight: '8px' }}>{item.title}</h1>
-          <button
-            className="favorite-btn"
-            onClick={() => toggleFavorite(item.id)}
-            aria-label={favorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
-            title="Favoritos"
-          >
-            {favorite ? '★' : '☆'}
-          </button>
-        </div>
-        {item.category === 'magias' && (
-          <div className="spell-metadata">
-            {item.spellSchool && (
-              <span className="metadata-item">{item.spellSchool}</span>
-            )}
-            {item.spellClasses && item.spellClasses.length > 0 && (
-              <span className="metadata-item">
-                Nível: {item.spellClasses.map(c => `${c.className} ${c.level}`).join(', ')}
-              </span>
-            )}
-            {item.spellCastingTime && (
-              <span className="metadata-item">{item.spellCastingTime}</span>
-            )}
-            {item.spellDuration && (
-              <span className="metadata-item">{item.spellDuration}</span>
-            )}
-          </div>
-        )}
-        <div 
-          className="content-body"
-          dangerouslySetInnerHTML={{ __html: htmlContent }}
-        />
-      </article>
+      <ContentArticle item={item} />
     </div>
   );
 }

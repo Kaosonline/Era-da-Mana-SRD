@@ -1,5 +1,4 @@
-<!-- spell name -->
-**Gesto Persuasivo**
+### Gesto Persuasivo
 
 **Escola** Necromancia [dor]; **Nível** Divino 1
 
@@ -11,5 +10,3 @@
 
 **DESCRIÇÃO**
 Seus olhos brilham e o alvo sofre 1d6 pontos de dano não letal. Pelo próximo minuto, você ganha um bônus de circunstância de +4 em testes de Intimidar contra o alvo.
-
----

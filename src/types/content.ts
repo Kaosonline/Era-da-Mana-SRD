@@ -4,12 +4,22 @@ export interface ContentItem {
   category: string;
   content: string;
   
-  // Campos de spells
-  spellLevel?: number; // menor nível (para filtro)
+  spellLevel?: number;
   spellSchool?: string;
   spellCastingTime?: string;
   spellDuration?: string;
-  spellClasses?: Array<{ className: string; level: number }>; // para exibição
+  spellClasses?: Array<{ className: string; level: number }>;
+}
+
+export interface ContentIndexEntry {
+  id: string;
+  title: string;
+  category: string;
+  spellLevel?: number;
+  spellSchool?: string;
+  spellCastingTime?: string;
+  spellDuration?: string;
+  spellClasses?: Array<{ className: string; level: number }>;
 }
 
 export interface SpellFilters {
