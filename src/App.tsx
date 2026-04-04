@@ -200,7 +200,7 @@ function CategoryRoute({
   
   const itemsInCategory = allItems
     .filter(i => i.category === category)
-    .sort((a, b) => a.title.localeCompare(b.title));
+    .sort((a, b) => (a.title || '').localeCompare(b.title || ''));
 
   if (itemsInCategory.length === 0) {
     return <Navigate to="/" replace />;
@@ -250,7 +250,7 @@ function ContentRoute({
 
   const itemsInCategory = allItems
     .filter(i => i.category === item.category)
-    .sort((a, b) => a.title.localeCompare(b.title));
+    .sort((a, b) => (a.title || '').localeCompare(b.title || ''));
   
   const currentIndex = itemsInCategory.findIndex(i => i.id === item.id);
   const previousItem = currentIndex > 0 ? itemsInCategory[currentIndex - 1] : null;

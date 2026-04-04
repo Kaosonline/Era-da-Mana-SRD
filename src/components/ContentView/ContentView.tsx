@@ -54,34 +54,48 @@ function HomePage({
   hasActiveFilters: boolean,
   onClearFilters: () => void
 }) {
-  const allCategories = Array.from(new Set(allItems.map(item => item.category))).sort();
+  const allCategories = useMemo(() => Array.from(new Set(allItems.map(item => item.category))).sort(), [allItems]);
+
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const category of allCategories) {
+      counts[category] = allItems.filter(item => 
+        item.category === category &&
+        (selectedCategories.length === 0 || selectedCategories.includes(item.category)) &&
+        (searchQuery === '' || 
+         item.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+         item.id?.toLowerCase().includes(searchQuery.toLowerCase())) &&
+        (category !== 'magias' || 
+          (!spellFilters.level || item.spellLevel?.toString() === spellFilters.level) &&
+          (!spellFilters.school || item.spellSchool?.toLowerCase().includes(spellFilters.school.toLowerCase())) &&
+          (!spellFilters.castingTime || item.spellCastingTime?.toLowerCase().includes(spellFilters.castingTime.toLowerCase())) &&
+          (!spellFilters.duration || item.spellDuration?.toLowerCase().includes(spellFilters.duration.toLowerCase()))
+        )
+      ).length;
+    }
+    return counts;
+  }, [allItems, allCategories, selectedCategories, spellFilters, searchQuery]);
 
   const countItemsInCategory = (category: string) => {
-    return allItems.filter(item => 
-      item.category === category &&
-      (selectedCategories.length === 0 || selectedCategories.includes(item.category)) &&
-      (searchQuery === '' || 
-       item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-       item.content.toLowerCase().includes(searchQuery.toLowerCase())) &&
-      (category !== 'magias' || 
-        (!spellFilters.level || item.spellLevel?.toString() === spellFilters.level) &&
-        (!spellFilters.school || item.spellSchool?.toLowerCase().includes(spellFilters.school.toLowerCase())) &&
-        (!spellFilters.castingTime || item.spellCastingTime?.toLowerCase().includes(spellFilters.castingTime.toLowerCase())) &&
-        (!spellFilters.duration || item.spellDuration?.toLowerCase().includes(spellFilters.duration.toLowerCase()))
-      )
-    ).length;
+    return categoryCounts[category] ?? 0;
   };
 
-  let categories = allCategories;
-  if (selectedCategories.length > 0) {
-    categories = categories.filter(cat => selectedCategories.includes(cat));
-  }
+  const visibleCategories = useMemo(() => {
+    let cats = selectedCategories.length > 0 
+      ? allCategories.filter(cat => selectedCategories.includes(cat))
+      : allCategories;
+    return cats.filter(cat => countItemsInCategory(cat) > 0);
+  }, [allCategories, selectedCategories, categoryCounts]);
 
-  categories = categories.filter(cat => countItemsInCategory(cat) > 0);
-
-  const getItemsForCategory = (category: string) => 
-    allItems.filter(item => item.category === category)
-            .sort((a, b) => a.title.localeCompare(b.title));
+  const itemsByCategory = useMemo(() => {
+    const map: Record<string, ContentItem[]> = {};
+    for (const cat of allCategories) {
+      map[cat] = allItems
+        .filter(item => item.category === cat)
+        .sort((a, b) => a.title.localeCompare(b.title));
+    }
+    return map;
+  }, [allItems, allCategories]);
 
   return (
     <div className="home-page">
@@ -106,9 +120,9 @@ function HomePage({
       )}
 
       <div className="category-grid">
-        {categories.map(category => {
+        {visibleCategories.map(category => {
           const count = countItemsInCategory(category);
-          const firstItem = getItemsForCategory(category)[0];
+          const firstItem = itemsByCategory[category]?.[0];
           return (
             <Link
               key={category}

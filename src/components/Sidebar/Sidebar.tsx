@@ -69,6 +69,14 @@ export function Sidebar({
   const [scrollTop, setScrollTop] = useState(0);
   const [containerHeight, setContainerHeight] = useState(600);
 
+  const itemsCountByCategory = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const item of items) {
+      counts[item.category] = (counts[item.category] || 0) + 1;
+    }
+    return counts;
+  }, [items]);
+
   const hasSpellMetadataAvailable = useMemo(() => {
     if (!hasMagiasSelected) return false;
     return items.some(item => 
@@ -120,8 +128,8 @@ export function Sidebar({
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       result = result.filter(item => 
-        item.title.toLowerCase().includes(query) ||
-        (item.content && item.content.toLowerCase().includes(query))
+        (item.title?.toLowerCase().includes(query)) ||
+        (item.id?.toLowerCase().includes(query))
       );
     }
 
@@ -279,7 +287,7 @@ export function Sidebar({
                 {categories.map(category => {
                   const icon = getCategoryIcon(category);
                   const name = formatCategoryName(category);
-                  const itemCount = items.filter(item => item.category === category).length;
+                  const itemCount = itemsCountByCategory[category] || 0;
                   return (
                     <label key={category} className="filter-option">
                       <input

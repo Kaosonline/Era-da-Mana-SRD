@@ -35,7 +35,7 @@ export default defineConfig({
       },
       workbox: {
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,md,json}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,json}'],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -70,12 +70,26 @@ export default defineConfig({
     })
   ],
   build: {
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 2000,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react-dom') || id.includes('scheduler')) {
+              return 'vendor';
+            }
+            if (id.includes('react-router-dom') || id.includes('react-router')) {
+              return 'router';
+            }
+            return 'vendor';
+          }
+          if (id.includes('src/content/')) {
+            const parts = id.split('src/content/');
+            if (parts.length > 1) {
+              const category = parts[1].split('/')[0];
+              return `content-${category}`;
+            }
+          }
         }
       }
     }
