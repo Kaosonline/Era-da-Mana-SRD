@@ -38,8 +38,3 @@ __pycache__/
 # Misc cache
 *.cache
 
-# Generated content (regenerated on every build/dev)
-public/content-index.json
-
-# OpenCode local config (uncomment if personal)
-# .opencode/

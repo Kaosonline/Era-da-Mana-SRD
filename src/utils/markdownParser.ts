@@ -42,13 +42,13 @@ export function parseMarkdown(markdown: string, category?: string): string {
 
       let thead = '';
       if (headers.length > 0) {
-        const headerCells = headers.map(cell => `<th>${cell.trim()}</th>`).join('');
+        const headerCells = headers.map(cell => `<th>${processInlineFormatting(cell.trim())}</th>`).join('');
         thead = `<thead><tr>${headerCells}</tr></thead>`;
       }
 
       const tbodyRows = bodyRows.map(row => {
         const cells = row.split('|').filter(cell => cell.trim() !== '');
-        const tds = cells.map(cell => `<td>${cell.trim()}</td>`).join('');
+        const tds = cells.map(cell => `<td>${processInlineFormatting(cell.trim())}</td>`).join('');
         return `<tr>${tds}</tr>`;
       }).join('\n');
 
@@ -105,7 +105,7 @@ export function parseMarkdown(markdown: string, category?: string): string {
   };
 
   const processInlineFormatting = (text: string): string => {
-    let processed = text;
+    let processed = escapeHtml(text);
     // Strikethrough
     processed = processed.replace(/~~(.*?)~~/g, '<del>$1</del>');
     // Bold (asterisco e underscore)
@@ -117,34 +117,42 @@ export function parseMarkdown(markdown: string, category?: string): string {
     processed = processed.replace(/`([^`]+)`/g, '<code>$1</code>');
     // Links - externos abrem em nova aba, internos são resolvidos
     processed = processed.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, text, url) => {
+      const safeUrl = escapeAttr(url);
+      const safeText = escapeAttr(text);
       if (/^(https?:|mailto:|\/\/)/i.test(url)) {
-        return `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+        return `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${safeText}</a>`;
       }
       // Link interno .md -> resolver para rota SPA
       if (/\.mdx?$/i.test(url) || !url.includes('.')) {
         const resolved = resolveMdLink(url);
-        return `<a href="${resolved}" class="internal-link">${text}</a>`;
+        return `<a href="${escapeAttr(resolved)}" class="internal-link">${safeText}</a>`;
       }
-      return `<a href="${url}">${text}</a>`;
+      return `<a href="${safeUrl}">${safeText}</a>`;
     });
     // Imagens
-    processed = processed.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" />');
+    processed = processed.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_match, alt, src) => {
+      return `<img src="${escapeAttr(src)}" alt="${escapeAttr(alt)}" />`;
+    });
     // Cross-referências - link direto para rota SPA
     processed = processed.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_match, target, display) => {
       const id = target.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\w-\/]/g, '');
       const text = display ? display.trim() : target.trim();
-      return `<a href="/${id}" class="internal-link">${text}</a>`;
+      return `<a href="/${escapeAttr(id)}" class="internal-link">${escapeAttr(text)}</a>`;
     });
     return processed;
   };
 
   const escapeHtml = (text: string): string => {
     return text
-      .replace(/&/g, '&')
-      .replace(/</g, '<')
-      .replace(/>/g, '>')
-      .replace(/"/g, '"')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
+  };
+
+  const escapeAttr = (text: string): string => {
+    return text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   };
 
   for (let i = 0; i < lines.length; i++) {
@@ -153,19 +161,19 @@ export function parseMarkdown(markdown: string, category?: string): string {
 
     if (trimmed.startsWith('# ')) {
       flushList();
-      result.push(`<h1>${trimmed.substring(2)}</h1>`);
+      result.push(`<h1>${processInlineFormatting(trimmed.substring(2))}</h1>`);
       continue;
     } else if (trimmed.startsWith('## ')) {
       flushList();
-      result.push(`<h2>${trimmed.substring(3)}</h2>`);
+      result.push(`<h2>${processInlineFormatting(trimmed.substring(3))}</h2>`);
       continue;
     } else if (trimmed.startsWith('### ')) {
       flushList();
-      result.push(`<h3>${trimmed.substring(4)}</h3>`);
+      result.push(`<h3>${processInlineFormatting(trimmed.substring(4))}</h3>`);
       continue;
     } else if (trimmed.startsWith('#### ')) {
       flushList();
-      result.push(`<h4>${trimmed.substring(5)}</h4>`);
+      result.push(`<h4>${processInlineFormatting(trimmed.substring(5))}</h4>`);
       continue;
     }
 
@@ -174,7 +182,7 @@ export function parseMarkdown(markdown: string, category?: string): string {
         result.push('<blockquote>');
         inBlockquote = true;
       }
-      result.push(`<p>${trimmed.substring(2)}</p>`);
+      result.push(`<p>${processInlineFormatting(trimmed.substring(2))}</p>`);
       continue;
     } else if (inBlockquote) {
       result.push('</blockquote>');
