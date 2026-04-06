@@ -1,30 +1,11 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ContentItem } from '../../types/content';
+import { getCategoryIcon, formatCategoryName } from '../../utils/categoryHelpers';
 import { highlightText } from '../../utils/highlightText';
 import './Sidebar.css';
 
-const CATEGORY_ICONS: Record<string, string> = {
-  'raças': '🧝',
-  'classes': '⚔️',
-  'magias': '✨',
-  'talentos': '📜',
-  'perícias': '🎯',
-  'equipamentos': '🛡️',
-  'condições': '⚠️',
-  'regras': '📖',
-};
-
-function getCategoryIcon(category: string): string {
-  return CATEGORY_ICONS[category.toLowerCase()] || '📚';
-}
-
-function formatCategoryName(category: string): string {
-  return category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g, ' ');
-}
-
 const ITEM_HEIGHT = 32;
-const CATEGORY_HEADER_HEIGHT = 28;
 const OVERSCAN = 10;
 
 interface VirtualizedSidebarProps { 
@@ -43,11 +24,16 @@ interface VirtualizedSidebarProps {
     durations: string[];
   };
   hasMagiasSelected: boolean;
+  featFilters: { type?: string; noPrerequisites?: boolean };
+  onFeatFilterChange: (key: keyof FeatFilters, value: string | boolean) => void;
+  availableFeatTypes: string[];
+  hasTalentosSelected: boolean;
   isOpen: boolean;
   onToggle: () => void;
 }
 
 type SpellFilters = { level?: string; school?: string; castingTime?: string; duration?: string };
+type FeatFilters = { type?: string; noPrerequisites?: boolean };
 
 export function Sidebar({ 
   categories, 
@@ -60,6 +46,10 @@ export function Sidebar({
   onSpellFilterChange,
   availableSpellValues,
   hasMagiasSelected,
+  featFilters,
+  onFeatFilterChange,
+  availableFeatTypes,
+  hasTalentosSelected,
   isOpen,
   onToggle,
 }: VirtualizedSidebarProps) {
@@ -125,6 +115,17 @@ export function Sidebar({
       }
     }
 
+    if (hasTalentosSelected) {
+      if (featFilters.type || featFilters.noPrerequisites) {
+        result = result.filter(item => {
+          if (item.category !== 'talentos') return true;
+          if (featFilters.type && item.featType !== featFilters.type) return false;
+          if (featFilters.noPrerequisites && item.hasPrerequisites) return false;
+          return true;
+        });
+      }
+    }
+
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       result = result.filter(item => 
@@ -134,7 +135,7 @@ export function Sidebar({
     }
 
     return result;
-  }, [items, searchQuery, selectedCategories, spellFilters, hasMagiasSelected]);
+  }, [items, searchQuery, selectedCategories, spellFilters, hasMagiasSelected, featFilters, hasTalentosSelected]);
 
   const grouped = useMemo(() => {
     const groups: Record<string, ContentItem[]> = {};
@@ -166,7 +167,7 @@ export function Sidebar({
       });
     });
 
-    return { layoutItems, totalHeight: offset * ITEM_HEIGHT + grouped.length * (CATEGORY_HEADER_HEIGHT - ITEM_HEIGHT) };
+    return { layoutItems, totalHeight: offset * ITEM_HEIGHT };
   }, [grouped]);
 
   const visibleItems = useMemo(() => {
@@ -178,7 +179,7 @@ export function Sidebar({
 
     return layout.layoutItems.slice(startIdx, endIdx).map(item => ({
       ...item,
-      top: item.index * ITEM_HEIGHT + (Math.floor(item.index / 1) * 0),
+      top: item.index * ITEM_HEIGHT,
     }));
   }, [layout, scrollTop, containerHeight]);
 
@@ -216,6 +217,10 @@ export function Sidebar({
       (spellFilters.school ? 1 : 0) + 
       (spellFilters.castingTime ? 1 : 0) + 
       (spellFilters.duration ? 1 : 0) 
+      : 0) +
+    (hasTalentosSelected ?
+      (featFilters.type ? 1 : 0) + 
+      (featFilters.noPrerequisites ? 1 : 0)
       : 0);
 
   return (
@@ -223,6 +228,7 @@ export function Sidebar({
       <button className="mobile-menu-btn" onClick={onToggle} aria-label="Toggle menu">
         ☰
       </button>
+      {isOpen && <div className="sidebar-overlay" onClick={onToggle} aria-hidden="true" />}
       {isOpen && (
         <button className="sidebar-close-btn" onClick={onToggle} aria-label="Fechar sidebar" title="Fechar sidebar">
           ▶
@@ -375,6 +381,36 @@ export function Sidebar({
                   )}
                 </div>
               )}
+
+              {hasTalentosSelected && availableFeatTypes.length > 0 && (
+                <div className="feat-filters">
+                  <h4>Filtros de Talentos</h4>
+                  
+                  <div className="filter-group">
+                    <label>Tipo</label>
+                    <select 
+                      value={featFilters.type || ''}
+                      onChange={(e) => onFeatFilterChange('type', e.target.value)}
+                    >
+                      <option value="">Todos</option>
+                      {availableFeatTypes.map(type => (
+                        <option key={type} value={type}>{type}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="filter-group filter-checkbox">
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={!!featFilters.noPrerequisites}
+                        onChange={(e) => onFeatFilterChange('noPrerequisites', e.target.checked)}
+                      />
+                      Sem pré-requisitos
+                    </label>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -400,7 +436,7 @@ export function Sidebar({
                         top: layoutItem.top,
                         left: 0,
                         right: 0,
-                        height: CATEGORY_HEADER_HEIGHT,
+                        height: ITEM_HEIGHT,
                       }}
                     >
                       <h3 className="nav-category-title">
@@ -429,6 +465,7 @@ export function Sidebar({
                       to={`/${item.category}/${item.id}`}
                       className={`nav-item ${id === item.id && category === item.category ? 'active' : ''}`}
                       onClick={closeMobile}
+                      aria-current={id === item.id && category === item.category ? 'page' : undefined}
                     >
                       {highlightText(item.title, searchQuery)}
                       {item.category === 'magias' && item.spellLevel !== undefined && (

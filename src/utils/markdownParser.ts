@@ -35,8 +35,23 @@ export function parseMarkdown(markdown: string, category?: string): string {
 
   const flushTable = () => {
     if (inTable) {
-      const headerRow = tableRows[0] || '';
-      const bodyRows = tableRows.slice(2);
+      if (tableRows.length < 2) {
+        tableRows = [];
+        inTable = false;
+        return;
+      }
+
+      const separatorIdx = tableRows.findIndex(row => /^[\s|:-]+$/.test(row) && row.includes('-'));
+      let headerRow: string;
+      let bodyRows: string[];
+
+      if (separatorIdx !== -1) {
+        headerRow = tableRows[0];
+        bodyRows = tableRows.slice(separatorIdx + 1);
+      } else {
+        headerRow = tableRows[0];
+        bodyRows = tableRows.slice(1);
+      }
 
       const headers = headerRow.split('|').filter(cell => cell.trim() !== '');
 
@@ -116,28 +131,27 @@ export function parseMarkdown(markdown: string, category?: string): string {
     // Código inline
     processed = processed.replace(/`([^`]+)`/g, '<code>$1</code>');
     // Links - externos abrem em nova aba, internos são resolvidos
-    processed = processed.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, text, url) => {
-      const safeUrl = escapeAttr(url);
-      const safeText = escapeAttr(text);
-      if (/^(https?:|mailto:|\/\/)/i.test(url)) {
-        return `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${safeText}</a>`;
+    // O texto e URL já foram escapados por escapeHtml, então usamos diretamente
+    processed = processed.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, displayText, rawUrl) => {
+      if (/^(https?:|mailto:|\/\/)/i.test(rawUrl)) {
+        return `<a href="${rawUrl}" target="_blank" rel="noopener noreferrer">${displayText}</a>`;
       }
       // Link interno .md -> resolver para rota SPA
-      if (/\.mdx?$/i.test(url) || !url.includes('.')) {
-        const resolved = resolveMdLink(url);
-        return `<a href="${escapeAttr(resolved)}" class="internal-link">${safeText}</a>`;
+      if (/\.mdx?$/i.test(rawUrl) || !rawUrl.includes('.')) {
+        const resolved = resolveMdLink(rawUrl);
+        return `<a href="${escapeAttr(resolved)}" class="internal-link">${displayText}</a>`;
       }
-      return `<a href="${safeUrl}">${safeText}</a>`;
+      return `<a href="${rawUrl}">${displayText}</a>`;
     });
     // Imagens
     processed = processed.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_match, alt, src) => {
-      return `<img src="${escapeAttr(src)}" alt="${escapeAttr(alt)}" />`;
+      return `<img src="${src}" alt="${alt}" />`;
     });
     // Cross-referências - link direto para rota SPA
     processed = processed.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_match, target, display) => {
       const id = target.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\w-\/]/g, '');
-      const text = display ? display.trim() : target.trim();
-      return `<a href="/${escapeAttr(id)}" class="internal-link">${escapeAttr(text)}</a>`;
+      const linkText = display ? display.trim() : target.trim();
+      return `<a href="/${escapeAttr(id)}" class="internal-link">${linkText}</a>`;
     });
     return processed;
   };
@@ -258,6 +272,7 @@ export function parseMarkdown(markdown: string, category?: string): string {
   if (inOl) result.push('</ol>');
   if (inBlockquote) result.push('</blockquote>');
   if (inTable) flushTable();
+  if (inCodeBlock) flushCodeBlock();
 
   const finalResult = result.join('\n');
   

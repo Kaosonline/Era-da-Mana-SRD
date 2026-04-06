@@ -94,3 +94,13 @@ export function getUniqueSpellValues(items: ContentItem[], field: keyof ContentI
 
   return values;
 }
+
+export function getUniqueFeatTypes(items: ContentItem[]): string[] {
+  const values = items
+    .filter(item => item.category === 'talentos' && item.featType)
+    .map(item => String(item.featType))
+    .filter((value, index, arr) => arr.indexOf(value) === index)
+    .sort((a, b) => a.localeCompare(b));
+
+  return values;
+}

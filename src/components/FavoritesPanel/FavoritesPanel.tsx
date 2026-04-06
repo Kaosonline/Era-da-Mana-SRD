@@ -52,6 +52,7 @@ export function FavoritesPanel({ allItems, isOpen, onClose }: FavoritesPanelProp
                 key={item.id}
                 className="favorite-item"
                 onClick={() => handleNavigate(item)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleNavigate(item); } }}
                 role="button"
                 tabIndex={0}
               >

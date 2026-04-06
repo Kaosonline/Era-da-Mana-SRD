@@ -16,6 +16,8 @@ interface ContentIndexItem {
   spellCastingTime?: string;
   spellDuration?: string;
   spellClasses?: Array<{ className: string; level: number }>;
+  featType?: string;
+  hasPrerequisites?: boolean;
 }
 
 interface SpellMetadata {
@@ -74,6 +76,78 @@ function parseSpellMetadata(markdown: string): SpellMetadata | null {
 
   if (!metadata.escola && metadata.classes.length === 0) return null;
   return metadata;
+}
+
+function normalizeFeatType(raw: string): string {
+  const normalized = raw.trim().toLowerCase();
+  
+  const typeMap: Record<string, string> = {
+    'geral': 'Geral',
+    'gerais': 'Geral',
+    'general': 'Geral',
+    'combate': 'Combate',
+    'talento de combate': 'Combate',
+    'talentos de combate': 'Combate',
+    'mítico': 'Mítico',
+    'mitico': 'Mítico',
+    'mythic': 'Mítico',
+    'mítica': 'Mítico',
+    'monstro': 'Monstro',
+    'história': 'História',
+    'story': 'História',
+    'conto': 'História',
+    'narrativa': 'História',
+    'metamágico': 'Metamágico',
+    'metamágica': 'Metamágico',
+    'metamagic': 'Metamágico',
+    'talento de metamagia': 'Metamágico',
+    'metamagia': 'Metamágico',
+    'criação de item': 'Criação de Item',
+    'criação de itens': 'Criação de Item',
+    'item creation': 'Criação de Item',
+    'domínio de item': 'Criação de Item',
+    'domínio com itens': 'Criação de Item',
+    'conduíte': 'Conduíte',
+    'conduit': 'Conduíte',
+    'conduto': 'Conduíte',
+    'realização': 'Realização',
+    'conquista': 'Realização',
+    'determinação': 'Determinação',
+    'meditação': 'Meditação',
+    'trabalho em equipe': 'Trabalho em Equipe',
+    'familiar': 'Familiar',
+    'conceito': 'Conceito',
+    'estilo': 'Estilo',
+  };
+  
+  if (typeMap[normalized]) return typeMap[normalized];
+  
+  for (const [key, value] of Object.entries(typeMap)) {
+    if (normalized.startsWith(key)) return value;
+  }
+  
+  return raw.trim();
+}
+
+function parseFeatMetadata(content: string): { featType?: string; hasPrerequisites?: boolean } {
+  const result: { featType?: string; hasPrerequisites?: boolean } = {};
+  
+  const tipoMatch = content.match(/\*\*Tipo do talento\*\*\s*[:\-]?\s*(.+)/);
+  if (tipoMatch) {
+    let value = tipoMatch[1].trim();
+    const nextAsterisk = value.indexOf('**');
+    if (nextAsterisk !== -1) {
+      value = value.substring(0, nextAsterisk).trim();
+    }
+    value = value.replace(/;+$/, '').trim();
+    if (value) {
+      result.featType = normalizeFeatType(value);
+    }
+  }
+  
+  result.hasPrerequisites = content.includes('**Pré-requisitos**');
+  
+  return result;
 }
 
 function getTitle(content: string): string {
@@ -152,10 +226,24 @@ async function generateIndex() {
         }
       }
 
+      if (item.category === 'talentos') {
+        const featMeta = parseFeatMetadata(item.content);
+        if (featMeta.featType) base.featType = featMeta.featType;
+        if (featMeta.hasPrerequisites !== undefined) base.hasPrerequisites = featMeta.hasPrerequisites;
+      }
+
       return base;
     });
 
     const tsOutputFile = join(__dirname, '..', 'src', 'utils', 'contentIndex.ts');
+    const indexJson = JSON.stringify(indexItems);
+    const categoryJson = JSON.stringify(
+      categories.reduce((acc, cat) => {
+        acc[cat] = indexItems.filter(i => i.category === cat);
+        return acc;
+      }, {} as Record<string, ContentIndexItem[]>)
+    );
+
     const tsContent = `// Este arquivo é gerado automaticamente por scripts/generate-index.ts
 // Não edite manualmente - suas mudanças serão sobrescritas
 
@@ -169,17 +257,13 @@ export interface ContentIndexItem {
   spellCastingTime?: string;
   spellDuration?: string;
   spellClasses?: Array<{ className: string; level: number }>;
+  featType?: string;
+  hasPrerequisites?: boolean;
 }
 
-export const contentIndex: ContentIndexItem[] = ${JSON.stringify(indexItems, null, 2)};
+export const contentIndex: ContentIndexItem[] = JSON.parse(${JSON.stringify(indexJson)});
 
-export const contentIndexByCategory: Record<string, ContentIndexItem[]> = ${JSON.stringify(
-      categories.reduce((acc, cat) => {
-        acc[cat] = indexItems.filter(i => i.category === cat);
-        return acc;
-      }, {} as Record<string, ContentIndexItem[]>),
-      null, 2
-    )};
+export const contentIndexByCategory: Record<string, ContentIndexItem[]> = JSON.parse(${JSON.stringify(categoryJson)});
 
 export const categories = ${JSON.stringify(categories, null, 2)};
 

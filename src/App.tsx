@@ -6,7 +6,7 @@ import { Header } from './components/Header/Header';
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { ContentView } from './components/ContentView/ContentView';
 import { FavoritesPanel } from './components/FavoritesPanel/FavoritesPanel';
-import { loadContentIndex, getCategories, getUniqueSpellValues } from './utils/dataLoader';
+import { loadContentIndex, getCategories, getUniqueSpellValues, getUniqueFeatTypes } from './utils/dataLoader';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import type { ContentItem } from './types/content';
 import './styles/variables.css';
@@ -31,8 +31,10 @@ function AppContent() {
     durations: string[];
     levels: number[];
   }>({ schools: [], castingTimes: [], durations: [], levels: [] });
+  const [featFilters, setFeatFilters] = useState<{ type?: string; noPrerequisites?: boolean }>({});
+  const [availableFeatTypes, setAvailableFeatTypes] = useState<string[]>([]);
   const [favoritesOpen, setFavoritesOpen] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -60,6 +62,8 @@ function AppContent() {
             durations: getUniqueSpellValues(magias, 'spellDuration'),
             levels,
           });
+
+          setAvailableFeatTypes(getUniqueFeatTypes(items));
         }
       } catch (err) {
         console.error('Erro ao carregar conteúdo:', err);
@@ -86,11 +90,13 @@ function AppContent() {
   const clearAllFilters = () => {
     setSelectedCategories([]);
     setSpellFilters({});
+    setFeatFilters({});
     setSearchQuery('');
   };
 
-  const hasActiveFilters = !!searchQuery || selectedCategories.length > 0 || Object.values(spellFilters).some(v => v);
+  const hasActiveFilters = !!searchQuery || selectedCategories.length > 0 || Object.values(spellFilters).some(v => v) || Object.values(featFilters).some(v => v);
   const hasMagiasSelected = selectedCategories.includes('magias');
+  const hasTalentosSelected = selectedCategories.includes('talentos');
 
   if (loading) {
     return (
@@ -120,20 +126,24 @@ function AppContent() {
         sidebarOpen={sidebarOpen}
       />
       <div className="app-layout">
-        <Sidebar
-          categories={categories}
-          items={allItems}
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
-          selectedCategories={selectedCategories}
-          onToggleCategory={toggleCategory}
-          spellFilters={spellFilters}
-          onSpellFilterChange={updateSpellFilter}
-          availableSpellValues={availableSpellValues}
-          hasMagiasSelected={hasMagiasSelected}
-          isOpen={sidebarOpen}
-          onToggle={() => setSidebarOpen(!sidebarOpen)}
-        />
+      <Sidebar
+        categories={categories}
+        items={allItems}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        selectedCategories={selectedCategories}
+        onToggleCategory={toggleCategory}
+        spellFilters={spellFilters}
+        onSpellFilterChange={updateSpellFilter}
+        availableSpellValues={availableSpellValues}
+        hasMagiasSelected={hasMagiasSelected}
+        featFilters={featFilters}
+        onFeatFilterChange={(key, value) => setFeatFilters(prev => ({ ...prev, [key]: typeof value === 'boolean' ? value : value || undefined }))}
+        availableFeatTypes={availableFeatTypes}
+        hasTalentosSelected={hasTalentosSelected}
+        isOpen={sidebarOpen}
+        onToggle={() => setSidebarOpen(!sidebarOpen)}
+      />
         <main className="main-content">
           <Routes>
             <Route path="/" element={
@@ -143,6 +153,7 @@ function AppContent() {
                 searchQuery={searchQuery}
                 selectedCategories={selectedCategories}
                 spellFilters={spellFilters}
+                featFilters={featFilters}
                 hasActiveFilters={hasActiveFilters}
                 onClearFilters={clearAllFilters}
               />
@@ -153,6 +164,7 @@ function AppContent() {
                 searchQuery={searchQuery}
                 selectedCategories={selectedCategories}
                 spellFilters={spellFilters}
+                featFilters={featFilters}
                 hasActiveFilters={hasActiveFilters}
                 onClearFilters={clearAllFilters}
               />
@@ -163,6 +175,7 @@ function AppContent() {
                 searchQuery={searchQuery}
                 selectedCategories={selectedCategories}
                 spellFilters={spellFilters}
+                featFilters={featFilters}
                 hasActiveFilters={hasActiveFilters}
                 onClearFilters={clearAllFilters}
               />
@@ -185,6 +198,7 @@ function CategoryRoute({
   searchQuery,
   selectedCategories,
   spellFilters,
+  featFilters,
   hasActiveFilters,
   onClearFilters
 }: {
@@ -192,6 +206,7 @@ function CategoryRoute({
   searchQuery: string;
   selectedCategories: string[];
   spellFilters: SpellFilters;
+  featFilters?: { type?: string; noPrerequisites?: boolean };
   hasActiveFilters: boolean;
   onClearFilters: () => void;
 }) {
@@ -218,6 +233,7 @@ function CategoryRoute({
       searchQuery={searchQuery}
       selectedCategories={selectedCategories}
       spellFilters={spellFilters}
+      featFilters={featFilters}
       hasActiveFilters={hasActiveFilters}
       onClearFilters={onClearFilters}
     />
@@ -229,6 +245,7 @@ function ContentRoute({
   searchQuery,
   selectedCategories,
   spellFilters,
+  featFilters,
   hasActiveFilters,
   onClearFilters
 }: {
@@ -236,6 +253,7 @@ function ContentRoute({
   searchQuery: string;
   selectedCategories: string[];
   spellFilters: SpellFilters;
+  featFilters?: { type?: string; noPrerequisites?: boolean };
   hasActiveFilters: boolean;
   onClearFilters: () => void;
 }) {
@@ -268,6 +286,7 @@ function ContentRoute({
       searchQuery={searchQuery}
       selectedCategories={selectedCategories}
       spellFilters={spellFilters}
+      featFilters={featFilters}
       hasActiveFilters={hasActiveFilters}
       onClearFilters={onClearFilters}
     />

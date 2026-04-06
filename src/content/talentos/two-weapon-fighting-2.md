@@ -1,4 +1,4 @@
-### Combate com Duas Armas
+### Combater com Duas Armas Mítico
 **Tipo do talento**: Mítico
 **Pré-requisitos**: Combate com Duas Armas.
 **Descrição**: Com golpes hábeis, você obtém uma vantagem sobre seus inimigos além do mero dano.

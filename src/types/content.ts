@@ -9,6 +9,9 @@ export interface ContentItem {
   spellCastingTime?: string;
   spellDuration?: string;
   spellClasses?: Array<{ className: string; level: number }>;
+  
+  featType?: string;
+  hasPrerequisites?: boolean;
 }
 
 export interface ContentIndexEntry {
@@ -20,6 +23,8 @@ export interface ContentIndexEntry {
   spellCastingTime?: string;
   spellDuration?: string;
   spellClasses?: Array<{ className: string; level: number }>;
+  featType?: string;
+  hasPrerequisites?: boolean;
 }
 
 export interface SpellFilters {

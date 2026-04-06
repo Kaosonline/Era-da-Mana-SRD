@@ -4,25 +4,8 @@ import { ContentItem } from '../../types/content';
 import { useFavorites } from '../../contexts/FavoritesContext';
 import { parseMarkdown } from '../../utils/markdownParser';
 import { loadContentItem } from '../../utils/dataLoader';
+import { getCategoryIcon, formatCategoryName } from '../../utils/categoryHelpers';
 import './ContentView.css';
-
-function getCategoryIcon(category: string): string {
-  const icons: Record<string, string> = {
-    'raças': '🧝',
-    'classes': '⚔️',
-    'magias': '✨',
-    'talentos': '📜',
-    'perícias': '🎯',
-    'equipamentos': '🛡️',
-    'condições': '⚠️',
-    'regras': '📖',
-  };
-  return icons[category.toLowerCase()] || '📚';
-}
-
-function formatCategoryName(category: string): string {
-  return category.charAt(0).toUpperCase() + category.slice(1).replace(/-/g, ' ');
-}
 
 interface ContentViewProps {
   item: ContentItem | null;
@@ -35,6 +18,7 @@ interface ContentViewProps {
   searchQuery: string;
   selectedCategories: string[];
   spellFilters: { level?: string; school?: string; castingTime?: string; duration?: string };
+  featFilters?: { type?: string; noPrerequisites?: boolean };
   hasActiveFilters: boolean;
   onClearFilters: () => void;
 }
@@ -43,6 +27,7 @@ function HomePage({
   allItems, 
   selectedCategories,
   spellFilters,
+  featFilters,
   searchQuery,
   hasActiveFilters,
   onClearFilters
@@ -50,6 +35,7 @@ function HomePage({
   allItems: ContentItem[], 
   selectedCategories: string[],
   spellFilters: { level?: string; school?: string; castingTime?: string; duration?: string },
+  featFilters?: { type?: string; noPrerequisites?: boolean },
   searchQuery: string,
   hasActiveFilters: boolean,
   onClearFilters: () => void
@@ -70,11 +56,15 @@ function HomePage({
           (!spellFilters.school || item.spellSchool?.toLowerCase().includes(spellFilters.school.toLowerCase())) &&
           (!spellFilters.castingTime || item.spellCastingTime?.toLowerCase().includes(spellFilters.castingTime.toLowerCase())) &&
           (!spellFilters.duration || item.spellDuration?.toLowerCase().includes(spellFilters.duration.toLowerCase()))
+        ) &&
+        (category !== 'talentos' || 
+          (!featFilters?.type || item.featType === featFilters.type) &&
+          (!featFilters?.noPrerequisites || !item.hasPrerequisites)
         )
       ).length;
     }
     return counts;
-  }, [allItems, allCategories, selectedCategories, spellFilters, searchQuery]);
+  }, [allItems, allCategories, selectedCategories, spellFilters, featFilters, searchQuery]);
 
   const countItemsInCategory = (category: string) => {
     return categoryCounts[category] ?? 0;
@@ -89,13 +79,13 @@ function HomePage({
 
   const itemsByCategory = useMemo(() => {
     const map: Record<string, ContentItem[]> = {};
-    for (const cat of allCategories) {
+    for (const cat of visibleCategories) {
       map[cat] = allItems
         .filter(item => item.category === cat)
         .sort((a, b) => a.title.localeCompare(b.title));
     }
     return map;
-  }, [allItems, allCategories]);
+  }, [allItems, visibleCategories]);
 
   return (
     <div className="home-page">
@@ -237,6 +227,24 @@ function ContentArticle({ item }: { item: ContentItem }) {
           )}
         </div>
       )}
+      {item.category === 'talentos' && (
+        <div className="feat-metadata">
+          {item.featType && (
+            <span className="metadata-item">
+              Tipo: {item.featType}
+            </span>
+          )}
+          {item.hasPrerequisites === true ? (
+            <span className="metadata-item metadata-prerequisites">
+              Pré-requisitos: Sim
+            </span>
+          ) : item.hasPrerequisites === false ? (
+            <span className="metadata-item metadata-no-prerequisites">
+              Sem pré-requisitos
+            </span>
+          ) : null}
+        </div>
+      )}
       <div
         className="content-body"
         dangerouslySetInnerHTML={{ __html: htmlContent }}
@@ -256,6 +264,7 @@ export function ContentView({
   searchQuery,
   selectedCategories,
   spellFilters,
+  featFilters,
   hasActiveFilters,
   onClearFilters
 }: ContentViewProps) {
@@ -264,6 +273,7 @@ export function ContentView({
       allItems={allItems} 
       selectedCategories={selectedCategories}
       spellFilters={spellFilters}
+      featFilters={featFilters}
       searchQuery={searchQuery}
       hasActiveFilters={hasActiveFilters}
       onClearFilters={onClearFilters}

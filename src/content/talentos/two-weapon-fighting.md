@@ -1,4 +1,4 @@
-### **Combate com Duas Armas**
+### Combate com Duas Armas
 **Tipo do talento**: Combate
 **Pré-requisitos**: Dest 15.
 **Descrição**: Você pode lutar com uma arma em cada uma de suas mãos. Você pode fazer um ataque extra a cada rodada com a arma secundária.
