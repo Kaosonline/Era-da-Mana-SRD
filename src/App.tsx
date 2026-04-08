@@ -260,7 +260,11 @@ function ContentRoute({
   const { category, id } = useParams();
   const navigate = useNavigate();
   
-  const item = allItems.find(i => i.id === id && i.category === category) || null;
+  const normalizeId = (s: string) => s.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+  
+  const item = allItems.find(i => 
+    i.category === category && normalizeId(i.id) === normalizeId(id || '')
+  ) || null;
   
   if (!item) {
     return <Navigate to="/" replace />;
@@ -279,7 +283,7 @@ function ContentRoute({
       item={item}
       previousItem={previousItem}
       nextItem={nextItem}
-      onSelect={(newId) => navigate(`/${item.category}/${newId}`)}
+      onSelect={(newId) => navigate(`/${item.category}/${normalizeId(newId)}`)}
       onBackToCategory={() => navigate('/')}
       currentCategory={item.category}
       allItems={allItems}

@@ -2,13 +2,51 @@
 // Cache para resultados de parsing
 const parseCache = new Map<string, string>();
 
+// Funções auxiliares de escape
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function escapeAttr(text: string): string {
+  return text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 export function parseMarkdown(markdown: string, category?: string): string {
   const cacheKey = `${category || ''}|||${markdown}`;
   if (parseCache.has(cacheKey)) {
     return parseCache.get(cacheKey)!;
   }
   
-  let html = markdown;
+  // Pré-processamento 1: normalizar linhas com múltiplos campos **Campo**
+  // Converte "**Campo1** valor1; **Campo2** valor2" em linhas separadas
+  const step1 = markdown.split('\n').map(line => {
+    if (!line.includes('**')) return line;
+    const parts = line.split(/(?<=; |  )\*\*/);
+    if (parts.length <= 1) return line;
+    return parts.map((part, idx) => {
+      if (idx === 0) return part;
+      return '**' + part;
+    }).join('\n');
+  }).join('\n');
+
+  // Pré-processamento 2: transformar linhas que são apenas **SEÇÃO** em marcação especial
+  const preprocessed = step1.split('\n').map(line => {
+    const trimmed = line.trim();
+    const match = trimmed.match(/^\*\*([^*]+)\*\*$/);
+    if (match) {
+      const sectionName = match[1].trim();
+      const isDesc = sectionName.toUpperCase() === 'DESCRIÇÃO';
+      return `<p class="section-header${isDesc ? ' desc-header' : ''}">${escapeHtml(sectionName)}</p>`;
+    }
+    return line;
+  }).join('\n');
+  
+  let html = preprocessed;
   const lines = html.split('\n');
   const result: string[] = [];
   let inUl = false;
@@ -107,16 +145,18 @@ export function parseMarkdown(markdown: string, category?: string): string {
           cat = '';
         }
       }
-      const fileName = segments.join('/').replace(/\.md$/, '').replace(/\.mdx$/, '');
+      const fileName = segments.join('/').replace(/\.md$/, '').replace(/\.mdx$/, '').toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
       return `/${cat}/${fileName}${hashPart}`;
     }
 
     if (pathPart.includes('/')) {
-      return `/${pathPart}${hashPart}`;
+      const slug = pathPart.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+      return `/${slug}${hashPart}`;
     }
 
     const cat = category || '';
-    return `/${cat}/${pathPart}${hashPart}`;
+    const slug = pathPart.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+    return `/${cat}/${slug}${hashPart}`;
   };
 
   const processInlineFormatting = (text: string): string => {
@@ -156,22 +196,15 @@ export function parseMarkdown(markdown: string, category?: string): string {
     return processed;
   };
 
-  const escapeHtml = (text: string): string => {
-    return text
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  };
-
-  const escapeAttr = (text: string): string => {
-    return text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  };
-
   for (let i = 0; i < lines.length; i++) {
     let line = lines[i];
     const trimmed = line.trim();
+
+    // Pular linhas que já são HTML de cabeçalho de seção (pré-processadas)
+    if (line.startsWith('<p class="section-header')) {
+      result.push(line);
+      continue;
+    }
 
     if (trimmed.startsWith('# ')) {
       flushList();

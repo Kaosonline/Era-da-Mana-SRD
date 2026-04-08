@@ -1,5 +1,5 @@
-import { useState, useEffect, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { ContentItem } from '../../types/content';
 import { useFavorites } from '../../contexts/FavoritesContext';
 import { parseMarkdown } from '../../utils/markdownParser';
@@ -148,6 +148,8 @@ function ContentArticle({ item }: { item: ContentItem }) {
   const [loadingContent, setLoadingContent] = useState(!item.content);
   const { isFavorite, toggleFavorite } = useFavorites();
   const favorite = isFavorite(item.id);
+  const navigate = useNavigate();
+  const contentBodyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (item.content) {
@@ -173,6 +175,36 @@ function ContentArticle({ item }: { item: ContentItem }) {
       cancelled = true;
     };
   }, [item.id, item.category, item.content]);
+
+  const handleInternalLinkClick = useCallback((e: MouseEvent) => {
+    const target = e.target as HTMLElement;
+    const link = target.closest('a.internal-link');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('//')) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const path = href.split('#')[0];
+    const parts = path.split('/').filter(Boolean);
+
+    if (parts.length === 2) {
+      navigate(`/${parts[0]}/${parts[1]}`);
+    } else if (parts.length === 1) {
+      navigate(`/${parts[0]}`);
+    }
+  }, [navigate]);
+
+  useEffect(() => {
+    const el = contentBodyRef.current;
+    if (!el) return;
+    el.addEventListener('click', handleInternalLinkClick);
+    return () => {
+      el.removeEventListener('click', handleInternalLinkClick);
+    };
+  }, [handleInternalLinkClick]);
 
   const htmlContent = useMemo(() => {
     if (!content) return '';
@@ -247,6 +279,7 @@ function ContentArticle({ item }: { item: ContentItem }) {
       )}
       <div
         className="content-body"
+        ref={contentBodyRef}
         dangerouslySetInnerHTML={{ __html: htmlContent }}
       />
     </article>
