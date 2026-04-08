@@ -1,4 +1,6 @@
 
+import { getItemByTitle, getItemById, searchItems } from './contentIndex';
+
 // Cache para resultados de parsing
 const parseCache = new Map<string, string>();
 
@@ -154,6 +156,18 @@ export function parseMarkdown(markdown: string, category?: string): string {
       return `/${slug}${hashPart}`;
     }
 
+    const item = getItemByTitle(pathPart);
+    if (item) {
+      return `/${item.category}/${item.id}${hashPart}`;
+    }
+    const byId = getItemById(pathPart);
+    if (byId) {
+      return `/${byId.category}/${byId.id}${hashPart}`;
+    }
+    const searchResults = searchItems(pathPart);
+    if (searchResults.length > 0) {
+      return `/${searchResults[0].category}/${searchResults[0].id}${hashPart}`;
+    }
     const cat = category || '';
     const slug = pathPart.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
     return `/${cat}/${slug}${hashPart}`;

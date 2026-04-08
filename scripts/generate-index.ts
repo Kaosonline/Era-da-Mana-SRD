@@ -274,6 +274,19 @@ export function getItemById(id: string): ContentIndexItem | undefined {
 export function getItemsByCategory(category: string): ContentIndexItem[] {
   return contentIndexByCategory[category.toLowerCase()] || [];
 }
+
+export function getItemByTitle(title: string): ContentIndexItem | undefined {
+  const normalizedTitle = title.toLowerCase().trim();
+  return contentIndex.find(item => item.title.toLowerCase().trim() === normalizedTitle);
+}
+
+export function searchItems(query: string): ContentIndexItem[] {
+  const normalized = query.toLowerCase().trim();
+  return contentIndex.filter(item => 
+    item.id.toLowerCase().includes(normalized) || 
+    item.title.toLowerCase().includes(normalized)
+  );
+}
 `;
 
     await writeFile(tsOutputFile, tsContent);

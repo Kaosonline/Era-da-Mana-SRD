@@ -1,0 +1,100 @@
+{
+  "session_id": "ses_2nqinp8q",
+  "browser_session_id": "ses_eo3f3y29",
+  "request": "Quero adicionar uma nova magia de cura básica",
+  "created_at": 1775654035727,
+  "updated_at": 1775654060378,
+  "branches": {
+    "spell-design": {
+      "id": "spell-design",
+      "scope": "Definir parâmetros da magia: nível, escola, tempo de conjuração, duração, alcance, componentes",
+      "status": "exploring",
+      "questions": [
+        {
+          "id": "q_fhimq5zt",
+          "type": "ask_text",
+          "text": "Qual o nível da magia? (ex: 1, 2, 3...)",
+          "config": {
+            "question": "Qual o nível da magia? (ex: 1, 2, 3...)",
+            "placeholder": "Digite um número de 1 a 9"
+          },
+          "answer": {
+            "text": "1"
+          },
+          "answeredAt": 1775654060378
+        }
+      ],
+      "finding": null
+    },
+    "spell-effects": {
+      "id": "spell-effects",
+      "scope": "Definir efeitos da cura: valor de cura, área de efeito, curing conditions, scaling",
+      "status": "exploring",
+      "questions": [
+        {
+          "id": "q_fxn843ul",
+          "type": "ask_text",
+          "text": "Quanto de pontos de vida a magia deve curar?",
+          "config": {
+            "question": "Quanto de pontos de vida a magia deve curar?",
+            "placeholder": "Ex: 1d8, 2d6, 15 pontos fixos..."
+          }
+        }
+      ],
+      "finding": null
+    },
+    "spell-balance": {
+      "id": "spell-balance",
+      "scope": "Avaliar balanceamento comparando com magias existentes do mesmo nível",
+      "status": "exploring",
+      "questions": [
+        {
+          "id": "q_1vrnanm4",
+          "type": "show_options",
+          "text": "Você prefere que a magia seja mais focada em cura pura ou tenha efeitos adicionais?",
+          "config": {
+            "question": "Você prefere que a magia seja mais focada em cura pura ou tenha efeitos adicionais?",
+            "options": [
+              {
+                "id": "pure-heal",
+                "label": "Cura pura (sem efeitos secundários)"
+              },
+              {
+                "id": "heal-plus",
+                "label": "Cura + efeito secundário (ex: remover condição)"
+              },
+              {
+                "id": "heal-aoe",
+                "label": "Cura em área (afeta múltiplos alvos)"
+              }
+            ]
+          }
+        }
+      ],
+      "finding": null
+    },
+    "flavor-naming": {
+      "id": "flavor-naming",
+      "scope": "Criar nome, descrição fluff e flavor da magia",
+      "status": "exploring",
+      "questions": [
+        {
+          "id": "q_js1yab7d",
+          "type": "ask_text",
+          "text": "Sugira um nome temático para a magia:",
+          "config": {
+            "question": "Sugira um nome temático para a magia:",
+            "placeholder": "Ex: Toque de Vida, Palavras de Cura..."
+          }
+        }
+      ],
+      "finding": null
+    }
+  },
+  "branch_order": [
+    "spell-design",
+    "spell-effects",
+    "spell-balance",
+    "flavor-naming"
+  ]
+}
