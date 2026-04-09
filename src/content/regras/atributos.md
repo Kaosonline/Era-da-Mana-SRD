@@ -4,19 +4,22 @@ Um personagem é composto por seis atributos: Força, Destreza, Constituição, 
 
 ### Força (For)
 
-Força mede a força muscular e o poder físico. Essa habilidade é importante para aqueles que se envolvem em combate corpo a corpo. A Força também define a quantidade máxima de peso que seu personagem pode carregar (Veja em [Capacidade de Carga](capacidade-de-carga.md)). Um personagem com Força 0 é fraco demais para se mover e está inconsciente. Algumas criaturas não possuem Força e não têm nenhum modificador em perícias ou testes baseados em Força.
+Força mede a força muscular e o poder físico. Essa habilidade é importante para aqueles que se envolvem em combate corpo a corpo. A Força também define a quantidade máxima de peso que seu personagem pode carregar (Veja em [Capacidade de Carga](capacidade-de-carga.md)). 
+Um personagem com Força 0 é fraco demais para se mover e está inconsciente. 
+Algumas criaturas não possuem Força e não têm nenhum modificador em perícias ou testes baseados em Força.
 
 
 Você aplica o modificador de Força do seu personagem a:
 
-Jogadas de ataque corpo a corpo.
+- Jogadas de ataque corpo a corpo.
 
-Jogadas de dano ao usar uma arma corpo a corpo ou uma arma de arremesso, incluindo uma funda. (Exceções: Ataques com a mão secundária recebem apenas metade do bônus de Força do personagem, enquanto ataques com as duas mãos recebem 1,5 vezes o bônus de Força. Uma penalidade de Força, mas não um bônus, se aplica a ataques feitos com um arco que não seja um arco composto.)
-Testes de escalada e natação.
+- Jogadas de dano ao usar uma arma corpo a corpo ou uma arma de arremesso, incluindo uma funda. (Exceções: Ataques com a mão secundária recebem apenas metade do bônus de Força do personagem, enquanto ataques com as duas mãos recebem 1,5 vezes o bônus de Força. Uma penalidade de Força, mas não um bônus, se aplica a ataques feitos com um arco que não seja um arco composto.)
 
-Testes de Força (para arrombar portas e coisas do tipo).
+- Testes de Escalar e Natação.
 
-Seu valor de Força determina a capacidade de carga do seu personagem.
+- Testes de Força (para arrombar portas e coisas do tipo).
+
+- Seu valor de Força determina a capacidade de carga do seu personagem.
 
 ### Destreza (Des)
 
@@ -34,7 +37,7 @@ Testes de perícia em Acrobacia, Desativar Dispositivo, Arte da Fuga, Montaria, 
 
 ### Constituição (Con)
 
-A Constituição representa a saúde e a resistência do seu personagem. Um bônus de Constituição aumenta os pontos de vida de um personagem, portanto, essa habilidade é importante para todas as classes. Algumas criaturas, como mortos-vivos e constructos, não possuem um valor de Constituição. O modificador delas é +0 para quaisquer testes baseados em Constituição. Um personagem com um valor de Constituição de 0 está morto.
+A Constituição representa a saúde e a resistência do seu personagem. Um bônus de Constituição aumenta os pontos de vida de um personagem, portanto, essa habilidade é importante para todas as classes. Algumas criaturas, como mortos-vivos e constructos, não possuem um valor de Constituição. O modificador delas é 0 para quaisquer testes baseados em Constituição. Um personagem com um valor de Constituição de 0 está morto.
 
 Você aplica o modificador de Constituição do seu personagem a:
 

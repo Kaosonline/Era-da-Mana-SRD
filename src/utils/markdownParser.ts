@@ -311,7 +311,7 @@ export function parseMarkdown(markdown: string, category?: string): string {
     if (trimmed.length > 0) {
       result.push(`<p>${processed}</p>`);
     } else {
-      result.push('');
+      result.push('<br>');
     }
   }
 
