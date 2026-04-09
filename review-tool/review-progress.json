@@ -1,0 +1,22 @@
+{
+  "status": {
+    "condições/abalado": "approved",
+    "condições/agarrado": "approved",
+    "condições/assustado": "approved",
+    "condições/aterrorizado": "skipped",
+    "condições/atordoado": "approved",
+    "condições/cambaleante": "approved",
+    "condições/cansado": "approved",
+    "condições/cego": "approved",
+    "condições/deitado": "approved",
+    "condições/bleed": "approved",
+    "condições/blinded": "approved",
+    "condições/broken": "approved",
+    "condições/confused": "approved",
+    "condições/cowering": "approved",
+    "condições/dazed": "approved",
+    "condições/dazzled": "approved"
+  },
+  "lastCategory": "condições",
+  "exportedAt": "2026-04-08T19:54:16.364Z"
+}
