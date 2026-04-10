@@ -69,6 +69,23 @@ app.post('/api/save/:category/:id', (req, res) => {
   }
 });
 
+// Rota: deletar um arquivo
+app.delete('/api/delete/:category/:id', (req, res) => {
+  const { category, id } = req.params;
+  const filePath = path.join(CONTENT_DIR, category, `${id}.md`);
+
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ error: `Arquivo "${id}.md" não encontrado` });
+  }
+
+  try {
+    fs.unlinkSync(filePath);
+    res.json({ success: true, message: 'Arquivo deletado com sucesso' });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Rota: listar todas as categorias disponíveis
 app.get('/api/categories', (req, res) => {
   try {
@@ -85,7 +102,7 @@ app.get('/api/categories', (req, res) => {
   }
 });
 
-// Rota: buscar todos os arquivos em todas as categorias
+// Rota: buscar todos os arquivos em todas as categorias (com snippets para busca)
 app.get('/api/search-all', (req, res) => {
   try {
     if (!fs.existsSync(CONTENT_DIR)) {
@@ -102,7 +119,29 @@ app.get('/api/search-all', (req, res) => {
         .filter(f => f.endsWith('.md'))
         .map(filename => {
           const id = filename.replace('.md', '');
-          return { id, filename, category };
+          
+          // Ler conteúdo para extrair pontos-chave (primeiros títulos)
+          let snippet = '';
+          try {
+            const content = fs.readFileSync(path.join(categoryDir, filename), 'utf-8');
+            const lines = content.split('\n').filter(l => l.trim());
+            // Pegar primeiros pontos-chave: títulos (#) e linhas em negrito (**)
+            const keyPoints = [];
+            for (const line of lines.slice(0, 30)) {
+              if (line.startsWith('#')) {
+                keyPoints.push(line.replace(/^#+\s*/, '').toLowerCase());
+              } else if (line.startsWith('**') && line.includes('**')) {
+                const match = line.match(/\*\*(.+?)\*\*/);
+                if (match) keyPoints.push(match[1].toLowerCase());
+              }
+              if (keyPoints.length >= 5) break;
+            }
+            snippet = keyPoints.join(' ');
+          } catch (e) {
+            // ignore
+          }
+          
+          return { id, filename, category, snippet };
         });
       allFiles.push(...files);
     }

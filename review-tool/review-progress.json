@@ -1,14 +1,5 @@
 {
   "status": {
-    "condições/abalado": "approved",
-    "condições/agarrado": "approved",
-    "condições/assustado": "approved",
-    "condições/aterrorizado": "skipped",
-    "condições/atordoado": "approved",
-    "condições/cambaleante": "approved",
-    "condições/cansado": "approved",
-    "condições/cego": "approved",
-    "condições/deitado": "approved",
     "condições/bleed": "approved",
     "condições/blinded": "approved",
     "condições/broken": "approved",
@@ -43,8 +34,19 @@
     "condições/staggered": "approved",
     "condições/stunned": "approved",
     "condições/unconscious": "approved",
-    "regras/atributos": "needs-fix"
+    "regras/atributos": "approved",
+    "magias/Abadar's Truthtelling": "approved",
+    "magias/Abeyance": "approved",
+    "magias/Ablative Sphere": "approved",
+    "magias/Ablative Barrier": "approved",
+    "magias/Aboleth's Lung": "approved",
+    "magias/Absolution": "approved",
+    "magias/Absorb Rune I": "approved",
+    "regras/cobertura": "approved",
+    "regras/climax": "approved",
+    "regras/capacidade-de-carga": "approved",
+    "regras/mecânica-básica": "approved",
+    "regras/classes": "approved"
   },
-  "lastCategory": "regras",
-  "exportedAt": "2026-04-09T19:59:13.406Z"
+  "lastCategory": "regras"
 }

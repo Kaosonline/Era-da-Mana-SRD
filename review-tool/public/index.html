@@ -292,6 +292,17 @@
       box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
     }
 
+    .btn-delete {
+      background: #ef4444;
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-delete:hover:not(:disabled) {
+      background: #f87171;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+    }
+
     .btn-link {
       background: #06b6d4;
       color: #ffffff;
@@ -684,7 +695,7 @@
               <button class="btn btn-save" id="btnSave" title="Salvar (Ctrl+S)">💾 Salvar</button>
               <button class="btn btn-approve" id="btnApprove" title="Aprovar">✅ Aprovar</button>
               <button class="btn btn-needs-fix" id="btnNeedsFix" title="Precisa corrigir">❌ Precisa corrigir</button>
-              <button class="btn btn-skip" id="btnSkip" title="Pular">⏭️ Pular</button>
+              <button class="btn btn-delete" id="btnDelete" title="Deletar">🗑️ Deletar</button>
             </div>
           </div>
         </div>
@@ -749,7 +760,7 @@
       btnSave: document.getElementById('btnSave'),
       btnApprove: document.getElementById('btnApprove'),
       btnNeedsFix: document.getElementById('btnNeedsFix'),
-      btnSkip: document.getElementById('btnSkip'),
+      btnDelete: document.getElementById('btnDelete'),
       btnExport: document.getElementById('btnExport'),
       btnImport: document.getElementById('btnImport'),
       toast: document.getElementById('toast'),
@@ -769,20 +780,38 @@
       btnLinkInsert: document.getElementById('btnLinkInsert')
     };
 
-    // Carregar progresso do localStorage
-    function loadProgress() {
+    // Carregar progresso do arquivo JSON e localStorage
+    async function loadProgress() {
+      // Primeiro tenta carregar do arquivo JSON no servidor
+      try {
+        const res = await fetch('/api/export-progress');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.status) {
+            state.status = data.status;
+            localStorage.setItem('reviewProgress', JSON.stringify(data.status));
+          }
+          if (data.lastCategory) {
+            state.currentCategory = data.lastCategory;
+            localStorage.setItem('lastCategory', data.lastCategory);
+          }
+        }
+      } catch (e) {
+        console.log('Arquivo de progresso não encontrado, usando localStorage');
+      }
+
+      // Complementa com localStorage (para índices por categoria)
       try {
         const saved = localStorage.getItem('reviewProgress');
-        if (saved) {
+        if (saved && Object.keys(state.status).length === 0) {
           state.status = JSON.parse(saved);
         }
         const lastCategory = localStorage.getItem('lastCategory');
-        if (lastCategory) {
+        if (lastCategory && !state.currentCategory) {
           state.currentCategory = lastCategory;
         }
-        // Nota: o índice é carregado por categoria no loadFiles()
       } catch (e) {
-        console.error('Erro ao carregar progresso:', e);
+        console.error('Erro ao carregar do localStorage:', e);
       }
     }
 
@@ -1027,6 +1056,17 @@
           state.currentContent = content;
           state.hasChanges = false;
           els.hasChangesIndicator.style.display = 'none';
+          
+          // Salvar progresso no arquivo JSON
+          await fetch('/api/import-progress', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+              status: state.status, 
+              lastCategory: state.currentCategory 
+            })
+          });
+          
           showToast('Arquivo salvo com sucesso!', 'success');
         } else {
           showToast('Erro ao salvar: ' + data.error, 'error');
@@ -1039,8 +1079,46 @@
       els.btnSave.textContent = '💾 Salvar';
     }
 
+    // Deletar arquivo atual
+    async function deleteCurrentFile() {
+      if (!state.currentFileId) return;
+      
+      const confirmDelete = confirm(`Deseja realmente deletar o arquivo "${state.currentFileId}.md"?`);
+      if (!confirmDelete) return;
+
+      try {
+        const res = await fetch(`/api/delete/${state.currentCategory}/${state.currentFileId}`, {
+          method: 'DELETE'
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          showToast('Arquivo deletado!', 'success');
+          
+          // Remover da lista de arquivos
+          state.files = state.files.filter(f => f.id !== state.currentFileId);
+          state.filteredFiles = state.filteredFiles.filter(f => f.id !== state.currentFileId);
+          
+          // Limpar editor
+          state.currentFileId = null;
+          state.currentContent = '';
+          els.editorContent.style.display = 'none';
+          els.welcomeScreen.style.display = 'flex';
+          
+          renderFileList();
+          updateProgressBar();
+          updateGlobalStats();
+        } else {
+          showToast('Erro ao deletar: ' + data.error, 'error');
+        }
+      } catch (err) {
+        showToast('Erro ao deletar arquivo', 'error');
+      }
+    }
+
     // Definir status
-    function setStatus(status) {
+    async function setStatus(status) {
       if (!state.currentFileId) return;
 
       const key = `${state.currentCategory}/${state.currentFileId}`;
@@ -1051,6 +1129,16 @@
       renderFileList();
       updateProgressBar();
       updateGlobalStats();
+
+      // Salvar progresso no arquivo JSON
+      await fetch('/api/import-progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          status: state.status, 
+          lastCategory: state.currentCategory 
+        })
+      });
 
       const labels = {
         'approved': 'Aprovado',
@@ -1239,23 +1327,52 @@
     // Renderizar sugestões
     function renderSuggestions(query) {
       const slug = textToSlug(query);
+      const queryLower = query.toLowerCase();
+      
       const suggestions = state.allFiles.map(f => {
         const fileSlug = textToSlug(f.id);
         const titleLower = f.id.replace(/[-_]/g, ' ').toLowerCase();
-        const queryLower = query.toLowerCase();
+        const snippetLower = (f.snippet || '').toLowerCase();
 
         let score = 0;
 
+        // Prioridade 1: correspondência exata no nome
         if (fileSlug === slug) score = 1;
         else if (fileSlug.startsWith(slug)) score = 0.95;
         else if (slug.startsWith(fileSlug)) score = 0.9;
         else if (titleLower === queryLower) score = 0.95;
         else if (titleLower.includes(queryLower)) score = 0.85;
-        else score = similarity(slug, fileSlug);
+        else if (fileSlug.includes(slug)) score = 0.7;
+        
+        // Prioridade 2: correspondência nos pontos-chave (snippet)
+        if (score < 0.5 && snippetLower) {
+          const snippetPoints = snippetLower.split(' ').filter(p => p.length > 2);
+          let matchCount = 0;
+          const queryWords = slug.split('-').filter(w => w.length > 2);
+          
+          for (const qw of queryWords) {
+            for (const sp of snippetPoints) {
+              if (sp.includes(qw) || qw.includes(sp)) {
+                matchCount++;
+                break;
+              }
+            }
+          }
+          
+          if (matchCount > 0) {
+            const snippetScore = Math.min(0.6, matchCount * 0.15);
+            if (snippetScore > score) score = snippetScore;
+          }
+        }
+
+        // Prioridade 3: similaridade
+        if (score < 0.3) {
+          score = similarity(slug, fileSlug) * 0.4;
+        }
 
         return { ...f, score };
       })
-      .filter(f => f.score > 0.3)
+      .filter(f => f.score > 0.2)
       .sort((a, b) => b.score - a.score)
       .slice(0, 15);
 
@@ -1405,7 +1522,7 @@
     els.btnSave.addEventListener('click', saveContent);
     els.btnApprove.addEventListener('click', () => setStatus('approved'));
     els.btnNeedsFix.addEventListener('click', () => setStatus('needs-fix'));
-    els.btnSkip.addEventListener('click', () => setStatus('skipped'));
+    els.btnDelete.addEventListener('click', deleteCurrentFile);
     els.btnPrev.addEventListener('click', goToPrev);
     els.btnNext.addEventListener('click', goToNext);
     els.btnLink.addEventListener('click', openLinkModal);

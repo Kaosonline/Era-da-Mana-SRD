@@ -1,4 +1,4 @@
-### Pulmão de Aboleth
+### Brânquias
 
 **Escola** Transmutação; **Nível** Arcano 2, Divino 2
 
