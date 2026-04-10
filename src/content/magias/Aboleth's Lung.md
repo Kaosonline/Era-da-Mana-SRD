@@ -3,7 +3,7 @@
 **Escola** Transmutação; **Nível** Arcano 2, Divino 2
 
 **CONJURAÇÃO**
-**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M/FD (pedaço de alga)
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, F/FD (pedaço de alga)
 
 **EFEITO**
 **Alcance** toque  **Alvos** criaturas vivas tocadas  **Duração** 1 hora/nível; ver texto  **Teste de Resistência** Vontade anula  **Resistência à Magia** sim

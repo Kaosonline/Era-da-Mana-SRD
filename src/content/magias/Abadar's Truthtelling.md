@@ -1,4 +1,4 @@
-### Verdade de Abadar
+### Toque da Verdade
 
 **Escola** Encantamento (Compulsão) [afeta a mente]; **Nível** Divino 1
 
@@ -13,4 +13,4 @@
 **Resistência à Magia** sim
 
 **DESCRIÇÃO**
-Esta magia funciona exatamente como a magia [Zona da Verdade](Zone of Truth.md), exceto conforme observado acima. O alvo momentaneamente assume a semelhança de um ser de ordem perfeita, como um arconte ou inevitável, para que todos que possam ver o alvo saibam que ele está afetado pela magia. Este disfarce divino cintila sobre o alvo por apenas um instante e não permite que ele passe por membro de uma raça diferente.
+Esta magia funciona exatamente como a magia [Zona da Verdade](Zone of Truth.md), exceto conforme observado acima.
