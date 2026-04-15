@@ -4,7 +4,7 @@
 
 - Você pode tentar manobras: empurrão, desarmar, agarrar, quebrar, derrubar e mais
 - Cada personagem tem BMC (Bônus de Manobra de Combate) = BBA + Modificador de Força + Modificador de tamanho 
-- Tamanho especial: Miúdo –8, Minusculo –4, Pequeno –2, Pequeno –1, Médio +0, Grande +1, Enorme +2, Colossal +8
+- Modificador de Tamanho: Miúdo –8, Minusculo –4, Pequeno –2, Pequeno –1, Médio +0, Grande +1, Enorme +2, Colossal +8
 
 ## DMC (Defesa de Manobra de Combate)
 
@@ -87,24 +87,24 @@
 - Itens vestidos (armadura, anéis) não podem ser roubados
 - Sem o talento Roubar Aprimorado, provoca ataque de oportunidade
 
-### Quebrar (Sunder)
+### Quebrar
 
 - Destruir item segurado ou vestido do oponente
 - Causa dano ao item. Se exceder Dureza, subtrai dos PV do item
-- Se PV ≤ metade, item ganha condição Quebrado
+- Se o PV do item é menor ou metade, item ganha condição [Quebrado](broken.md)
 - Sem o talento Quebrar Aprimorado, provoca ataque de oportunidade
 
-### Trip (Trip)
+### Derrubar
 
-- Derrubar oponente
-- Se exceder DMC: alvo cai no chão. Se falhar por 10+, você cai
-- Criaturas sem pernas, limos não podem ser trips
-- Sem o talento Trip Aprimorado, provoca ataque de oportunidade
+- Tenta Derrubar oponente no lugar de um ataque
+- Se exceder DMC: alvo está [Caído](prone.md). Se falhar por 10+, você cai
+- Criaturas sem pernas não podem ser derrubadas
+- Sem o talento Derrubar Aprimorado, provoca ataque de oportunidade
 
-## Fingir (Feint)
+### Fintar 
 
-- Ação padrão (ou movimento com Feint Aprimorado)
-- Teste de Engano contra CD = 10 + BBA + Sab do oponente
+- Ação padrão
+- Teste de Blefar contra CD = 10 + BBA + Sentir Motivação do oponente
 - Se bem-sucedido: próximo ataque corpo a corpo não permite bônus de Destreza à CA
 - Não provoca ataques de oportunidade
-- Penalidades: –4 contra não-humanoides, –8 contra Animal, impossível sem Inteligência
+- Penalidades: –4 contra não-humanoides, –8 contra Animal, impossível contra criaturas sem Inteligência

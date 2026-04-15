@@ -68,7 +68,9 @@
     "magias/Acid Maw": "approved",
     "regras/ocultacao": "approved",
     "regras/flanqueamento": "approved",
-    "regras/manobras-de-combate": "needs-fix"
+    "regras/manobras-de-combate": "needs-fix",
+    "talentos/combat-expertise": "approved",
+    "talentos/improved-reposition": "approved"
   },
-  "lastCategory": "regras"
+  "lastCategory": "talentos"
 }

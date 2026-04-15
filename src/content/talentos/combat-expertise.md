@@ -1,4 +1,4 @@
-### Perícia em Combate
+### Especialização em Combate
 **Tipo do talento**: Combate
 **Pré-requisitos**: Int 13.
 **Descrição**: Você pode aumentar sua defesa à custa de sua precisão.
