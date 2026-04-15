@@ -3,7 +3,7 @@
 **Escola** Conjuração (Criação) [ácido]; **Nível** Arcano 6
 
 **CONJURAÇÃO**
-**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M (ervilhas em pó e um casco de animal)
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S
 
 **EFEITO**
 **Alcance** médio (30 m + 3 m/nível)  **Efeito** névoa se espalha em um raio de 6 m, altura de 6 m  **Duração** 1 rodada/nível  **Teste de Resistência** nenhum  **Resistência à Magia** não

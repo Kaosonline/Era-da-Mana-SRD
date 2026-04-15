@@ -152,6 +152,52 @@ app.get('/api/search-all', (req, res) => {
   }
 });
 
+// Rota: buscar todos os arquivos com conteúdo completo e títulos para busca de links
+app.get('/api/search-all-full', (req, res) => {
+  try {
+    if (!fs.existsSync(CONTENT_DIR)) {
+      return res.status(404).json({ error: 'Diretório de conteúdo não encontrado' });
+    }
+
+    const allFiles = [];
+    const categories = fs.readdirSync(CONTENT_DIR)
+      .filter(item => fs.statSync(path.join(CONTENT_DIR, item)).isDirectory());
+
+    for (const category of categories) {
+      const categoryDir = path.join(CONTENT_DIR, category);
+      const files = fs.readdirSync(categoryDir)
+        .filter(f => f.endsWith('.md'))
+        .map(filename => {
+          const id = filename.replace('.md', '');
+          
+          let titles = [];
+          let content = '';
+          
+          try {
+            const rawContent = fs.readFileSync(path.join(categoryDir, filename), 'utf-8');
+            content = rawContent.toLowerCase();
+            
+            // Extrair todos os títulos (# hasta ######)
+            const titleRegex = /^#{1,6}\s+(.+)$/gm;
+            let match;
+            while ((match = titleRegex.exec(rawContent)) !== null) {
+              titles.push(match[1].trim().toLowerCase());
+            }
+          } catch (e) {
+            // ignore
+          }
+          
+          return { id, filename, category, titles, content };
+        });
+      allFiles.push(...files);
+    }
+
+    res.json(allFiles);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Rota: exportar progresso (aprovações)
 app.get('/api/export-progress', (req, res) => {
   try {

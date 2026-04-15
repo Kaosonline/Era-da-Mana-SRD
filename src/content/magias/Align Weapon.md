@@ -9,4 +9,7 @@
 **Alcance** toque  **Alvos** arma tocada ou 50 projéteis (todos devem estar juntos no momento da conjuração)  **Duração** 1 min./nível  **Teste de Resistência** Vontade anula (inofensivo, objeto)  **Resistência a Magia** sim (inofensivo, objeto)
 
 **DESCRIÇÃO**
-Alinhar Arma torna uma arma caótica, má, boa ou leal, conforme sua escolha. Uma arma alinhada pode ignorar a redução de dano de certas criaturas. Esta magia não tem efeito em uma arma que já possua um alinhamento. Você não pode lançar esta magia em uma arma natural, como um golpe desarmado. Quando você torna uma arma caótica, má, boa ou leal, Alinhar Arma é uma magia caótica, má, boa ou leal, respectivamente.
+Alinhar Arma torna uma arma caótica, má, boa ou leal, conforme sua escolha. Uma arma alinhada pode ignorar a redução de dano de certas criaturas. Esta magia não tem efeito em uma arma que já possua um alinhamento. Você não pode conjurar esta magia em uma arma natural, como um golpe desarmado. Quando você torna uma arma caótica, má, boa ou leal, Alinhar Arma é uma magia caótica, má, boa ou leal, respectivamente.
+
+**MELHORIA**
+Você pode gastar 1 PM a mais para dividir a duração em incrementos de 1 minuto entre qualquer número de armas tocadas. Cada grupo de até 50 projéteis (que devem estar juntos no momento da conjuração) conta como uma arma para o propósito de dividir a duração da magia.

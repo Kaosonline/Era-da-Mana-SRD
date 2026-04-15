@@ -3,10 +3,10 @@
 **Escola** Conjuração (Cura) [bem]; **Nível** Arcano 3, Divino 3
 
 **CONJURAÇÃO**
-**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M/FD (coração de pomba)
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, F/FD
 
 **EFEITO**
 **Alcance** toque  **Alvos** criatura tocada  **Duração** instantânea  **Teste de Resistência** (Fortitude) anula (inofensivo)  **Resistência à Magia** sim (inofensivo)
 
 **DESCRIÇÃO**
-O conjurador pode transferir os efeitos de aflições como maldições, doenças e venenos da criatura alvo para si mesmo. Esta magia também pode transferir as condições cego, surdo, fatigado, nauseado, abalado e enjoado. Todos os aspectos das aflições transferidas (CDs de teste, duração restante, condições de remoção, etc.) permanecem os mesmos, mas afetam o conjurador em vez do alvo original. Após transferir a aflição ou condição, o conjurador está livre para curá-la de qualquer maneira que puder.
+O conjurador pode transferir os efeitos de aflições como maldições, doenças e venenos da criatura alvo para si mesmo. Esta magia também pode transferir as condições [cego](blinded.md), [surdo](deafened.md), [fadigado](fatigued.md), [nauseado](nauseated.md), [abalado](shaken.md) e [enjoado](sickened.md). Todos os aspectos das aflições transferidas (CDs de teste, duração restante, condições de remoção, etc.) permanecem os mesmos, mas afetam o conjurador em vez do alvo original. Após transferir a aflição ou condição, o conjurador está livre para curá-la de qualquer maneira que puder.

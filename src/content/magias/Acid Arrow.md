@@ -3,7 +3,7 @@
 **Escola** Conjuração (Criação) [ácido]; **Nível** Arcano 2
 
 **CONJURAÇÃO**
-**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M (folha de ruibarbo e estômago de víbora), F (um dardo)
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, F (um dardo)
 
 **EFEITO**
 **Alcance** longo (120 m + 12 m/nível)  **Efeito** uma flecha de ácido  **Duração** 1 rodada + 1 rodada por três níveis  **Teste de Resistência** nenhum  **Resistência à Magia** não

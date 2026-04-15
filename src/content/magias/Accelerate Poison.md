@@ -3,7 +3,7 @@
 **Escola** Transmutação [veneno]; **Nível** Arcano 2, Divino 2
 
 **CONJURAÇÃO**
-**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S, M (um espinho)
+**Tempo de Conjuração** 1 ação padrão  **Componentes** V, S
 
 **EFEITO**
 **Alcance** toque  **Alvos** criatura tocada  **Duração** instantânea  **Teste de Resistência** (Fortitude) anula  **Resistência à Magia** sim

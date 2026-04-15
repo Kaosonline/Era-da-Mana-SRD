@@ -1289,7 +1289,7 @@
     async function loadAllFiles() {
       if (state.allFiles.length > 0) return state.allFiles;
       try {
-        const res = await fetch('/api/search-all');
+        const res = await fetch('/api/search-all-full');
         const files = await res.json();
         state.allFiles = files;
         return files;
@@ -1328,51 +1328,94 @@
     function renderSuggestions(query) {
       const slug = textToSlug(query);
       const queryLower = query.toLowerCase();
+      const queryWords = slug.split('-').filter(w => w.length > 2);
       
       const suggestions = state.allFiles.map(f => {
         const fileSlug = textToSlug(f.id);
         const titleLower = f.id.replace(/[-_]/g, ' ').toLowerCase();
-        const snippetLower = (f.snippet || '').toLowerCase();
+        const titles = f.titles || [];
+        const content = f.content || '';
 
         let score = 0;
+        let matchType = '';
 
-        // Prioridade 1: correspondência exata no nome
-        if (fileSlug === slug) score = 1;
-        else if (fileSlug.startsWith(slug)) score = 0.95;
-        else if (slug.startsWith(fileSlug)) score = 0.9;
-        else if (titleLower === queryLower) score = 0.95;
-        else if (titleLower.includes(queryLower)) score = 0.85;
-        else if (fileSlug.includes(slug)) score = 0.7;
+        // Prioridade 1: correspondência exata no nome do arquivo
+        if (fileSlug === slug) {
+          score = 1;
+          matchType = 'exact';
+        } else if (fileSlug.startsWith(slug)) {
+          score = 0.95;
+          matchType = 'prefix';
+        } else if (slug.startsWith(fileSlug)) {
+          score = 0.9;
+          matchType = 'slugPrefix';
+        } else if (titleLower === queryLower) {
+          score = 0.95;
+          matchType = 'titleExact';
+        } else if (titleLower.includes(queryLower)) {
+          score = 0.85;
+          matchType = 'titleContains';
+        } else if (fileSlug.includes(slug)) {
+          score = 0.7;
+          matchType = 'slugContains';
+        }
         
-        // Prioridade 2: correspondência nos pontos-chave (snippet)
-        if (score < 0.5 && snippetLower) {
-          const snippetPoints = snippetLower.split(' ').filter(p => p.length > 2);
-          let matchCount = 0;
-          const queryWords = slug.split('-').filter(w => w.length > 2);
-          
-          for (const qw of queryWords) {
-            for (const sp of snippetPoints) {
-              if (sp.includes(qw) || qw.includes(sp)) {
-                matchCount++;
-                break;
+        // Prioridade 2: correspondência nos títulos do arquivo
+        if (score < 0.5) {
+          for (const title of titles) {
+            const titleSlug = textToSlug(title);
+            if (titleSlug === slug) {
+              score = 0.9;
+              matchType = 'titleMatch';
+              break;
+            } else if (titleSlug.startsWith(slug) || slug.startsWith(titleSlug)) {
+              score = 0.85;
+              matchType = 'titlePrefix';
+              break;
+            } else if (title.toLowerCase().includes(queryLower)) {
+              score = 0.8;
+              matchType = 'titleContains';
+              break;
+            } else {
+              // Verificar word-by-word
+              for (const qw of queryWords) {
+                if (titleSlug.includes(qw) || qw.includes(titleSlug)) {
+                  score = 0.7;
+                  matchType = 'titleWord';
+                  break;
+                }
               }
+              if (score > 0) break;
             }
           }
-          
-          if (matchCount > 0) {
-            const snippetScore = Math.min(0.6, matchCount * 0.15);
-            if (snippetScore > score) score = snippetScore;
+        }
+        
+        // Prioridade 3: correspondência no conteúdo
+        if (score < 0.4) {
+          let contentMatches = 0;
+          for (const qw of queryWords) {
+            if (content.includes(qw)) {
+              contentMatches++;
+            }
+          }
+          if (contentMatches > 0) {
+            score = Math.min(0.5, contentMatches * 0.15);
+            matchType = 'content';
           }
         }
 
-        // Prioridade 3: similaridade
-        if (score < 0.3) {
-          score = similarity(slug, fileSlug) * 0.4;
+        // Prioridade 4: similaridade como fallback
+        if (score < 0.2) {
+          const simScore = similarity(slug, fileSlug);
+          if (simScore > 0.3) {
+            score = simScore * 0.3;
+            matchType = 'similarity';
+          }
         }
 
-        return { ...f, score };
+        return { ...f, score, matchType };
       })
-      .filter(f => f.score > 0.2)
+      .filter(f => f.score > 0.15)
       .sort((a, b) => b.score - a.score)
       .slice(0, 15);
 
@@ -1392,9 +1435,11 @@
       els.suggestionsList.innerHTML = suggestions.map(s => {
         const displayName = s.id.replace(/[-_]/g, ' ');
         const pct = Math.round(s.score * 100);
+        const matchLabel = s.matchType === 'titleMatch' || s.matchType === 'titlePrefix' ? ' (título)' : 
+                          s.matchType === 'content' ? ' (conteúdo)' : '';
         return `
           <div class="suggestion-item" data-category="${s.category}" data-id="${s.id}" data-score="${s.score}">
-            <span>${displayName}</span>
+            <span>${displayName}${matchLabel}</span>
             <span class="cat-badge">${s.category}</span>
             <span class="match-score">${pct}%</span>
           </div>
