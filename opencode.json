@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "share": "auto",
+  "agent": {
+    "plan": {
+      "skills": ["caveman"]
+    },
+    "build": {
+      "skills": ["caveman", "ui-ux-pro-max"]
+    }
+  }
+}

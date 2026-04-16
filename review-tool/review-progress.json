@@ -70,7 +70,16 @@
     "regras/flanqueamento": "approved",
     "regras/manobras-de-combate": "needs-fix",
     "talentos/combat-expertise": "approved",
-    "talentos/improved-reposition": "approved"
+    "talentos/improved-reposition": "approved",
+    "talentos/improved-dirty-trick": "approved",
+    "talentos/greater-dirty-trick": "approved",
+    "talentos/power-attack": "approved",
+    "talentos/improved-bull-rush": "approved",
+    "talentos/greater-bull-rush": "approved",
+    "talentos/quick-bull-rush": "approved",
+    "talentos/improved-bull-rush-2": "approved",
+    "talentos/bull-rush-strike": "approved",
+    "talentos/bristling-bull-rush": "approved"
   },
   "lastCategory": "talentos"
 }

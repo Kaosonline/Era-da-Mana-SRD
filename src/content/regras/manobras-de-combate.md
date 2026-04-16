@@ -23,12 +23,12 @@
 
 # Tipos de Manobras
 
-### Empurrão
+### Empurrar
 
 - Ação padrão ou como parte uma investida (no lugar do ataque corpo a corpo)
 - Empurrar oponente para trás sem dano
 - Se bem-sucedido: empurra 1,5m. Para cada 5 acima do DMC, +1,5m
-- Sem o talento Empurrão Aprimorado, provoca ataque de oportunidade
+- Sem o talento [Empurrar Aprimorado](improved-bull-rush.md), provoca ataque de oportunidade
 
 ### Truque Sujo
 
@@ -36,7 +36,8 @@
 - Exemplos: jogar areia nos olhos (cego por 1 rodada), puxar calça (metade velocidade), golpear ponto sensível (enjoado)
 - Condições: cego, atordoado, surdo, emaranhado, abalado ou enjoado por 1 rodada
 - Para cada 5 acima do DMC, +1 rodada
-- Sem o talento Truque Sujo Aprimorado, provoca ataque de oportunidade
+- Oponente pode remover a condição gastando uma ação de movimento
+- Sem o talento [Truque Sujo Aprimorado](improved-dirty-trick.md), provoca ataque de oportunidade
 
 ### Desarmar
 
@@ -89,14 +90,14 @@
 
 ### Quebrar
 
-- Destruir item segurado ou vestido do oponente
+- Ação padrão: Destruir item segurado ou vestido do oponente
 - Causa dano ao item. Se exceder Dureza, subtrai dos PV do item
 - Se o PV do item é menor ou metade, item ganha condição [Quebrado](broken.md)
 - Sem o talento Quebrar Aprimorado, provoca ataque de oportunidade
 
 ### Derrubar
 
-- Tenta Derrubar oponente no lugar de um ataque
+- Tenta Derrubar oponente no lugar de um ataque corpo a corpo
 - Se exceder DMC: alvo está [Caído](prone.md). Se falhar por 10+, você cai
 - Criaturas sem pernas não podem ser derrubadas
 - Sem o talento Derrubar Aprimorado, provoca ataque de oportunidade
