@@ -68,7 +68,9 @@
     "magias/Acid Maw": "approved",
     "regras/ocultacao": "approved",
     "regras/flanqueamento": "approved",
-    "regras/manobras-de-combate": "needs-fix"
+    "regras/manobras-de-combate": "needs-fix",
+    "magias/Fog Cloud": "approved",
+    "magias/Solid Fog": "approved"
   },
-  "lastCategory": "regras"
+  "lastCategory": "magias"
 }
