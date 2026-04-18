@@ -1,4 +1,4 @@
-### Disarm Partner
+### Parceiro de Desarme
 **Tipo do talento**: Combate
 **Pré-requisitos**: BBA +1.
 **Descrição**: Quando seu aliado falha ao desarmar um oponente dentro do seu alcance, você pode tentar desarmar o mesmo inimigo.

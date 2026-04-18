@@ -43,9 +43,3 @@ Talentos should use these patterns:
 - Strict mode enabled (`noUnusedLocals`, `noUnusedParameters`)
 - TypeScript runs as part of `npm run build` before Vite
 - No separate typecheck script — use `npx tsc` for isolated checks
-
-## Dual-Repo Workspace
-
-This directory contains two git repos:
-- `.` (Era-da-Mana-SRD) — main project
-- `review-tool/` — separate project

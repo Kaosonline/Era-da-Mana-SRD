@@ -1,4 +1,4 @@
-### Improved Reposition
+### Reposicionar Aprimorado
 **Tipo do talento**: Combate
 **Pré-requisitos**: Int 13, [Especialização em Combate](combat-expertise.md).
 **Descrição**: Você aprendeu a forçar seus inimigos a se moverem pelo campo de batalha.

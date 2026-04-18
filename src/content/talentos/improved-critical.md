@@ -1,5 +1,5 @@
 ### Improved Critical
-**Tipo do talento**: Combate
+**Tipo do talento**: Crítico
 **Pré-requisitos**: Proficiência com arma, BBA +8.
 **Descrição**: Ataques feitos com a arma escolhida são bastante letais.
 **Benefício**: Ao usar a arma selecionada, seu alcance de ameaça dobra.

@@ -1,5 +1,5 @@
 ### Exhausting Critical
-**Tipo do talento**: Combate
+**Tipo do talento**: Crítico
 **Pré-requisitos**: Foco em Golpes Críticos, Crítico Cansativo, BBA +15.
 **Descrição**: Seus golpes críticos fazem os oponentes ficarem exaustos.
 **Benefício**: Quando você obtém um golpe crítico contra um inimigo, seu alvo fica imediatamente exausto. Este talento não tem efeito em criaturas exaustas.

@@ -37,4 +37,16 @@ __pycache__/
 
 # Misc cache
 *.cache
+
+# Auto-generated
+public/content-index.json
+src/utils/contentIndex.ts
+
+# Logs
+*.log
+
+# Subdirectories
+review-tool/node_modules/
 opencode-terminal.bat
+
+

@@ -2,14 +2,18 @@
 
 ## O Básico
 
-- Você pode tentar manobras: empurrão, desarmar, agarrar, quebrar, derrubar e mais
-- Cada personagem tem BMC (Bônus de Manobra de Combate) = BBA + Modificador de Força + Modificador de tamanho 
+- Você pode tentar manobras: empurrar, desarmar, agarrar, quebrar, derrubar e mais
 - Modificador de Tamanho: Miúdo –8, Minusculo –4, Pequeno –2, Pequeno –1, Médio +0, Grande +1, Enorme +2, Colossal +8
+
+## BMC (Bônus de Manobra de Combate)
+
+- BMC = 1d20 + BBA + Modificador de Força + Modificador de tamanho + bônus diversos
+- Alguns talentos concedem bônus ao BMC para realizar manobras específicas
 
 ## DMC (Defesa de Manobra de Combate)
 
 - DMC = 10 + BBA + Modificador de Força + Modificador de Destreza + Modificador de tamanho + bônus diversos
-- Algumas feats concedem bônus ao DMC contra manobras específicas
+- Alguns talentos concedem bônus ao DMC contra manobras específicas
 
 ## Realizando uma Manobra
 
@@ -44,12 +48,13 @@
 - Substitui ataque corpo a corpo
 - Se bem-sucedido: alvo larga item segurado na mão primária. Se exceder DMC em 10+, larga itens de ambas as mãos
 - Se falhar por 10+, você larga sua arma
-- Sem o talento Desarmar Aprimorado, provoca ataque de oportunidade
+- Sem o talento [Desarmar Aprimorado](improved-disarm.md), provoca ataque de oportunidade
 - Se tentar Desarmar enquanto desarmado: –4 na rolagem
 
 ### Arrastar
 
 - Ação padrão: arrastar oponente em uma linha reta atrás de você
+- Só é possível com oponentes de até uma categoria de tamanho maior que você
 - Ambos se movem 1,5m. Para cada 5 acima do DMC, +1,5m
 - Sem o talento Arrastar Aprimorado, provoca ataque de oportunidade
 
@@ -66,7 +71,7 @@
   - **Imobilizar**: dar condição [Imobilizado](pinned.md) ao oponente
   - **Amarrar**: se alvo já estiver Imobilizado, prende seu oponente com cordas ou similares (DC = 20 + seu BMC)
 
-### Avanço
+### Avançar
 
 - Ação padrão durante movimento ou como parte de carga
 - Passar pelo quadrado do oponente
@@ -78,6 +83,7 @@
 - Ação padrão: mover oponente para diferente localização
 - Se bem-sucedido: move 1,5m. Para cada 5 acima do DMC, +1,5m
 - O alvo deve permanecer ao seu alcance durante o movimento
+- Você não pode reposicionar um inimigo para um espaço intrinsecamente perigoso
 - Sem o talento Reposicionar Aprimorado, provoca ataque de oportunidade
 
 ### Roubar

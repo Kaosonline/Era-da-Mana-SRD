@@ -1,5 +1,5 @@
-### Domínio Crítico
-**Tipo do talento**: Combate
+### Maestria em Críticos
+**Tipo do talento**: Crítico
 **Pré-requisitos**: Foco Crítico, quaisquer dois talentos críticos, lutador de 14º nível.
 **Descrição**: Seus golpes críticos causam dois efeitos adicionais.
 **Benefício**: Quando você obtém um golpe crítico, pode aplicar os efeitos de dois talentos críticos além do dano causado.
