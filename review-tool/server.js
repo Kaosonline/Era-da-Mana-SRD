@@ -223,10 +223,10 @@ app.post('/api/import-progress', (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n========================================`);
   console.log(`  Ferramenta de Revisão de Traduções`);
-  console.log(`  Acesse: http://localhost:${PORT}`);
+  console.log(`  Acesse: http://localhost:${PORT} ou http://<IP_TAILS>:${PORT}`);
   console.log(`  Pressione Ctrl+C para parar`);
   console.log(`========================================\n`);
 });
