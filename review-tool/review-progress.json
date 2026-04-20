@@ -102,7 +102,17 @@
     "talentos/rapid-grappler": "approved",
     "talentos/deadly-grappler": "approved",
     "talentos/brutal-grappler": "approved",
-    "talentos/resisting-grappler": "approved"
+    "talentos/resisting-grappler": "approved",
+    "talentos/improved-trip": "approved",
+    "talentos/greater-trip": "approved",
+    "talentos/tandem-trip": "approved",
+    "talentos/cornugon-trip": "approved",
+    "talentos/ranged-trip": "approved",
+    "talentos/wolf-trip": "approved",
+    "talentos/ace-trip": "approved",
+    "regras/pontos-de-classe": "approved",
+    "habilidades de classe/alquimista": "approved",
+    "habilidades de classe/Alquimista": "approved"
   },
-  "lastCategory": "talentos"
+  "lastCategory": "habilidades de classe"
 }
