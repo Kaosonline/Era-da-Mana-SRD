@@ -1,4 +1,3 @@
-import { execSync } from 'child_process';
 import { Supermemory } from 'supermemory';
 
 const API_KEY = process.env.SUPERMEMORY_API_KEY;
@@ -48,7 +47,7 @@ export async function getUserContext(query: string, tag: string = DEFAULT_TAG) {
 
   const result = await supermemory.profile({
     containerTag: tag,
-    query,
+    q: query,
   });
 
   return result;

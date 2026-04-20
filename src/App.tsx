@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { BrowserRouter, Routes, Route, useParams, useNavigate, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { FavoritesProvider } from './contexts/FavoritesContext';
@@ -25,14 +25,7 @@ function AppContent() {
   const [categories, setCategories] = useState<string[]>([]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [spellFilters, setSpellFilters] = useState<SpellFilters>({});
-  const [availableSpellValues, setAvailableSpellValues] = useState<{
-    schools: string[];
-    castingTimes: string[];
-    durations: string[];
-    levels: number[];
-  }>({ schools: [], castingTimes: [], durations: [], levels: [] });
   const [featFilters, setFeatFilters] = useState<{ type?: string; noPrerequisites?: boolean }>({});
-  const [availableFeatTypes, setAvailableFeatTypes] = useState<string[]>([]);
   const [favoritesOpen, setFavoritesOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -46,25 +39,6 @@ function AppContent() {
         const items = await loadContentIndex();
         setAllItems(items);
         setCategories(getCategories(items));
-        if (items.length > 0) {
-          const magias = items.filter(item => item.category === 'magias');
-          const levels = Array.from(
-            new Set(
-              magias
-                .map(spell => spell.spellLevel)
-                .filter((level): level is number => level !== undefined)
-            )
-          ).sort((a, b) => a - b);
-
-          setAvailableSpellValues({
-            schools: getUniqueSpellValues(magias, 'spellSchool'),
-            castingTimes: getUniqueSpellValues(magias, 'spellCastingTime'),
-            durations: getUniqueSpellValues(magias, 'spellDuration'),
-            levels,
-          });
-
-          setAvailableFeatTypes(getUniqueFeatTypes(items));
-        }
       } catch (err) {
         console.error('Erro ao carregar conteúdo:', err);
         setError(err instanceof Error ? err.message : 'Erro desconhecido');
@@ -84,7 +58,9 @@ function AppContent() {
   };
 
   const updateSpellFilter = (key: keyof SpellFilters, value: string) => {
-    setSpellFilters(prev => ({ ...prev, [key]: value }));
+    // Validação básica para evitar valores inválidos
+    const validatedValue = value.trim();
+    setSpellFilters(prev => ({ ...prev, [key]: validatedValue || undefined }));
   };
 
   const clearAllFilters = () => {
@@ -94,15 +70,52 @@ function AppContent() {
     setSearchQuery('');
   };
 
-  const hasActiveFilters = !!searchQuery || selectedCategories.length > 0 || Object.values(spellFilters).some(v => v) || Object.values(featFilters).some(v => v);
-  const hasMagiasSelected = selectedCategories.includes('magias');
-  const hasTalentosSelected = selectedCategories.includes('talentos');
+  const hasActiveFilters = useMemo(() =>
+    !!searchQuery ||
+    selectedCategories.length > 0 ||
+    Object.values(spellFilters).some(v => v) ||
+    Object.values(featFilters).some(v => v),
+    [searchQuery, selectedCategories, spellFilters, featFilters]
+  );
+
+  const hasMagiasSelected = useMemo(() =>
+    selectedCategories.includes('magias'),
+    [selectedCategories]
+  );
+
+  const hasTalentosSelected = useMemo(() =>
+    selectedCategories.includes('talentos'),
+    [selectedCategories]
+  );
+
+  const magias = useMemo(() =>
+    allItems.filter(item => item.category === 'magias'),
+    [allItems]
+  );
+
+  const availableSpellValues = useMemo(() => ({
+    schools: getUniqueSpellValues(magias, 'spellSchool'),
+    castingTimes: getUniqueSpellValues(magias, 'spellCastingTime'),
+    durations: getUniqueSpellValues(magias, 'spellDuration'),
+    levels: Array.from(
+      new Set(
+        magias
+          .map(spell => spell.spellLevel)
+          .filter((level): level is number => level !== undefined)
+      )
+    ).sort((a, b) => a - b),
+  }), [magias]);
+
+  const availableFeatTypes = useMemo(() =>
+    getUniqueFeatTypes(allItems),
+    [allItems]
+  );
 
   if (loading) {
     return (
-      <div className="app-srd">
+      <div className="app-srd" aria-busy="true" aria-live="polite">
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-          <p>Carregando conteúdo...</p>
+          <p role="status">Carregando conteúdo...</p>
         </div>
       </div>
     );
@@ -110,7 +123,7 @@ function AppContent() {
 
   if (error) {
     return (
-      <div className="app-srd">
+      <div className="app-srd" role="alert" aria-live="assertive">
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', color: 'red' }}>
           <p>Erro: {error}</p>
         </div>
@@ -138,7 +151,10 @@ function AppContent() {
         availableSpellValues={availableSpellValues}
         hasMagiasSelected={hasMagiasSelected}
         featFilters={featFilters}
-        onFeatFilterChange={(key, value) => setFeatFilters(prev => ({ ...prev, [key]: typeof value === 'boolean' ? value : value || undefined }))}
+        onFeatFilterChange={(key, value) => {
+          const validatedValue = typeof value === 'boolean' ? value : (value?.trim() || undefined);
+          setFeatFilters(prev => ({ ...prev, [key]: validatedValue }));
+        }}
         availableFeatTypes={availableFeatTypes}
         hasTalentosSelected={hasTalentosSelected}
         isOpen={sidebarOpen}

@@ -1,12 +1,14 @@
-# Era da Mana RPG – Compêndio de Regras
+# Era da Mana RPG – Compêndio de Regras e Ferramenta de Revisão
 
-Um site de referência de regras para **Era da Mana RPG**, inspirado no estilo do d20pfsrd e Archives of Nethys. Focado em ser **fácil de instalar, rodar e modificar** mesmo com pouco conhecimento de programação.
+Um sistema completo para gerenciamento e revisão de regras para **Era da Mana RPG**, inspirado no estilo do d20pfsrd e Archives of Nethys. Inclui um site de referência de regras e uma ferramenta de revisão de traduções.
 
 ## 🎯 Propósito
 
-Fornecer uma **wiki online** das regras de Era da Mana RPG, organizada por categorias (raças, magias, talentos, condições, etc.), com **busca avançada**, **filtros para magias** e **carregamento otimizado** para milhares de páginas.
+Fornecer uma **wiki online** das regras de Era da Mana RPG, organizada por categorias (raças, magias, talentos, condições, etc.), com **busca avançada**, **filtros para magias** e **carregamento otimizado** para milhares de páginas. Além disso, inclui uma ferramenta de revisão para garantir a qualidade das traduções.
 
 ## ✨ Funcionalidades
+
+### Site de Regras
 
 - **Navegação por categorias**: Menu lateral virtualizado com todas as seções
 - **Busca em tempo real**: Encontre regras por título ou conteúdo
@@ -22,6 +24,22 @@ Fornecer uma **wiki online** das regras de Era da Mana RPG, organizada por categ
 - **Carregamento otimizado**: Índice pré-gerado + lazy loading de conteúdo + sidebar virtualizada
 - **Sem banco de dados**: Todo conteúdo em arquivos markdown estáticos
 
+### Ferramenta de Revisão de Traduções
+
+- **Edição inline**: Edita o texto diretamente na tela e salva no arquivo `.md` original
+- **Marcação de status**: Aprova, marca para corrigir ou pula cada item
+- **Progresso salvo**: Continua automaticamente de onde parou (localStorage)
+- **Busca**: Filtra arquivos por nome
+- **Filtro por status**: Veja apenas pendentes, aprovados, precisando correção ou pulados
+- **Barra de progresso**: Acompanha quantos itens já foram revisados
+- **Atalhos de teclado**:
+  - `Ctrl + S`: Salvar alterações
+  - `Ctrl + Enter`: Aprovar tradução
+  - `Ctrl + 1`: Marcar como "Precisa corrigir"
+  - `Ctrl + 2`: Pular
+  - `Ctrl + ←`: Arquivo anterior
+  - `Ctrl + →`: Próximo arquivo
+
 ## 🚀 Como Usar
 
 ### Requisitos
@@ -30,6 +48,8 @@ Fornecer uma **wiki online** das regras de Era da Mana RPG, organizada por categ
 - Navegador moderno (Chrome, Firefox, Edge)
 
 ### Instalação e Execução
+
+#### Site de Regras
 
 ```bash
 # Instale as dependências (uma vez só)
@@ -41,20 +61,35 @@ npm run dev
 
 Abra `http://localhost:5173/` no navegador.
 
+#### Ferramenta de Revisão
+
+```bash
+# Navegue até a pasta da ferramenta
+cd review-tool
+
+# Instale as dependências (uma vez só)
+npm install
+
+# Inicie o servidor
+npm start
+```
+
+Abra `http://localhost:3001/` no navegador.
+
 ### Comandos Disponíveis
 
 | Comando | Descrição |
 |---------|-----------|
-| `npm run dev` | Servidor de desenvolvimento com hot reload |
-| `npm run build` | Gera build otimizada para produção |
-| `npm run preview` | Pré-visualiza a build de produção |
-| `npm run generate-index` | Regenera o índice de conteúdo manualmente |
+| `npm run dev` | Servidor de desenvolvimento com hot reload (site de regras) |
+| `npm run build` | Gera build otimizada para produção (site de regras) |
+| `npm run preview` | Pré-visualiza a build de produção (site de regras) |
+| `npm run generate-index` | Regenera o índice de conteúdo manualmente (site de regras) |
 
 ## 📁 Estrutura do Projeto
 
 ```
 src/
-├── components/           # Componentes React
+├── components/           # Componentes React (site de regras)
 │   ├── Header/          # Cabeçalho com logo e tema
 │   ├── Sidebar/         # Menu lateral virtualizado
 │   ├── ContentView/     # Exibição do conteúdo
@@ -74,6 +109,12 @@ src/
 ├── types/               # Tipos TypeScript
 ├── styles/              # CSS global e variáveis de tema
 └── App.tsx              # Componente principal
+
+review-tool/
+├── server.js           # Servidor Express (lê/escreve arquivos .md)
+├── package.json
+└── public/
+    └── index.html      # Interface web da ferramenta de revisão
 ```
 
 ## ⚡ Otimizações de Performance
@@ -190,8 +231,31 @@ python -m http.server --directory dist 8000
 - **React Router** – Navegação SPA
 - **CSS Variables** – Temas claro/escuro
 - **Markdown** – Formato de conteúdo
+- **Express** – Servidor da ferramenta de revisão
+
+## 📝 Fluxo de Trabalho de Revisão
+
+1. **Revisar traduções**:
+   - Inicie a ferramenta de revisão (`cd review-tool && npm start`)
+   - Selecione a categoria (ex: `magias` ou `talentos`)
+   - Leia a tradução no editor
+   - Se estiver boa, clique **✅ Aprovar** (`Ctrl+Enter`)
+   - Se precisar de correção, edite o texto e clique **💾 Salvar** (`Ctrl+S`), depois marque como **✅ Aprovar**
+   - Se não tiver tempo agora, clique **⏭️ Pular** (`Ctrl+2`)
+   - Use o filtro de status para revisar depois apenas os pulados ou marcados como "Precisa corrigir"
+
+2. **Visualizar no site**:
+   - Após aprovar as traduções, inicie o site de regras (`npm run dev`)
+   - Verifique como as traduções aparecem no contexto completo
+   - Teste os filtros e busca
+
+3. **Iterar**:
+   - Volte para a ferramenta de revisão para ajustes finais
+   - Use o site para testar a experiência do usuário
 
 ## 🐛 Problemas Comuns
+
+### Site de Regras
 
 | Problema | Solução |
 |----------|---------|
@@ -201,18 +265,61 @@ python -m http.server --directory dist 8000
 | Filtros de magia não aparecem | Selecione a categoria "magias" e verifique o formato dos metadados |
 | Links não funcionam | Use caminhos relativos `.md` (ex: `capacidade-de-carga.md`) |
 
+### Ferramenta de Revisão
+
+| Problema | Solução |
+|----------|---------|
+| "Nenhuma categoria encontrada" ou tela em branco | Verifique se o servidor está rodando (porta 3001) e se `src/content/` existe |
+| "Erro ao carregar arquivos" | Verifique se os arquivos `.md` existem em `src/content/magias/` e `src/content/talentos/` |
+| A ferramenta não salva as alterações | Verifique permissões de escrita na pasta `src/content/` |
+| A lista de arquivos não aparece | Tente selecionar manualmente uma categoria no dropdown superior |
+
 ## 📄 Licença
 
 - Código-fonte: **MIT**
 - Conteúdo de regras: **Open Game License (OGL)** ou licença específica do sistema
+- Ferramenta de revisão: **MIT** (pode ser removida sem afetar o projeto principal)
 
 ## 🤝 Contribuindo
 
-1. Adicione conteúdo nos arquivos `.md`
-2. Mantenha a estrutura de pastas
-3. Para magias, use o formato com metadados
-4. Teste localmente antes de enviar
+1. **Adicionar conteúdo**:
+   - Adicione arquivos `.md` em `src/content/`
+   - Mantenha a estrutura de pastas
+   - Para magias, use o formato com metadados
+
+2. **Revisar traduções**:
+   - Use a ferramenta de revisão para garantir qualidade
+   - Siga o fluxo de trabalho sugerido
+   - Teste no site antes de finalizar
+
+3. **Reportar problemas**:
+   - Descreva o problema com detalhes
+   - Inclua screenshots se possível
+   - Especifique se é no site de regras ou ferramenta de revisão
+
+4. **Enviar melhorias**:
+   - Para o site: modifique os arquivos em `src/`
+   - Para a ferramenta: modifique os arquivos em `review-tool/`
+   - Teste localmente antes de enviar
+
+## 📌 Notas Importantes
+
+1. **Arquivos `.md`**: São editados **diretamente** em `src/content/` do projeto principal
+2. **Progresso da revisão**: Salvo no navegador (localStorage). Limpar o cache apaga o progresso
+3. **Ferramenta de revisão**: Pasta `review-tool/` está no `.gitignore` e pode ser excluída sem afetar o projeto
+4. **Conteúdo**: Organizado por pastas que definem as categorias no menu
+5. **Links internos**: Usam caminhos relativos `.md` que são resolvidos automaticamente
+
+## 🎯 Roadmap Futuro
+
+- [ ] Integração da ferramenta de revisão no site principal
+- [ ] Exportação/importação de progresso de revisão
+- [ ] Suporte a múltiplos revisores com sincronização
+- [ ] Estatísticas avançadas de cobertura de tradução
+- [ ] Sistema de comentários e anotações nas traduções
 
 ---
 
 **Feito com ♥ para a comunidade de RPG**
+
+*Projeto mantido por [Kaosonline](https://github.com/Kaosonline) e colaboradores*
