@@ -112,7 +112,8 @@
     "talentos/ace-trip": "approved",
     "regras/pontos-de-classe": "approved",
     "habilidades de classe/alquimista": "approved",
-    "habilidades de classe/Alquimista": "approved"
+    "habilidades de classe/Alquimista": "approved",
+    "habilidades de classe/Animus": "approved"
   },
-  "lastCategory": "habilidades de classe"
+  "lastCategory": "magias"
 }

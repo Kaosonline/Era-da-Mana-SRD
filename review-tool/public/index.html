@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Revisão de Traduções - Era da Mana SRD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -325,6 +328,17 @@
       box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
     }
 
+    .btn-preview {
+      background: #10b981;
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-preview:hover:not(:disabled) {
+      background: #34d399;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    }
+
     .status-actions {
       display: flex;
       gap: 8px;
@@ -355,6 +369,289 @@
     .editor-textarea:focus {
       background: #f8fafc;
       box-shadow: inset 0 0 0 2px #06b6d4;
+    }
+
+    .preview-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .preview-header {
+      padding: 8px 16px;
+      background: var(--color-surface-hover);
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .preview-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .preview-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .toggle-preview-btn {
+      padding: 4px 12px;
+      background: var(--color-primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .toggle-preview-btn:hover {
+      background: var(--color-primary-hover);
+    }
+
+    .toggle-theme-btn {
+      padding: 4px 12px;
+      background: var(--color-secondary);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .toggle-theme-btn:hover {
+      background: var(--color-secondary-hover);
+    }
+
+    .preview-panel {
+      flex: 1;
+      width: 100%;
+      padding: 16px;
+      background: var(--color-surface);
+      color: var(--color-text);
+      overflow-y: auto;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .preview-panel[data-theme="dark"] {
+      background: var(--color-surface);
+      color: var(--color-text);
+    }
+
+    .preview-panel h1, .preview-panel h2, .preview-panel h3, .preview-panel h4, .preview-panel h5, .preview-panel h6 {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+    }
+
+    .preview-panel h1 { font-size: 2.5rem; color: var(--color-text); }
+    .preview-panel h2 { font-size: 2rem; color: var(--color-text); }
+    .preview-panel h3 { font-size: 1.5rem; color: var(--color-secondary); }
+    .preview-panel h4 { font-size: 1.25rem; color: var(--color-text); }
+
+    .preview-panel p {
+      margin-bottom: 0.35rem;
+    }
+
+    .preview-panel p:first-child {
+      margin-top: 0;
+    }
+
+    /* Estilos específicos para elementos do sistema de RPG */
+    .preview-panel strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    .preview-panel em {
+      color: var(--color-text-secondary);
+      font-style: italic;
+    }
+
+    /* Estilos para os campos de magia (Escola, Nível, Tempo de Conjuração, etc.) */
+    .preview-panel p strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    /* Estilos para as seções CONJURAÇÃO, EFEITO, DESCRIÇÃO */
+    .preview-panel h3.section-header {
+      font-size: 1rem;
+      color: var(--color-secondary);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin: 1em 0 0.5em 0;
+      padding-bottom: 0.25em;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .preview-panel h1 { font-size: 2.5rem; }
+    .preview-panel h2 { font-size: 2rem; }
+    .preview-panel h3 { font-size: 1.5rem; }
+    .preview-panel h4 { font-size: 1.25rem; }
+
+    .preview-panel p {
+      margin-bottom: 1rem;
+    }
+
+    .preview-panel table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+    }
+
+    .preview-panel th, .preview-panel td {
+      border: 1px solid var(--color-border);
+      padding: 8px;
+      text-align: left;
+    }
+
+    .preview-panel th {
+      background: var(--color-surface-hover);
+      font-weight: 600;
+    }
+
+    .preview-panel tr:nth-child(even) {
+      background: var(--color-surface-hover);
+    }
+
+    .preview-panel code {
+      background: var(--color-surface-hover);
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    .preview-panel pre {
+      background: var(--color-background);
+      color: var(--color-text);
+      padding: 12px;
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+    }
+
+    .preview-panel pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .preview-panel blockquote {
+      border-left: 3px solid var(--color-primary);
+      padding-left: 12px;
+      margin-left: 0;
+      color: var(--color-text-secondary);
+      font-style: italic;
+    }
+
+    .preview-panel ul, .preview-panel ol {
+      padding-left: 24px;
+      margin: 1em 0;
+    }
+
+    .preview-panel li {
+      margin: 0.5em 0;
+    }
+
+    .preview-panel a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .preview-panel a:hover {
+      color: var(--color-primary-hover);
+      text-decoration: underline;
+    }
+
+    .preview-panel hr {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: 2em 0;
+    }
+
+    .preview-panel .math-inline {
+      font-family: 'Times New Roman', serif;
+      font-style: italic;
+    }
+
+    .preview-panel .math-display {
+      font-family: 'Times New Roman', serif;
+      font-style: italic;
+      text-align: center;
+      margin: 1em 0;
+      padding: 0.5em;
+      background: var(--color-surface-hover);
+      border-radius: var(--radius-md);
+    }
+
+    /* Estilos específicos para elementos do sistema de RPG */
+    .preview-panel strong {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .preview-panel em {
+      color: var(--color-text-secondary);
+      font-style: italic;
+    }
+
+    /* Estilos para os campos de magia (Escola, Nível, Tempo de Conjuração, etc.) */
+    .preview-panel p strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    /* Estilos para as seções da magia */
+    .preview-panel p {
+      margin-bottom: 0.35rem;
+    }
+
+    .preview-panel p:first-child {
+      margin-top: 0;
+    }
+
+    /* Estilos para as classes de escola de magia */
+    .preview-panel .escola-ilusao { color: var(--color-secondary); }
+    .preview-panel .escola-evocacao { color: var(--color-danger); }
+    .preview-panel .escola-abjuracao { color: var(--color-primary); }
+    .preview-panel .escola-adivinhacao { color: var(--color-accent); }
+    .preview-panel .escola-conjuracao { color: var(--color-success); }
+    .preview-panel .escola-encantamento { color: #ec4899; }
+    .preview-panel .escola-necromancia { color: var(--color-text); }
+    .preview-panel .escola-transmutacao { color: #6366f1; }
+    .preview-panel .escola-universal { color: #fbbf24; }
+
+    /* Estilos para os níveis de magia */
+    .preview-panel .nivel-arcano { color: var(--color-primary); }
+    .preview-panel .nivel-divino { color: var(--color-secondary); }
+    .preview-panel .nivel-ocultista { color: #ec4899; }
+
+    /* Estilos para os campos de tempo, duração, alcance, etc. */
+    .preview-panel .tempo-de-conjuracao { color: var(--color-text); }
+    .preview-panel .duracao { color: var(--color-text); }
+    .preview-panel .alcance { color: var(--color-text); }
+    .preview-panel .alvos { color: var(--color-text); }
+    .preview-panel .teste-de-resistencia { color: var(--color-text); }
+    .preview-panel .resistencia-a-magia { color: var(--color-text); }
+
+    /* Estilos para as seções CONJURAÇÃO, EFEITO, DESCRIÇÃO */
+    .preview-panel h3 {
+      font-size: 1rem;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin: 1em 0 0.5em 0;
+      padding-bottom: 0.25em;
+      border-bottom: 1px solid var(--color-border);
     }
 
     .welcome-screen {
@@ -614,6 +911,8 @@
       font-size: 0.85rem;
     }
   </style>
+  <link rel="stylesheet" href="/variables.css">
+  <link rel="stylesheet" href="/global.css">
 </head>
 <body>
     <div class="header">
@@ -684,24 +983,35 @@
             <span class="current-status-badge pending" id="currentStatusBadge">Pendente</span>
             <span class="has-changes-indicator" id="hasChangesIndicator" style="display: none;">✏️ Alterações não salvas</span>
           </div>
-          <div style="display: flex; gap: 8px; align-items: center;">
-            <div class="editor-nav">
-              <button class="btn btn-nav" id="btnPrev" title="Anterior">← Anterior</button>
-              <button class="btn btn-nav" id="btnNext" title="Próximo">Próximo →</button>
-              <button class="btn btn-link" id="btnTable" title="Criar Tabela">📊 Tabela</button>
-            </div>
-            <div class="status-actions">
-              <button class="btn btn-link" id="btnLink" title="Criar Link (Ctrl+K)">🔗 Link</button>
-              <button class="btn btn-save" id="btnSave" title="Salvar (Ctrl+S)">💾 Salvar</button>
-              <button class="btn btn-approve" id="btnApprove" title="Aprovar">✅ Aprovar</button>
-              <button class="btn btn-needs-fix" id="btnNeedsFix" title="Precisa corrigir">❌ Precisa corrigir</button>
-              <button class="btn btn-delete" id="btnDelete" title="Deletar">🗑️ Deletar</button>
-            </div>
+           <div style="display: flex; gap: 8px; align-items: center;">
+      <div class="editor-nav">
+        <button class="btn btn-nav" id="btnPrev" title="Anterior">← Anterior</button>
+        <button class="btn btn-nav" id="btnNext" title="Próximo">Próximo →</button>
+        <button class="btn btn-table" id="btnTable" title="Criar Tabela">📊 Tabela</button>
+        <button class="btn btn-preview" id="btnPreview" title="Alternar Preview (Ctrl+P)">👁️ Preview</button>
+      </div>
+      <div class="status-actions">
+        <button class="btn btn-link" id="btnLink" title="Criar Link (Ctrl+K)">🔗 Link</button>
+        <button class="btn btn-save" id="btnSave" title="Salvar (Ctrl+S)">💾 Salvar</button>
+        <button class="btn btn-approve" id="btnApprove" title="Aprovar">✅ Aprovar</button>
+        <button class="btn btn-needs-fix" id="btnNeedsFix" title="Precisa corrigir">❌ Precisa corrigir</button>
+        <button class="btn btn-delete" id="btnDelete" title="Deletar">🗑️ Deletar</button>
+      </div>
           </div>
         </div>
-        <div class="editor-content">
-          <textarea class="editor-textarea" id="editorTextarea" placeholder="Carregando conteúdo..."></textarea>
+    <div class="editor-content">
+      <textarea class="editor-textarea" id="editorTextarea" placeholder="Carregando conteúdo..."></textarea>
+      <div class="preview-container" id="previewContainer" style="display: none;">
+        <div class="preview-header">
+          <span class="preview-title">Visualização do Markdown</span>
+          <div class="preview-actions">
+            <button class="toggle-theme-btn" id="toggleThemeBtn">🌓 Tema</button>
+            <button class="toggle-preview-btn" id="togglePreviewBtn">Fechar Preview</button>
+          </div>
         </div>
+        <div class="preview-panel" id="previewPanel"></div>
+      </div>
+    </div>
       </div>
     </div>
   </div>
@@ -722,7 +1032,8 @@
     </div>
   </div>
 
-  <script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
     // Estado da aplicação
     const state = {
       categories: [],
@@ -738,7 +1049,9 @@
       statusFilter: 'all',
       loading: false,
       allFiles: [],
-      linkSelection: null // { text, start, end }
+      linkSelection: null, // { text, start, end }
+      showPreview: false, // Novo estado para controlar a visualização do preview
+      currentTheme: 'light' // Novo estado para controlar o tema (light/dark)
     };
 
     // Elementos DOM
@@ -770,14 +1083,19 @@
       statPending: document.getElementById('statPending'),
       globalStats: document.getElementById('globalStats'),
       btnLink: document.getElementById('btnLink'),
-      btnTable: document.getElementById('btnTable'),
-      linkModalOverlay: document.getElementById('linkModalOverlay'),
-      linkSelectedPreview: document.getElementById('linkSelectedPreview'),
-      linkSearchInput: document.getElementById('linkSearchInput'),
-      suggestionsLabel: document.getElementById('suggestionsLabel'),
-      suggestionsList: document.getElementById('suggestionsList'),
-      btnLinkCancel: document.getElementById('btnLinkCancel'),
-      btnLinkInsert: document.getElementById('btnLinkInsert')
+    btnTable: document.getElementById('btnTable'),
+    btnPreview: document.getElementById('btnPreview'),
+    previewContainer: document.getElementById('previewContainer'),
+    previewPanel: document.getElementById('previewPanel'),
+    togglePreviewBtn: document.getElementById('togglePreviewBtn'),
+    toggleThemeBtn: document.getElementById('toggleThemeBtn'),
+    linkModalOverlay: document.getElementById('linkModalOverlay'),
+    linkSelectedPreview: document.getElementById('linkSelectedPreview'),
+    linkSearchInput: document.getElementById('linkSearchInput'),
+    suggestionsLabel: document.getElementById('suggestionsLabel'),
+    suggestionsList: document.getElementById('suggestionsList'),
+    btnLinkCancel: document.getElementById('btnLinkCancel'),
+    btnLinkInsert: document.getElementById('btnLinkInsert')
     };
 
     // Carregar progresso do arquivo JSON e localStorage
@@ -1489,6 +1807,39 @@
       showToast('Link inserido!', 'success');
     }
 
+    // Alternar visualização do preview
+    function togglePreview() {
+      state.showPreview = !state.showPreview;
+      els.previewContainer.style.display = state.showPreview ? 'flex' : 'none';
+      els.togglePreviewBtn.textContent = state.showPreview ? 'Fechar Preview' : 'Abrir Preview';
+
+      if (state.showPreview) {
+        // Inicializar tema
+        els.previewPanel.setAttribute('data-theme', state.currentTheme);
+        els.toggleThemeBtn.textContent = state.currentTheme === 'dark' ? '☀️ Claro' : '🌙 Escuro';
+        updatePreview();
+      }
+    }
+
+    // Alternar tema do preview
+    function toggleTheme() {
+      state.currentTheme = state.currentTheme === 'light' ? 'dark' : 'light';
+      els.previewPanel.setAttribute('data-theme', state.currentTheme);
+      updatePreview();
+      
+      const themeLabel = state.currentTheme === 'dark' ? '☀️ Claro' : '🌙 Escuro';
+      els.toggleThemeBtn.textContent = themeLabel;
+      
+      showToast(`Tema alterado para ${state.currentTheme === 'dark' ? 'escuro' : 'claro'}`, 'info');
+    }
+
+    // Atualizar preview do Markdown
+    function updatePreview() {
+      const content = els.editorTextarea.value;
+      els.previewPanel.innerHTML = marked.parse(content);
+      els.previewPanel.setAttribute('data-theme', state.currentTheme);
+    }
+
     // Converter texto selecionado para tabela markdown
     function convertToTable() {
       const ta = els.editorTextarea;
@@ -1562,6 +1913,9 @@
     els.editorTextarea.addEventListener('input', () => {
       state.hasChanges = els.editorTextarea.value !== state.currentContent;
       els.hasChangesIndicator.style.display = state.hasChanges ? 'inline' : 'none';
+      if (state.showPreview) {
+        updatePreview();
+      }
     });
 
     els.btnSave.addEventListener('click', saveContent);
@@ -1572,6 +1926,9 @@
     els.btnNext.addEventListener('click', goToNext);
     els.btnLink.addEventListener('click', openLinkModal);
     els.btnTable.addEventListener('click', convertToTable);
+    els.btnPreview.addEventListener('click', togglePreview);
+    els.togglePreviewBtn.addEventListener('click', togglePreview);
+    els.toggleThemeBtn.addEventListener('click', toggleTheme);
     els.btnExport.addEventListener('click', exportProgress);
     els.btnImport.addEventListener('click', importProgress);
     els.btnLinkCancel.addEventListener('click', closeLinkModal);
@@ -1633,10 +1990,22 @@
         convertToTable();
       }
 
+      // Ctrl+P para alternar preview
+      if (e.ctrlKey && e.key === 'p') {
+        e.preventDefault();
+        togglePreview();
+      }
+
       // Escape para fechar modal de link
       if (e.key === 'Escape' && els.linkModalOverlay.style.display === 'flex') {
         e.preventDefault();
         closeLinkModal();
+      }
+
+      // Escape para fechar preview
+      if (e.key === 'Escape' && state.showPreview) {
+        e.preventDefault();
+        togglePreview();
       }
 
       // Enter para inserir link quando modal aberto

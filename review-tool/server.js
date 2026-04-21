@@ -3,13 +3,15 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 3001;
+const PORT = 3002;
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const CONTENT_DIR = path.join(__dirname, '..', 'src', 'content');
 const PROGRESS_FILE = path.join(__dirname, 'review-progress.json');
+const GLOBAL_CSS_PATH = path.join(__dirname, '..', 'src', 'styles', 'global.css');
+const VARIABLES_CSS_PATH = path.join(__dirname, '..', 'src', 'styles', 'variables.css');
 
 // Rota: listar todos os arquivos de uma categoria
 app.get('/api/list/:category', (req, res) => {
@@ -198,6 +200,33 @@ app.get('/api/search-all-full', (req, res) => {
   }
 });
 
+// Rota: servir CSS do projeto principal
+app.get('/global.css', (req, res) => {
+  try {
+    if (fs.existsSync(GLOBAL_CSS_PATH)) {
+      const css = fs.readFileSync(GLOBAL_CSS_PATH, 'utf-8');
+      res.type('text/css').send(css);
+    } else {
+      res.status(404).send('CSS não encontrado');
+    }
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/variables.css', (req, res) => {
+  try {
+    if (fs.existsSync(VARIABLES_CSS_PATH)) {
+      const css = fs.readFileSync(VARIABLES_CSS_PATH, 'utf-8');
+      res.type('text/css').send(css);
+    } else {
+      res.status(404).send('CSS não encontrado');
+    }
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Rota: exportar progresso (aprovações)
 app.get('/api/export-progress', (req, res) => {
   try {
@@ -226,7 +255,7 @@ app.post('/api/import-progress', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n========================================`);
   console.log(`  Ferramenta de Revisão de Traduções`);
-  console.log(`  Acesse: http://localhost:${PORT} ou http://<IP_TAILS>:${PORT}`);
+  console.log(`  Acesse: http://localhost:${PORT}`);
   console.log(`  Pressione Ctrl+C para parar`);
   console.log(`========================================\n`);
 });

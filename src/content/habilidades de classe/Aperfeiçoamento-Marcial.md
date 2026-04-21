@@ -1,7 +1,5 @@
 # Aperfeiçoamento Marcial (Ex)
 
-Custo da Habilidade: 30+30 por nível
-
 Ao adquirir esta habilidade, o personagem aprimora sua progressão de Bônus Base de Ataque (BBA), substituindo sua progressão atual por uma progressão superior. A progressão desta habilidade ocorre em estágios e cada estágio deve ser adquirido separadamente.
 
 O BBA resultante substitui completamente o BBA anterior do personagem.
@@ -50,3 +48,5 @@ Cada estágio de Aperfeiçoamento Marcial custa 30 Pontos de Classe.
 | 18 | 13 | 9 |
 | 19 | 14 | 9 |
 | 20 | 15 | 10 |
+
+## Custo: 30+30 por nível
