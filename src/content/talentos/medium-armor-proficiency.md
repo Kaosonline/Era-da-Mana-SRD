@@ -1,7 +1,6 @@
-### Proficiência em Armadura Média
+### Proficiência com Armaduras Médias
 **Tipo do talento**: Combate
-**Pré-requisitos**: Proficiência em Armadura Leve.
+**Pré-requisitos**: [Proficiência com Armaduras Leves](light-armor-proficiency.md).
 **Descrição**: Você é habilidoso em usar armaduras médias.
-**Benefício**: Ver Proficiência em Armadura Leve.
-**Especial**: Bárbaros, clérigos, druidas, guerreiros, paladinos e rangers possuem automaticamente Proficiência em Armadura Média como um talento bônus. Eles não precisam escolhê-lo.
-**Normal**: Ver Proficiência em Armadura Leve.
+**Benefício**: Ver Proficiência com Armaduras Leves.
+**Normal**: Ver Proficiência com Armaduras Leves.

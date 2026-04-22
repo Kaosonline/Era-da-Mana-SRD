@@ -15,7 +15,7 @@ Você ganha 6 pontos de classe por nível.
 
 ### Bônus Base de Ataque (BBA)
 
-Você tem um BBA médio. A cada nível de especialista, você adiciona +0,75 no seu BBA. 
+Você tem um BBA médio. A cada nível de especialista, você adiciona +0,75 no seu BBA (sempre arredondar os decimais para baixo em cálculos). 
 
 ### Perícias
 

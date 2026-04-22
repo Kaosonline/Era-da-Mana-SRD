@@ -114,7 +114,17 @@
     "habilidades de classe/alquimista": "approved",
     "habilidades de classe/Alquimista": "approved",
     "habilidades de classe/Animus": "approved",
-    "talentos/Cleave": "approved"
+    "talentos/Cleave": "approved",
+    "talentos/all-consuming-swing": "approved",
+    "talentos/awesome-blow": "approved",
+    "talentos/awesome-charge": "approved",
+    "talentos/bloody-assault": "approved",
+    "classes/especialista": "approved",
+    "classes/conjurador": "approved",
+    "classes/combatente": "approved",
+    "talentos/light-armor-proficiency": "approved",
+    "talentos/medium-armor-proficiency": "approved",
+    "talentos/heavy-armor-proficiency": "approved"
   },
   "lastCategory": "talentos"
 }

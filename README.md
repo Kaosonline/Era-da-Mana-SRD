@@ -28,17 +28,31 @@ Fornecer uma **wiki online** das regras de Era da Mana RPG, organizada por categ
 
 - **Edição inline**: Edita o texto diretamente na tela e salva no arquivo `.md` original
 - **Marcação de status**: Aprova, marca para corrigir ou pula cada item
-- **Progresso salvo**: Continua automaticamente de onde parou (localStorage)
-- **Busca**: Filtra arquivos por nome
+- **Progresso unificado**: Salvo no servidor (`review-progress.json`)
+- **Busca avançada**: Filtra por nome com suporte a frases exatas (`"termo"`) e exclusões (`-termo`)
 - **Filtro por status**: Veja apenas pendentes, aprovados, precisando correção ou pulados
 - **Barra de progresso**: Acompanha quantos itens já foram revisados
-- **Atalhos de teclado**:
+- **Preview em tempo real**: Visualização do markdown formatado com zoom (50%-200%)
+- **Scroll sincronizado**: Opcionalmente sincroniza scroll entre editor e preview
+- **Links internos**: Cria links markdown automaticamente com busca inteligente
+- **Conversor de tabelas**: Transforma texto selecionado em tabelas markdown
+- **Tema claro/escuro**: Preview com temas adaptáveis
+- **Acessibilidade completa**: Suporte a leitores de tela, navegação por teclado e alto contraste
+- **Atalhos de teclado** (todos com uma mão):
   - `Ctrl + S`: Salvar alterações
   - `Ctrl + Enter`: Aprovar tradução
   - `Ctrl + 1`: Marcar como "Precisa corrigir"
   - `Ctrl + 2`: Pular
   - `Ctrl + ←`: Arquivo anterior
   - `Ctrl + →`: Próximo arquivo
+  - `Alt + 1`: Criar link interno ✨
+  - `Ctrl + T`: Converter seleção em tabela
+  - `Ctrl + P`: Alternar preview
+  - `Ctrl + H`: Mostrar ajuda de atalhos
+  - `↑ / ↓`: Navegar na lista de arquivos
+  - `Home / End`: Primeiro/último arquivo
+  - `Ctrl + ↑ / ↓`: Zoom no preview
+  - `Esc`: Fechar modal/preview
 
 ## 🚀 Como Usar
 
@@ -237,12 +251,16 @@ python -m http.server --directory dist 8000
 
 1. **Revisar traduções**:
    - Inicie a ferramenta de revisão (`cd review-tool && npm start`)
+   - Acesse `http://localhost:3001` no navegador
    - Selecione a categoria (ex: `magias` ou `talentos`)
-   - Leia a tradução no editor
+   - Leia a tradução no editor ou use o preview (`Ctrl+P`)
    - Se estiver boa, clique **✅ Aprovar** (`Ctrl+Enter`)
    - Se precisar de correção, edite o texto e clique **💾 Salvar** (`Ctrl+S`), depois marque como **✅ Aprovar**
+   - Para criar links internos, selecione o texto e use **🔗 Link** (`Alt+1`)
+   - Para converter texto em tabela, selecione e use **📊 Tabela** (`Ctrl+T`)
    - Se não tiver tempo agora, clique **⏭️ Pular** (`Ctrl+2`)
    - Use o filtro de status para revisar depois apenas os pulados ou marcados como "Precisa corrigir"
+   - Use a navegação por teclado (`↑/↓`, `Home/End`) para agilizar
 
 2. **Visualizar no site**:
    - Após aprovar as traduções, inicie o site de regras (`npm run dev`)
@@ -252,6 +270,10 @@ python -m http.server --directory dist 8000
 3. **Iterar**:
    - Volte para a ferramenta de revisão para ajustes finais
    - Use o site para testar a experiência do usuário
+
+4. **Exportar/Importar progresso**:
+   - Use os botões **📤 Exportar** e **📥 Importar** para backup ou transferência entre máquinas
+   - O progresso também é salvo automaticamente em `review-tool/review-progress.json`
 
 ## 🐛 Problemas Comuns
 
@@ -273,6 +295,11 @@ python -m http.server --directory dist 8000
 | "Erro ao carregar arquivos" | Verifique se os arquivos `.md` existem em `src/content/magias/` e `src/content/talentos/` |
 | A ferramenta não salva as alterações | Verifique permissões de escrita na pasta `src/content/` |
 | A lista de arquivos não aparece | Tente selecionar manualmente uma categoria no dropdown superior |
+| Preview não abre | Pressione `Ctrl+P` ou clique em "👁️ Preview" |
+| Zoom não funciona | Verifique se o preview está aberto; use slider ou `Ctrl+↑/↓` |
+| Scroll não sincroniza | Clique no botão "🔗 Scroll" para ativar/desativar |
+| `Alt+1` não funciona | Verifique se o foco está no editor; alguns browsers capturam o atalho |
+| Progresso não persiste | Verifique se `review-tool/review-progress.json` está sendo atualizado |
 
 ## 📄 Licença
 
@@ -305,18 +332,20 @@ python -m http.server --directory dist 8000
 ## 📌 Notas Importantes
 
 1. **Arquivos `.md`**: São editados **diretamente** em `src/content/` do projeto principal
-2. **Progresso da revisão**: Salvo no navegador (localStorage). Limpar o cache apaga o progresso
-3. **Ferramenta de revisão**: Pasta `review-tool/` está no `.gitignore` e pode ser excluída sem afetar o projeto
+2. **Progresso da revisão**: Salvo em `review-tool/review-progress.json` no servidor. O progresso persiste entre sessões e pode ser exportado/importado
+3. **Ferramenta de revisão**: Pasta `review-tool/` está no `.gitignore` e pode ser excluída sem afetar o projeto principal
 4. **Conteúdo**: Organizado por pastas que definem as categorias no menu
 5. **Links internos**: Usam caminhos relativos `.md` que são resolvidos automaticamente
+6. **Acessibilidade**: A ferramenta de revisão suporta leitores de tela, navegação por teclado completa e alto contraste
 
 ## 🎯 Roadmap Futuro
 
 - [ ] Integração da ferramenta de revisão no site principal
-- [ ] Exportação/importação de progresso de revisão
 - [ ] Suporte a múltiplos revisores com sincronização
 - [ ] Estatísticas avançadas de cobertura de tradução
 - [ ] Sistema de comentários e anotações nas traduções
+- [ ] Validação automática de formato de magias e talentos
+- [ ] Diff de alterações antes de salvar
 
 ---
 

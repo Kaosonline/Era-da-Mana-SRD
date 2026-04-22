@@ -71,12 +71,12 @@
   - **Imobilizar**: dar condição [Imobilizado](pinned.md) ao oponente
   - **Amarrar**: se alvo já estiver Imobilizado, prende seu oponente com cordas ou similares (DC = 20 + seu BMC)
 
-### Avançar
+### Atravessar
 
 - Ação padrão durante movimento ou como parte de carga
 - Passar pelo quadrado do oponente
 - Se bem-sucedido: passa pelo espaço. Se exceder DMC em 5+, alvo está [Caído](prone.md)
-- Sem o talento Avanço Aprimorado, provoca ataque de oportunidade
+- Sem o talento [Atravessar Aprimorado](improved-overrun.md), provoca ataque de oportunidade
 
 ### Reposicionar
 

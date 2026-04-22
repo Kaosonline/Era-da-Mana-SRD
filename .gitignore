@@ -85,3 +85,5 @@ review-tool/node_modules/
 opencode-terminal.bat
 .openclaude/
 .openclaude-profile.json
+review-tool/TESTING.md
+review-tool/CHANGES.md
