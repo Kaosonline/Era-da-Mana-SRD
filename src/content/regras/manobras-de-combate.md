@@ -37,7 +37,7 @@
 ### Truque Sujo
 
 - Ação padrão: impõe penalidade temporária ao oponente (a cargo do mestre decidir se é permitido ou não)
-- Exemplos: jogar areia nos olhos (cego por 1 rodada), puxar calça (metade velocidade), golpear ponto sensível (enjoado)
+- Exemplos: jogar areia nos olhos (cego por 1 rodada), puxar calça (metade do deslocamento), golpear ponto sensível (enjoado) e afins
 - Condições: cego, atordoado, surdo, emaranhado, abalado ou enjoado por 1 rodada
 - Para cada 5 acima do DMC, +1 rodada
 - Oponente pode remover a condição gastando uma ação de movimento
@@ -56,7 +56,7 @@
 - Ação padrão: arrastar oponente em uma linha reta atrás de você
 - Só é possível com oponentes de até uma categoria de tamanho maior que você
 - Ambos se movem 1,5m. Para cada 5 acima do DMC, +1,5m
-- Sem o talento Arrastar Aprimorado, provoca ataque de oportunidade
+- Sem o talento [Arrastar Aprimorado](improved-drag.md), provoca ataque de oportunidade
 
 ### Agarrar
 

@@ -113,7 +113,8 @@
     "regras/pontos-de-classe": "approved",
     "habilidades de classe/alquimista": "approved",
     "habilidades de classe/Alquimista": "approved",
-    "habilidades de classe/Animus": "approved"
+    "habilidades de classe/Animus": "approved",
+    "talentos/Cleave": "approved"
   },
-  "lastCategory": "magias"
+  "lastCategory": "talentos"
 }

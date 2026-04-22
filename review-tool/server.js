@@ -36,6 +36,97 @@ app.get('/api/list/:category', (req, res) => {
   }
 });
 
+// Rota: buscar arquivos por conteúdo (nome, título, descrição, pré-requisitos)
+app.get('/api/search/:category', (req, res) => {
+  const category = req.params.category;
+  const rawQuery = req.query.q || '';
+  
+  if (!rawQuery.trim()) {
+    return res.json([]);
+  }
+
+  const categoryDir = path.join(CONTENT_DIR, category);
+
+  if (!fs.existsSync(categoryDir)) {
+    return res.status(404).json({ error: `Categoria "${category}" não encontrada` });
+  }
+
+  // Parse da query: verificar frase exata com aspas
+  const queryLower = rawQuery.toLowerCase().trim();
+  const exactMatch = queryLower.match(/"([^"]+)"/);
+  const exactPhrase = exactMatch ? exactMatch[1] : null;
+  
+  // Palavras para buscar (se não tem frase exata)
+  const words = queryLower
+    .replace(/"[^"]+"/g, '')
+    .trim()
+    .split(/\s+/)
+    .filter(w => w.trim() && !w.startsWith('-'));
+  
+  // Termos de exclusão
+  const excludeWords = queryLower.match(/-(\S+)/g) || [];
+  const excludeTerms = excludeWords.map(w => w.slice(1).toLowerCase());
+
+  try {
+    const files = fs.readdirSync(categoryDir)
+      .filter(f => f.endsWith('.md'))
+      .filter(filename => {
+        const id = filename.replace('.md', '');
+        
+        // Verificar exclusões
+        const idLower = id.toLowerCase();
+        for (const excl of excludeTerms) {
+          if (idLower.includes(excl)) {
+            return false;
+          }
+        }
+
+        // Ler conteúdo
+        const filePath = path.join(categoryDir, filename);
+        const content = fs.readFileSync(filePath, 'utf-8').toLowerCase();
+        
+        // 1. Se tem frase exata com aspas, buscar só essa frase
+        if (exactPhrase) {
+          if (idLower.includes(exactPhrase) || content.includes(exactPhrase)) {
+            return true;
+          }
+          // Verificar se não tem termos de exclusão no conteúdo
+          for (const excl of excludeTerms) {
+            if (content.includes(excl)) {
+              return false;
+            }
+          }
+          return false;
+        }
+
+        // 2. Sem aspas: buscar qualquer palavra (OR)
+        // Primeiro verificar no ID
+        for (const word of words) {
+          if (idLower.includes(word)) {
+            return true;
+          }
+        }
+        // Depois no conteúdo
+        for (const word of words) {
+          if (content.includes(word)) {
+            return true;
+          }
+        }
+
+        return false;
+      })
+      .map(filename => {
+        const id = filename.replace('.md', '');
+        return { id, filename, category };
+      });
+
+    // Limitar resultados para performance
+    res.json(files.slice(0, 100));
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Rota: ler conteúdo de um arquivo
 app.get('/api/read/:category/:id', (req, res) => {
   const { category, id } = req.params;

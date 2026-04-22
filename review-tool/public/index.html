@@ -936,7 +936,7 @@
   <div class="main-container">
     <div class="sidebar">
       <div class="sidebar-header">
-        <input type="text" id="searchInput" class="search-input" placeholder="Buscar arquivo...">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar... (use &quot; para frase exata, - para excluir)">
       </div>
       <div class="progress-bar-container">
         <div class="progress-bar">
@@ -1229,14 +1229,104 @@
       state.loading = false;
     }
 
-    // Aplicar filtros
-    function applyFilters() {
+    // Normalizar texto para busca (remove acentos, lowercase)
+    function normalizeText(text) {
+      return text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    // Parsing de query de busca (VERSÃO SIMPLES)
+    function parseSearchQuery(rawQuery) {
+      if (!rawQuery || !rawQuery.trim()) {
+        return { exactPhrase: null, include: [], exclude: [] };
+      }
+
+      const query = rawQuery.trim().toLowerCase();
+      let exactPhrase = null;
+      const include = [];
+      const exclude = [];
+
+      // Verificar se há frase exata entre aspas
+      const exactMatch = query.match(/"([^"]+)"/);
+      if (exactMatch) {
+        exactPhrase = exactMatch[1];
+      }
+
+      // Extrair palavras restantes
+      let remainingWords = query.replace(/"[^"]+"/g, '').trim();
+      const words = remainingWords.split(/\s+/).filter(w => w.trim());
+
+      for (const word of words) {
+        if (word.startsWith('-')) {
+          const term = word.slice(1).trim();
+          if (term) exclude.push(term);
+        } else {
+          const term = word.trim();
+          if (term) include.push(term);
+        }
+      }
+
+      return { exactPhrase, include, exclude };
+    }
+
+    // Verificar se arquivo corresponde à busca
+    function matchesSearch(file, parsed) {
+      const fileId = file.id.toLowerCase();
+      const fileTitle = file.id.replace(/[-_]/g, ' ').toLowerCase();
+      
+      const searchTexts = [fileId, fileTitle];
+
+      // 1. Se há frase exata com aspas
+      if (parsed.exactPhrase) {
+        return searchTexts.some(text => text.includes(parsed.exactPhrase));
+      }
+
+      // 2. Verificar termos de exclusão (-palavra)
+      for (const excl of parsed.exclude) {
+        if (searchTexts.some(text => text.includes(excl))) {
+          return false;
+        }
+      }
+
+      // 3. Verificar termos de inclusão
+      if (parsed.include.length > 0) {
+        return parsed.include.some(term => 
+          searchTexts.some(text => text.includes(term))
+        );
+      }
+
+      return true;
+    }
+
+    // Aplicar filtros com busca no servidor
+    async function applyFilters() {
+      // Se tem query de busca com pelo menos 2 caracteres, buscar no servidor
+      if (state.searchQuery && state.searchQuery.trim().length >= 2) {
+        try {
+          const query = encodeURIComponent(state.searchQuery.trim());
+          const res = await fetch(`/api/search/${state.currentCategory}?q=${query}`);
+          const files = await res.json();
+          
+          // Atualizar state.files com resultados da busca
+          state.filteredFiles = files;
+          
+          //Também atualizar a lista principal
+          state.files = files;
+          
+          renderFileList();
+          updateProgressBar();
+          return;
+        } catch (err) {
+          console.error('Erro na busca:', err);
+        }
+      }
+
+      // Se não tem query ou deu erro, usar filtro local
       let filtered = [...state.files];
 
-      // Filtro por busca
+      // Filtro por busca local
       if (state.searchQuery) {
-        const query = state.searchQuery.toLowerCase();
-        filtered = filtered.filter(f => f.id.toLowerCase().includes(query));
+        const parsed = parseSearchQuery(state.searchQuery);
+        filtered = filtered.filter(f => matchesSearch(f, parsed));
       }
 
       // Filtro por status
