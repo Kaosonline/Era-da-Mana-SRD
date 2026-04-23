@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../contexts/ThemeContext';
 import './Header.css';
 
@@ -9,6 +10,7 @@ interface HeaderProps {
 
 export function Header({ onMenuToggle, onFavoritesToggle, sidebarOpen }: HeaderProps) {
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
 
   return (
     <header className="header">
@@ -18,7 +20,7 @@ export function Header({ onMenuToggle, onFavoritesToggle, sidebarOpen }: HeaderP
             {sidebarOpen ? '◀' : '☰'}
           </button>
         )}
-        <h1 className="header-title">Era da Mana RPG</h1>
+        <h1 className="header-title" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>Era da Mana RPG</h1>
       </div>
       <div className="header-right">
         {onFavoritesToggle && (

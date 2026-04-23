@@ -1,8 +1,9 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { ContentItem } from '../../types/content';
 import { getCategoryIcon, formatCategoryName } from '../../utils/categoryHelpers';
 import { highlightText } from '../../utils/highlightText';
+import { useTabs } from '../../contexts/TabsContext';
 import './Sidebar.css';
 
 const ITEM_HEIGHT = 32;
@@ -30,6 +31,7 @@ interface VirtualizedSidebarProps {
   hasTalentosSelected: boolean;
   isOpen: boolean;
   onToggle: () => void;
+  onOpenTab: (tab: { id: string; category: string; itemId: string; title: string }) => void;
 }
 
 type SpellFilters = { level?: string; school?: string; castingTime?: string; duration?: string };
@@ -52,8 +54,10 @@ export function Sidebar({
   hasTalentosSelected,
   isOpen,
   onToggle,
+  onOpenTab,
 }: VirtualizedSidebarProps) {
-  const { category, id } = useParams<{ category?: string; id?: string }>();
+  const { category } = useParams<{ category?: string; id?: string }>();
+  const { activeTab } = useTabs();
   const [showCategoryFilter, setShowCategoryFilter] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [scrollTop, setScrollTop] = useState(0);
@@ -450,6 +454,8 @@ export function Sidebar({
                 if (!layoutItem.item) return null;
 
                 const item = layoutItem.item;
+                const tabId = `${item.category}/${item.id}`;
+                const isActive = activeTab === tabId;
                 return (
                   <div
                     key={`item-${item.id}`}
@@ -461,17 +467,19 @@ export function Sidebar({
                       height: ITEM_HEIGHT,
                     }}
                   >
-                    <Link
-                      to={`/${item.category}/${item.id}`}
-                      className={`nav-item ${id === item.id && category === item.category ? 'active' : ''}`}
-                      onClick={closeMobile}
-                      aria-current={id === item.id && category === item.category ? 'page' : undefined}
+                    <button
+                      className={`nav-item ${isActive ? 'active' : ''}`}
+                      onClick={() => {
+                        onOpenTab({ id: tabId, category: item.category, itemId: item.id, title: item.title });
+                        closeMobile();
+                      }}
+                      aria-current={isActive ? 'page' : undefined}
                     >
                       {highlightText(item.title, searchQuery)}
                       {item.category === 'magias' && item.spellLevel !== undefined && (
                         <span className="spell-level-indicator"> (Nv.{item.spellLevel})</span>
                       )}
-                    </Link>
+                    </button>
                   </div>
                 );
               })}

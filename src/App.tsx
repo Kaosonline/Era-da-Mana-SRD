@@ -2,9 +2,11 @@ import { useState, useEffect, useMemo } from 'react';
 import { BrowserRouter, Routes, Route, useParams, useNavigate, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { FavoritesProvider } from './contexts/FavoritesContext';
+import { TabsProvider, useTabs } from './contexts/TabsContext';
 import { Header } from './components/Header/Header';
 import { Sidebar } from './components/Sidebar/Sidebar';
-import { ContentView } from './components/ContentView/ContentView';
+import { ContentView, CategoryListView } from './components/ContentView/ContentView';
+import { TabBar } from './components/TabBar/TabBar';
 import { FavoritesPanel } from './components/FavoritesPanel/FavoritesPanel';
 import { loadContentIndex, getCategories, getUniqueSpellValues, getUniqueFeatTypes } from './utils/dataLoader';
 import { ErrorBoundary } from './components/ErrorBoundary';
@@ -20,6 +22,7 @@ interface SpellFilters {
 }
 
 function AppContent() {
+  const { openTab } = useTabs();
   const [allItems, setAllItems] = useState<ContentItem[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [categories, setCategories] = useState<string[]>([]);
@@ -30,6 +33,14 @@ function AppContent() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 769px)');
+    setSidebarOpen(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setSidebarOpen(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
 
   useEffect(() => {
     const load = async () => {
@@ -138,7 +149,7 @@ function AppContent() {
         onFavoritesToggle={() => setFavoritesOpen(true)}
         sidebarOpen={sidebarOpen}
       />
-      <div className="app-layout">
+      <div className={`app-layout ${sidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
       <Sidebar
         categories={categories}
         items={allItems}
@@ -159,8 +170,10 @@ function AppContent() {
         hasTalentosSelected={hasTalentosSelected}
         isOpen={sidebarOpen}
         onToggle={() => setSidebarOpen(!sidebarOpen)}
+        onOpenTab={openTab}
       />
         <main className="main-content">
+          <TabBar />
           <Routes>
             <Route path="/" element={
               <ContentView
@@ -211,12 +224,12 @@ function AppContent() {
 
 function CategoryRoute({ 
   allItems, 
-  searchQuery,
-  selectedCategories,
-  spellFilters,
-  featFilters,
-  hasActiveFilters,
-  onClearFilters
+  searchQuery: _searchQuery,
+  selectedCategories: _selectedCategories,
+  spellFilters: _spellFilters,
+  featFilters: _featFilters,
+  hasActiveFilters: _hasActiveFilters,
+  onClearFilters: _onClearFilters
 }: {
   allItems: ContentItem[];
   searchQuery: string;
@@ -227,7 +240,6 @@ function CategoryRoute({
   onClearFilters: () => void;
 }) {
   const { category } = useParams();
-  const navigate = useNavigate();
   
   const itemsInCategory = allItems
     .filter(i => i.category === category)
@@ -238,32 +250,21 @@ function CategoryRoute({
   }
 
   return (
-    <ContentView
-      item={itemsInCategory[0]}
-      previousItem={null}
-      nextItem={itemsInCategory.length > 1 ? itemsInCategory[1] : null}
-      onSelect={(id) => navigate(`/${category}/${id}`)}
-      onBackToCategory={() => navigate('/')}
-      currentCategory={category || ''}
-      allItems={allItems}
-      searchQuery={searchQuery}
-      selectedCategories={selectedCategories}
-      spellFilters={spellFilters}
-      featFilters={featFilters}
-      hasActiveFilters={hasActiveFilters}
-      onClearFilters={onClearFilters}
+    <CategoryListView
+      category={category || ''}
+      items={itemsInCategory}
     />
   );
 }
 
 function ContentRoute({ 
   allItems, 
-  searchQuery,
-  selectedCategories,
-  spellFilters,
-  featFilters,
-  hasActiveFilters,
-  onClearFilters
+  searchQuery: _searchQuery2,
+  selectedCategories: _selectedCategories2,
+  spellFilters: _spellFilters2,
+  featFilters: _featFilters2,
+  hasActiveFilters: _hasActiveFilters2,
+  onClearFilters: _onClearFilters2
 }: {
   allItems: ContentItem[];
   searchQuery: string;
@@ -275,6 +276,7 @@ function ContentRoute({
 }) {
   const { category, id } = useParams();
   const navigate = useNavigate();
+  const { setActiveTab, updateActiveTab } = useTabs();
   
   const normalizeId = (s: string) => s.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
   
@@ -286,6 +288,12 @@ function ContentRoute({
     return <Navigate to="/" replace />;
   }
 
+  const tabId = `${item.category}/${item.id}`;
+
+  useEffect(() => {
+    setActiveTab(tabId);
+  }, [tabId]);
+
   const itemsInCategory = allItems
     .filter(i => i.category === item.category)
     .sort((a, b) => (a.title || '').localeCompare(b.title || ''));
@@ -294,21 +302,33 @@ function ContentRoute({
   const previousItem = currentIndex > 0 ? itemsInCategory[currentIndex - 1] : null;
   const nextItem = currentIndex < itemsInCategory.length - 1 ? itemsInCategory[currentIndex + 1] : null;
 
+  const handleSelect = (newId: string) => {
+    const normalized = normalizeId(newId);
+    const targetItem = allItems.find(i => i.category === item.category && normalizeId(i.id) === normalized);
+    if (targetItem) {
+      updateActiveTab({ id: `${targetItem.category}/${targetItem.id}`, category: targetItem.category, itemId: targetItem.id, title: targetItem.title });
+    }
+  };
+
+  const handleBack = () => {
+    navigate('/');
+  };
+
   return (
     <ContentView
       item={item}
       previousItem={previousItem}
       nextItem={nextItem}
-      onSelect={(newId) => navigate(`/${item.category}/${normalizeId(newId)}`)}
-      onBackToCategory={() => navigate('/')}
+      onSelect={handleSelect}
+      onBackToCategory={handleBack}
       currentCategory={item.category}
       allItems={allItems}
-      searchQuery={searchQuery}
-      selectedCategories={selectedCategories}
-      spellFilters={spellFilters}
-      featFilters={featFilters}
-      hasActiveFilters={hasActiveFilters}
-      onClearFilters={onClearFilters}
+      searchQuery={_searchQuery2}
+      selectedCategories={_selectedCategories2}
+      spellFilters={_spellFilters2}
+      featFilters={_featFilters2}
+      hasActiveFilters={_hasActiveFilters2}
+      onClearFilters={_onClearFilters2}
     />
   );
 }
@@ -319,7 +339,9 @@ function App() {
       <ThemeProvider>
         <FavoritesProvider>
           <ErrorBoundary>
-            <AppContent />
+            <TabsProvider>
+              <AppContent />
+            </TabsProvider>
           </ErrorBoundary>
         </FavoritesProvider>
       </ThemeProvider>

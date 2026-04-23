@@ -151,3 +151,30 @@ input, textarea, select {
   border-bottom-style: solid;
   background: rgba(37, 99, 235, 0.05);
 }
+
+/* ========== APP LAYOUT ========== */
+.app-layout {
+  display: flex;
+  min-height: calc(100vh - 56px);
+  margin-top: 56px;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-layout.sidebar-open .main-content {
+  margin-left: 280px;
+}
+
+.app-layout.sidebar-closed .main-content {
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .app-layout.sidebar-open .main-content {
+    margin-left: 0;
+  }
+}

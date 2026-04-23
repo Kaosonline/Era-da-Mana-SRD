@@ -1,7 +1,8 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ContentItem } from '../../types/content';
 import { useFavorites } from '../../contexts/FavoritesContext';
+import { useTabs } from '../../contexts/TabsContext';
 import { parseMarkdown } from '../../utils/markdownParser';
 import { loadContentItem } from '../../utils/dataLoader';
 import { getCategoryIcon, formatCategoryName } from '../../utils/categoryHelpers';
@@ -40,6 +41,7 @@ function HomePage({
   hasActiveFilters: boolean,
   onClearFilters: () => void
 }) {
+  const navigate = useNavigate();
   const allCategories = useMemo(() =>
     Array.from(new Set(allItems.map(item => item.category))).sort(),
     [allItems]
@@ -53,17 +55,14 @@ function HomePage({
 
     for (const category of allCategories) {
       counts[category] = allItems.filter(item => {
-        // Filtro por categoria
         if (item.category !== category) return false;
         if (hasSelectedCategories && !selectedCategories.includes(category)) return false;
 
-        // Filtro por busca
         const matchesSearch = searchQuery === '' ||
           item.title?.toLowerCase().includes(lowerSearchQuery) ||
           item.id?.toLowerCase().includes(lowerSearchQuery);
         if (!matchesSearch) return false;
 
-        // Filtros específicos para magias
         if (category === 'magias') {
           return (
             !spellFilters.level || item.spellLevel?.toString() === spellFilters.level
@@ -76,7 +75,6 @@ function HomePage({
           );
         }
 
-        // Filtros específicos para talentos
         if (category === 'talentos') {
           return (
             !featFilters?.type || item.featType === featFilters.type
@@ -101,16 +99,6 @@ function HomePage({
       : allCategories;
     return cats.filter(cat => categoryCounts[cat] > 0);
   }, [allCategories, selectedCategories, categoryCounts]);
-
-  const itemsByCategory = useMemo(() => {
-    const map: Record<string, ContentItem[]> = {};
-    for (const cat of visibleCategories) {
-      map[cat] = allItems
-        .filter(item => item.category === cat)
-        .sort((a, b) => a.title.localeCompare(b.title));
-    }
-    return map;
-  }, [allItems, visibleCategories]);
 
   return (
     <div className="home-page">
@@ -141,20 +129,106 @@ function HomePage({
       <div className="category-grid" role="grid" aria-label="Categorias de conteúdo">
         {visibleCategories.map(category => {
           const count = countItemsInCategory(category);
-          const firstItem = itemsByCategory[category]?.[0];
           return (
-            <Link
+            <button
               key={category}
-              to={`/${category}/${firstItem?.id || ''}`}
               className="category-card"
               aria-label={`${formatCategoryName(category)}, ${count} ${count === 1 ? 'página' : 'páginas'}`}
+              onClick={() => navigate(`/${category}`)}
             >
               <div className="category-icon" aria-hidden="true">{getCategoryIcon(category)}</div>
               <h3>{formatCategoryName(category)}</h3>
               <p>{count} {count === 1 ? 'página' : 'páginas'}</p>
-            </Link>
+            </button>
           );
         })}
+      </div>
+    </div>
+  );
+}
+
+function CategoryListView({
+  category,
+  items
+}: {
+  category: string;
+  items: ContentItem[];
+}) {
+  const navigate = useNavigate();
+  const { openTab } = useTabs();
+  const [query, setQuery] = useState('');
+
+  const filtered = useMemo(() => {
+    if (!query.trim()) return items;
+    const q = query.toLowerCase();
+    return items.filter(item =>
+      item.title?.toLowerCase().includes(q) ||
+      item.id?.toLowerCase().includes(q)
+    );
+  }, [items, query]);
+
+  return (
+    <div className="category-list-view">
+      <nav className="navigation-bar" aria-label="Navegação de categoria" role="navigation">
+        <button
+          className="nav-button back-to-category"
+          onClick={() => navigate(-1)}
+          aria-label="Voltar para a página anterior"
+          title="Voltar"
+        >
+          ← Voltar
+        </button>
+        <h2 className="category-list-title">
+          {getCategoryIcon(category)} {formatCategoryName(category)}
+          <span className="category-list-count">({items.length} {items.length === 1 ? 'página' : 'páginas'})</span>
+        </h2>
+      </nav>
+
+      <div className="category-list-search">
+        <span className="search-icon">🔍</span>
+        <input
+          type="text"
+          placeholder={`Buscar em ${formatCategoryName(category)}...`}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="search-input"
+        />
+        {query && (
+          <button
+            className="clear-search"
+            onClick={() => setQuery('')}
+            aria-label="Limpar busca"
+          >
+            ✕
+          </button>
+        )}
+      </div>
+
+      <div className="category-list-results" role="list" aria-label={`Resultados em ${formatCategoryName(category)}`}>
+        {filtered.length === 0 ? (
+          <p className="no-results">Nenhum resultado encontrado para "{query}".</p>
+        ) : (
+          filtered.map(item => (
+            <button
+              key={item.id}
+              className="category-list-item"
+              onClick={() => {
+                openTab({ id: `${item.category}/${item.id}`, category: item.category, itemId: item.id, title: item.title });
+              }}
+              role="listitem"
+            >
+              <span className="list-item-title">{item.title}</span>
+              <span className="list-item-meta">
+                {item.category === 'magias' && item.spellLevel !== undefined && (
+                  <span className="spell-level-badge">Nv. {item.spellLevel}</span>
+                )}
+                {item.category === 'talentos' && item.featType && (
+                  <span className="feat-type-badge">{item.featType}</span>
+                )}
+              </span>
+            </button>
+          ))
+        )}
       </div>
     </div>
   );
@@ -306,15 +380,6 @@ function ContentArticle({ item }: { item: ContentItem }) {
               Tipo: {item.featType}
             </span>
           )}
-          {item.hasPrerequisites === true ? (
-            <span className="metadata-item metadata-prerequisites" aria-label="Este talento possui pré-requisitos">
-              Pré-requisitos: Sim
-            </span>
-          ) : item.hasPrerequisites === false ? (
-            <span className="metadata-item metadata-no-prerequisites" aria-label="Este talento não possui pré-requisitos">
-              Sem pré-requisitos
-            </span>
-          ) : null}
         </div>
       )}
       <div
@@ -328,12 +393,13 @@ function ContentArticle({ item }: { item: ContentItem }) {
   );
 }
 
+export { CategoryListView };
 export function ContentView({
   item,
   previousItem,
   nextItem,
   onSelect = () => {},
-  onBackToCategory = () => {},
+  onBackToCategory: _onBackToCategory,
   currentCategory: _currentCategory,
   allItems = [],
   searchQuery,
@@ -343,6 +409,7 @@ export function ContentView({
   hasActiveFilters,
   onClearFilters
 }: ContentViewProps) {
+  const navigate = useNavigate();
   if (!item) {
     return <HomePage
       allItems={allItems}
@@ -360,11 +427,11 @@ export function ContentView({
       <nav className="navigation-bar" aria-label="Navegação de páginas" role="navigation">
         <button
           className="nav-button back-to-category"
-          onClick={onBackToCategory}
-          aria-label="Voltar para a página inicial"
-          title="Voltar para início"
+          onClick={() => navigate(-1)}
+          aria-label="Voltar para a página anterior"
+          title="Voltar"
         >
-          ← Início
+          ← Voltar
         </button>
         <div style={{ display: 'flex', gap: '0.5rem' }}>
           <button

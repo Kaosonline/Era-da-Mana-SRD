@@ -102,7 +102,9 @@ export async function loadContentItem(category: string, id: string): Promise<str
     // Limitar tamanho do cache para evitar memory leaks
     if (contentModuleCache.size > MAX_CACHE_SIZE) {
       const firstKey = contentModuleCache.keys().next().value;
-      contentModuleCache.delete(firstKey);
+      if (firstKey) {
+        contentModuleCache.delete(firstKey);
+      }
     }
 
     return source;
