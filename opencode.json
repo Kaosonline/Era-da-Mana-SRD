@@ -2,6 +2,13 @@
   "$schema": "https://opencode.ai/config.json",
   "model": "alibaba/qwen3.6-plus",
   "share": "auto",
+  "mcp": {
+    "exa": {
+      "type": "remote",
+      "url": "https://mcp.exa.ai/mcp?exaApiKey=5ef4ea25-d0d0-4d2d-8ea5-e27ce3a2dc15&tools=web_search_exa,web_fetch_exa,web_search_advanced_exa",
+      "enabled": true
+    }
+  },
   "agent": {
     "plan": {
       "skills": ["caveman"]

@@ -8,7 +8,7 @@ O personagem recebe automaticamente o talento Preparar Poções, mesmo que não 
 
 Além disso, o personagem pode utilizar Ofício (Alquimia) para identificar poções, como se estivesse utilizando [Detectar Magia](Detect Magic.md). 
 
-Para isso, ele deve segurar a poção por 1 rodada, realizando um teste de Ofício (Alquimia) no lugar de Arte da Magia. Para quaisquer efeitos que dependam de nível, considera-se o nível do personagem como nível efetivo.
-
-### Custo: 2 Pontos de Classe
-### Pré-requisitos: Inteligência 13+, Ofício (Alquimia) 1+ graduações.
+Como uma ação de rodada completa, o personagem analisa uma poção que esteja segurando, realizando um teste de Ofício (Alquimia) no lugar de Arte da Magia. Para efeitos das informações reveladas, considere o nível do personagem como seu nível de conjurador efetivo.
+---
+**Custo:** 2 Pontos de Classe
+**Pré-requisitos:** Inteligência 13+, Ofício (Alquimia) 1+ graduações.

@@ -124,7 +124,12 @@
     "classes/combatente": "approved",
     "talentos/light-armor-proficiency": "approved",
     "talentos/medium-armor-proficiency": "approved",
-    "talentos/heavy-armor-proficiency": "approved"
+    "talentos/heavy-armor-proficiency": "approved",
+    "talentos/bulette-charge-style": "approved",
+    "habilidades de classe/Aperfeiçoamento-Marcial": "approved",
+    "habilidades de classe/Arcanista-Blindado": "approved",
+    "habilidades de classe/Arma-da-Ruína": "approved",
+    "habilidades de classe/Disparo-Místico": "approved"
   },
-  "lastCategory": "talentos"
+  "lastCategory": "habilidades de classe"
 }

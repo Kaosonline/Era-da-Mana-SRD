@@ -1,26 +1,18 @@
 # Arma da Ruína (Sob)
 
-Custo da Habilidade: 10
+Ao adquirir esta habilidade, o personagem aprende a imbuir uma de suas armas com poder destrutivo, tornando-a especialmente letal contra um tipo específico de criatura.
 
-Ao adquirir esta habilidade, o personagem aprende a imbuir uma de suas armas com poder destrutivo, tornando-a especialmente letal contra um tipo específico de inimigo.
-
-Como uma ação rápida, o personagem imbuí uma arma que esteja empunhando com a propriedade especial Ruína contra um tipo de criatura à sua escolha.
+Como uma ação rápida, o personagem escolhe um tipo de criatura e imbuí uma arma que esteja empunhando. O bônus de aprimoramento da arma aumenta em +2 e ela causa +2d6 de dano adicional contra criaturas do tipo escolhido.
 Se o tipo escolhido for humanoide ou extraplanar, o personagem deve selecionar também um subtipo apropriado.
 
-Enquanto a habilidade estiver ativa, a arma recebe todos os benefícios normais da propriedade Ruína contra o tipo de criatura escolhido.
+A habilidade pode ser mantida ativa por um número total de rodadas por dia igual à metade do nível do personagem (arredondado para baixo) + seu modificador de Sabedoria. Essas rodadas não precisam ser consecutivas.
 
-Como uma ação rápida, o personagem pode alterar o tipo de criatura afetado, desde que a habilidade ainda esteja ativa.
+Enquanto a habilidade estiver ativa, o personagem pode, como uma ação rápida, alterar o tipo de criatura afetado.
 
-Arma da Ruína pode ser mantida ativa por um número total de rodadas por dia igual à metade do nível total do personagem (arredondado para baixo) + o modificador de Sabedoria.
+A habilidade só funciona enquanto o personagem estiver empunhando a arma imbuída. Caso a arma seja derrubada ou removida, o efeito é suprimido, retornando normalmente caso o personagem volte a empunhá-la antes do término da duração.
 
-Essas rodadas não precisam ser consecutivas.
+Apenas uma arma por vez pode ser afetada por Arma da Ruína. Ativar esta habilidade novamente encerra qualquer efeito anterior.
+---
+**Custo:** Adquirir Arma da Ruína custa 2 Pontos de Classe.
 
-A habilidade só funciona enquanto o personagem estiver empunhando a arma imbuída. Caso a arma seja derrubada ou retirada, o efeito é suprimido, mas volta a funcionar normalmente se a arma retornar à posse do personagem antes do término da duração restante.
-
-Apenas uma arma por vez pode ser afetada por Arma da Ruína.
-
-Se o personagem ativar esta habilidade novamente, qualquer efeito anterior termina imediatamente.
-
-Adquirir Arma da Ruína custa 10 Pontos de Classe.
-
-Pré-requisitos: Nível de Personagem 5+; Sabedoria 13+.
+**Pré-requisitos:** Nível de Personagem 5+; Sabedoria 13+.

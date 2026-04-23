@@ -43,3 +43,21 @@ Talentos should use these patterns:
 - Strict mode enabled (`noUnusedLocals`, `noUnusedParameters`)
 - TypeScript runs as part of `npm run build` before Vite
 - No separate typecheck script — use `npx tsc` for isolated checks
+
+## Exa MCP (Web Search)
+
+When you need current information, documentation, or code examples from the web, use the `exa` MCP tools:
+
+- `web_search_exa` — search the web for any topic
+- `web_fetch_exa` — read full page content as markdown from URLs
+
+**Common mistakes to avoid:**
+- `useAutoprompt` is deprecated — do not use it
+- `text`, `summary`, `highlights` must be nested inside `contents` on `/search`
+- Use `includeDomains`/`excludeDomains`, not `includeUrls`/`excludeUrls`
+- Set `maxCharacters` on text to control token cost
+
+**Recommended:**
+- Use `type: "auto"` for most queries
+- Use `type: "deep"` for thorough research
+- Always set `contents.text.maxCharacters` (e.g. 20000) to limit tokens

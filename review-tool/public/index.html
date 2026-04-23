@@ -220,6 +220,32 @@
       color: var(--color-text);
     }
 
+    .file-item .file-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .file-item .metadata {
+      font-size: 0.7rem;
+      color: var(--color-text-secondary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .file-item .snippet {
+      font-size: 0.75rem;
+      color: var(--color-text-secondary);
+      font-style: italic;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     .editor-area {
       flex: 1;
       display: flex;
@@ -1169,7 +1195,7 @@
   <div class="main-container">
     <div class="sidebar" role="navigation" aria-label="Navegação de arquivos">
       <div class="sidebar-header">
-        <input type="text" id="searchInput" class="search-input" placeholder="Buscar... (use &quot; para frase exata, - para excluir)" aria-label="Buscar arquivos">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar... (use + para buscar qualquer palavra, - para excluir)" aria-label="Buscar arquivos">
       </div>
       <div class="progress-bar-container">
         <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso da revisão">
@@ -1287,6 +1313,8 @@
         <tr><td><kbd>Alt</kbd>+<kbd>1</kbd></td><td class="action">Criar link interno</td></tr>
         <tr><td><kbd>Ctrl</kbd>+<kbd>T</kbd></td><td class="action">Converter seleção em tabela</td></tr>
         <tr><td><kbd>Ctrl</kbd>+<kbd>P</kbd></td><td class="action">Alternar preview</td></tr>
+        <tr><td><kbd>Ctrl</kbd>+<kbd>B</kbd></td><td class="action">Aplicar negrito (**texto**)</td></tr>
+        <tr><td><kbd>Ctrl</kbd>+<kbd>I</kbd></td><td class="action">Aplicar itálico (*texto*)</td></tr>
         <tr><td><kbd>Ctrl</kbd>+<kbd>H</kbd></td><td class="action">Mostrar esta ajuda</td></tr>
         <tr><td><kbd>↑</kbd>/<kbd>↓</kbd></td><td class="action">Navegar na lista de arquivos</td></tr>
         <tr><td><kbd>Home</kbd>/<kbd>End</kbd></td><td class="action">Primeiro/último arquivo</td></tr>
@@ -1608,6 +1636,23 @@
       updateProgressBar();
     }
 
+    // Format metadata for display
+    function formatMetadata(file) {
+      if (!file.metadata) return '';
+      
+      const parts = [];
+      
+      if (state.currentCategory === 'magias') {
+        if (file.metadata.school) parts.push(file.metadata.school);
+        if (file.metadata.level) parts.push(file.metadata.level);
+        if (file.metadata.castingTime) parts.push(file.metadata.castingTime);
+      } else if (state.currentCategory === 'talentos') {
+        if (file.metadata.type) parts.push(file.metadata.type);
+      }
+      
+      return parts.join(' | ');
+    }
+
     // Renderizar lista de arquivos
     function renderFileList() {
       if (state.filteredFiles.length === 0) {
@@ -1620,6 +1665,8 @@
         const status = state.status[key] || 'pending';
         const isActive = index === state.currentIndex;
         const title = file.id.replace(/-/g, ' ').replace(/_/g, ' ');
+        const metadata = formatMetadata(file);
+        const snippet = file.snippet || '';
 
         return `
           <div class="file-item ${isActive ? 'active' : ''}" 
@@ -1628,7 +1675,11 @@
                aria-selected="${isActive}"
                tabindex="${isActive ? 0 : -1}">
             <span class="status-dot ${status}" aria-hidden="true"></span>
-            <span class="title" title="${file.id}">${title}</span>
+            <div class="file-info">
+              <span class="title" title="${file.id}">${title}</span>
+              ${metadata ? `<span class="metadata">${metadata}</span>` : ''}
+              ${snippet ? `<span class="snippet">${snippet}</span>` : ''}
+            </div>
           </div>
         `;
       }).join('');
@@ -2184,6 +2235,40 @@
       els.toggleThemeBtn.textContent = themeLabel;
       
       showToast(`Tema alterado para ${state.currentTheme === 'dark' ? 'escuro' : 'claro'}`, 'info');
+    }
+
+    // Envolver texto selecionado com marcadores
+    function wrapSelection(before, after) {
+      const ta = els.editorTextarea;
+      const start = ta.selectionStart;
+      const end = ta.selectionEnd;
+      const selectedText = ta.value.substring(start, end);
+
+      if (selectedText) {
+        // Texto selecionado: envolver
+        ta.value = ta.value.substring(0, start) + before + selectedText + after + ta.value.substring(end);
+        ta.selectionStart = start;
+        ta.selectionEnd = start + before.length + selectedText.length + after.length;
+      } else {
+        // Sem seleção: inserir marcadores com cursor no meio
+        ta.value = ta.value.substring(0, start) + before + after + ta.value.substring(end);
+        ta.selectionStart = start + before.length;
+        ta.selectionEnd = start + before.length;
+      }
+
+      ta.focus();
+      state.hasChanges = ta.value !== state.currentContent;
+      els.hasChangesIndicator.style.display = state.hasChanges ? 'inline' : 'none';
+    }
+
+    // Aplicar negrito
+    function applyBold() {
+      wrapSelection('**', '**');
+    }
+
+    // Aplicar itálico
+    function applyItalic() {
+      wrapSelection('*', '*');
     }
 
     // Escapar HTML para segurança
@@ -2749,6 +2834,20 @@
       if (e.ctrlKey && e.key === 'p') {
         e.preventDefault();
         togglePreview();
+        return;
+      }
+
+      // Ctrl+B para negrito
+      if (e.ctrlKey && e.key === 'b') {
+        e.preventDefault();
+        applyBold();
+        return;
+      }
+
+      // Ctrl+I para itálico
+      if (e.ctrlKey && e.key === 'i') {
+        e.preventDefault();
+        applyItalic();
         return;
       }
 

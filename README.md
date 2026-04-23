@@ -29,7 +29,7 @@ Fornecer uma **wiki online** das regras de Era da Mana RPG, organizada por categ
 - **Edição inline**: Edita o texto diretamente na tela e salva no arquivo `.md` original
 - **Marcação de status**: Aprova, marca para corrigir ou pula cada item
 - **Progresso unificado**: Salvo no servidor (`review-progress.json`)
-- **Busca avançada**: Filtra por nome com suporte a frases exatas (`"termo"`) e exclusões (`-termo`)
+- **Busca avançada**: Busca por frase exata por padrão. Use `+` para buscar qualquer palavra (`ataque +poderoso`) e `-` para excluir (`-termo`)
 - **Filtro por status**: Veja apenas pendentes, aprovados, precisando correção ou pulados
 - **Barra de progresso**: Acompanha quantos itens já foram revisados
 - **Preview em tempo real**: Visualização do markdown formatado com zoom (50%-200%)
@@ -48,6 +48,8 @@ Fornecer uma **wiki online** das regras de Era da Mana RPG, organizada por categ
   - `Alt + 1`: Criar link interno ✨
   - `Ctrl + T`: Converter seleção em tabela
   - `Ctrl + P`: Alternar preview
+  - `Ctrl + B`: Aplicar negrito (**texto**)
+  - `Ctrl + I`: Aplicar itálico (*texto*)
   - `Ctrl + H`: Mostrar ajuda de atalhos
   - `↑ / ↓`: Navegar na lista de arquivos
   - `Home / End`: Primeiro/último arquivo

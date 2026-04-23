@@ -34,7 +34,7 @@ O personagem pode gastar até 3 pontos de Animus para aprimorar uma técnica.
 
 Além das opções anteriores, ele ganha acesso aos seguintes aprimoramentos:
 
-- **Investida de Animus**: ao gastar 3 pontos de Animus, o personagem pode se mover até seu deslocamento base como parte da ação de iniciar a técnica, antes de resolvê-la. Esse movimento é um efeito de teleporte, e o personagem deve ser capaz de ver claramente o destino.
+- **Investida de Animus**: ao gastar 3 pontos de Animus, o personagem pode se mover até seu deslocamento base como parte da ação de iniciar a técnica, antes de resolvê-la. Esse movimento é um efeito de teleporte e não provoca ataques de oportunidade. O personagem deve ser capaz de ver claramente o destino.
 - **Aumentar Alcance**: ao gastar 2 pontos de Animus, o personagem pode atingir uma criatura a até 9 metros com uma técnica que normalmente exigiria um ataque corpo a corpo. A técnica é resolvida normalmente, como se o alvo estivesse dentro do alcance corpo a corpo do personagem.
 
 ## Nível 4
@@ -44,9 +44,8 @@ O personagem pode gastar até 4 pontos de Animus para aprimorar uma técnica.
 ## Nível 5
 
 O personagem pode gastar até 5 pontos de Animus para aprimorar uma técnica.
-
-### Custo: Adquirir o 1º nível de Animus custa 10 Pontos de Classe. Cada nível adicional desta habilidade custa 10 Pontos de Classe.
-
-### Pré-requisito: possuir a habilidade de Iniciar Técnicas.
+---
+**Custo:** Adquirir o 1º nível de Animus custa 2 Pontos de Classe. Cada nível adicional desta habilidade custa 2 Pontos de Classe.
+**Pré-requisito:** possuir a habilidade de Iniciar Técnicas.
 
 _O nível máximo desta habilidade é 5._

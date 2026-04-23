@@ -1,19 +1,20 @@
 # Disparo Místico (SM)
+Ao adquirir esta habilidade, o personagem passa a canalizar energia arcana contra seus inimigos.
 
-Custo da Habilidade: 20+10 por nível
+Como uma ação padrão, ele pode realizar um ataque de toque à distância com alcance de 18 metros contra um único alvo.
 
-Ao adquirir esta habilidade, o personagem passa a canalizar energia arcana contra seus inimigos. 
+O Disparo Místico causa 1d6 pontos de dano quando adquirido. Esse dano aumenta em 1d6 cada aprimoramento da habilidade.
 
-Você pode com ação padrão, realizar um ataque de toque à distância com alcance de 18 metros contra um único alvo.
+A partir do 3º nível de personagem, e a cada 2 níveis subsequentes (3º, 5º, 7º, 9º, 11º e assim por diante), o personagem pode adquirir um aprimoramento desta habilidade. Cada aprimoramento deve ser adquirido separadamente e não pode exceder o limite permitido pelo nível do personagem.
 
-O Disparo Místico causa 1d6+1 pontos de dano quando adquirido. Em determinados níveis de personagem, o personagem pode aprimorar esta habilidade, aumentando seu dano em 1d6+1. Esses aprimoramentos podem ser adquiridos a partir do 3º nível de personagem e a cada 2 níveis subsequentes (3º, 5º, 7º, 9º, 11º e assim por diante).
+Ao adquirir esta habilidade, o personagem escolhe um tipo de energia entre ácido, fogo, frio ou eletricidade. Essa escolha é permanente.
 
-Cada aprimoramento custa 10 Pontos de Classe e deve ser adquirido separadamente no nível em que se torna disponível. Caso o personagem não adquira o aprimoramento ao atingir um desses níveis, ele pode fazê-lo em um nível posterior, desde que ainda respeite o limite máximo da habilidade.
+O Disparo Místico é tratado como uma habilidade similar a magia equivalente a uma magia arcana de 1º círculo da escola de Conjuração. Ele está sujeito à resistência à magia, utilizando o nível do personagem como nível efetivo para testes de superação.
 
-Você escolhe entre ácido, fogo, frio, ou eletricidade. O dano de Disparo Místico causa esse tipo de dano de energia. Esse tipo de dano deve ser escolhido ao adquirir esta habilidade e não pode ser alterado posteriormente.
+O Disparo Místico causa metade do dano contra objetos.
 
-O Disparo Místico é considerado equivalente a uma habilidade de 1º círculo e está sujeito à resistência à magia, utilizando o nível do personagem como nível efetivo para testes de superação. Ela causa metade do dano contra objetos. Talentos ou habilidades que aumentem testes para superar resistência à magia se aplicam a Disparo Místico.
+Este ataque ameaça crítico com um resultado natural 20 e possui multiplicador x2.
 
-Disparo Místico pode ser usado à vontade.
-
-Adquirir disparo místico custa 20 Pontos de Classe. Cada aprimoramento nesta habilidade custa 10 Pontos de Classe.
+Disparo Místico pode ser usado à vontade
+---
+**Custo:** Adquirir Disparo Místico custa 4 Pontos de Classe. Cada aprimoramento nesta habilidade custa 2 Pontos de Classe.
