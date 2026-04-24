@@ -3,6 +3,7 @@ export interface ContentItem {
   title: string;
   category: string;
   content: string;
+  subcategory?: string;
   
   spellLevel?: number;
   spellSchool?: string;
@@ -18,6 +19,7 @@ export interface ContentIndexEntry {
   id: string;
   title: string;
   category: string;
+  subcategory?: string;
   spellLevel?: number;
   spellSchool?: string;
   spellCastingTime?: string;

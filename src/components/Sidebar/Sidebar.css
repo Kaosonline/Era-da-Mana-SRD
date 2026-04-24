@@ -589,3 +589,50 @@
   border: 1px solid var(--color-border);
   font-weight: 500;
 }
+
+/* ========== SIDEBAR SUBCATEGORY (EQUIPAMENTOS) ========== */
+.nav-subcategory {
+  margin-bottom: 0.25rem;
+}
+
+.nav-subcategory-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: 100%;
+  padding: 0.3rem 0.5rem 0.3rem 0.75rem;
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background 0.15s;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+
+.nav-subcategory-btn:hover {
+  background: var(--color-surface-hover);
+}
+
+.sub-chevron {
+  font-size: 0.6rem;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.sub-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sub-count {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}

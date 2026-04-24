@@ -35,11 +35,7 @@ function AppContent() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 769px)');
-    setSidebarOpen(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setSidebarOpen(e.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
+    setSidebarOpen(false);
   }, []);
 
   useEffect(() => {
@@ -280,9 +276,20 @@ function ContentRoute({
   
   const normalizeId = (s: string) => s.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
   
-  const item = allItems.find(i => 
+  let item = allItems.find(i => 
     i.category === category && normalizeId(i.id) === normalizeId(id || '')
   ) || null;
+
+  // For equipment, also try matching by subcategory if not found
+  if (!item && category === 'equipamentos') {
+    const parts = (id || '').split('/');
+    if (parts.length === 2) {
+      const [subcat, realId] = parts;
+      item = allItems.find(i =>
+        i.category === category && i.subcategory === subcat && normalizeId(i.id) === normalizeId(realId)
+      ) || null;
+    }
+  }
   
   if (!item) {
     return <Navigate to="/" replace />;
@@ -304,7 +311,14 @@ function ContentRoute({
 
   const handleSelect = (newId: string) => {
     const normalized = normalizeId(newId);
-    const targetItem = allItems.find(i => i.category === item.category && normalizeId(i.id) === normalized);
+    let targetItem = allItems.find(i => i.category === item.category && normalizeId(i.id) === normalized);
+    // For equipment, also search by subcategory path
+    if (!targetItem && item.category === 'equipamentos') {
+      targetItem = allItems.find(i => {
+        const fullPath = `${i.subcategory}/${i.id}`;
+        return i.category === item.category && normalizeId(fullPath) === normalized;
+      });
+    }
     if (targetItem) {
       updateActiveTab({ id: `${targetItem.category}/${targetItem.id}`, category: targetItem.category, itemId: targetItem.id, title: targetItem.title });
     }

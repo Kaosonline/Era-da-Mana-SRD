@@ -157,6 +157,7 @@ function CategoryListView({
   const navigate = useNavigate();
   const { openTab } = useTabs();
   const [query, setQuery] = useState('');
+  const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
 
   const filtered = useMemo(() => {
     if (!query.trim()) return items;
@@ -166,6 +167,137 @@ function CategoryListView({
       item.id?.toLowerCase().includes(q)
     );
   }, [items, query]);
+
+  const groupedItems = useMemo(() => {
+    if (category !== 'equipamentos') return null;
+    const groups: Record<string, ContentItem[]> = {};
+    for (const item of filtered) {
+      const sub = item.subcategory || 'Outros';
+      if (!groups[sub]) groups[sub] = [];
+      groups[sub].push(item);
+    }
+    const sorted: [string, ContentItem[]][] = Object.entries(groups).sort(([a], [b]) => a.localeCompare(b));
+    for (const [, groupItems] of sorted) {
+      groupItems.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+    }
+    return sorted;
+  }, [filtered, category]);
+
+  useEffect(() => {
+    if (groupedItems) {
+      const collapsed: Record<string, boolean> = {};
+      for (const [group] of groupedItems) collapsed[group] = false;
+      setExpandedGroups(collapsed);
+    }
+  }, [groupedItems]);
+
+  const toggleGroup = (group: string) => {
+    setExpandedGroups(prev => ({ ...prev, [group]: !prev[group] }));
+  };
+
+  const expandAll = () => {
+    if (!groupedItems) return;
+    const all: Record<string, boolean> = {};
+    for (const [group] of groupedItems) all[group] = true;
+    setExpandedGroups(all);
+  };
+
+  const collapseAll = () => {
+    if (!groupedItems) return;
+    const collapsed: Record<string, boolean> = {};
+    for (const [group] of groupedItems) collapsed[group] = false;
+    setExpandedGroups(collapsed);
+  };
+
+  if (groupedItems) {
+    const totalExpanded = Object.values(expandedGroups).filter(Boolean).length;
+    const allExpanded = totalExpanded === groupedItems.length;
+
+    return (
+      <div className="category-list-view">
+        <nav className="navigation-bar" aria-label="Navegação de categoria" role="navigation">
+          <button
+            className="nav-button back-to-category"
+            onClick={() => navigate(-1)}
+            aria-label="Voltar para a página anterior"
+            title="Voltar"
+          >
+            ← Voltar
+          </button>
+          <h2 className="category-list-title">
+            {getCategoryIcon(category)} {formatCategoryName(category)}
+            <span className="category-list-count">({items.length} {items.length === 1 ? 'página' : 'páginas'})</span>
+          </h2>
+        </nav>
+
+        <div className="category-list-search">
+          <span className="search-icon">🔍</span>
+          <input
+            type="text"
+            placeholder={`Buscar em ${formatCategoryName(category)}...`}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="search-input"
+          />
+          {query && (
+            <button
+              className="clear-search"
+              onClick={() => setQuery('')}
+              aria-label="Limpar busca"
+            >
+              ✕
+            </button>
+          )}
+        </div>
+
+        {groupedItems.length > 1 && (
+          <div className="group-controls">
+            <button className="group-control-btn" onClick={allExpanded ? collapseAll : expandAll}>
+              {allExpanded ? 'Recolher tudo' : 'Expandir tudo'}
+            </button>
+          </div>
+        )}
+
+        <div className="category-grouped-results" role="list" aria-label={`Resultados em ${formatCategoryName(category)}`}>
+          {groupedItems.map(([group, groupItems]) => {
+            const isExpanded = expandedGroups[group] === true;
+            return (
+              <div key={group} className="category-group">
+                <button
+                  className="category-group-header"
+                  onClick={() => toggleGroup(group)}
+                  aria-expanded={isExpanded}
+                >
+                  <span className="group-chevron">{isExpanded ? '▼' : '▶'}</span>
+                  <span className="group-name">{group}</span>
+                  <span className="group-count">({groupItems.length})</span>
+                </button>
+                {isExpanded && (
+                  <div className="category-group-items" role="list">
+                    {groupItems.map(item => (
+                      <button
+                        key={item.id}
+                        className="category-list-item"
+                        onClick={() => {
+                          const tabId = item.subcategory
+                            ? `${item.category}/${item.subcategory}/${item.id}`
+                            : `${item.category}/${item.id}`;
+                          openTab({ id: tabId, category: item.category, itemId: item.id, title: item.title });
+                        }}
+                        role="listitem"
+                      >
+                        <span className="list-item-title">{item.title}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="category-list-view">
@@ -268,7 +400,7 @@ function ContentArticle({ item }: { item: ContentItem }) {
 
     const fetchContent = async () => {
       setLoadingContent(true);
-      const rawContent = await loadContentItem(item.category, item.id);
+      const rawContent = await loadContentItem(item.category, item.id, item.subcategory);
       if (!cancelled && rawContent) {
         setContent(rawContent);
         setLoadingContent(false);

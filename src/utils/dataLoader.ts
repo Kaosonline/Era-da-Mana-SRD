@@ -16,15 +16,21 @@ let indexCache: ContentItem[] | null = null;
  * Tenta várias normalizações do ID para encontrar o arquivo correspondente
  * @param category Categoria do conteúdo (ex: 'magias', 'talentos')
  * @param id Identificador do item
+ * @param subcategory Subcategoria opcional (ex: 'Armas Simples')
  * @returns Caminho do módulo ou o primeiro caminho possível se não encontrado
  */
-function buildModulePath(category: string, id: string): string {
-  // Tenta caminhos diretos com diferentes normalizações
-  const possiblePaths = [
-    `../content/${category}/${id}.md`,
-    `../content/${category}/${id.replace(/-/g, ' ')}.md`,
-    `../content/${category}/${id.replace(/-/g, '_')}.md`,
-  ];
+function buildModulePath(category: string, id: string, subcategory?: string): string {
+  const possiblePaths = subcategory
+    ? [
+        `../content/${category}/${subcategory}/${id}.md`,
+        `../content/${category}/${subcategory}/${id.replace(/-/g, ' ')}.md`,
+        `../content/${category}/${subcategory}/${id.replace(/-/g, '_')}.md`,
+      ]
+    : [
+        `../content/${category}/${id}.md`,
+        `../content/${category}/${id.replace(/-/g, ' ')}.md`,
+        `../content/${category}/${id.replace(/-/g, '_')}.md`,
+      ];
 
   for (const path of possiblePaths) {
     if (contentModules[path]) return path;
@@ -78,9 +84,10 @@ export async function loadContentIndex(): Promise<ContentItem[]> {
  * Usa cache para evitar carregamentos repetidos
  * @param category Categoria do conteúdo
  * @param id Identificador do item
+ * @param subcategory Subcategoria opcional
  * @returns Conteúdo em formato string ou null se não encontrado
  */
-export async function loadContentItem(category: string, id: string): Promise<string | null> {
+export async function loadContentItem(category: string, id: string, subcategory?: string): Promise<string | null> {
   const cacheKey = `${category}/${id}`;
 
   // Verifica cache primeiro
@@ -88,7 +95,7 @@ export async function loadContentItem(category: string, id: string): Promise<str
     return contentModuleCache.get(cacheKey) || null;
   }
 
-  const modulePath = buildModulePath(category, id);
+  const modulePath = buildModulePath(category, id, subcategory);
 
   if (!contentModules[modulePath]) {
     console.warn(`Módulo não encontrado para ${category}/${id}`);

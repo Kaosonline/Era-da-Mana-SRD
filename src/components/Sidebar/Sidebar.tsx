@@ -59,6 +59,7 @@ export function Sidebar({
   const { category } = useParams<{ category?: string; id?: string }>();
   const { activeTab } = useTabs();
   const [showCategoryFilter, setShowCategoryFilter] = useState(false);
+  const [expandedEquipGroups, setExpandedEquipGroups] = useState<Record<string, boolean>>({});
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [scrollTop, setScrollTop] = useState(0);
   const [containerHeight, setContainerHeight] = useState(600);
@@ -142,37 +143,72 @@ export function Sidebar({
   }, [items, searchQuery, selectedCategories, spellFilters, hasMagiasSelected, featFilters, hasTalentosSelected]);
 
   const grouped = useMemo(() => {
-    const groups: Record<string, ContentItem[]> = {};
+    const groups: Array<{ category: string; subcategory?: string; items: ContentItem[] }> = [];
+    const byCategory: Record<string, ContentItem[]> = {};
     filteredItems.forEach(item => {
-      if (!groups[item.category]) {
-        groups[item.category] = [];
-      }
-      groups[item.category].push(item);
+      if (!byCategory[item.category]) byCategory[item.category] = [];
+      byCategory[item.category].push(item);
     });
-    return Object.entries(groups)
-      .sort(([catA], [catB]) => catA.localeCompare(catB))
-      .map(([category, categoryItems]) => ({
-        category,
-        items: categoryItems.sort((a, b) => a.title.localeCompare(b.title))
-      }));
+
+    for (const [cat, catItems] of Object.entries(byCategory)) {
+      if (cat === 'equipamentos') {
+        const bySub: Record<string, ContentItem[]> = {};
+        catItems.forEach(item => {
+          const sub = item.subcategory || 'Outros';
+          if (!bySub[sub]) bySub[sub] = [];
+          bySub[sub].push(item);
+        });
+        for (const [sub, subItems] of Object.entries(bySub).sort(([a], [b]) => a.localeCompare(b))) {
+          groups.push({ category: cat, subcategory: sub, items: subItems.sort((a, b) => a.title.localeCompare(b.title)) });
+        }
+      } else {
+        groups.push({ category: cat, items: catItems.sort((a, b) => a.title.localeCompare(b.title)) });
+      }
+    }
+
+    return groups.sort((a, b) => {
+      if (a.category !== b.category) return a.category.localeCompare(b.category);
+      return (a.subcategory || '').localeCompare(b.subcategory || '');
+    });
   }, [filteredItems]);
 
   const layout = useMemo(() => {
-    const layoutItems: Array<{ type: 'category' | 'item'; category: string; item?: ContentItem; index: number }> = [];
+    const layoutItems: Array<{ type: 'category' | 'subcategory' | 'item'; category: string; subcategory?: string; item?: ContentItem; index: number }> = [];
     let offset = 0;
+    const equipCategoryShown = new Set<string>();
 
     grouped.forEach(group => {
-      layoutItems.push({ type: 'category', category: group.category, index: offset });
-      offset++;
+      if (group.category === 'equipamentos') {
+        if (!equipCategoryShown.has(group.category)) {
+          layoutItems.push({ type: 'category', category: group.category, index: offset });
+          offset++;
+          equipCategoryShown.add(group.category);
+        }
 
-      group.items.forEach(item => {
-        layoutItems.push({ type: 'item', category: group.category, item, index: offset });
+        const sub = group.subcategory || 'Outros';
+        const isExpanded = expandedEquipGroups[sub] === true;
+        layoutItems.push({ type: 'subcategory', category: group.category, subcategory: sub, index: offset });
         offset++;
-      });
+
+        if (isExpanded) {
+          group.items.forEach(item => {
+            layoutItems.push({ type: 'item', category: group.category, item, index: offset });
+            offset++;
+          });
+        }
+      } else {
+        layoutItems.push({ type: 'category', category: group.category, index: offset });
+        offset++;
+
+        group.items.forEach(item => {
+          layoutItems.push({ type: 'item', category: group.category, item, index: offset });
+          offset++;
+        });
+      }
     });
 
     return { layoutItems, totalHeight: offset * ITEM_HEIGHT };
-  }, [grouped]);
+  }, [grouped, expandedEquipGroups]);
 
   const visibleItems = useMemo(() => {
     const startIdx = Math.max(0, Math.floor(scrollTop / ITEM_HEIGHT) - OVERSCAN);
@@ -428,8 +464,11 @@ export function Sidebar({
             <div style={{ height: layout.totalHeight, position: 'relative' }}>
               {visibleItems.map((layoutItem) => {
                 if (layoutItem.type === 'category') {
-                  const group = grouped.find(g => g.category === layoutItem.category);
-                  if (!group) return null;
+                  const group = grouped.find(g => g.category === layoutItem.category && !g.subcategory);
+                  if (!group) {
+                    const firstGroup = grouped.find(g => g.category === layoutItem.category);
+                    if (!firstGroup) return null;
+                  }
 
                   return (
                     <div 
@@ -451,10 +490,42 @@ export function Sidebar({
                   );
                 }
 
+                if (layoutItem.type === 'subcategory') {
+                  const sub = layoutItem.subcategory || '';
+                  const isExpanded = expandedEquipGroups[sub] === true;
+                  const subItems = grouped.find(g => g.subcategory === sub)?.items || [];
+                  return (
+                    <div
+                      key={`sub-${sub}`}
+                      className="nav-subcategory"
+                      style={{
+                        position: 'absolute',
+                        top: layoutItem.top,
+                        left: 0,
+                        right: 0,
+                        height: ITEM_HEIGHT,
+                      }}
+                    >
+                      <button
+                        className="nav-subcategory-btn"
+                        onClick={() => {
+                          setExpandedEquipGroups(prev => ({ ...prev, [sub]: !prev[sub] }));
+                        }}
+                      >
+                        <span className="sub-chevron">{isExpanded ? '▼' : '▶'}</span>
+                        <span className="sub-name">{sub}</span>
+                        <span className="sub-count">({subItems.length})</span>
+                      </button>
+                    </div>
+                  );
+                }
+
                 if (!layoutItem.item) return null;
 
                 const item = layoutItem.item;
-                const tabId = `${item.category}/${item.id}`;
+                const tabId = item.subcategory
+                  ? `${item.category}/${item.subcategory}/${item.id}`
+                  : `${item.category}/${item.id}`;
                 const isActive = activeTab === tabId;
                 return (
                   <div

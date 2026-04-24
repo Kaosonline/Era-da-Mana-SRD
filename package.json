@@ -9,7 +9,8 @@
     "prebuild": "tsx scripts/generate-index.ts",
     "dev": "vite --host",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "import-equipamentos": "tsx scripts/import-equipamentos.ts"
   },
   "dependencies": {
     "@bdliyq/opencode-rate-limit-retry": "^1.0.3",

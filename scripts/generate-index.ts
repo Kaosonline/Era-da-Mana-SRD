@@ -11,6 +11,7 @@ interface ContentIndexItem {
   category: string;
   title: string;
   path: string;
+  subcategory?: string;
   spellLevel?: number;
   spellSchool?: string;
   spellCastingTime?: string;
@@ -160,8 +161,8 @@ function getTitle(content: string): string {
   return 'Sem título';
 }
 
-async function walkDir(dir: string, basePath: string = dir): Promise<Array<{ id: string; category: string; title: string; path: string; content: string }>> {
-  let items: Array<{ id: string; category: string; title: string; path: string; content: string }> = [];
+async function walkDir(dir: string, basePath: string = dir): Promise<Array<{ id: string; category: string; title: string; path: string; subcategory: string; content: string }>> {
+  let items: Array<{ id: string; category: string; title: string; path: string; subcategory: string; content: string }> = [];
 
   try {
     const entries = await readdir(dir, { withFileTypes: true });
@@ -174,9 +175,11 @@ async function walkDir(dir: string, basePath: string = dir): Promise<Array<{ id:
       } else if (entry.isFile() && extname(entry.name) === '.md') {
         const content = await readFile(fullPath, 'utf-8');
         const title = getTitle(content);
-        const category = relative(basePath, dir).split(/[\\/]/)[0];
+        const pathParts = relative(basePath, dir).split(/[\\/]/);
+        const category = pathParts[0];
+        const subcategory = pathParts.length > 1 ? pathParts[1] : '';
         const id = basename(entry.name, '.md');
-        items.push({ id, category: category.toLowerCase(), title, path: relativePath.replace(/\\/g, '/'), content });
+        items.push({ id, category: category.toLowerCase(), title, path: relativePath.replace(/\\/g, '/'), subcategory, content });
       }
     }
   } catch (error) {
@@ -211,6 +214,7 @@ async function generateIndex() {
         title: item.title,
         path: item.path,
       };
+      if (item.subcategory) base.subcategory = item.subcategory;
 
       if (item.category === 'magias') {
         const spellMeta = parseSpellMetadata(item.content);
@@ -252,6 +256,7 @@ export interface ContentIndexItem {
   category: string;
   title: string;
   path: string;
+  subcategory?: string;
   spellLevel?: number;
   spellSchool?: string;
   spellCastingTime?: string;
