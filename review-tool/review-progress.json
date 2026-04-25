@@ -129,7 +129,15 @@
     "habilidades de classe/Aperfeiçoamento-Marcial": "approved",
     "habilidades de classe/Arcanista-Blindado": "approved",
     "habilidades de classe/Arma-da-Ruína": "approved",
-    "habilidades de classe/Disparo-Místico": "approved"
+    "habilidades de classe/Disparo-Místico": "approved",
+    "habilidades de classe/Treinamento-em-armadura": "approved",
+    "habilidades de classe/Treinamento-com-Armas": "approved",
+    "habilidades de classe/Treinamento-em-Armadura": "approved",
+    "habilidades de classe/Bravura": "approved",
+    "habilidades de classe/Arma-Mística": "approved",
+    "habilidades de classe/Arsenal-Mágico": "approved",
+    "habilidades de classe/Arsenal-Mágico-Especializado": "approved",
+    "habilidades de classe/Ataque-Furtivo": "approved"
   },
-  "lastCategory": "talentos"
+  "lastCategory": "habilidades de classe"
 }

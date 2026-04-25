@@ -1,7 +1,5 @@
 # Atuações (Sob)
 
-Custo da Habilidade: 20+10 por nível
-
 Ao adquirir esta habilidade, o personagem aprende a utilizar a perícia Atuação para produzir efeitos mágicos sobre criaturas ao seu redor, incluindo a si mesmo, se desejar.
 
 Iniciar uma Atuação é uma ação padrão. A cada rodada subsequente, a Atuação pode ser mantida como uma ação livre. Para mudar de uma Atuação para outra, o personagem deve encerrar a Atuação atual e iniciar a nova como uma ação padrão. Uma Atuação termina imediatamente se o personagem for morto, paralisado, atordoado, inconsciente ou impedido de realizar ações livres para mantê-la.
@@ -18,13 +16,13 @@ Se uma Atuação possuir componentes visuais, as criaturas afetadas devem ser ca
 
 O nível máximo dessa habilidade não pode exceder o nível de personagem.
 
-Adquirir Atuações custa 20 Pontos de Classe. Cada aumento de nível em Atuações custa 10 Pontos de Classe adicionais.
+Adquirir Atuações custa 4 Pontos de Classe. Cada aumento de nível em Atuações custa 2 Pontos de Classe adicionais.
 
-Especialistas adquirem Atuações por 10 Pontos de Classe.
+Especialistas adquirem Atuações por 2 Pontos de Classe.
 
 Pré-requisito: Atuação (qualquer) 1+.
 
-Abaixo está a lista de Atuações:
+Abaixo está a lista completa de Atuações:
 
 - **Contraponto**
     
