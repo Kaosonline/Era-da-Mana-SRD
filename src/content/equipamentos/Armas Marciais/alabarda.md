@@ -1,6 +1,6 @@
 # Alabarda
 
-**Custo** 10 PO  **Peso** 12lbs
+**Custo** 10 PO  **Peso** 6kg
 **Dano** 1d10  **Crítico** x3  **Tipo** Perfurante ou Cortante
 **Categoria** Duas Mãos  **Grupo** Haste
 **Alcance** -

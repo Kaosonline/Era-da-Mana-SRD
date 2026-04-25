@@ -1,6 +1,6 @@
 # Azagaia
 
-**Custo** 1 PO  **Peso** 2lbs
+**Custo** 1 PO  **Peso** 1kg
 **Dano** 1d6  **Crítico** x2  **Tipo** Perfurante
 **Categoria** Distância  **Grupo** Arremesso, Lanças
 **Alcance** 9 Metros (Arremesso)

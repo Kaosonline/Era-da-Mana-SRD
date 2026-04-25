@@ -1,6 +1,6 @@
 # Arco Curto
 
-**Custo** 30 PO  **Peso** 2lbs
+**Custo** 30 PO  **Peso** 1kg
 **Dano** 1d6  **Crítico** x3  **Tipo** Perfurante
 **Categoria** Distância  **Grupo** Arcos
 **Alcance** 18 Metros (Projétil)

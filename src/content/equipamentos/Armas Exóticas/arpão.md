@@ -1,6 +1,6 @@
 # Arpão
 
-**Custo** 5 PO  **Peso** 16lbs
+**Custo** 5 PO  **Peso** 8kg
 **Dano** 1d8  **Crítico** x3  **Tipo** Perfurante
 **Categoria** Duas Mãos  **Grupo** Lanças, Arremesso
 **Alcance** 3 Metros (Arremesso)

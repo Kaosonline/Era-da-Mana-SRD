@@ -137,7 +137,23 @@
     "habilidades de classe/Arma-Mística": "approved",
     "habilidades de classe/Arsenal-Mágico": "approved",
     "habilidades de classe/Arsenal-Mágico-Especializado": "approved",
-    "habilidades de classe/Ataque-Furtivo": "approved"
+    "habilidades de classe/Ataque-Furtivo": "approved",
+    "habilidades de classe/Atuações": "approved",
+    "habilidades de classe/Aura-Defensiva": "approved",
+    "habilidades de classe/Bombas-Alquímicas": "approved",
+    "habilidades de classe/Combate-Mágico": "approved",
+    "equipamentos/adaga": "approved",
+    "equipamentos/adaga-de-duelo": "approved",
+    "equipamentos/adaga-de-punho": "approved",
+    "equipamentos/adaga-quebra-espadas": "approved",
+    "equipamentos/alabarda": "approved",
+    "equipamentos/arco-curto": "approved",
+    "equipamentos/arco-curto-composto": "approved",
+    "equipamentos/arco-longo": "approved",
+    "equipamentos/arco-longo-composto": "approved",
+    "equipamentos/arpão": "approved",
+    "equipamentos/aspergillum-de-batalha": "approved",
+    "equipamentos/ataque-desarmado": "approved"
   },
-  "lastCategory": "habilidades de classe"
+  "lastCategory": "equipamentos"
 }

@@ -1,6 +1,6 @@
 # Arco Curto Composto
 
-**Custo** 75 PO  **Peso** 2lbs
+**Custo** 75 PO  **Peso** 1kg
 **Dano** 1d6  **Crítico** x3  **Tipo** Perfurante
 **Categoria** Distância  **Grupo** Arcos
 **Alcance** 21 Metros (Projétil)
@@ -16,4 +16,4 @@ O arco curto composto padrão exige um modificador de Força de +0 ou maior para
 
 Cada ponto de bônus de Força concedido pelo arco aumenta seu custo em 75 po. Se você tiver uma penalidade por Força baixa, aplique-a às jogadas de dano ao usar um arco curto composto.
 
-Para fins de Proficiência com Armas, Foco em Arma e talentos semelhantes, um arco curto composto é tratado como se fosse um arco curto.
+Para fins de Proficiência com Armas e talentos semelhantes, um arco curto composto é tratado como se fosse um [arco curto](arco-curto.md).

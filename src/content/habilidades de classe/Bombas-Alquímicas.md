@@ -1,28 +1,23 @@
 # Bombas Alquímicas (Sob)
+O personagem aprende a criar e arremessar bombas alquímicas instáveis a partir de reagentes preparados.
 
-Custo da Habilidade: 20+10 por nível
+O personagem pode criar e arremessar um número de bombas por dia igual ao seu nível nesta habilidade + seu modificador de Inteligência. Bombas devem ser utilizadas no mesmo turno em que são criadas; caso contrário, tornam-se inertes.
 
-Ao adquirir esta habilidade, o personagem aprende a misturar rapidamente substâncias voláteis, infundindo-as para criar bombas alquímicas altamente instáveis.
+Criar e arremessar uma bomba é uma ação padrão que provoca ataques de oportunidade.
 
-O personagem pode criar e arremessar um número de bombas por dia igual ao seu nível nesta habilidade + seu modificador de Inteligência. Bombas são inerentemente instáveis e devem ser utilizadas no mesmo turno em que são criadas; caso contrário, degradam-se e tornam-se inertes. O método de criação impede que grandes quantidades de material explosivo sejam armazenadas.
+Bombas são armas de arremesso com espalhamento, com alcance de 6 metros.
 
-Para criar uma bomba, o personagem deve possuir um pequeno frasco contendo um catalisador líquido (aproximadamente 30 ml). Esse catalisador pode ser produzido a partir de pequenas quantidades de reagentes de um laboratório de alquimia, podendo ser reabastecidos. 
+Em um acerto direto, a bomba causa 1d6 pontos de dano de fogo + modificador de Inteligência. Esse dano aumenta em +1d6 a cada nível ímpar desta habilidade além do primeiro.
 
-A maioria dos alquimistas prepara, no início do dia, um número de frascos de catalisador igual ao total de bombas que pode criar naquele dia; uma vez criado, um frasco de catalisador permanece utilizável por anos. Bombas não utilizadas no dia são perdidas e não podem ser acumuladas.
+Esse dano não é multiplicado em acertos críticos nem por efeitos como Ataque Vital.
 
-Sacar os componentes, criar e arremessar uma bomba exige 1 ação padrão e provoca ataque de oportunidade. Bombas são armas de arremesso do tipo explosivo, com alcance de 6 metros, utilizando a regra de Arma de Arremesso com Espalhamento. Bombas são consideradas armas e podem ser selecionadas por talentos como Tiro Certeiro, Tiro à Queima-Roupa e Foco em Arma mas, de resto, não são afetados por talentos como Tiro Rápido, Combater com Duas Armas ou outros talentos ou magias semelhantes que permitiriam ao personagem lançar mais bombas por rodada.
+O dano de espalhamento é igual ao dano mínimo da bomba, incluindo Inteligência. Criaturas afetadas podem realizar um teste de Reflexos para reduzir o dano à metade (CD 10 + 1/2 do nível da habilidade + modificador de Inteligência).
 
-Em um acerto direto, a bomba causa 1d6 pontos de dano de fogo + o modificador de Inteligência do personagem. O dano da bomba aumenta em +1d6 a cada nível ímpar desta habilidade além do primeiro. Esse dano não é multiplicado em acertos críticos nem por efeitos como Ataque Vital.
+O personagem é proficiente com Bombas Alquímicas.
 
-O dano de espalhamento causado pela bomba é sempre igual ao dano mínimo da bomba. Criaturas afetadas pelo dano de espalhamento podem realizar um teste de Reflexos para reduzir o dano à metade, com CD igual a 10 + metade do nível desta habilidade + o modificador de Inteligência do personagem.
+Bombas Alquímicas são consideradas armas para fins de talentos como [Tiro Certeiro](point-blank-shot.md), [Tiro à Queima-Roupa](precise-shot.md) e [Foco em Arma](weapon-focus.md), mas não podem ser utilizadas com efeitos que concedam ataques adicionais, como [Tiro Rápido](rapid-shot.md) ou [Combater com Duas Armas](two-weapon-fighting.md).
+---
+**Custo:** Adquirir o 1º nível de Bombas Alquímicas custa 4 Pontos de Classe. Cada nível adicional custa 2 Pontos de Classe.
+**Pré-requisitos:** Habilidade de Classe Alquimista; Inteligência 13+.
 
-O personagem é considerado proficiente com Bombas Alquímicas e adiciona seu modificador de Inteligência ao dano causado por armas de espalhamento, incluindo o dano de espalhamento, quando aplicável.
-
-Além disso, o personagem é considerado como possuindo o talento Arremessar Qualquer Coisa, mesmo que não atenda aos pré-requisitos desse talento.
-
-O nível de Bombas Alquímicas não pode exceder o nível total do personagem.
-
-Adquirir Bombas Alquímicas custa 20 Pontos de Classe.
-Além disso, cada aumento de nível em Bombas Alquímicas custa 10 Pontos de Classe adicionais e deve ser adquirido separadamente no nível em que se torna disponível. Caso o personagem não adquira um aumento de nível ao atingir um desses níveis, ele pode fazê-lo posteriormente, respeitando os limites máximos da habilidade.
-
-Pré-requisitos: Habilidade de Classe Alquimista; Inteligência 13+
+*Nível máximo: igual ao nível de personagem.*

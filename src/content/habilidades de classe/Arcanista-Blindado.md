@@ -1,14 +1,22 @@
 # Arcanista Blindado (Ex)
 O personagem aprende técnicas avançadas de canalização mágica que lhe permitem conjurar magias arcanas mesmo enquanto utiliza armaduras e escudos, reduzindo ou anulando as interferências físicas sobre o fluxo arcano.
 
-Esta habilidade possui três níveis, adquiridos separadamente. Cada nível remove as restrições de conjuração arcana para determinados tipos de armadura.
+Esta habilidade possui três níveis, adquiridos separadamente.
+## Nível 1
 
-No 1º nível, o personagem pode conjurar magias arcanas normalmente enquanto estiver vestindo armaduras leves, sem sofrer falhas de conjuração.
+O personagem pode conjurar magias arcanas normalmente enquanto estiver vestindo armaduras leves, ignorando qualquer chance de falha de conjuração proveniente dessas armaduras.
+## Nível 2
 
-No 2º nível, o personagem pode conjurar magias arcanas normalmente enquanto estiver vestindo armaduras médias e utilizando escudos, ignorando quaisquer chances de falha de conjuração associadas a esses equipamentos.
+O personagem pode conjurar magias arcanas normalmente enquanto estiver vestindo armaduras médias e utilizando escudos, ignorando qualquer chance de falha de conjuração proveniente desses equipamentos.
+## Nível 3
 
-No 3º nível, o personagem pode conjurar magias arcanas normalmente enquanto estiver vestindo armaduras pesadas, ignorando completamente as penalidades e chances de falha de conjuração provenientes de armaduras e escudos.
+O personagem pode conjurar magias arcanas normalmente enquanto estiver vestindo armaduras pesadas, ignorando completamente as chances de falha de conjuração provenientes de armaduras e escudos.
 ---
-**Custo:** Cada nível de Arcanista Blindado custa 10 Pontos de Classe.
+**Custo:** Cada nível de Arcanista Blindado custa 2 Pontos de Classe.
 
-*Os benefícios de cada nível se acumulam.*
+**Pré-requisitos:**
+1º nível: capacidade de conjurar magias arcanas de 1º círculo, Proficiência em Armaduras Leves;
+2º nível: capacidade de conjurar magias arcanas de 3º círculo, Proficiência em Armaduras Médias, nível de personagem 5+;
+3º nível: capacidade de conjurar magias arcanas de 5º círculo, Proficiência em Armaduras Pesadas, nível de personagem 9+.
+
+*Nível máximo: 3. Os benefícios se acumulam.*

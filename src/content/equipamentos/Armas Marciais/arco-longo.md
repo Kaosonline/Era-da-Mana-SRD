@@ -1,6 +1,6 @@
 # Arco Longo
 
-**Custo** 75 PO  **Peso** 3lbs
+**Custo** 75 PO  **Peso** 1,5kg
 **Dano** 1d8  **Crítico** x3  **Tipo** Perfurante
 **Categoria** Distância  **Grupo** Arcos
 **Alcance** 30 Metros (Projétil)

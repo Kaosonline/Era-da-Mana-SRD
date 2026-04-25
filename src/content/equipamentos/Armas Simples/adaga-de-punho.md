@@ -1,6 +1,6 @@
 # Adaga de Punho
 
-**Custo** 2 PO  **Peso** 1lb
+**Custo** 2 PO  **Peso** 0,5kg
 **Dano** 1d4  **Crítico** x3  **Tipo** Perfurante
 **Categoria** Leve  **Grupo** Perto
 **Alcance** -
