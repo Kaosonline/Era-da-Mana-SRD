@@ -220,6 +220,31 @@
       color: var(--color-text);
     }
 
+    .file-item .file-id {
+      font-size: 0.7em;
+      color: var(--color-text-secondary);
+      opacity: 0.7;
+      font-family: monospace;
+      flex-shrink: 0;
+    }
+
+    .file-item.exact-match {
+      background: rgba(16, 185, 129, 0.08);
+    }
+
+    .file-item.high-relevance {
+      background: rgba(251, 191, 36, 0.05);
+    }
+
+    .file-item .snippet {
+      font-size: 0.75em;
+      color: var(--color-text-secondary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      opacity: 0.8;
+    }
+
     .file-item .file-info {
       flex: 1;
       display: flex;
@@ -1613,7 +1638,19 @@
         }
       }
 
-      // Se não tem query ou deu erro, usar filtro local
+      // Se não tem query ou deu erro, recarregar lista completa do servidor
+      if (!state.searchQuery || state.searchQuery.trim().length < 2) {
+        try {
+          const res = await fetch(`/api/list/${state.currentCategory}`);
+          const files = await res.json();
+          state.files = files.sort((a, b) => a.id.localeCompare(b.id));
+        } catch (err) {
+          console.error('Erro ao carregar lista:', err);
+          return;
+        }
+      }
+
+      // Aplicar filtros locais na lista completa
       let filtered = [...state.files];
 
       // Filtro por busca local
@@ -1648,6 +1685,7 @@
         if (file.metadata.castingTime) parts.push(file.metadata.castingTime);
       } else if (state.currentCategory === 'talentos') {
         if (file.metadata.type) parts.push(file.metadata.type);
+        if (file.metadata.prerequisites) parts.push(`Pré: ${file.metadata.prerequisites}`);
       }
       
       return parts.join(' | ');
@@ -1661,22 +1699,28 @@
       }
 
       els.fileList.innerHTML = state.filteredFiles.map((file, index) => {
-        const key = `${state.currentCategory}/${file.id}`;
+        const key = `${file.category || state.currentCategory}/${file.id}`;
         const status = state.status[key] || 'pending';
         const isActive = index === state.currentIndex;
-        const title = file.id.replace(/-/g, ' ').replace(/_/g, ' ');
+        // Use real title from metadata if available, else format from ID
+        const title = file.metadata?.title || file.id.replace(/-/g, ' ').replace(/_/g, ' ');
+        const displayId = file.id !== title ? `<span class="file-id">${file.id}</span>` : '';
         const metadata = formatMetadata(file);
         const snippet = file.snippet || '';
+        const relevanceClass = file.isExact ? 'exact-match' : (file.relevance > 5 ? 'high-relevance' : '');
 
         return `
-          <div class="file-item ${isActive ? 'active' : ''}" 
+          <div class="file-item ${relevanceClass} ${isActive ? 'active' : ''}" 
                data-index="${index}" 
+               data-id="${file.id}"
+               data-category="${file.category || state.currentCategory}"
                role="option" 
                aria-selected="${isActive}"
                tabindex="${isActive ? 0 : -1}">
             <span class="status-dot ${status}" aria-hidden="true"></span>
             <div class="file-info">
               <span class="title" title="${file.id}">${title}</span>
+              ${displayId}
               ${metadata ? `<span class="metadata">${metadata}</span>` : ''}
               ${snippet ? `<span class="snippet">${snippet}</span>` : ''}
             </div>
@@ -1712,16 +1756,18 @@
       }
 
       state.currentIndex = index;
-      state.currentFileId = state.filteredFiles[index].id;
       const file = state.filteredFiles[index];
-      const key = `${state.currentCategory}/${file.id}`;
+      state.currentFileId = file.id;
+      // Support cross-category search results
+      const fileCategory = file.category || state.currentCategory;
+      const key = `${fileCategory}/${file.id}`;
 
       // UI updates
       els.welcomeScreen.style.display = 'none';
       els.editorContent.style.display = 'flex';
 
-      // Atualizar título
-      const title = file.id.replace(/-/g, ' ').replace(/_/g, ' ');
+      // Atualizar título com metadata se disponível
+      const title = file.metadata?.title || file.id.replace(/-/g, ' ').replace(/_/g, ' ');
       els.editorTitle.textContent = title;
 
       // Atualizar badge de status
@@ -1737,7 +1783,7 @@
       els.editorTextarea.disabled = true;
 
       try {
-        const res = await fetch(`/api/read/${state.currentCategory}/${file.id}`);
+        const res = await fetch(`/api/read/${fileCategory}/${file.id}`);
         const data = await res.json();
         state.currentContent = data.content;
         els.editorTextarea.value = data.content;

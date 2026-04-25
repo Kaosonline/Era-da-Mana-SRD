@@ -55,8 +55,14 @@ class SearchEngine {
       this.indexer.stemmer.stem(term)
     );
     
+    // Also search by direct ID match (e.g., "power-attack" or "power-attack.md")
+    const idResults = this.searchById(searchTerms, category);
+    
     // Exact search
     let results = this.exactSearch(stemmedTerms, stemmedExclude, category);
+    
+    // Merge ID results
+    results = this.mergeIdResults(results, idResults);
     
     // Fuzzy search if few results
     if (fuzzy && results.length < 5 && searchTerms.length > 0) {
@@ -79,8 +85,18 @@ class SearchEngine {
       }));
     }
     
-    // Sort alphabetically by ID
-    results.sort((a, b) => a.id.localeCompare(b.id));
+    // Sort by relevance (exact matches first, then by relevance score, then alphabetically)
+    results.sort((a, b) => {
+      // Exact matches always first
+      if (a.isExact !== b.isExact) {
+        return a.isExact ? -1 : 1;
+      }
+      // Then by relevance score
+      const relDiff = (b.relevance || 0) - (a.relevance || 0);
+      if (relDiff !== 0) return relDiff;
+      // Finally alphabetically
+      return a.id.localeCompare(b.id);
+    });
     
     // Limit results
     return results.slice(0, limit);
@@ -182,6 +198,28 @@ class SearchEngine {
         
         if (excluded) continue;
         
+        // Calculate relevance score
+        let relevance = entry.positions.length;
+        
+        // Boost if term matches ID
+        if (entry.id && entry.id.toLowerCase().includes(term)) {
+          relevance += 10;
+        }
+        
+        // Boost if term matches title
+        if (fileEntry.metadata && fileEntry.metadata.title) {
+          if (fileEntry.metadata.title.toLowerCase().includes(term)) {
+            relevance += 5;
+          }
+        }
+        
+        // Boost if term matches prerequisites
+        if (fileEntry.metadata && fileEntry.metadata.prerequisites) {
+          if (fileEntry.metadata.prerequisites.toLowerCase().includes(term)) {
+            relevance += 3;
+          }
+        }
+        
         // Add or update result
         if (!results.has(fileKey)) {
           results.set(fileKey, {
@@ -189,11 +227,13 @@ class SearchEngine {
             category: entry.category,
             metadata: fileEntry.metadata,
             content: fileEntry.content,
-            matchCount: 0
+            matchCount: 0,
+            relevance: 0
           });
         }
         
         results.get(fileKey).matchCount += entry.positions.length;
+        results.get(fileKey).relevance += relevance;
       }
     }
     
@@ -235,6 +275,28 @@ class SearchEngine {
           
           if (excluded) continue;
           
+          // Calculate relevance
+          let relevance = match.score;
+          
+          // Boost if fuzzy matches ID
+          if (entry.id && entry.id.toLowerCase().includes(queryTerm)) {
+            relevance += 10;
+          }
+          
+          // Boost if matches title
+          if (fileEntry.metadata && fileEntry.metadata.title) {
+            if (fileEntry.metadata.title.toLowerCase().includes(queryTerm)) {
+              relevance += 5;
+            }
+          }
+          
+          // Boost if matches prerequisites
+          if (fileEntry.metadata && fileEntry.metadata.prerequisites) {
+            if (fileEntry.metadata.prerequisites.toLowerCase().includes(queryTerm)) {
+              relevance += 3;
+            }
+          }
+          
           if (!fuzzyMatches.has(fileKey)) {
             fuzzyMatches.set(fileKey, {
               id: entry.id,
@@ -242,13 +304,15 @@ class SearchEngine {
               metadata: fileEntry.metadata,
               content: fileEntry.content,
               matchCount: 0,
-              fuzzyScore: 0
+              fuzzyScore: 0,
+              relevance: 0
             });
           }
           
           const result = fuzzyMatches.get(fileKey);
           result.matchCount += entry.positions.length;
           result.fuzzyScore += match.score;
+          result.relevance += relevance;
         }
       }
     }
@@ -348,6 +412,80 @@ class SearchEngine {
     }
     
     return bestParagraph.trim();
+  }
+
+  /**
+   * Search files by direct ID match (e.g., "power-attack")
+   */
+  searchById(terms, category) {
+    const results = [];
+    const normalizedTerms = terms.map(t => t.toLowerCase().replace(/\.md$/, ''));
+    
+    for (const [fileKey, fileEntry] of Object.entries(this.indexer.index.files)) {
+      // Filter by category if specified
+      if (category && fileEntry.category !== category) continue;
+      
+      const idLower = fileEntry.id.toLowerCase();
+      
+      for (const term of normalizedTerms) {
+        // Exact match
+        if (idLower === term) {
+          results.push({
+            id: fileEntry.id,
+            category: fileEntry.category,
+            metadata: fileEntry.metadata,
+            content: fileEntry.content,
+            matchCount: 100, // High match count for exact ID match
+            relevance: 100,
+            idMatch: true
+          });
+          break;
+        }
+        
+        // Partial match (contains term)
+        if (idLower.includes(term) || term.includes(idLower)) {
+          results.push({
+            id: fileEntry.id,
+            category: fileEntry.category,
+            metadata: fileEntry.metadata,
+            content: fileEntry.content,
+            matchCount: 50,
+            relevance: 50,
+            idMatch: true
+          });
+          break;
+        }
+      }
+    }
+    
+    return results;
+  }
+
+  /**
+   * Merge ID results with other search results
+   */
+  mergeIdResults(existing, idResults) {
+    const merged = new Map();
+    
+    // Add existing results
+    for (const result of existing) {
+      merged.set(`${result.category}/${result.id}`, result);
+    }
+    
+    // Add ID results (only if not already present, or boost if present)
+    for (const idResult of idResults) {
+      const key = `${idResult.category}/${idResult.id}`;
+      if (merged.has(key)) {
+        // Boost existing result
+        const existing = merged.get(key);
+        existing.relevance = (existing.relevance || 0) + idResult.relevance;
+        existing.matchCount = Math.max(existing.matchCount, idResult.matchCount);
+      } else {
+        merged.set(key, idResult);
+      }
+    }
+    
+    return Array.from(merged.values());
   }
 }
 

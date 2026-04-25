@@ -22,6 +22,24 @@ class Indexer {
   }
   
   /**
+   * Recursively get all .md files in a directory
+   */
+  getAllMdFiles(dir) {
+    const files = [];
+    const items = fs.readdirSync(dir);
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        files.push(...this.getAllMdFiles(fullPath));
+      } else if (item.endsWith('.md')) {
+        files.push(fullPath);
+      }
+    }
+    return files;
+  }
+
+  /**
    * Build complete index from all files
    */
   async buildIndex() {
@@ -40,10 +58,10 @@ class Indexer {
     
     for (const category of categories) {
       const categoryDir = path.join(this.contentDir, category);
-      const files = fs.readdirSync(categoryDir).filter(f => f.endsWith('.md'));
+      const mdFiles = this.getAllMdFiles(categoryDir);
       
-      for (const filename of files) {
-        const filePath = path.join(categoryDir, filename);
+      for (const filePath of mdFiles) {
+        const filename = path.basename(filePath);
         const content = fs.readFileSync(filePath, 'utf-8');
         this.indexFile(category, filename, content);
         totalFiles++;
@@ -108,6 +126,92 @@ class Indexer {
       fileEntry.terms.push(term);
     }
     
+    // Also index ID parts (for "power-attack" → "power", "attack")
+    const idParts = id.split(/[-_]/).filter(p => p.length > 0);
+    for (const part of idParts) {
+      // Add both stemmed and raw term
+      const stemmed = this.stemmer.stem(part);
+      const rawLower = part.toLowerCase();
+      
+      for (const term of [stemmed, rawLower]) {
+        if (!this.index.terms[term]) {
+          this.index.terms[term] = [];
+        }
+        this.index.terms[term].push({
+          id,
+          category,
+          field: 'id',
+          positions: [0]
+        });
+        if (!fileEntry.terms.includes(term)) {
+          fileEntry.terms.push(term);
+        }
+      }
+    }
+    
+    // Also index the full ID with hyphens preserved (for "power-attack")
+    const idLower = id.toLowerCase();
+    if (!this.index.terms[idLower]) {
+      this.index.terms[idLower] = [];
+    }
+    this.index.terms[idLower].push({
+      id,
+      category,
+      field: 'id_full',
+      positions: [0]
+    });
+    if (!fileEntry.terms.includes(idLower)) {
+      fileEntry.terms.push(idLower);
+    }
+    
+    // Also index title if exists
+    if (metadata.title) {
+      const titleTokens = metadata.title.toLowerCase()
+        .replace(/[^\w\sà-ú]/g, ' ')
+        .split(/\s+/)
+        .filter(w => w.length > 0);
+      
+      for (const token of titleTokens) {
+        const stemmed = this.stemmer.stem(token);
+        if (!this.index.terms[stemmed]) {
+          this.index.terms[stemmed] = [];
+        }
+        this.index.terms[stemmed].push({
+          id,
+          category,
+          field: 'title',
+          positions: [0]
+        });
+        if (!fileEntry.terms.includes(stemmed)) {
+          fileEntry.terms.push(stemmed);
+        }
+      }
+    }
+    
+    // Also index prerequisites if exists
+    if (metadata.prerequisites) {
+      const prereqTokens = metadata.prerequisites.toLowerCase()
+        .replace(/[^\w\sà-ú]/g, ' ')
+        .split(/\s+/)
+        .filter(w => w.length > 0);
+      
+      for (const token of prereqTokens) {
+        const stemmed = this.stemmer.stem(token);
+        if (!this.index.terms[stemmed]) {
+          this.index.terms[stemmed] = [];
+        }
+        this.index.terms[stemmed].push({
+          id,
+          category,
+          field: 'prerequisites',
+          positions: [0]
+        });
+        if (!fileEntry.terms.includes(stemmed)) {
+          fileEntry.terms.push(stemmed);
+        }
+      }
+    }
+    
     this.index.files[fileKey] = fileEntry;
   }
   
@@ -152,6 +256,12 @@ class Indexer {
     const metadata = {};
     const lines = content.split('\n');
     
+    // Extract title (first heading ###)
+    const titleMatch = content.match(/^#{1,6}\s+(.+)$/m);
+    if (titleMatch) {
+      metadata.title = titleMatch[1].trim();
+    }
+    
     if (category === 'magias') {
       // Extract spell metadata
       for (const line of lines) {
@@ -176,6 +286,9 @@ class Indexer {
       for (const line of lines) {
         const typeMatch = line.match(/\*\*Tipo do talento\*\*:\s*(.+)$/i);
         if (typeMatch) metadata.type = typeMatch[1].trim();
+        
+        const prereqMatch = line.match(/\*\*Pré-requisitos\*\*\s*[:.]?\s*(.+)$/i);
+        if (prereqMatch) metadata.prerequisites = prereqMatch[1].trim();
       }
     }
     

@@ -15,6 +15,50 @@ const PROGRESS_FILE = path.join(__dirname, 'review-progress.json');
 const GLOBAL_CSS_PATH = path.join(__dirname, '..', 'src', 'styles', 'global.css');
 const VARIABLES_CSS_PATH = path.join(__dirname, '..', 'src', 'styles', 'variables.css');
 
+// Buscar arquivo recursivamente na pasta da categoria pelo ID
+function findFileRecursive(category, filename) {
+  function findInDir(dir) {
+    const items = fs.readdirSync(dir);
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        const found = findInDir(fullPath);
+        if (found) return found;
+      } else if (item === filename) {
+        return fullPath;
+      }
+    }
+    return null;
+  }
+  
+  const categoryDir = path.join(CONTENT_DIR, category);
+  if (!fs.existsSync(categoryDir)) return null;
+  return findInDir(categoryDir);
+}
+
+// Buscar arquivo pelo ID em qualquer subdiretório da categoria
+function findFileById(category, id) {
+  function findInDir(dir) {
+    const items = fs.readdirSync(dir);
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        const found = findInDir(fullPath);
+        if (found) return found;
+      } else if (item.replace('.md', '') === id) {
+        return fullPath;
+      }
+    }
+    return null;
+  }
+  
+  const categoryDir = path.join(CONTENT_DIR, category);
+  if (!fs.existsSync(categoryDir)) return null;
+  return findInDir(categoryDir);
+}
+
 // Initialize search engine
 const indexer = new Indexer(CONTENT_DIR);
 const searchEngine = new SearchEngine(indexer);
@@ -24,6 +68,12 @@ const searchEngine = new SearchEngine(indexer);
   await indexer.buildIndex();
   indexer.startWatcher();
 })();
+
+// Rota: rebuild índice
+app.post('/api/rebuild', async (req, res) => {
+  await indexer.buildIndex();
+  res.json({ message: 'Índice reconstruído', files: Object.keys(indexer.index.files).length });
+});
 
 // Rota: listar todos os arquivos de uma categoria
 app.get('/api/list/:category', (req, res) => {
@@ -37,9 +87,24 @@ app.get('/api/list/:category', (req, res) => {
       return res.status(404).json({ error: `Categoria "${category}" não encontrada` });
     }
     
-    const fallbackFiles = fs.readdirSync(categoryDir)
-      .filter(f => f.endsWith('.md'))
-      .map(filename => ({
+    // Buscar recursivamente todos os .md
+    function getAllMdFiles(dir) {
+      const results = [];
+      const items = fs.readdirSync(dir);
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory()) {
+          results.push(...getAllMdFiles(fullPath));
+        } else if (item.endsWith('.md')) {
+          results.push(path.basename(fullPath));
+        }
+      }
+      return results;
+    }
+    
+    const mdFiles = getAllMdFiles(categoryDir);
+    const fallbackFiles = mdFiles.map(filename => ({
         id: filename.replace('.md', ''),
         filename,
         category
@@ -79,17 +144,109 @@ app.get('/api/search/:category', (req, res) => {
   }
 });
 
+// Rota: buscar globalmente (todas categorias)
+app.get('/api/search-all', (req, res) => {
+  const { q } = req.query;
+  
+  if (!q || !q.trim()) {
+    return res.json([]);
+  }
+
+  try {
+    const results = searchEngine.search(q, null, {
+      limit: 100,
+      fuzzy: true,
+      snippets: true,
+      snippetContext: 200
+    });
+    
+    res.json(results);
+  } catch (err) {
+    console.error('[Search] Error:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Rota: estatísticas do índice (debug)
 app.get('/api/index-stats', (req, res) => {
   res.json(indexer.getStats());
 });
 
+// Rota: encontrar arquivos que referenciam outro (por ID ou título)
+app.get('/api/references/:category/:id', (req, res) => {
+  const { category, id } = req.params;
+  
+  try {
+    const targetId = id.toLowerCase();
+    const results = [];
+    
+    // Search in all categories for references
+    for (const [fileKey, fileEntry] of Object.entries(indexer.index.files)) {
+      // Skip the target file itself
+      if (fileKey === `${category}/${id}`) continue;
+      
+      // Check if content mentions the target ID or title
+      const content = fileEntry.content;
+      const fileId = fileEntry.id.toLowerCase();
+      
+      // Check if file mentions this ID (in various formats)
+      const mentionsTarget = 
+        content.includes(` ${targetId} `) || // space-prefixed
+        content.includes(` ${targetId}.md`) || // with .md extension
+        content.includes(`**${targetId}`) || // bold markdown
+        content.includes(`(${targetId})`) || // in parentheses
+        content.includes(` ${targetId},`) || // followed by comma
+        content.includes(` ${targetId}.`) || // followed by period
+        content.includes(fileEntry.id) || // also search by original file id
+        fileId.includes(targetId) || targetId.includes(fileId); // partial match
+      
+      if (mentionsTarget) {
+        results.push({
+          id: fileEntry.id,
+          category: fileEntry.category,
+          title: fileEntry.metadata?.title || fileEntry.id,
+          metadata: fileEntry.metadata
+        });
+      }
+    }
+    
+    res.json(results);
+  } catch (err) {
+    console.error('[References] Error:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Rota: debug - ver termos indexados de um arquivo
+app.get('/api/debug/file/:category/:id', (req, res) => {
+  const { category, id } = req.params;
+  const fileKey = `${category}/${id}`;
+  const fileEntry = indexer.index.files[fileKey];
+  
+  if (!fileEntry) {
+    return res.status(404).json({ error: 'File not found' });
+  }
+  
+  res.json({
+    id: fileEntry.id,
+    category: fileEntry.category,
+    metadata: fileEntry.metadata,
+    terms: fileEntry.terms.slice(0, 50),
+    totalTerms: fileEntry.terms.length
+  });
+});
+
 // Rota: ler conteúdo de um arquivo
 app.get('/api/read/:category/:id', (req, res) => {
   const { category, id } = req.params;
-  const filePath = path.join(CONTENT_DIR, category, `${id}.md`);
-
-  if (!fs.existsSync(filePath)) {
+  
+  const categoryDir = path.join(CONTENT_DIR, category);
+  if (!fs.existsSync(categoryDir)) {
+    return res.status(404).json({ error: `Categoria "${category}" não encontrada` });
+  }
+  
+  const filePath = findFileById(category, id);
+  if (!filePath) {
     return res.status(404).json({ error: `Arquivo "${id}.md" não encontrado` });
   }
 
@@ -105,9 +262,9 @@ app.get('/api/read/:category/:id', (req, res) => {
 app.post('/api/save/:category/:id', (req, res) => {
   const { category, id } = req.params;
   const { content } = req.body;
-  const filePath = path.join(CONTENT_DIR, category, `${id}.md`);
+  const filePath = findFileById(category, id);
 
-  if (!fs.existsSync(filePath)) {
+  if (!filePath) {
     return res.status(404).json({ error: `Arquivo "${id}.md" não encontrado` });
   }
 
@@ -123,9 +280,9 @@ app.post('/api/save/:category/:id', (req, res) => {
 // Rota: deletar um arquivo
 app.delete('/api/delete/:category/:id', (req, res) => {
   const { category, id } = req.params;
-  const filePath = path.join(CONTENT_DIR, category, `${id}.md`);
+  const filePath = findFileById(category, id);
 
-  if (!fs.existsSync(filePath)) {
+  if (!filePath) {
     return res.status(404).json({ error: `Arquivo "${id}.md" não encontrado` });
   }
 
