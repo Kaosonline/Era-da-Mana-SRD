@@ -1,6 +1,6 @@
 # Bastão
 
-**Custo** 0  **Peso** 4lbs
+**Custo** 0  **Peso** 2kg
 **Dano** 1d6/1d6  **Crítico** x2  **Tipo** Concussão
 **Categoria** Duas Mãos  **Grupo** Dupla, Monge
 **Alcance** -

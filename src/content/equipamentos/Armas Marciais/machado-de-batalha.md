@@ -1,6 +1,6 @@
 # Machado de Batalha
 
-**Custo** 10 PO  **Peso** 6lbs
+**Custo** 10 PO  **Peso** 3kg
 **Dano** 1d8  **Crítico** x3  **Tipo** Cortante
 **Categoria** Uma Mão  **Grupo** Machados
 **Alcance** -

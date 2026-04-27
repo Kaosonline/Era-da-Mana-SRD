@@ -1,6 +1,6 @@
 # Besta Leve de Repetição
 
-**Custo** 250 PO  **Peso** 6lbs
+**Custo** 250 PO  **Peso** 3kg
 **Dano** 1d8  **Crítico** 19-20/x2  **Tipo** Perfurante
 **Categoria** Distância  **Grupo** Bestas
 **Alcance** -

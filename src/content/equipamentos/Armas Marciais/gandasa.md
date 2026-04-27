@@ -1,6 +1,6 @@
 # Gandasa
 
-**Custo** 15 PO  **Peso** 4lbs
+**Custo** 15 PO  **Peso** 2kg
 **Dano** 2d4  **Crítico** x3  **Tipo** Cortante
 **Categoria** Uma Mão  **Grupo** Machados
 **Alcance** -

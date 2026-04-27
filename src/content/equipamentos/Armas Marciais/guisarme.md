@@ -1,6 +1,6 @@
 # Guisarme
 
-**Custo** 9 PO  **Peso** 12lbs
+**Custo** 9 PO  **Peso** 6kg
 **Dano** 2d4  **Crítico** x3  **Tipo** Cortante
 **Categoria** Duas Mãos  **Grupo** Haste
 **Alcance** -

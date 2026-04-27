@@ -1,6 +1,6 @@
 # Nunchaku
 
-**Custo** 2 PO  **Peso** 2lbs
+**Custo** 2 PO  **Peso** 1kg
 **Dano** 1d6  **Crítico** x2  **Tipo** Concussão
 **Categoria** Leve  **Grupo** Manguais, Monge
 **Alcance** -

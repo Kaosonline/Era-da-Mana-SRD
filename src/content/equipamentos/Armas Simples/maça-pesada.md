@@ -1,6 +1,6 @@
 # Maça Pesada
 
-**Custo** 12 PO  **Peso** 8lbs
+**Custo** 12 PO  **Peso** 4kg
 **Dano** 1d8  **Crítico** x2  **Tipo** Concussão
 **Categoria** Uma Mão  **Grupo** Martelos
 **Alcance** -

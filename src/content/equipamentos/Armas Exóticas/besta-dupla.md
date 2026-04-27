@@ -1,6 +1,6 @@
 # Besta Dupla
 
-**Custo** 300 PO  **Peso** 18lbs
+**Custo** 300 PO  **Peso** 9kg
 **Dano** 1d8  **Crítico** 19-20/x2  **Tipo** Perfurante
 **Categoria** Distância  **Grupo** Bestas
 **Alcance** 24 Metros (Projétil)
@@ -12,6 +12,6 @@ Devido ao seu tamanho e peso, você sofre uma penalidade de –4 na jogada de at
 
 Se o ataque acertar, o alvo sofre dano de ambos os virotes. Acertos críticos, dano de ataque furtivo e outros danos baseados em precisão se aplicam apenas ao primeiro virote.
 
-Recarregar um virote é uma ação padrão; o talento Recarga Rápida reduz isso para uma ação de movimento. Maestria em Bestas permite recarregar ambos os virotes como uma ação de movimento.
+Recarregar uma das bestas é uma ação padrão; o talento [Recarga Rápida](rapid-reload.md) reduz isso para uma ação de movimento. [Maestria em Bestas](crossbow-mastery.md) permite recarregar ambos os virotes como uma ação de movimento.
 
 Uma besta dupla dispara virotes de besta.

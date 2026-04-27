@@ -1,6 +1,6 @@
 # Espinhos de Armadura
 
-**Custo** 50 PO  **Peso** 10lbs
+**Custo** 50 PO  **Peso** 5kg
 **Dano** 1d6  **Crítico** x2  **Tipo** Perfurante
 **Categoria** Leve  **Grupo** Perto
 **Alcance** -

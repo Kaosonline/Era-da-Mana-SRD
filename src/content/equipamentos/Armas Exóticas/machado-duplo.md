@@ -1,6 +1,6 @@
 # Machado Duplo
 
-**Custo** 60 PO  **Peso** 15lbs
+**Custo** 60 PO  **Peso** 7,5kg
 **Dano** 1d8/1d8  **Crítico** x3  **Tipo** Cortante
 **Categoria** Duas Mãos  **Grupo** Machados, Dupla
 **Alcance** -

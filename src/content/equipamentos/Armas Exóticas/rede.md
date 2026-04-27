@@ -1,12 +1,12 @@
 # Rede
 
-**Custo** 20 PO  **Peso** 6lbs
+**Custo** 20 PO  **Peso** 3kg
 **Dano** 0  **Crítico** -  **Tipo** -
 **Categoria** Distância  **Grupo** Arremesso
 **Alcance** 3 Metros (Projétil)
 **Especial** Veja o texto
 
-Quando você arremessa uma rede, faz um ataque de toque à distância contra o alvo. O alcance máximo de uma rede é de 3 metros. Se acertar, o alvo fica enredado.
+Quando você arremessa uma rede, faz um ataque de toque à distância contra o alvo. O alcance máximo de uma rede é de 3 metros. Se acertar, o alvo fica [enredado](entangled.md).
 
 Se você controlar a corda presa à rede, obtendo sucesso em um teste de Força oposto enquanto a segura, a criatura enredada só pode se mover dentro dos limites permitidos pelo comprimento da corda. Se a criatura enredada tentar conjurar uma magia, ela deve realizar um teste de Concentração com CD 15 + o nível da magia ou a conjuração falha.
 

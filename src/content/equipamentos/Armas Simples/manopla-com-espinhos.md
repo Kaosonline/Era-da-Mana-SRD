@@ -1,6 +1,6 @@
 # Manopla com Espinhos
 
-**Custo** 5 PO  **Peso** 1lb
+**Custo** 10 PO  **Peso** 1kg
 **Dano** 1d4  **Crítico** x2  **Tipo** Perfurante
 **Categoria** Leve  **Grupo** Perto
 **Alcance** -
@@ -8,4 +8,4 @@
 
 Um ataque com uma manopla com espinhos é considerado um ataque armado. Seu oponente não pode usar a ação de desarmar para remover suas manoplas com espinhos.
 
-O custo e o peso indicados referem-se a uma única manopla.
+O custo e o peso indicados referem-se a um par de manoplas. 

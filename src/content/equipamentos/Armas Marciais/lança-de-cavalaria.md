@@ -1,6 +1,6 @@
 # Lança de Cavalaria
 
-**Custo** 10 PO  **Peso** 10lbs
+**Custo** 10 PO  **Peso** 5kg
 **Dano** 1d8  **Crítico** x3  **Tipo** Perfurante
 **Categoria** Duas Mãos  **Grupo** Lanças
 **Alcance** -

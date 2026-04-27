@@ -1,6 +1,6 @@
 # Mangual Atroz
 
-**Custo** 90 PO  **Peso** 10lbs
+**Custo** 90 PO  **Peso** 5kg
 **Dano** 1d8/1d8  **Crítico** x2  **Tipo** Concussão
 **Categoria** Duas Mãos  **Grupo** Dupla, Manguais
 **Alcance** -

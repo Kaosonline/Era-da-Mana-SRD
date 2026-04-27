@@ -1,6 +1,6 @@
 # Machado Grande
 
-**Custo** 20 PO  **Peso** 12lbs
+**Custo** 20 PO  **Peso** 6kg
 **Dano** 1d12  **Crítico** x3  **Tipo** Cortante
 **Categoria** Duas Mãos  **Grupo** Machados
 **Alcance** -

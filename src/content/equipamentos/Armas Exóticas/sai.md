@@ -1,6 +1,6 @@
 # Sai
 
-**Custo** 1 PO  **Peso** 1lb
+**Custo** 1 PO  **Peso** 0,5kg
 **Dano** 1d4  **Crítico** x2  **Tipo** Concussão
 **Categoria** Leve  **Grupo** Monge
 **Alcance** -

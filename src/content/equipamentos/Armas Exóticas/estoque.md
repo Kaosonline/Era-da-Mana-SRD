@@ -1,6 +1,6 @@
 # Estoque
 
-**Custo** 50 PO  **Peso** 4lbs
+**Custo** 50 PO  **Peso** 2kg
 **Dano** 2d4  **Crítico** 18-20/x2  **Tipo** Perfurante
 **Categoria** Uma Mão  **Grupo** Lâminas Pesadas
 **Alcance** -
@@ -12,4 +12,4 @@ Assim como a espada bastarda, o estoque exige treinamento especial para ser usad
 
 Quando você empunha um estoque com uma mão, ele é tratado como uma arma de uma mão; quando empunhado com duas mãos, é tratado como uma arma de duas mãos. 
 
-Se você puder usar o estoque com proficiência em uma mão, também pode usar o talento Acuidade com Arma para aplicar seu modificador de Destreza em vez do modificador de Força nas jogadas de ataque ao empunhar um estoque do seu tamanho, com uma ou duas mãos, mesmo que ele não seja uma arma leve.
+Se você puder usar o estoque com proficiência em uma mão, também pode usar o talento [Acuidade com Arma](weapon-finesse.md) para aplicar seu modificador de Destreza em vez do modificador de Força nas jogadas de ataque ao empunhar um estoque do seu tamanho, com uma ou duas mãos, mesmo que ele não seja uma arma leve.

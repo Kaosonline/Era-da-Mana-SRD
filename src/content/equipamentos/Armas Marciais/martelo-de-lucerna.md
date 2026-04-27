@@ -1,6 +1,6 @@
 # Martelo de Lucerna
 
-**Custo** 15 PO  **Peso** 12lbs
+**Custo** 15 PO  **Peso** 6kg
 **Dano** 1d12  **Crítico** x2  **Tipo** Concussão ou Perfurante
 **Categoria** Duas Mãos  **Grupo** Haste
 **Alcance** -

@@ -1,6 +1,6 @@
 # Maça de Estalo
 
-**Custo** 20 PO  **Peso** 10lbs
+**Custo** 20 PO  **Peso** 5kg
 **Dano** 1d8  **Crítico** x2  **Tipo** Concussão
 **Categoria** Uma Mão  **Grupo** Manguais, Martelos
 **Alcance** -

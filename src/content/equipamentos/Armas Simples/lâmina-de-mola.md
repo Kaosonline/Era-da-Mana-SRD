@@ -1,6 +1,6 @@
 # Lâmina de Mola
 
-**Custo** 70 PO  **Peso** 1lb
+**Custo** 70 PO  **Peso** 0,5kg
 **Dano** 1d4  **Crítico** x2  **Tipo** Perfurante ou Cortante
 **Categoria** Leve  **Grupo** Arremesso, Lâminas Leves
 **Alcance** 3 Metros (Arremesso)

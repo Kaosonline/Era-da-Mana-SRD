@@ -1,6 +1,6 @@
 # Cimitarra
 
-**Custo** 15 PO  **Peso** 4lbs
+**Custo** 15 PO  **Peso** 2kg
 **Dano** 1d6  **Crítico** 18-20/x2  **Tipo** Cortante
 **Categoria** Uma Mão  **Grupo** Lâminas Pesadas
 **Alcance** -

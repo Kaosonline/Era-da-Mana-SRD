@@ -1,6 +1,6 @@
 # Faca Chifre de Cervo
 
-**Custo** 10 PO  **Peso** 3lbs
+**Custo** 10 PO  **Peso** 1,5kg
 **Dano** 1d4  **Crítico** x3  **Tipo** Perfurante
 **Categoria** Leve  **Grupo** Lâminas Leves, Monge, Arremesso
 **Alcance** 6 Metros (Arremesso)

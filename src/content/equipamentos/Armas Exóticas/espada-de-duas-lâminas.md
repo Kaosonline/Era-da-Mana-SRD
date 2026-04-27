@@ -1,6 +1,6 @@
 # Espada de Duas Lâminas
 
-**Custo** 100 PO  **Peso** 10lbs
+**Custo** 100 PO  **Peso** 5kg
 **Dano** 1d8/1d8  **Crítico** 19-20/x2  **Tipo** Cortante
 **Categoria** Duas Mãos  **Grupo** Dupla, Lâminas Pesadas
 **Alcance** -

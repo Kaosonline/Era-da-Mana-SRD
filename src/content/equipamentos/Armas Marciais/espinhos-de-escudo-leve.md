@@ -1,6 +1,6 @@
 # Espinhos de Escudo Leve
 
-**Custo** 10 PO  **Peso** 5lbs
+**Custo** 10 PO  **Peso** 2,5kg
 **Dano** 1d4  **Crítico** x2  **Tipo** Perfurante
 **Categoria** Leve  **Grupo** Perto, Tribal
 **Alcance** -

@@ -1,6 +1,6 @@
 # Faca Borboleta
 
-**Custo** 5 PO  **Peso** 1lb
+**Custo** 5 PO  **Peso** 0,5kg
 **Dano** 1d4  **Crítico** 19-20/x2  **Tipo** Perfurante ou Cortante
 **Categoria** Leve  **Grupo** Lâminas Leves
 **Alcance** -

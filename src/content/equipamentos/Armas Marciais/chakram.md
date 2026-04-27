@@ -1,6 +1,6 @@
 # Chakram
 
-**Custo** 1 PO  **Peso** 1lb
+**Custo** 1 PO  **Peso** 0,5kg
 **Dano** 1d8  **Crítico** x2  **Tipo** Cortante
 **Categoria** Distância  **Grupo** Arremesso, Lâminas Leves
 **Alcance** 9 Metros (Arremesso)

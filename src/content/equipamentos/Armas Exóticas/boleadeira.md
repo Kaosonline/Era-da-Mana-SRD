@@ -1,6 +1,6 @@
 # Boleadeira
 
-**Custo** 15 PO  **Peso** 2lbs
+**Custo** 15 PO  **Peso** 1kg
 **Dano** 1d4  **Crítico** x2  **Tipo** Concussão e Perfurante
 **Categoria** Distância  **Grupo** Arremesso
 **Alcance** 3 Metros (Arremesso)

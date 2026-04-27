@@ -1,6 +1,6 @@
 # Espada Bastarda
 
-**Custo** 35 PO  **Peso** 6lbs
+**Custo** 35 PO  **Peso** 3kg
 **Dano** 1d10  **Crítico** 19-20/x2  **Tipo** Cortante
 **Categoria** Uma Mão  **Grupo** Lâminas Pesadas
 **Alcance** -

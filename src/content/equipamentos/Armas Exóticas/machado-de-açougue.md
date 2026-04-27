@@ -1,6 +1,6 @@
 # Machado de Açougue
 
-**Custo** 65 PO  **Peso** 25lbs
+**Custo** 65 PO  **Peso** 12,5kg
 **Dano** 3d6  **Crítico** x3  **Tipo** Cortante
 **Categoria** Duas Mãos  **Grupo** Machados
 **Alcance** -

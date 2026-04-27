@@ -1,6 +1,6 @@
 # Martelo Leve
 
-**Custo** 1 PO  **Peso** 2lbs
+**Custo** 1 PO  **Peso** 1kg
 **Dano** 1d4  **Crítico** x2  **Tipo** Concussão
 **Categoria** Leve  **Grupo** Martelos, Arremesso
 **Alcance** 6 Metros (Arremesso)

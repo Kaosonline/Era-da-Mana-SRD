@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const Indexer = require('./lib/indexer');
 const SearchEngine = require('./lib/searchEngine');
+const PrecisionIndexer = require('./lib/PrecisionIndexer');
+const PrecisionSearch = require('./lib/PrecisionSearch');
 
 const app = express();
 const PORT = 3001;
@@ -59,13 +61,18 @@ function findFileById(category, id) {
   return findInDir(categoryDir);
 }
 
-// Initialize search engine
+// Initialize search engines (both old and new)
 const indexer = new Indexer(CONTENT_DIR);
 const searchEngine = new SearchEngine(indexer);
+
+// New precision search
+const precisionIndexer = new PrecisionIndexer(CONTENT_DIR);
+const precisionSearch = new PrecisionSearch(precisionIndexer);
 
 // Build index on startup
 (async () => {
   await indexer.buildIndex();
+  await precisionIndexer.buildIndex();
   indexer.startWatcher();
 })();
 
@@ -120,21 +127,22 @@ app.get('/api/list/:category', (req, res) => {
   })));
 });
 
-// Rota: buscar arquivos com motor avançado
+// Rota: buscar arquivos com motor avançado (novo PrecisionSearch)
 app.get('/api/search/:category', (req, res) => {
   const { category } = req.params;
-  const { q } = req.query;
+  const { q, scope, exact, fuzzy, limit } = req.query;
   
   if (!q || !q.trim()) {
     return res.json([]);
   }
 
   try {
-    const results = searchEngine.search(q, category, {
-      limit: 100,
-      fuzzy: true,
-      snippets: true,
-      snippetContext: 200
+    const results = precisionSearch.search(q, {
+      category: category,
+      searchScope: scope || 'all',
+      exactPhrase: exact === 'true',
+      fuzzy: fuzzy === 'true',
+      limit: parseInt(limit) || 100
     });
     
     res.json(results);
@@ -144,20 +152,21 @@ app.get('/api/search/:category', (req, res) => {
   }
 });
 
-// Rota: buscar globalmente (todas categorias)
+// Rota: buscar globalmente (todas categorias) - novo PrecisionSearch
 app.get('/api/search-all', (req, res) => {
-  const { q } = req.query;
+  const { q, scope, exact, fuzzy, limit } = req.query;
   
   if (!q || !q.trim()) {
     return res.json([]);
   }
 
   try {
-    const results = searchEngine.search(q, null, {
-      limit: 100,
-      fuzzy: true,
-      snippets: true,
-      snippetContext: 200
+    const results = precisionSearch.search(q, {
+      category: null,
+      searchScope: scope || 'all',
+      exactPhrase: exact === 'true',
+      fuzzy: fuzzy === 'true',
+      limit: parseInt(limit) || 100
     });
     
     res.json(results);
@@ -170,6 +179,12 @@ app.get('/api/search-all', (req, res) => {
 // Rota: estatísticas do índice (debug)
 app.get('/api/index-stats', (req, res) => {
   res.json(indexer.getStats());
+});
+
+// Rota: rebuild índice do PrecisionSearch
+app.post('/api/rebuild-precision', async (req, res) => {
+  await precisionIndexer.buildIndex();
+  res.json({ message: 'Índice Precision reconstruído', files: Object.keys(precisionIndexer.index.files).length });
 });
 
 // Rota: encontrar arquivos que referenciam outro (por ID ou título)

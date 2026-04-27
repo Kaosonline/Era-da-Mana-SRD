@@ -1,6 +1,6 @@
 # Machete
 
-**Custo** 10 PO  **Peso** 2lbs
+**Custo** 10 PO  **Peso** 1kg
 **Dano** 1d6  **Crítico** 19-20/x2  **Tipo** Cortante
 **Categoria** Leve  **Grupo** Lâminas Leves
 **Alcance** -

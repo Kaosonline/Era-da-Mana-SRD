@@ -1,6 +1,6 @@
 # Bardiche
 
-**Custo** 13 PO  **Peso** 14lbs
+**Custo** 13 PO  **Peso** 7kg
 **Dano** 1d10  **Crítico** 19-20/x2  **Tipo** Cortante
 **Categoria** Duas Mãos  **Grupo** Machados, Haste
 **Alcance** -

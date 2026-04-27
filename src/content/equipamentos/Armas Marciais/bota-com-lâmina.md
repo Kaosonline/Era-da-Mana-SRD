@@ -1,6 +1,6 @@
 # Bota com Lâmina
 
-**Custo** 25 PO  **Peso** 2lbs
+**Custo** 25 PO  **Peso** 1kg
 **Dano** 1d4  **Crítico** x2  **Tipo** Perfurante
 **Categoria** Leve  **Grupo** Lâminas Leves
 **Alcance** -

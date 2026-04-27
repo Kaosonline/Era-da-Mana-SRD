@@ -1,6 +1,6 @@
 # Glaive
 
-**Custo** 8 PO  **Peso** 10lbs
+**Custo** 8 PO  **Peso** 5kg
 **Dano** 1d10  **Crítico** x3  **Tipo** Cortante
 **Categoria** Duas Mãos  **Grupo** Haste
 **Alcance** -

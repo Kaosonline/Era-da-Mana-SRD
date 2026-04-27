@@ -1,6 +1,6 @@
 # Besta Pesada
 
-**Custo** 50 PO  **Peso** 8lbs
+**Custo** 50 PO  **Peso** 4kg
 **Dano** 1d10  **Crítico** 19-20/x2  **Tipo** Perfurante
 **Categoria** Distância  **Grupo** Bestas
 **Alcance** 36 Metros (Projétil)

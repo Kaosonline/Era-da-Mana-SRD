@@ -1,6 +1,6 @@
 # Lança Dupla
 
-**Custo** 25 PO  **Peso** 12lbs
+**Custo** 25 PO  **Peso** 6kg
 **Dano** 1d8/1d8  **Crítico** x3  **Tipo** Perfurante
 **Categoria** Duas Mãos  **Grupo** Lanças, Dupla
 **Alcance** -

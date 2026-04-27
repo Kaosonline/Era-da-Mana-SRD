@@ -1,6 +1,6 @@
 # Bec de Corbin
 
-**Custo** 15 PO  **Peso** 12lbs
+**Custo** 15 PO  **Peso** 6kg
 **Dano** 1d10  **Crítico** x3  **Tipo** Concussão ou Perfurante
 **Categoria** Duas Mãos  **Grupo** Haste
 **Alcance** -

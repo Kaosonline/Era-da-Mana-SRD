@@ -1,6 +1,6 @@
 # Siangham
 
-**Custo** 3 PO  **Peso** 1lb
+**Custo** 3 PO  **Peso** 0,5kg
 **Dano** 1d6  **Crítico** x2  **Tipo** Perfurante
 **Categoria** Leve  **Grupo** Monge
 **Alcance** -

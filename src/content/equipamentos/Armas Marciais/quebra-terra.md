@@ -1,6 +1,6 @@
 # Quebra-Terra
 
-**Custo** 40 PO  **Peso** 14lbs
+**Custo** 40 PO  **Peso** 7kg
 **Dano** 2d6  **Crítico** x3  **Tipo** Concussão
 **Categoria** Duas Mãos  **Grupo** Martelos
 **Alcance** -

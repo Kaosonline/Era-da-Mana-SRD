@@ -1,6 +1,6 @@
 # Besta Pesada de Repetição
 
-**Custo** 400 PO  **Peso** 12lbs
+**Custo** 400 PO  **Peso** 6kg
 **Dano** 1d10  **Crítico** 19-20/x2  **Tipo** Perfurante
 **Categoria** Distância  **Grupo** Bestas
 **Alcance** 36 Metros (Projétil)

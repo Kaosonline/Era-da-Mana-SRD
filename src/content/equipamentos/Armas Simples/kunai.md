@@ -1,6 +1,6 @@
 # Kunai
 
-**Custo** 2 PO  **Peso** 2lbs
+**Custo** 2 PO  **Peso** 1kg
 **Dano** 1d4  **Crítico** x2  **Tipo** Concussão ou Perfurante
 **Categoria** Leve  **Grupo** Perto, Arremesso
 **Alcance** 3 Metros (Arremesso)

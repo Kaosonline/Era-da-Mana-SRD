@@ -1,6 +1,6 @@
 # Gancho de Escalada
 
-**Custo** 6 PO  **Peso** 14lbs
+**Custo** 6 PO  **Peso** 7kg
 **Dano** 1d6  **Crítico** x2  **Tipo** Perfurante
 **Categoria** Distância  **Grupo** Arcos
 **Alcance** 3 Metros (Projétil)

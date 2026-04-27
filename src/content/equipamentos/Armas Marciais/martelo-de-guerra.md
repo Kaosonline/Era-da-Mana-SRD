@@ -1,6 +1,6 @@
 # Martelo de Guerra
 
-**Custo** 12 PO  **Peso** 5lbs
+**Custo** 12 PO  **Peso** 2,5kg
 **Dano** 1d8  **Crítico** x3  **Tipo** Concussão
 **Categoria** Uma Mão  **Grupo** Martelos
 **Alcance** -

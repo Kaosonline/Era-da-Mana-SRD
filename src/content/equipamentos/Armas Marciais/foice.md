@@ -1,6 +1,6 @@
 # Foice
 
-**Custo** 18 PO  **Peso** 10lbs
+**Custo** 18 PO  **Peso** 5kg
 **Dano** 2d4  **Crítico** x4  **Tipo** Perfurante ou Cortante
 **Categoria** Duas Mãos  **Grupo** Lâminas Pesadas
 **Alcance** -

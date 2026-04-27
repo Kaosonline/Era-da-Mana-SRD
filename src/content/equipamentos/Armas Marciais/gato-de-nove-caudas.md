@@ -1,6 +1,6 @@
 # Gato de Nove Caudas
 
-**Custo** 1 PO  **Peso** 1lb
+**Custo** 1 PO  **Peso** 0,5kg
 **Dano** 1d4  **Crítico** x2  **Tipo** Cortante
 **Categoria** Leve  **Grupo** Manguais
 **Alcance** -

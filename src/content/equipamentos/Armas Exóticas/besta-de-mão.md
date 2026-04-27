@@ -1,6 +1,6 @@
 # Besta de Mão
 
-**Custo** 100 PO  **Peso** 2lbs
+**Custo** 100 PO  **Peso** 1kg
 **Dano** 1d4  **Crítico** 19-20/x2  **Tipo** Perfurante
 **Categoria** Distância  **Grupo** Bestas
 **Alcance** 9 Metros (Projétil)

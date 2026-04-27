@@ -1,6 +1,6 @@
 # Machado de Abordagem
 
-**Custo** 6 PO  **Peso** 3lbs
+**Custo** 6 PO  **Peso** 1,5kg
 **Dano** 1d6  **Crítico** x3  **Tipo** Perfurante ou Cortante
 **Categoria** Leve  **Grupo** Machados
 **Alcance** -

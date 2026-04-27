@@ -1,6 +1,6 @@
 # Machado Gancho
 
-**Custo** 20 PO  **Peso** 7lbs
+**Custo** 20 PO  **Peso** 3,5kg
 **Dano** 1d8  **Crítico** x3  **Tipo** Cortante
 **Categoria** Uma Mão  **Grupo** Machados
 **Alcance** -

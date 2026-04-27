@@ -1,6 +1,6 @@
 # Tridente
 
-**Custo** 15 PO  **Peso** 4lbs
+**Custo** 15 PO  **Peso** 2kg
 **Dano** 1d8  **Crítico** x2  **Tipo** Perfurante
 **Categoria** Uma Mão  **Grupo** Lanças, Arremesso
 **Alcance** -

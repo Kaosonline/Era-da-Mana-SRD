@@ -1,6 +1,6 @@
 # Lança
 
-**Custo** 2 PO  **Peso** 6lbs
+**Custo** 2 PO  **Peso** 3kg
 **Dano** 1d8  **Crítico** x3  **Tipo** Perfurante
 **Categoria** Duas Mãos  **Grupo** Lanças, Arremesso, Tribal
 **Alcance** 6 Metros (Arremesso)

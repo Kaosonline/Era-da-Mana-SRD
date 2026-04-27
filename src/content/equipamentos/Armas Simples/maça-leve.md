@@ -1,6 +1,6 @@
 # Maça Leve
 
-**Custo** 5 PO  **Peso** 4lbs
+**Custo** 5 PO  **Peso** 2kg
 **Dano** 1d6  **Crítico** x2  **Tipo** Concussão
 **Categoria** Leve  **Grupo** Martelos
 **Alcance** -

@@ -1,6 +1,6 @@
 # Machado de Guerra
 
-**Custo** 30 PO  **Peso** 8lbs
+**Custo** 30 PO  **Peso** 4kg
 **Dano** 1d10  **Crítico** x3  **Tipo** Cortante
 **Categoria** Uma Mão  **Grupo** Machados
 **Alcance** -

@@ -1,6 +1,6 @@
 # Bill
 
-**Custo** 11 PO  **Peso** 11lbs
+**Custo** 11 PO  **Peso** 5,5kg
 **Dano** 1d8  **Crítico** x3  **Tipo** Cortante
 **Categoria** Duas Mãos  **Grupo** Haste
 **Alcance** -

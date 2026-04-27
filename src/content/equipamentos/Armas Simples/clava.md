@@ -1,6 +1,6 @@
 # Clava
 
-**Custo** 0  **Peso** 3lbs
+**Custo** 0  **Peso** 1,5kg
 **Dano** 1d6  **Crítico** x2  **Tipo** Concussão
 **Categoria** Uma Mão  **Grupo** Martelos, Tribal
 **Alcance** 3 Metros (Arremesso)
