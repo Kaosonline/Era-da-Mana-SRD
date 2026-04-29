@@ -1,7 +1,5 @@
 # Canalização Mágica (Ex)
 
-Custo da Habilidade: 10
-
 O personagem aprende a canalizar magias de toque diretamente através de suas armas, fundindo o impacto físico do ataque com a liberação da energia mágica.
 
 Sempre que o personagem conjurar uma magia com alcance toque, ele pode entregar essa magia por meio de uma arma que esteja empunhando como parte da mesma ação de conjuração. Em vez de realizar o ataque de toque corpo a corpo gratuito normalmente concedido para descarregar a magia, o personagem realiza um ataque gratuito com a arma, usando seu maior bônus base de ataque.
@@ -17,7 +15,9 @@ O ataque utiliza a margem de ameaça de crítico da arma empunhada, incluindo mo
 Se o personagem falhar no ataque, a magia é dissipada sem efeito, como se tivesse falhado no ataque de toque normal.
 
 Esta habilidade só funciona enquanto a arma estiver sendo empunhada pelo próprio personagem.
+---
+**Custo:** 2 Pontos de Classe.
 
-Adquirir Canalização Mágica custa 10 Pontos de Classe.
+**Pré-requisitos:** Combate Mágico.
 
-Pré-requisito: possuir a habilidade Combate Mágico.
+*Nível máximo: 1.*

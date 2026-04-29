@@ -265,7 +265,18 @@
     "equipamentos/tridente": "approved",
     "equipamentos/zarabatana": "approved",
     "equipamentos/martelo-leve": "approved",
-    "equipamentos/Desarmado": "approved"
+    "equipamentos/Desarmado": "approved",
+    "habilidades de classe/Amplitude-de-Conhecimento": "approved",
+    "habilidades de classe/Canalização-Mágica": "approved",
+    "habilidades de classe/Canalizar Energia": "approved",
+    "habilidades de classe/Chamas-Purificadoras": "approved",
+    "habilidades de classe/Comando-de-Equipe": "approved",
+    "habilidades de classe/Comando-de-Equipe-Avançado": "approved",
+    "habilidades de classe/Combate-Desarmado": "approved",
+    "habilidades de classe/Combate-Solitário": "approved",
+    "habilidades de classe/Conjuração-Completa": "approved",
+    "habilidades de classe/Conjuração-Limitada": "approved",
+    "habilidades de classe/Conjuração-Parcial": "approved"
   },
-  "lastCategory": "talentos"
+  "lastCategory": "habilidades de classe"
 }
