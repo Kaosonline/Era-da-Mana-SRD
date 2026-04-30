@@ -7,5 +7,5 @@ A Aura Defensiva se manifesta no início do primeiro turno do personagem em comb
 
 A aura se dissipa automaticamente ao final do combate, junto com o Reservatório de Animus.
 ---
-**Custo:** 2 Pontos de Classe.
+**Custo: **10 Pontos de Classe.
 **Pré-requisitos:** possuir a habilidade [Animus](Animus.md); nível de personagem 2+.

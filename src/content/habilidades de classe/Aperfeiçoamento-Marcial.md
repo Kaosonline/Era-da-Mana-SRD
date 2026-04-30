@@ -15,7 +15,7 @@ A progressão de BBA Ruim do personagem (0,5 por nível de personagem) passa a s
 
 A progressão de BBA Médio do personagem (0,75 por nível de personagem) passa a ser BBA Alto (1 por nível de personagem).
 
-Um personagem que já possua BBA Médio adquire diretamente este nível, desde que atenda aos pré-requisitos. Personagens que já possuam BBA Alto não obtêm benefícios com esta habilidade.
+Um personagem que já possua BBA Médio pode adquirir diretamente este nível, desde que atenda aos pré-requisitos. Personagens que já possuam BBA Alto não obtêm benefícios com esta habilidade.
 ---
 **Custo:** Adquirir o 1º nível de Aperfeiçoamento Marcial custa 6 Pontos de Classe. Cada nível adicional custa 6 Pontos de Classe.
 **Pré-requisitos:** 

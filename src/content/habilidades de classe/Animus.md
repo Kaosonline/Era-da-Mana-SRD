@@ -46,6 +46,6 @@ O personagem pode gastar até 4 pontos de Animus para aprimorar uma técnica.
 O personagem pode gastar até 5 pontos de Animus para aprimorar uma técnica.
 ---
 **Custo:** Adquirir o 1º nível de Animus custa 2 Pontos de Classe. Cada nível adicional desta habilidade custa 2 Pontos de Classe.
-**Pré-requisito:** possuir a capacidade de Iniciar Técnicas.
+**Pré-requisito:** possuir a habilidade de Iniciar Técnicas.
 
 _O nível máximo desta habilidade é 5._

@@ -17,4 +17,4 @@ O personagem só pode manter uma arma aprimorada por meio desta habilidade por v
 ---
 **Custo:** Adquirir Arsenal Mágico Especializado custa 2 Pontos de Classe.
 
-**Pré-requisitos:** Arsenal Mágico (2º nível).
+**Pré-requisitos:** possuir Arsenal Mágico (2º nível).
