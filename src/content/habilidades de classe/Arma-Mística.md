@@ -19,4 +19,4 @@ Talentos metamágicos não podem ser aplicados à Arma Mística. Talentos ou hab
 Para fins de interação com regras e efeitos, o dano causado pela Arma Mística é tratado como proveniente do Disparo Místico, sendo considerado uma habilidade similar a magia equivalente a uma magia arcana de 1º círculo da escola de Conjuração.
 ---
 **Custo:** Adquirir Arma Mística custa 2 Pontos de Classe.
-**Pré-requisitos:** [Disparo Místico](Disparo-Místico.md).
+**Pré-requisitos:** Disparo Místico.
