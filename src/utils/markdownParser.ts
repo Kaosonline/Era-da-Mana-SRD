@@ -59,6 +59,14 @@ export function parseMarkdown(markdown: string, category?: string): string {
   let inCodeBlock = false;
   let codeBlockLang = '';
   let codeBlockLines: string[] = [];
+  let inCollapsible = false;
+
+  const flushCollapsible = () => {
+    if (inCollapsible) {
+      result.push('</div></details>');
+      inCollapsible = false;
+    }
+  };
 
   const flushList = (listType?: 'ul' | 'ol') => {
     if (inUl) {
@@ -222,19 +230,47 @@ export function parseMarkdown(markdown: string, category?: string): string {
 
     if (trimmed.startsWith('# ')) {
       flushList();
-      result.push(`<h1>${processInlineFormatting(trimmed.substring(2))}</h1>`);
+      flushCollapsible();
+      const title = trimmed.substring(2);
+      if (title.startsWith('> ')) {
+        result.push(`<details class="collapsible"><summary><h1>${processInlineFormatting(title.substring(2))}</h1></summary><div class="collapsible-content">`);
+        inCollapsible = true;
+      } else {
+        result.push(`<h1>${processInlineFormatting(title)}</h1>`);
+      }
       continue;
     } else if (trimmed.startsWith('## ')) {
       flushList();
-      result.push(`<h2>${processInlineFormatting(trimmed.substring(3))}</h2>`);
+      flushCollapsible();
+      const title = trimmed.substring(3);
+      if (title.startsWith('> ')) {
+        result.push(`<details class="collapsible"><summary><h2>${processInlineFormatting(title.substring(2))}</h2></summary><div class="collapsible-content">`);
+        inCollapsible = true;
+      } else {
+        result.push(`<h2>${processInlineFormatting(title)}</h2>`);
+      }
       continue;
     } else if (trimmed.startsWith('### ')) {
       flushList();
-      result.push(`<h3>${processInlineFormatting(trimmed.substring(4))}</h3>`);
+      flushCollapsible();
+      const title = trimmed.substring(4);
+      if (title.startsWith('> ')) {
+        result.push(`<details class="collapsible"><summary><h3>${processInlineFormatting(title.substring(2))}</h3></summary><div class="collapsible-content">`);
+        inCollapsible = true;
+      } else {
+        result.push(`<h3>${processInlineFormatting(title)}</h3>`);
+      }
       continue;
     } else if (trimmed.startsWith('#### ')) {
       flushList();
-      result.push(`<h4>${processInlineFormatting(trimmed.substring(5))}</h4>`);
+      flushCollapsible();
+      const title = trimmed.substring(5);
+      if (title.startsWith('> ')) {
+        result.push(`<details class="collapsible"><summary><h4>${processInlineFormatting(title.substring(2))}</h4></summary><div class="collapsible-content">`);
+        inCollapsible = true;
+      } else {
+        result.push(`<h4>${processInlineFormatting(title)}</h4>`);
+      }
       continue;
     }
 
@@ -274,6 +310,7 @@ export function parseMarkdown(markdown: string, category?: string): string {
 
     // Blocos de código (```)
     if (trimmed.startsWith('```')) {
+      flushCollapsible();
       if (!inCodeBlock) {
         inCodeBlock = true;
         codeBlockLang = trimmed.substring(3).trim();
@@ -290,6 +327,7 @@ export function parseMarkdown(markdown: string, category?: string): string {
     // Detectar tabelas markdown (linhas que começam e terminam com | e têm pelo menos 2 |)
     // Ignora linhas como "|" (apenas um pipe) que não são tabelas válidas
     if (trimmed.startsWith('|') && trimmed.endsWith('|') && trimmed.indexOf('|', 1) > 0) {
+      flushCollapsible();
       if (!inTable) {
         inTable = true;
         tableRows = [];
@@ -302,6 +340,7 @@ export function parseMarkdown(markdown: string, category?: string): string {
 
     // Linha horizontal (---, ***, ___)
     if (/^(\*{3,}|-{3,}|_{3,})$/.test(trimmed)) {
+      flushCollapsible();
       result.push('<hr>');
       continue;
     }
@@ -320,6 +359,7 @@ export function parseMarkdown(markdown: string, category?: string): string {
   if (inBlockquote) result.push('</blockquote>');
   if (inTable) flushTable();
   if (inCodeBlock) flushCodeBlock();
+  if (inCollapsible) flushCollapsible();
 
   const finalResult = result.join('\n');
   

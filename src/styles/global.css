@@ -178,3 +178,76 @@ input, textarea, select {
     margin-left: 0;
   }
 }
+
+/* ========== COLAPSÁVEL / LISTA ALTERNANTE (ESTILO NOTION) ========== */
+details.collapsible {
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+details.collapsible summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  cursor: pointer;
+  list-style: none;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+details.collapsible summary::-webkit-details-marker {
+  display: none;
+}
+
+details.collapsible summary::before {
+  content: '▶';
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+details.collapsible[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details.collapsible summary:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-primary);
+}
+
+details.collapsible summary h1,
+details.collapsible summary h2,
+details.collapsible summary h3,
+details.collapsible summary h4 {
+  margin: 0;
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+details.collapsible .collapsible-content {
+  padding: 0.75rem 1rem;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  margin-top: -1px;
+}
+
+details.collapsible .collapsible-content p {
+  margin-bottom: 0.5rem;
+}
+
+details.collapsible .collapsible-content p:last-child {
+  margin-bottom: 0;
+}

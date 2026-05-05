@@ -2,7 +2,7 @@
 
 Um personagem é composto por seis atributos: Força, Destreza, Constituição, Sabedoria, Inteligência e Carisma. Cada atributo descreve parcialmente seu personagem e afeta a maioria de suas ações. Esses valores são gerados por meio de rolagens de dados ou um sistema de compra de pontos (determinado pelo seu Mestre) na criação do personagem e são considerados atributos permanentes.
 
-### Força (For)
+### > Força (For)
 
 Força mede a força muscular e o poder físico. Essa habilidade é importante para aqueles que se envolvem em combate corpo a corpo. A Força também define a quantidade máxima de peso que seu personagem pode carregar (Veja em [Capacidade de Carga](capacidade-de-carga.md)). 
 Um personagem com Força 0 é fraco demais para se mover e está inconsciente. 
@@ -21,7 +21,7 @@ Você aplica o modificador de Força do seu personagem a:
 
 - Seu valor de Força determina a capacidade de carga do seu personagem.
 
-### Destreza (Des)
+### > Destreza (Des)
 
 A Destreza mede agilidade, reflexos e equilíbrio. Essa habilidade é útil para personagens que usam armaduras leves ou médias, ou nenhuma armadura. Essa habilidade é vital para personagens que buscam se destacar com armas de longo ou médio alcance. 
 Um personagem com Destreza 0 é incapaz de se mover e fica efetivamente imóvel (mas não inconsciente).
@@ -36,7 +36,7 @@ Você aplica o modificador de Destreza do seu personagem a:
 
 - Testes de perícia em Acrobacia, Desativar Dispositivo, Arte da Fuga, Cavalgar, Dirigir, Prestidigitação e Furtividade.
 
-### Constituição (Con)
+### > Constituição (Con)
 
 A Constituição representa a saúde e a resistência do seu personagem. Um bônus de Constituição aumenta os pontos de vida de um personagem, portanto, essa habilidade é importante para todas as classes. Algumas criaturas, como mortos-vivos e constructos, não possuem um valor de Constituição. O modificador delas é 0 para quaisquer testes baseados em Constituição. Um personagem com um valor de Constituição de 0 está morto.
 
@@ -48,7 +48,7 @@ Você aplica o modificador de Constituição do seu personagem a:
 
 - Se o valor de Constituição de um personagem mudar o suficiente para alterar seu modificador de Constituição, os pontos de vida do personagem também aumentam ou diminuem de acordo.
 
-### Inteligência (Int)
+### > Inteligência (Int)
 
 A Inteligência determina a capacidade de aprendizado e raciocínio do seu personagem. Criaturas com instinto animal têm Inteligência 1 ou 2. Qualquer criatura capaz de compreender a fala tem uma pontuação de pelo menos 3. 
 Um personagem com Inteligência 0 está em estado comatoso. Algumas criaturas não possuem Inteligência. Seu modificador é +0 para quaisquer perícias ou testes baseados em Inteligência.
@@ -63,7 +63,7 @@ Você aplica o modificador de Inteligência do seu personagem a:
 
 *O valor mínimo de Inteligência necessário para conjurar uma magia com Inteligência é 10 + o nível da magia.*
 
-### Sabedoria (Sab)
+### > Sabedoria (Sab)
 
 Sabedoria descreve a força de vontade, o bom senso, a percepção e a intuição de um personagem. Se você deseja que seu personagem tenha sentidos aguçados, coloque um valor alto em Sabedoria. Toda criatura possui um valor de Sabedoria. Um personagem com Sabedoria 0 é incapaz de raciocínio lógico e está inconsciente.
 
@@ -75,7 +75,7 @@ Você aplica o modificador de Sabedoria do seu personagem a:
 
 *O valor mínimo de Sabedoria necessário para conjurar uma magia com Sabedoria é 10 + o nível da magia.*
 
-### Carisma (Car)
+### > Carisma (Car)
 
 Carisma mede a personalidade, o magnetismo pessoal, a capacidade de liderança e a aparência de um personagem. Para criaturas mortas-vivas, Carisma é uma medida de sua "força vital" sobrenatural. Toda criatura possui um valor de Carisma. Um personagem com Carisma 0 não consegue se esforçar de forma alguma e está inconsciente.
 
